@@ -1,4 +1,5 @@
 import './App.css'
+import Business from './Components/Business/Business'
 import Hero from './Components/Navbar/Hero'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
       <Hero/>
+      <Business/>
     </>
   )
 }

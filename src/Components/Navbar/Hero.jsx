@@ -1,13 +1,23 @@
-import logo from "../../assets/Logo.png";
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
+
 import Container from "../../Container";
+import logo from "../../assets/Logo.png";
 import img1 from "../../assets/plant-bg.jpg";
 import img2 from "../../assets/plant-bg2.jpg";
 import img3 from "../../assets/plant-bg3.jpg";
 const Hero = () => {
-  const images = [img1, img2, img3];
-  // Track current index
+   const images = [img1, img2, img3];
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-slide every 3s
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   // Next & Prev functions
   const nextSlide = () => {
@@ -17,16 +27,15 @@ const Hero = () => {
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
-
   return (
     <div
-      className="relative bg-cover bg-center h-screen transition-all duration-700 ease-in-out"
+      className=" bg-cover bg-center h-screen transition-all duration-700 ease-in-out"
       style={{ backgroundImage: `url(${images[currentIndex]})` }}
     >
       {/* Navbar */}
       <div className="absolute top-0 left-0 w-full">
         <Container>
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center ">
             {/* Logo */}
             <img src={logo} alt="Logo" className="h-[105px] w-[105px]" />
 
@@ -95,7 +104,7 @@ const Hero = () => {
               <div className="absolute top-[-20px] left-0 w-[250px] border-t-4 border-white rounded-full animate-lineGrow"></div>
               <div className="absolute top-[-18px] left-[200px] w-[413px] border-t border-white rounded-full animate-lineGrow delay-200"></div>
               <div className="absolute top-[-327px] left-[980px] w-[482px] border-t border-white rotate-[140deg] origin-left animate-lineGrow delay-500"></div>
-
+              
               {/* Caption */}
               <p className="mt-4 text-[32px]">
                 Strength • Safety • Sustainability
@@ -109,7 +118,7 @@ const Hero = () => {
             <div className="relative mt-6">
               {/* Decorative Lines */}
               <div className="absolute top-[-20px] right-0 w-[250px] border-t-4 border-white rounded-full animate-lineGrow"></div>
-              <div className="absolute top-[-18px] right-[200px] w-[350px] border-t border-white rounded-full animate-lineGrow delay-200"></div>
+              <div className="absolute top-[-18px] right-[200px] w-[336px] border-t border-white rounded-full animate-lineGrow delay-200"></div>
               {/* Optional Diagonal Line */}
               {/* <div className="absolute top-[-160px] right-0 w-[600px] border-t border-white rotate-[-140deg] origin-right animate-lineGrow delay-500"></div> */}
 
@@ -120,34 +129,56 @@ const Hero = () => {
             </div>
           </div>
         </Container>
-
-        {/* Get in touch button */}
-        <button className="absolute bottom-12 bg-red-600 px-8 py-3 text-white font-semibold">
-          GET IN TOUCH
-        </button>
-
-        {/* Arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl md:text-6xl px-3 py-1 rounded-full transition"
-        >
-          &#8249;
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl md:text-6xl px-3 py-1 rounded-full transition"
-        >
-          &#8250;
-        </button>
-
-        {/* Dots Indicator */}
-        <div className="absolute bottom-6 w-full flex justify-center gap-3">
-          {images.map((_, index) => (
-            <div key={index} onClick={() => setCurrentIndex(index)}></div>
-          ))}
-        </div>
+<div className="bg-cover bg-center h-screen transition-all duration-700 ease-in-out ">
+      {/* Images with smooth fade + slide */}
+      <div className="relative w-full h-full">
+        {images.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`slide-${index}`}
+            className={`absolute w-full h-full object-cover transition-all duration-700 ease-in-out
+              ${index === currentIndex ? "opacity-100 scale-100" : "opacity-0 scale-105"}
+            `}
+          />
+        ))}
       </div>
+
+      {/* GET IN TOUCH Button */}
+      <button className="absolute bottom-12 bg-red-600/80 backdrop-blur-md px-8 py-3 text-white font-semibold rounded-full shadow-md hover:scale-105 transition">
+        GET IN TOUCH
+      </button>
+
+      {/* Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black/30 hover:bg-black/50 px-3 py-1 rounded-full text-4xl transition"
+      >
+        &#8249;
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black/30 hover:bg-black/50 px-3 py-1 rounded-full text-4xl transition"
+      >
+        &#8250;
+      </button>
+
+      {/* Dots Indicator - glassy */}
+      {/* <div className="absolute bottom-6 w-full flex justify-center gap-3">
+        {images.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-4 h-4 rounded-full cursor-pointer backdrop-blur-md transition 
+              ${currentIndex === index ? "bg-white/80 shadow-lg scale-110" : "bg-white/40 hover:bg-white/60"}
+            `}
+          ></div>
+        ))}
+      </div> */}
     </div>
+      </div>
+      </div>
+    
   );
 };
 
