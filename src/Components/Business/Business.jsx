@@ -31,17 +31,17 @@ const Business = () => {
   ];
 
   return (
-    <div className="pt-[220px]">
+    <div className="pt-[200px]">
       <Container>
         <div className="text-center">
-          <h1 className="text-3xl pb-[10px] font-bold">OUR BUSINESS</h1>
-          <p className="mt-3 pb-[100px] text-gray-600 max-w-3xl mx-auto">
+          <h1 className="text-3xl pb-[5px] font-bold">OUR BUSINESS</h1>
+          <p className="mt-3 pb-[60px] text-gray-600 max-w-3xl mx-auto">
             At Fixit Group, we believe in building a family-united by purpose,
             driven by passion, and connected through a shared love for hard work.
           </p>
 
           {/* Logo Section */}
-          <div className="flex justify-center items-center gap-10 mt-10 flex-wrap">
+          <div className="flex justify-center pb-[200px] items-center gap-10 mt-10 flex-wrap">
             {businesses.map((item, index) => (
               <a
                 key={index}

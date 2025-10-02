@@ -145,20 +145,20 @@ const Hero = () => {
       </div>
 
       {/* GET IN TOUCH Button */}
-      <button className="absolute bottom-12 bg-red-600/80 backdrop-blur-md px-8 py-3 text-white font-semibold rounded-full shadow-md hover:scale-105 transition">
+      <button className="absolute ml-[-120px] align-middle bottom-12 bg-red-600/80 backdrop-blur-md px-8 py-3 text-white font-semibold  shadow-md hover:scale-105 transition">
         GET IN TOUCH
       </button>
 
       {/* Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black/30 hover:bg-black/50 px-3 py-1 rounded-full text-4xl transition"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white  px-3 py-1 text-6xl transition"
       >
         &#8249;
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black/30 hover:bg-black/50 px-3 py-1 rounded-full text-4xl transition"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white  px-3 py-1 text-6xl transition"
       >
         &#8250;
       </button>
