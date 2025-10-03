@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-
+import { FiMenu, FiX } from "react-icons/fi"; 
 import Container from "../../Container";
 import logo from "../../assets/Logo.png";
 import img1 from "../../assets/plant-bg.jpg";
@@ -8,7 +8,12 @@ import img2 from "../../assets/plant-bg2.jpg";
 import img3 from "../../assets/plant-bg3.jpg";
 const Hero = () => {
    const images = [img1, img2, img3];
-  const [currentIndex, setCurrentIndex] = useState(0);
+const [menuOpen, setMenuOpen] = useState(false);
+const navLinks = [
+    { name: "About Us", href: "#Navbar" },
+    { name: "Our Business", href: "#Business" },
+    { name: "Careers", href: "#projects" },
+   ];
 
   // Auto-slide every 3s
   useEffect(() => {
@@ -33,40 +38,86 @@ const Hero = () => {
       style={{ backgroundImage: `url(${images[currentIndex]})` }}
     >
       {/* Navbar */}
-      <div className="absolute top-0 left-0 w-full">
-        <Container>
-          <div className="flex justify-between items-center ">
-            {/* Logo */}
-            <img src={logo} alt="Logo" className="h-[105px] w-[105px]" />
+  <div className="absolute top-0 left-0 w-full bg-transparent">
+      <Container>
+        <div className="flex justify-between items-center py-4 px-4 md:px-6 lg:px-10">
+          {/* Logo */}
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-[70px] w-[70px] md:h-[90px] md:w-[90px] lg:h-[105px] lg:w-[105px]"
+          />
 
-            {/* Navigation */}
-            <div className="flex items-center text-[22px] gap-9 text-white">
-              {/* Nav Links */}
-              <ul className="flex gap-9 font-OpenSans">
-                <li className="cursor-pointer hover:text-gray-300 transition duration-300">
-                  About Us
-                </li>
-                <li className="cursor-pointer hover:text-gray-300 transition duration-300">
-                  Our Business
-                </li>
-                <li className="cursor-pointer hover:text-gray-300 transition duration-300">
-                  Careers
-                </li>
-              </ul>
+          {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-6 md:gap-10 lg:gap-14 text-[16px] md:text-[20px] lg:text-[22px] text-white">
+  {/* Nav Links */}
+  {/* <ul className="flex gap-6 md:gap-8 lg:gap-9 font-OpenSans">
+    {["About Us", "Our Business", "Careers"].map((item, index) => (
+      <li
+        key={index}
+        className="relative cursor-pointer transition-colors duration-300 hover:text-gray-300
+          after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] 
+          after:w-0 after:bg-white after:transition-all after:duration-500 hover:after:w-full"
+      >
+        {item}
+      </li>
+    ))}
+  </ul> */}
+  
+          <ul className="flex gap-6 md:gap-8 lg:gap-9 font-OpenSans">
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <a href={link.href} className="hover:text-gray-400 transition">
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-              {/* Button */}
-              <button
-                className="relative px-6 py-2 rounded-lg text-white font-semibold 
-  bg-gray-600 overflow-hidden 
-  transition-all duration-500 hover:bg-[#C0302D] hover:text-white hover:border-[#F6AB2F]"
-              >
-                <span className="relative z-10">CONTACT</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 opacity-0 hover:opacity-30 transition duration-500"></span>
-              </button>
-            </div>
+  {/* Contact Button */}
+  <button
+    className="relative px-4 py-2 md:px-6 md:py-2 rounded-lg text-sm md:text-base lg:text-lg
+      text-white font-semibold bg-gray-600 overflow-hidden transition-all duration-500 
+      hover:bg-[#C0302D] hover:text-white hover:border-[#F6AB2F]"
+  >
+    <span className="relative z-10">CONTACT</span>
+    <span className="absolute inset-0 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500
+      opacity-0 hover:opacity-30 transition duration-500"></span>
+  </button>
+</div>
+
+
+          {/* Mobile Menu Icon */}
+          <div className="md:hidden text-white text-3xl cursor-pointer">
+            {menuOpen ? (
+              <FiX onClick={() => setMenuOpen(false)} />
+            ) : (
+              <FiMenu onClick={() => setMenuOpen(true)} />
+            )}
           </div>
-        </Container>
-      </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {menuOpen && (
+          <div className="md:hidden bg-[#111] text-white px-6 py-6 space-y-6 text-lg">
+            <ul className="flex flex-col gap-6 font-OpenSans">
+              <li className="cursor-pointer hover:text-gray-300">About Us</li>
+              <li className="cursor-pointer hover:text-gray-300">Our Business</li>
+              <li className="cursor-pointer hover:text-gray-300">Careers</li>
+            </ul>
+
+            {/* Button */}
+            <button
+              className="w-full relative px-4 py-2 rounded-lg text-base text-white font-semibold bg-gray-600 overflow-hidden transition-all duration-500 hover:bg-[#C0302D] hover:text-white hover:border-[#F6AB2F]"
+            >
+              <span className="relative z-10">CONTACT</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 opacity-0 hover:opacity-30 transition duration-500"></span>
+            </button>
+          </div>
+        )}
+      </Container>
+    </div>
+
 
       {/* Hero Content */}
       <div className="flex flex-col items-center justify-center h-full text-white text-center relative">
@@ -145,7 +196,7 @@ const Hero = () => {
       </div>
 
       {/* GET IN TOUCH Button */}
-      <button className="absolute ml-[-120px] align-middle bottom-12 bg-red-600/80 backdrop-blur-md px-8 py-3 text-white font-semibold  shadow-md hover:scale-105 transition">
+      <button className="absolute ml-[-78px] align-middle bottom-12 bg-red-600/80 backdrop-blur-md px-8 py-3 text-white font-semibold  shadow-md hover:scale-105 transition">
         GET IN TOUCH
       </button>
 
