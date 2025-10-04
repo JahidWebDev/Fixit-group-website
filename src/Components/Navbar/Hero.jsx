@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import Container from "../../Container";
-import logo from "../../assets/Logo.png";
+import logo from "../../assets/Fixit-Group-Logo.png";
 import img1 from "../../assets/plant-bg.jpg";
 import img2 from "../../assets/plant-bg2.jpg";
 import img3 from "../../assets/plant-bg3.jpg";
@@ -27,7 +27,7 @@ const Hero = () => {
   }, [images.length]);
 
   // ✅ Next & Prev functions
-   const nextSlide = () => {
+    const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
@@ -150,19 +150,33 @@ const Hero = () => {
 
   </Container>
 </div>
- <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white px-3 py-1 text-6xl transition"
-          >
-            &#8249;
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white px-3 py-1 text-6xl transition"
-          >
-            &#8250;
-          </button>
+   <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white px-3 py-1 text-7xl z-20 transition hover:scale-110"
+        >
+          &#8249;
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2   text-white px-3 py-1 text-7xl z-20 transition hover:scale-110"
+        >
+          &#8250;
+        </button>
+        
       </div>
+      {/* ✅ Bottom-Centered Button */}
+<button
+  className="absolute bottom-8 left-1/2 -translate-x-1/2 
+             bg-[#C0302D] text-white font-normal
+             px-3 py-2.5 text-sm sm:px-6 sm:py-3 sm:text-base 
+             md:px-6 md:py-3.5 md:text-lg 
+             tracking-wide  shadow-lg 
+             hover:bg-[#a82825] transition-all duration-300 
+             hover:scale-105 z-20"
+>
+  GET IN TOUCH
+</button>
+
     </section>
   );
 };

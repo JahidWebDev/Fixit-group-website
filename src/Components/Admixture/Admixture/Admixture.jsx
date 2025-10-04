@@ -1,5 +1,5 @@
 import React from "react";
-import CarAdmixture from "../../../assets/CarAdmixture.png";
+import CarAdmixture from "../../../assets/Car-Admixture-Admixture.png";
 
 const Admixture = () => {
   return (

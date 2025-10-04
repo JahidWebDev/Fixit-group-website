@@ -1,5 +1,5 @@
 import React from "react";
-import LubricantImg from "../../assets/all.png";
+import LubricantImg from "../../assets/Credit-card-Oil-dam-all.png";
 
 const Importing = () => {
   return (

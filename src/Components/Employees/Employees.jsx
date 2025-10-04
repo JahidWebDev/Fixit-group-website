@@ -1,6 +1,6 @@
 import React from "react";
-import loveicon from "../../assets/LoveIcon.png";
-import manicon from "../../assets/ManIcon.png";
+import loveicon from "../../assets/Love-Icon.png";
+import manicon from "../../assets/Man-Icon.png";
 
 const Employees = () => {
   return (

@@ -1,17 +1,17 @@
 import React from "react";
-import logo from "../../assets/Logo2.png"; // নিশ্চিত করুন ফাইল এখানে আছে
+import logo from "../../assets/Fixit-group-logo-White-color.png"; 
 
 const Footer = () => {
   return (
     <footer className="relative bg-[#b71c1c] text-white">
       {/* Background shape */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         <img
-          src="/footer-bg.png" // public folder এ রাখুন
+          src="/footer-bg.png" 
           alt="background"
           className="w-full h-full object-cover opacity-100"
         />
-      </div>
+      </div> */}
 
       {/* Main content */}
       <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-3 gap-10 py-16 px-8">

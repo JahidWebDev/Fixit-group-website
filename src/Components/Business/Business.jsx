@@ -1,9 +1,9 @@
 import React from "react";
 
-import fixitLogo from "../../assets/fixit.png";
-import jaguarLogo from "../../assets/jaguar.png";
-import motulLogo from "../../assets/motul.png";
-import shadowLogo from "../../assets/shadow.png";
+import fixitLogo from "../../assets/Dr.Fixit-Logo.png";
+import jaguarLogo from "../../assets/Jaguar-logo.png";
+import motulLogo from "../../assets/Motul-Logo.png";
+import shadowLogo from "../../assets/Shadow-Design-logo.png";
 import Container from "../../Container";
 
 const Business = () => {
