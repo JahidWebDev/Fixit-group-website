@@ -1,24 +1,44 @@
-import './App.css'
-import Admixture from './Components/Admixture/Admixture/Admixture'
-import Business from './Components/Business/Business'
-import Employees from './Components/Employees/Employees'
-import Footer from './Components/Footer/Footer'
-import Importing from './Components/Importing/Importing'
-import Hero from './Components/Navbar/Hero'
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+// Components
+import Hero from "./Components/Navbar/Hero";
+import Business from "./Components/Business/Business";
+import Employees from "./Components/Employees/Employees";
+import Admixture from "./Components/Admixture/Admixture/Admixture";
+import Importing from "./Components/Importing/Importing";
+import Footer from "./Components/Footer/Footer";
+import OurBusiness from "./Components/Our-Business/OurBusiness";
 
-
+function Home() {
   return (
     <>
-      <Hero/>
-      <Business/>
-      <Employees/>
-      <Admixture/>
-      <Importing/>
-      <Footer/>
+        <Hero />
+      <Business />
+      <Employees />
+      <Admixture />
+      <Importing />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+    
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/our-business" element={<OurBusiness />} /> {/* fixed */}
+        <Route path="/admixture" element={<Admixture />} />
+        <Route path="/importing" element={<Importing />} />
+        <Route path="/employees" element={<Employees />} />
+      </Routes>
+
+      
+    </Router>
+  );
+}
+
+export default App;

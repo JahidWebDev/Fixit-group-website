@@ -31,7 +31,7 @@ const Business = () => {
   ];
 
   return (
-    <section id="business">
+    <section >
       <div className="pt-20 md:pt-[200px]">
         <Container>
           <div className="text-center">
