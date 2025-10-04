@@ -9,6 +9,14 @@
 
   src: url("../src/assets/Fonts/OpenSans-Regular.ttf") format("woff2");
 }
+@font-face {
+  font-family: RobotoSlab;
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+
+  src: url("../src/assets/Fonts/RobotoSlab-VariableFont_wght.ttf") format("woff2");
+}
 @keyframes gradient-x {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -19,6 +27,10 @@
 
 @theme {
   --font-OpenSans: "OpenSans", sans-serif; 
+}
+@theme {
+  --font-family: "Montserrat", sans-serif;
+ 
 }
 
 @keyframes lineGrow {
