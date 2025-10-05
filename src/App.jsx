@@ -18,7 +18,7 @@ function Home() {
       <Employees />
       <Admixture />
       <Importing />
-      <Footer />
+     
     </>
   );
 }
@@ -36,7 +36,7 @@ function App() {
         <Route path="/employees" element={<Employees />} />
       </Routes>
 
-      
+      <Footer />
     </Router>
   );
 }

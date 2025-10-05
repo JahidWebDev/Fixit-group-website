@@ -19,7 +19,7 @@ const Hero = () => {
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/our-business" }, // lowercase to match route
-  { name: "Our Business", href: "/our-business" }, // lowercase to match route
+  { name: "Our Business", href: "/Our Business" }, // lowercase to match route
   { name: "Careers", href: "/Careers" },
 
 ];
@@ -82,12 +82,15 @@ const navLinks = [
           </ul>
 
           {/* Contact Button */}
-          <button
-            className="relative px-4 py-2 md:px-6 rounded-lg text-sm md:text-base lg:text-lg
-              text-white font-semibold bg-gray-600 overflow-hidden transition-all duration-500 
-              hover:bg-[#C0302D]"
-          >
-            CONTACT
+          <button>
+ <a
+                    href="/contact"
+                    className="px-6 py-2 bg-yellow-500 text-black font-semibold rounded-md hover:bg-yellow-600 transition"
+                  >
+                    CONTACT
+                  </a>
+          
+           
           </button>
         </div>
 
@@ -145,7 +148,7 @@ const navLinks = [
                   <div className="absolute top-[-20px] left-0 w-[250px] border-t-4 border-white rounded-full"></div>
                   <div className="absolute top-[-18px] left-[200px] w-[413px] border-t border-white rounded-full"></div>
                   <div className="absolute top-[-327px] left-[980px] w-[482px] border-t border-white rotate-[140deg] origin-left"></div>
-                  <p className="mt-4 md:text-10xl text-[32px]">
+                  <p className="mt-3 md:text-10xl text-[32px] font-['Open_Sans']">
                     Strength • Safety • Sustainability
                   </p>
                 </div>
@@ -159,7 +162,7 @@ const navLinks = [
                 <div className="relative mt-6">
                   <div className="absolute top-[-20px] right-0 w-[250px] border-t-4 border-white rounded-full "></div>
                   <div className="absolute top-[-18px] right-[200px] w-[336px] border-t border-white rounded-full "></div>
-                  <p className="mt-4 text-[32px]">
+                  <p className="mt-3 text-[32px] font-['Open_Sans']">
                     We Build • We Bond • We Believe
                   </p>
                 </div>

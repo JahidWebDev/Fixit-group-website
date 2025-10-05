@@ -1,17 +1,47 @@
 import React, { useState } from "react";
 import Container from "../../Container";
+
 import logo2 from "../../assets/Fixit-Group-Logo.png";
 import img4 from "../../assets/Fixit-Group-About-us.png";
 import logo5 from "../../assets/Fixit-Group-Logo-Black-&-White.png";
-import waveShape from "../../assets/Fixit-Group-Branding-Icon.png"; // <-- use your wave image here
+import waveShape from "../../assets/Fixit-Group-Branding-Icon.png";
+
+import fixitLogo from "../../assets/Dr.Fixit-Logo.png";
+import jaguarLogo from "../../assets/Jaguar-logo.png";
+import motulLogo from "../../assets/Motul-Logo.png";
+import shadowLogo from "../../assets/Shadow-Design-logo.png";
+
 const OurBusiness = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const businesses = [
+    {
+      name: "Dr. Fixit",
+      logo: fixitLogo,
+      link: "https://www.drfixit.co.in/",
+    },
+    {
+      name: "Jaguar",
+      logo: jaguarLogo,
+      link: "https://www.jaguar.com/",
+    },
+    {
+      name: "Motul",
+      logo: motulLogo,
+      link: "https://www.motul.com/",
+    },
+    {
+      name: "Shadow Design & Printing",
+      logo: shadowLogo,
+      link: "https://shadow-printing.com/",
+    },
+  ];
+
   return (
     <section className="relative">
-      {/* Banner Section */}
+      {/* ================== Banner Section ================== */}
       <div
-        className="h-[80vh] bg-cover bg-center relative"
+        className="h-[76vh] bg-cover bg-center relative"
         style={{ backgroundImage: `url(${img4})` }}
       >
         {/* Overlay */}
@@ -43,9 +73,6 @@ const OurBusiness = () => {
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                 </li>
 
-               
-             
-
                 {/* Dropdown - Our Business */}
                 <li className="relative">
                   <button
@@ -70,20 +97,16 @@ const OurBusiness = () => {
                     </svg>
                   </button>
 
-                  <span
-                    className={`absolute left-0 -bottom-1 h-[2px] bg-yellow-400 transition-all duration-300 ${
-                      dropdownOpen ? "w-full" : "w-0"
-                    }`}
-                  ></span>
-
                   {dropdownOpen && (
-                    <ul className="absolute top-10 left-0 w-64 rounded-xl shadow-lg py-3 
+                    <ul
+                      className="absolute top-10 left-0 w-64 rounded-xl shadow-lg py-3 
                                    bg-white/10 backdrop-blur-md border border-white/20 
-                                   text-white animate-fadeIn">
+                                   text-white animate-fadeIn"
+                    >
                       <li>
                         <a
                           href="/dr-fixit"
-                          className="block px-5 py-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-300 text-yellow-300 transition"
+                          className="block px-5 py-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                         >
                           Dr. Fixit Ltd.
                         </a>
@@ -166,108 +189,267 @@ const OurBusiness = () => {
               Welcome to Fixit Group
             </h1>
             <p className="text-base md:text-xl max-w-2xl mx-auto">
-              Building a stronger, smarter Bangladesh with innovation, quality, and trust.
+              Building a stronger, smarter Bangladesh with innovation, quality,
+              and trust.
             </p>
           </div>
         </div>
       </div>
-<section className="relative overflow-hidden">
-  {/* Wave Shape (orange background with curve) */}
- <div className="bg-[#A12420] w-full h-[200px]">
-   <div className="absolute top-0 right-0 w-full z-0">
-    <img
-      src={waveShape}
-      alt="Wave Shape"
-      className="w-full h-full object-cover"
-    />
-  </div>
-   <div className="relative z-10 flex flex-col md:flex-row items-center gap-4 md:gap-6 px-10 md:px-12 lg:px-50 pt-10 pb-8">
-    <img
-      src={logo5}
-      alt="Fixit Logo"
-      className="h-[70px] w-[70px] md:h-[90px] md:w-[90px] lg:h-[105px] lg:w-[105px]  object-contain"
-    />
-    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
-      About <span className="text-[#A12420]">Fixit Group</span>
-    </h2>
-  </div>
- </div>
 
-  {/* Header (Logo + About Text on orange area) */}
- 
+      {/* ================== About Section ================== */}
+      <section className="relative overflow-hidden">
+        {/* Wave Shape (orange background with curve) */}
+        <div className="bg-[#A12420] w-full h-[200px]">
+          <div className="absolute top-0 right-0 w-full z-0">
+            <img
+              src={waveShape}
+              alt="Wave Shape"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="relative z-10 flex flex-col md:flex-row items-center gap-4 md:gap-6 px-10 md:px-12 lg:px-50 pt-10 pb-8">
+            <img
+              src={logo5}
+              alt="Fixit Logo"
+              className="h-[70px] w-[70px] md:h-[90px] md:w-[90px] lg:h-[105px] lg:w-[105px]  object-contain"
+            />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
+              About <span className="text-[#A12420]">Fixit Group</span>
+            </h2>
+          </div>
+        </div>
 
-  {/* Red Content Section (corrected color) */}
-  <div className="relative bg-[#A12420] text-white px-6 md:px-12 lg:px-10 py-16 z-[-1000]">
-    <div className="max-w-[1488px] mx-auto">
-      <div className="space-y-6 text-lg leading-relaxed">
-        <p>
-          <span className="font-bold text-yellow-300">Fixit Group</span> began its
-          journey in 2019, entering the construction market in Bangladesh under the{" "}
-          <strong>National</strong> brand. We initially introduced a wide range of
-          construction chemical products, including{" "}
-          <strong>
-            Concrete Admixture, Waterproofing Experts for Leak-free Home, Damp Proofing,
-            Wall Crack & Water Wall Sealer
-          </strong>
-          . Within a short period, these products gained the trust and confidence of
-          customers nationwide, establishing{" "}
-          <span className="font-bold text-yellow-300">Fixit Group</span> as a trusted
-          and reliable name in the{" "}
-          <strong>Construction Chemical Industry of Bangladesh.</strong>
-        </p>
+        {/* Header (Logo + About Text on orange area) */}
 
-        <p>
-          In 2022, we expanded into the Lubricant Industry through our new brand,{" "}
-          <span className="font-bold text-yellow-300">JAGUAR</span>. Our goal was to
-          provide high-quality Industrial Lubricants and Automotive Lubricants,
-          ensuring superior performance for both industrial and automotive sectors.
-          Today, Jaguar Lubricants stands as a symbol of quality and long-lasting
-          performance in the Bangladesh market.
-        </p>
+        {/* Red Content Section (corrected color) */}
+        <div className="relative bg-[#A12420] text-white px-6 md:px-12 lg:px-10 py-16 z-[-1000]">
+          <div className="max-w-[1488px] mx-auto">
+            <div className="space-y-6 text-lg leading-relaxed">
+              <p>
+                <span className="font-bold text-yellow-300">Fixit Group</span>{" "}
+                began its journey in 2019, entering the construction market in
+                Bangladesh under the <strong>National</strong> brand. We
+                initially introduced a wide range of construction chemical
+                products, including{" "}
+                <strong>
+                  Concrete Admixture, Waterproofing Experts for Leak-free Home,
+                  Damp Proofing, Wall Crack & Water Wall Sealer
+                </strong>
+                . Within a short period, these products gained the trust and
+                confidence of customers nationwide, establishing{" "}
+                <span className="font-bold text-yellow-300">Fixit Group</span>{" "}
+                as a trusted and reliable name in the{" "}
+                <strong>Construction Chemical Industry of Bangladesh.</strong>
+              </p>
 
-        <p>
-          In 2024, our business entered a new era when we officially registered with
-          the Bangladesh Government under the name{" "}
-          <span className="font-bold text-yellow-300">Dr. Fixit Limited</span>,
-          obtaining RJSC certification along with all required legal and business
-          documents. This milestone marked a significant chapter in Fixit Group’s
-          history—a period of strong growth and overwhelming positive feedback from our
-          valued customers. Alhamdulillah!
-        </p>
+              <p>
+                In 2022, we expanded into the Lubricant Industry through our new
+                brand, <span className="font-bold text-yellow-300">JAGUAR</span>
+                . Our goal was to provide high-quality Industrial Lubricants and
+                Automotive Lubricants, ensuring superior performance for both
+                industrial and automotive sectors. Today, Jaguar Lubricants
+                stands as a symbol of quality and long-lasting performance in
+                the Bangladesh market.
+              </p>
 
-        <p>
-          In 2025, we proudly became the{" "}
-          <span className="font-bold text-yellow-300">Authorized Importer of Motul</span>{" "}
-          in Bangladesh. Through this partnership, we brought world-renowned{" "}
-          <strong>Motul Lubricants</strong> to the local market, further strengthening
-          our presence in the{" "}
-          <strong>automotive and industrial lubricant industry.</strong>
-        </p>
+              <p>
+                In 2024, our business entered a new era when we officially
+                registered with the Bangladesh Government under the name{" "}
+                <span className="font-bold text-yellow-300">
+                  Dr. Fixit Limited
+                </span>
+                , obtaining RJSC certification along with all required legal and
+                business documents. This milestone marked a significant chapter
+                in Fixit Group’s history—a period of strong growth and
+                overwhelming positive feedback from our valued customers.
+                Alhamdulillah!
+              </p>
 
-        <p>
-          However, our entrepreneurial journey began much earlier—back in 2014, with a
-          printing business named{" "}
-          <span className="italic font-bold">Shadow Design & Printing</span>. From that
-          humble beginning, we have gradually expanded across multiple sectors, driven
-          by dedication, innovation, and customer trust.
-        </p>
+              <p>
+                In 2025, we proudly became the{" "}
+                <span className="font-bold text-yellow-300">
+                  Authorized Importer of Motul
+                </span>{" "}
+                in Bangladesh. Through this partnership, we brought
+                world-renowned <strong>Motul Lubricants</strong> to the local
+                market, further strengthening our presence in the{" "}
+                <strong>automotive and industrial lubricant industry.</strong>
+              </p>
 
-        <p>
-          Today, <span className="font-bold text-yellow-300">Fixit Group</span> stands
-          as a symbol of quality, durability, and reliability in{" "}
-          <strong>Bangladesh’s construction, lubricant, and printing industries.</strong>
+              <p>
+                However, our entrepreneurial journey began much earlier—back in
+                2014, with a printing business named{" "}
+                <span className="italic font-bold">
+                  Shadow Design & Printing
+                </span>
+                . From that humble beginning, we have gradually expanded across
+                multiple sectors, driven by dedication, innovation, and customer
+                trust.
+              </p>
+
+              <p>
+                Today,{" "}
+                <span className="font-bold text-yellow-300">Fixit Group</span>{" "}
+                stands as a symbol of quality, durability, and reliability in{" "}
+                <strong>
+                  Bangladesh’s construction, lubricant, and printing industries.
+                </strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================== Logo Grid Section ================== */}
+      <section>
+        <div className="pt-20 md:pt-[200px]">
+          <Container>
+            <div className="text-center">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 sm:gap-12 justify-items-center pb-20 md:pb-[200px]">
+                {businesses.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:scale-105 transition-transform"
+                  >
+                    <img
+                      src={item.logo}
+                      alt={item.name}
+                      className="h-12 sm:h-16 md:h-20 object-contain"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </Container>
+        </div>
+      </section>
+
+      {/* ================== Vision / Mission / Goals ================== */}
+      <div className="max-w-8xl mx-auto bg-[#e6e7e870] my-10 text-gray-900 ">
+        {" "}
+        {/* Vision Section */}{" "}
+        <section className="flex p-10 flex-col md:flex-row items-stretch transition-all duration-300 cursor-pointer hover:bg-[#F9AE41]">
+          {" "}
+          {/* Left Heading */}{" "}
+          <div className="md:w-1/3 flex items-center justify-center">
+            {" "}
+            <h2 className="text-4xl md:text-5xl font-semibold text-center">
+              {" "}
+              Our Vision{" "}
+            </h2>{" "}
+          </div>{" "}
+          {/* Right Content */}{" "}
+          <div className="md:flex-1 p-10">
+            {" "}
+            <p className="text-justify leading-relaxed text-lg w-[800px]">
+              {" "}
+              To become one of the leading multi-sector companies in Bangladesh,
+              recognized for innovation, quality, and customer trust in the
+              fields of construction chemicals, lubricants, and printing
+              solutions. We aim to support national industrial growth through
+              sustainable, high-performance, and reliable products that make
+              life easier and businesses stronger.{" "}
+            </p>{" "}
+          </div>{" "}
+        </section>{" "}
+        {/* Mission Section */}{" "}
+        <section className="flex p-10 flex-col md:flex-row items-stretch transition-all duration-300 cursor-pointer bg-[#F9AE41]">
+          {" "}
+          {/* Left Heading */}{" "}
+          <div className="md:w-1/3 flex items-center justify-center p-10">
+            {" "}
+            <h2 className="text-4xl md:text-5xl font-semibold text-center">
+              {" "}
+              Our Mission{" "}
+            </h2>{" "}
+          </div>{" "}
+          {/* Right Content */}{" "}
+          <div className="md:flex-1 p-10">
+            {" "}
+            <ul className="list-disc list-inside space-y-3 text-lg leading-relaxed">
+              {" "}
+              <li>
+                {" "}
+                Deliver premium-quality products & services that exceed customer
+                expectations.{" "}
+              </li>{" "}
+              <li>
+                {" "}
+                Maintain honesty, transparency & professionalism in all
+                operations.{" "}
+              </li>{" "}
+              <li>
+                {" "}
+                Foster innovation & sustainability across all business sectors.{" "}
+              </li>{" "}
+              <li>
+                {" "}
+                Build long-term, trust-based relationships with customers,
+                employees and partners.{" "}
+              </li>{" "}
+            </ul>{" "}
+          </div>{" "}
+        </section>{" "}
+        {/* Goals Section */}{" "}
+        <section className="flex p-10 flex-col md:flex-row items-stretch transition-all duration-300 hover:bg-[#F9AE41]">
+          {" "}
+          {/* Left Heading */}{" "}
+          <div className="md:w-1/3 flex items-center justify-center p-10">
+            {" "}
+            <h2 className="text-4xl md:text-5xl font-semibold text-center">
+              {" "}
+              Our Goals{" "}
+            </h2>{" "}
+          </div>{" "}
+          {/* Right Content */}{" "}
+          <div className="md:flex-1 p-10">
+            {" "}
+            <ul className="list-disc list-inside space-y-3 text-lg leading-relaxed marker:text-red-500">
+              {" "}
+              <li>
+                Expand Fixit Group’s footprint both nationally and globally.
+              </li>{" "}
+              <li>
+                {" "}
+                Strengthen our portfolio in construction chemicals, industrial &
+                automotive lubricants, and printing solutions.{" "}
+              </li>{" "}
+              <li>
+                {" "}
+                Ensure 100% customer satisfaction through quality and
+                after-sales service.{" "}
+              </li>{" "}
+              <li>
+                {" "}
+                Promote eco-friendly & sustainable practices for a better
+                future.{" "}
+              </li>{" "}
+              <li>
+                {" "}
+                Develop a skilled and dedicated team to drive continuous growth.{" "}
+              </li>{" "}
+            </ul>{" "}
+          </div>{" "}
+        </section>{" "}
+      </div>
+
+      {/* ================== Final Statement ================== */}
+      <div className="flex items-center justify-center px-4 py-[80px] bg-white text-center">
+        <p className="text-xl leading-relaxed max-w-3xl">
+          <span className="text-red-600 underline font-semibold">
+            FIXIT GROUP
+          </span>{" "}
+          <span className="text-black">
+            is dedicated to quality, sustainability, and innovation – building a
+            stronger, smarter Bangladesh.
+          </span>
         </p>
       </div>
-    </div>
-  </div>
-</section>
-
-
-
     </section>
-    
   );
 };
 
 export default OurBusiness;
-
