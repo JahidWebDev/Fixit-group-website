@@ -13,7 +13,8 @@ import shadowLogo from "../../assets/Shadow-Design-logo.png";
 
 const OurBusiness = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [submenuOpen, setSubmenuOpen] = useState(false)
   const businesses = [
     {
       name: "Dr. Fixit",
@@ -41,8 +42,9 @@ const OurBusiness = () => {
     <section className="relative">
       {/* ================== Banner Section ================== */}
       <div
-        className="h-[76vh] bg-cover bg-center relative"
-        style={{ backgroundImage: `url(${img4})` }}
+        className="relative bg-center bg-cover h-[60vh] sm:h-[68vh] md:h-[76vh] lg:h-[82vh]"
+style={{ backgroundImage: `url(${img4})` }}
+aria-label="Hero background"
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
@@ -50,17 +52,21 @@ const OurBusiness = () => {
         {/* Navbar */}
         <div className="absolute top-0 left-0 w-full z-20">
           <Container>
-            <nav className="flex items-center justify-between py-5">
-              {/* Logo */}
-              <a href="/">
+           <header className="absolute top-0 left-0 w-full z-50">
+      <div className="flex justify-between items-center px-5 py-3 md:px-10">
+        {/* Logo */}
+      <div className="flex items-center justify-between py-5">
+ <a href="/">
                 <img
                   src={logo2}
                   alt="Fixit Logo"
                   className="h-[70px] w-[70px] md:h-[90px] md:w-[90px] lg:h-[105px] lg:w-[105px] cursor-pointer"
                 />
               </a>
+      </div>
 
-              {/* Menu */}
+        
+         {/* Menu */}
               <ul className="hidden md:flex items-center gap-6 md:gap-10 lg:gap-14 text-white font-normal text-lg">
                 {/* Home */}
                 <li className="relative group">
@@ -72,7 +78,15 @@ const OurBusiness = () => {
                   </a>
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                 </li>
-
+                 <li className="relative group">
+                  <a
+                    href="/our-business"
+                    className="transition-all duration-300 hover:text-yellow-400"
+                  >
+                    About Us
+                  </a>
+                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+                </li>
                 {/* Dropdown - Our Business */}
                 <li className="relative">
                   <button
@@ -106,7 +120,7 @@ const OurBusiness = () => {
                       <li>
                         <a
                           href="/dr-fixit"
-                          className="block px-5 py-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                          className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                         >
                           Dr. Fixit Ltd.
                         </a>
@@ -114,7 +128,7 @@ const OurBusiness = () => {
                       <li>
                         <a
                           href="/jaguar"
-                          className="block px-5 py-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                          className="block px-5 py-2 hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                         >
                           Jaguar Lubricants
                         </a>
@@ -122,7 +136,7 @@ const OurBusiness = () => {
                       <li>
                         <a
                           href="/motul"
-                          className="block px-5 py-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                          className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                         >
                           Motul
                         </a>
@@ -130,7 +144,7 @@ const OurBusiness = () => {
                       <li>
                         <a
                           href="/robinson"
-                          className="block px-5 py-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                          className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                         >
                           Robinson Can Industries
                         </a>
@@ -161,24 +175,136 @@ const OurBusiness = () => {
                 </li>
               </ul>
 
-              {/* Mobile Menu Icon */}
-              <div className="md:hidden text-white text-3xl cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2"
-                  stroke="currentColor"
-                  className="w-8 h-8"
+
+        {/* Hamburger Icon (Mobile) */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-white focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-8 h-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d={
+                menuOpen
+                  ? "M6 18L18 6M6 6l12 12" // Close (X)
+                  : "M4 6h16M4 12h16M4 18h16" // Hamburger
+              }
+            />
+          </svg>
+        </button>
+      </div>
+`
+
+
+
+
+`
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <>
+          {/* Background Overlay */}
+          <div
+            className="fixed inset-0 bg-black/40 z-40"
+            onClick={() => setMenuOpen(false)}
+          />
+
+          {/* Floating Dropdown Menu */}
+          <div
+            className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn"
+          >
+            <ul className="flex flex-col text-base font-medium py-4">
+              <li>
+                <button
+                  onClick={() => setSubmenuOpen(!submenuOpen)}
+                  className="w-full flex justify-between items-center px-5 py-3 hover:bg-gray-100"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </div>
-            </nav>
+                  PRODUCTS
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`w-4 h-4 transition-transform ${
+                      submenuOpen ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {/* Submenu */}
+                {submenuOpen && (
+                  <ul className="pl-6 bg-gray-50">
+                    <li>
+                      <a href="/new-construction" className="block px-4 py-2 hover:bg-gray-100">
+                        New Construction
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/repair-construction" className="block px-4 py-2 hover:bg-gray-100">
+                        Repair Construction
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/remover" className="block px-4 py-2 hover:bg-gray-100">
+                        Remover
+                      </a>
+                    </li>
+                  </ul>
+                )}
+              </li>
+
+              <li>
+                <a href="/resource" className="block px-5 py-3 hover:bg-gray-100">
+                  RESOURCE
+                </a>
+              </li>
+              <li>
+                <a href="/certificate" className="block px-5 py-3 hover:bg-gray-100">
+                  CERTIFICATE
+                </a>
+              </li>
+              <li>
+                <a href="/team" className="block px-5 py-3 hover:bg-gray-100">
+                  TEAM
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/yourwhatsapp"
+                  className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
+                >
+                  <span>Let’s Talk</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/dealer"
+                  className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
+                >
+                  <span>Find a Dealer</span>
+                </a>
+              </li>
+              <li>
+                <a href="/app" className="block px-5 py-3 hover:bg-gray-100">
+                  APP FOR CONTRACTOR
+                </a>
+              </li>
+            </ul>
+          </div>
+        </>
+      )}
+    </header>
+
           </Container>
         </div>
 
