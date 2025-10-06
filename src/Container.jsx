@@ -2,7 +2,7 @@ import React from "react";
 
 const Container = ({ children }) => {
   return (
-    <div className=" max-w-[1488px] mx-auto py-4">
+    <div className="max-w-[1488px] mx-auto">
       {children}
     </div>
   );
