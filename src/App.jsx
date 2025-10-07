@@ -8,8 +8,8 @@ import Employees from "./Components/Employees/Employees";
 import Admixture from "./Components/Admixture/Admixture";
 import Importing from "./Components/Importing/Importing";
 import Footer from "./Components/Footer/Footer";
-import OurBusiness from "./Components/Our-Business/OurBusiness";
-import DrFixit from "./Components/Dr-Fixit/drfixit";
+import OurBusiness from "./Components/OurBusiness/OurBusiness";
+import DrFixit from "./Components/DrFixit/drfixit";
 
 function Home() {
   return (
@@ -28,8 +28,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/our-business" element={<OurBusiness />} />
-        <Route path="/dr-fixit" element={<DrFixit />} />
+        <Route path="/ourbusiness" element={<OurBusiness />} />
+        <Route path="/drfixit" element={<DrFixit />} />
         <Route path="/admixture" element={<Admixture />} />
         <Route path="/importing" element={<Importing />} />
         <Route path="/employees" element={<Employees />} />

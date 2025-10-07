@@ -6,7 +6,7 @@ import img4 from "../../assets/Fixit-Group-About-us.png";
 import logo5 from "../../assets/Fixit-Group-Logo-Black-&-White.png";
 import waveShape from "../../assets/Fixit-Group-Branding-Icon.png";
 
-import fixitLogo from "../../assets/Dr.Fixit-Logo.png";
+import fixitLogo from "../../assets/Dr-Fixit-Logo.png";
 import jaguarLogo from "../../assets/Jaguar-logo.png";
 import motulLogo from "../../assets/Motul-Logo.png";
 import shadowLogo from "../../assets/Robinson-Can-Industrise.png";
@@ -76,7 +76,7 @@ const OurBusiness = () => {
                   </li>
                   <li className="relative group">
                     <Link
-                      to="/our-business"
+                      to="/ourbusiness"
                       className="transition-all duration-300 hover:text-yellow-400"
                     >
                       About Us
@@ -116,7 +116,7 @@ const OurBusiness = () => {
                       >
                         <li>
                           <Link
-                            to="/dr-fixit"
+                            to="/drfixit"
                             className="block px-5 py-2 hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                           >
                             Dr. Fixit Ltd.

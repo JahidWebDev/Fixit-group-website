@@ -79,7 +79,7 @@ const Hero = () => {
         {/* About Us */}
         <li className="relative group">
           <Link
-            to="/our-business"
+            to="/ourbusiness"
             className="transition-all duration-300 hover:text-yellow-400"
           >
             About Us
