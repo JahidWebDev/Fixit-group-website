@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Container from "../../Container";
 import logo2 from "../../assets/Fixit-Group-Logo-Black-&-White.png";
 import drfixitLogo from "../../assets/Dr-Fixit-Logo.png"
-const DrFixit = () => {
+const Drfixit = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -297,4 +297,4 @@ const DrFixit = () => {
   );
 };
 
-export default DrFixit;
+export default Drfixit;
