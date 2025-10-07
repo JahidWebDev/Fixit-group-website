@@ -9,7 +9,7 @@ import Admixture from "./Components/Admixture/Admixture/Admixture";
 import Importing from "./Components/Importing/Importing";
 import Footer from "./Components/Footer/Footer";
 import OurBusiness from "./Components/Our-Business/OurBusiness";
-
+import DrFixit from "./Components/Dr-Fixit/drfixit";
 function Home() {
   return (
     <>
@@ -30,10 +30,12 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/our-business" element={<OurBusiness />} /> {/* fixed */}
+        <Route path="/our-business" element={<OurBusiness />} /> 
+        <Route path="/dr-fixit" element={<DrFixit/>} />
         <Route path="/admixture" element={<Admixture />} />
         <Route path="/importing" element={<Importing />} />
         <Route path="/employees" element={<Employees />} />
+        
       </Routes>
 
       <Footer />

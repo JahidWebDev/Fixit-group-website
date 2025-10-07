@@ -9,7 +9,7 @@ import waveShape from "../../assets/Fixit-Group-Branding-Icon.png";
 import fixitLogo from "../../assets/Dr.Fixit-Logo.png";
 import jaguarLogo from "../../assets/Jaguar-logo.png";
 import motulLogo from "../../assets/Motul-Logo.png";
-import shadowLogo from "../../assets/Shadow-Design-logo.png";
+import shadowLogo from "../../assets/Robinson-Can-Industrise.png";
 import { Link } from "react-router-dom";
 
 const OurBusiness = () => {
@@ -18,22 +18,18 @@ const OurBusiness = () => {
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const businesses = [
     {
-    
       logo: fixitLogo,
       // link: "https://www.drfixit.co.in/",
     },
     {
-    
       logo: jaguarLogo,
       // link: "https://www.jaguar.com/",
     },
     {
-     
       logo: motulLogo,
       // link: "https://www.motul.com/",
     },
     {
-     
       logo: shadowLogo,
       // link: "https://shadow-printing.com/",
     },
@@ -119,36 +115,54 @@ const OurBusiness = () => {
                                    text-white animate-fadeIn"
                       >
                         <li>
-                          <a
-                            href="/dr-fixit"
-                            className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                          <Link
+                            to="/dr-fixit"
+                            className="block px-5 py-2 hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                           >
                             Dr. Fixit Ltd.
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          {/* <a
                             href="/jaguar"
                             className="block px-5 py-2 hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                           >
                             Jaguar Lubricants
-                          </a>
+                          </a> */}
+                           <Link
+                            to="/"
+                            className="block px-5 py-2 hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                          >
+                            Jaguar Lubricants
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          {/* <a
                             href="/motul"
                             className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                           >
                             Motul
-                          </a>
+                          </a> */}
+                           <Link
+                            to="/"
+                            className="block px-5 py-2 hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                          >
+                           Motul
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          {/* <a
                             href="/robinson"
                             className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                           >
                             Robinson Can Industries
-                          </a>
+                          </a> */}
+                           <Link
+                            to="/"
+                            className="block px-5 py-2 hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                          >
+                            Robinson Can Industries
+                          </Link>
                         </li>
                       </ul>
                     )}
@@ -201,7 +215,7 @@ const OurBusiness = () => {
                   </svg>
                 </button>
               </div>
-             
+
               {menuOpen && (
                 <>
                   {/* Background Overlay */}
@@ -358,13 +372,12 @@ const OurBusiness = () => {
             />
 
             {/* Heading */}
-           <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-black leading-tight">
-  About{" "}
-  <span className="text-white sm:text-[#A12420] font-bold">
-    Fixit Group
-  </span>
-</h2>
-
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-black leading-tight">
+              About{" "}
+              <span className="text-white sm:text-[#A12420] font-bold">
+                Fixit Group
+              </span>
+            </h2>
           </div>
         </div>
 
@@ -375,8 +388,8 @@ const OurBusiness = () => {
           <div className="max-w-[1488px] mx-auto">
             <div className="space-y-6 text-lg leading-relaxed">
               <p>
-                <span className="font-bold text-yellow-300">Fixit Group</span>{" "}
-                began its journey in 2019, entering the construction market in
+                <span className="font-bold text-white">Fixit Group</span> began
+                its journey in 2019, entering the construction market in
                 Bangladesh under the <strong>National</strong> brand. We
                 initially introduced a wide range of construction chemical
                 products, including{" "}
@@ -386,15 +399,15 @@ const OurBusiness = () => {
                 </strong>
                 . Within a short period, these products gained the trust and
                 confidence of customers nationwide, establishing{" "}
-                <span className="font-bold text-yellow-300">Fixit Group</span>{" "}
-                as a trusted and reliable name in the{" "}
+                <span className="font-bold text-white">Fixit Group</span> as a
+                trusted and reliable name in the{" "}
                 <strong>Construction Chemical Industry of Bangladesh.</strong>
               </p>
 
               <p>
                 In 2022, we expanded into the Lubricant Industry through our new
-                brand, <span className="font-bold text-yellow-300">JAGUAR</span>
-                . Our goal was to provide high-quality Industrial Lubricants and
+                brand, <span className="font-bold text-white">JAGUAR</span>. Our
+                goal was to provide high-quality Industrial Lubricants and
                 Automotive Lubricants, ensuring superior performance for both
                 industrial and automotive sectors. Today, Jaguar Lubricants
                 stands as a symbol of quality and long-lasting performance in
@@ -404,10 +417,8 @@ const OurBusiness = () => {
               <p>
                 In 2024, our business entered a new era when we officially
                 registered with the Bangladesh Government under the name{" "}
-                <span className="font-bold text-yellow-300">
-                  Dr. Fixit Limited
-                </span>
-                , obtaining RJSC certification along with all required legal and
+                <span className="font-bold text-white">Dr. Fixit Limited</span>,
+                obtaining RJSC certification along with all required legal and
                 business documents. This milestone marked a significant chapter
                 in Fixit Group’s history—a period of strong growth and
                 overwhelming positive feedback from our valued customers.
@@ -416,7 +427,7 @@ const OurBusiness = () => {
 
               <p>
                 In 2025, we proudly became the{" "}
-                <span className="font-bold text-yellow-300">
+                <span className="font-bold text-white">
                   Authorized Importer of Motul
                 </span>{" "}
                 in Bangladesh. Through this partnership, we brought
@@ -438,7 +449,7 @@ const OurBusiness = () => {
 
               <p>
                 Today,{" "}
-                <span className="font-bold text-yellow-300">Fixit Group</span>{" "}
+                <span className="font-bold text-white ">Fixit Group</span>{" "}
                 stands as a symbol of quality, durability, and reliability in{" "}
                 <strong>
                   Bangladesh’s construction, lubricant, and printing industries.
@@ -450,103 +461,124 @@ const OurBusiness = () => {
       </section>
 
       {/* ================== Logo Grid Section ================== */}
-<section>
-  <div className="pt-20 md:pt-[200px]">
-    <Container>
-      <div className="text-center">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-10 justify-items-center pb-20 md:pb-[200px]">
-          {businesses.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
-            >
-              <div className="flex items-center justify-center w-[140px] sm:w-[160px] md:w-[220px] h-[70px] sm:h-[90px] md:h-[110px]   transition-all duration-300">
-                <img
-                  src={item.logo}
-                  alt={item.name}
-                  className="max-h-[80%] max-w-[90%] object-contain group-hover:scale-110 transition-transform duration-300"
-                />
+      <section>
+        <div className="pt-20 md:pt-[200px]">
+          <Container>
+            <div className="text-center">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-10 justify-items-center pb-20 md:pb-[200px]">
+                {businesses.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+                  >
+                    <div className="flex items-center justify-center w-[140px] sm:w-[160px] md:w-[220px] h-[70px] sm:h-[90px] md:h-[110px]   transition-all duration-300">
+                      <img
+                        src={item.logo}
+                        alt={item.name}
+                        className="max-h-[80%] max-w-[90%] object-contain group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <p className="mt-3 text-sm sm:text-base font-semibold text-gray-800">
+                      {item.name}
+                    </p>
+                  </a>
+                ))}
               </div>
-              <p className="mt-3 text-sm sm:text-base font-semibold text-gray-800">
-                {item.name}
-              </p>
-            </a>
-          ))}
+            </div>
+          </Container>
         </div>
-      </div>
-    </Container>
-  </div>
-</section>
-
+      </section>
 
       {/* ================== Vision / Mission / Goals ================== */}
       <div className="max-w-8xl mx-auto bg-[#e6e7e870] my-10 text-gray-900 ">
         {" "}
         {/* Vision Section */}{" "}
-       <section className="flex flex-col md:flex-row items-stretch p-6 sm:p-8 md:p-10 transition-all duration-300 cursor-pointer hover:bg-white">
-  {/* Left Heading */}
-  <div className="md:w-1/3 flex items-center justify-center mb-6 md:mb-0">
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center">
-      Our Vision
-    </h2>
-  </div>
+        <section className="flex flex-col md:flex-row items-stretch p-6 sm:p-8 md:p-10 transition-all duration-300 cursor-pointer hover:bg-white">
+          {/* Left Heading */}
+          <div className="md:w-1/3 flex items-center justify-center mb-6 md:mb-0">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center">
+              Our Vision
+            </h2>
+          </div>
 
-  {/* Right Content */}
-  <div className="md:flex-1 md:p-10 px-2 sm:px-4">
-    <p className="text-justify leading-relaxed text-base sm:text-lg max-w-[600px]">
-      To become one of the leading multi-sector companies in Bangladesh,
-      recognized for innovation, quality, and customer trust in the fields of
-      construction chemicals, lubricants, and printing solutions. We aim to
-      support national industrial growth through sustainable, high-performance,
-      and reliable products that make life easier and businesses stronger.
-    </p>
-  </div>
-</section>
-
+          {/* Right Content */}
+          <div className="md:flex-1 md:p-10 px-2 sm:px-4">
+            <p className="text-justify leading-relaxed text-base sm:text-lg max-w-[600px]">
+              To become one of the leading multi-sector companies in Bangladesh,
+              recognized for innovation, quality, and customer trust in the
+              fields of construction chemicals, lubricants, and printing
+              solutions. We aim to support national industrial growth through
+              sustainable, high-performance, and reliable products that make
+              life easier and businesses stronger.
+            </p>
+          </div>
+        </section>
         {/* Mission Section */}{" "}
         <section className="flex flex-col md:flex-row items-stretch p-6 sm:p-8 md:p-10 transition-all duration-300 cursor-pointer bg-[#F9AE41] hover:bg-[#fbbb4d]">
-  {/* Left Heading */}
-  <div className="md:w-1/3 flex items-center justify-center mb-6 md:mb-0 px-2 sm:px-4">
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center">
-      Our Mission
-    </h2>
-  </div>
+          {/* Left Heading */}
+          <div className="md:w-1/3 flex items-center justify-center mb-6 md:mb-0 px-2 sm:px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center">
+              Our Mission
+            </h2>
+          </div>
 
-  {/* Right Content */}
-  <div className="md:flex-1 md:p-8 px-2 sm:px-4">
-    <ul className="list-disc list-inside space-y-3 text-base sm:text-lg leading-relaxed">
-      <li>Deliver premium-quality products & services that exceed customer expectations.</li>
-      <li>Maintain honesty, transparency & professionalism in all operations.</li>
-      <li>Foster innovation & sustainability across all business sectors.</li>
-      <li>Build long-term, trust-based relationships with customers, employees, and partners.</li>
-    </ul>
-  </div>
-</section>
-
+          {/* Right Content */}
+          <div className="md:flex-1 md:p-8 px-2 sm:px-4">
+            <ul className="list-disc list-inside space-y-3 text-base sm:text-lg leading-relaxed">
+              <li>
+                Deliver premium-quality products & services that exceed customer
+                expectations.
+              </li>
+              <li>
+                Maintain honesty, transparency & professionalism in all
+                operations.
+              </li>
+              <li>
+                Foster innovation & sustainability across all business sectors.
+              </li>
+              <li>
+                Build long-term, trust-based relationships with customers,
+                employees, and partners.
+              </li>
+            </ul>
+          </div>
+        </section>
         {/* Goals Section */}{" "}
-       <section className="flex flex-col md:flex-row items-stretch p-6 sm:p-8 md:p-10 transition-all duration-300 hover:bg-white">
-  {/* Left Heading */}
-  <div className="md:w-1/3 flex items-center justify-center mb-6 md:mb-0 px-2 sm:px-4">
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center">
-      Our Goals
-    </h2>
-  </div>
+        <section className="flex flex-col md:flex-row items-stretch p-6 sm:p-8 md:p-10 transition-all duration-300 hover:bg-white">
+          {/* Left Heading */}
+          <div className="md:w-1/3 flex items-center justify-center mb-6 md:mb-0 px-2 sm:px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center">
+              Our Goals
+            </h2>
+          </div>
 
-  {/* Right Content */}
-  <div className="md:flex-1 md:p-8 px-2 sm:px-4">
-    <ul className="list-disc list-inside space-y-3 text-base sm:text-lg leading-relaxed marker:text-red-500">
-      <li>Expand Fixit Group’s footprint both nationally and globally.</li>
-      <li>Strengthen our portfolio in construction chemicals, industrial & automotive lubricants, and printing solutions.</li>
-      <li>Ensure 100% customer satisfaction through quality and after-sales service.</li>
-      <li>Promote eco-friendly & sustainable practices for a better future.</li>
-      <li>Develop a skilled and dedicated team to drive continuous growth.</li>
-    </ul>
-  </div>
-</section>
-
+          {/* Right Content */}
+          <div className="md:flex-1 md:p-8 px-2 sm:px-4">
+            <ul className="list-disc list-inside space-y-3 text-base sm:text-lg leading-relaxed marker:text-red-500">
+              <li>
+                Expand Fixit Group’s footprint both nationally and globally.
+              </li>
+              <li>
+                Strengthen our portfolio in construction chemicals, industrial &
+                automotive lubricants, and printing solutions.
+              </li>
+              <li>
+                Ensure 100% customer satisfaction through quality and
+                after-sales service.
+              </li>
+              <li>
+                Promote eco-friendly & sustainable practices for a better
+                future.
+              </li>
+              <li>
+                Develop a skilled and dedicated team to drive continuous growth.
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
 
       {/* ================== Final Statement ================== */}

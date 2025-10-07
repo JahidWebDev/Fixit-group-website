@@ -3,7 +3,7 @@ import React from "react";
 import fixitLogo from "../../assets/Dr.Fixit-Logo.png";
 import jaguarLogo from "../../assets/Jaguar-logo.png";
 import motulLogo from "../../assets/Motul-Logo.png";
-import shadowLogo from "../../assets/Shadow-Design-logo.png";
+import shadowLogo from "../../assets/Robinson-Can-Industrise.png";
 import Container from "../../Container";
 
 const Business = () => {
