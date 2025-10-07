@@ -9,7 +9,8 @@ import Admixture from "./Components/Admixture/Admixture";
 import Importing from "./Components/Importing/Importing";
 import Footer from "./Components/Footer/Footer";
 import OurBusiness from "./Components/OurBusiness/OurBusiness";
-import Drfixit from "./Components/Drfixit/Drfixit";
+import Drfixit from "./Components/Drfixitgroup/drfixit";
+
 
 
 
@@ -31,7 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ourbusiness" element={<OurBusiness />} />
-        <Route path="/drfixit" element={<Drfixit />} />
+        <Route path="/drfixit" element={<Drfixit/>} />
         <Route path="/admixture" element={<Admixture />} />
         <Route path="/importing" element={<Importing />} />
         <Route path="/employees" element={<Employees />} />
