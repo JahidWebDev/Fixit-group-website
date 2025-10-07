@@ -1,34 +1,25 @@
 @import "tailwindcss";
 
-
+/* ✅ Corrected font-face rules */
 @font-face {
-  font-family: OpenSans;
+  font-family: "OpenSans";
   font-style: normal;
   font-weight: 300 800;
   font-display: swap;
-
-  src: url("../src/assets/Fonts/OpenSans-Regular.ttf") format("woff2");
+  src: url("../src/assets/Fonts/OpenSans-Regular.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: RobotoSlab;
+  font-family: "RobotoSlab";
   font-style: normal;
   font-weight: 300 800;
   font-display: swap;
+  src: url("../src/assets/Fonts/RobotoSlab-VariableFont_wght.ttf") format("truetype");
+}
 
-  src: url("../src/assets/Fonts/RobotoSlab-VariableFont_wght.ttf") format("woff2");
-}
-@keyframes gradient-x {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
+
 .animate-gradient-x {
   animation: gradient-x 5s ease infinite;
 }
 
-@theme {
-  --font-OpenSans: "OpenSans", sans-serif; 
-}
-@theme {
-  --font-family: "Montserrat", sans-serif;
- 
-}
+
