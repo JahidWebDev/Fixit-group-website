@@ -115,7 +115,7 @@ const Hero = () => {
             >
               <li>
                 <Link
-                  to="/dr-fixit"
+                  to="/drfixit"
                   className="block px-5 py-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                 >
                   Dr. Fixit Ltd.
@@ -318,6 +318,7 @@ const Hero = () => {
                 <div className="relative mt-6">
                   <div className="absolute top-[-20px] right-0 w-[250px] border-t-6 border-white rounded-full "></div>
                   <div className="absolute top-[-18px] right-[200px] w-[336px] border-t border-white rounded-full "></div>
+                  
                   <p className="mt-3 text-[32px] font-['Open_Sans']">
                     We Build • We Bond • We Believe
                   </p>
