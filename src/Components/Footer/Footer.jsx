@@ -42,10 +42,10 @@ const Footer = () => {
         <div className="text-center md:text-left w-full md:w-1/4">
           <h4 className="font-semibold text-lg uppercase mb-2">Quick Links</h4>
           <ul className="space-y-1">
-            <li><Link href="#" className="hover:underline">Home</Link></li>
-            <li><Link href="#" className="hover:underline">Our Business</Link></li>
-            <li><Link href="#" className="hover:underline">Careers</Link></li>
-            <li><Link href="#" className="hover:underline">Contact</Link></li>
+            <li><Link to="#" className="hover:underline">Home</Link></li>
+            <li><Link to="#" className="hover:underline">Our Business</Link></li>
+            <li><Link to="#" className="hover:underline">Careers</Link></li>
+            <li><Link to="#" className="hover:underline">Contact</Link></li>
           </ul>
         </div>
 
@@ -53,8 +53,8 @@ const Footer = () => {
         <div className="text-center md:text-left w-full md:w-1/4">
           <h4 className="font-semibold text-lg uppercase mb-2">Legal & Press</h4>
           <ul className="space-y-1">
-            <li><Link href="#" className="hover:underline">Certificate</Link></li>
-            <li><Link href="#" className="hover:underline">Papers</Link></li>
+            <li><Link to="#" className="hover:underline">Certificate</Link></li>
+            <li><Link to="#" className="hover:underline">Papers</Link></li>
           </ul>
         </div>
       </div>
