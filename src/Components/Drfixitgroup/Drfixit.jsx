@@ -11,7 +11,7 @@ const Drfixit = () => {
   return (
     <section className="w-full  z-50">
       <Container>
-              <header className="border-b bg-amber-600 border-[#b71c1c]/20">
+              <header className="border-b bg-amber-600">
         <div className="max-w-[1600px] mx-auto px-20 sm:px-6 md:px-10 py-4 flex justify-between items-center">
           {/* Left: Logo */}
           <div className="flex items-center">
