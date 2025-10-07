@@ -53,25 +53,25 @@ const OurBusiness = () => {
               <div className="max-w-[1600px] mx-auto flex justify-between items-center px-5 py-3 md:px-10">
                 {/* Logo */}
                 <div className="flex items-center justify-between py-5">
-                  <a href="/">
+                  <Link to="/">
                     <img
                       src={logo2}
                       alt="Fixit Logo"
                       className="h-[70px] w-[70px] md:h-[90px] md:w-[90px] lg:h-[105px] lg:w-[105px] cursor-pointer"
                     />
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Menu */}
                 <ul className="hidden md:flex items-center gap-6 md:gap-10 lg:gap-14 text-white font-normal text-lg">
                   {/* Home */}
                   <li className="relative group">
-                    <a
-                      href="/"
+                    <Link
+                      to="/"
                       className="transition-all duration-300 hover:text-yellow-400"
                     >
                       Home
-                    </a>
+                    </Link>
                     <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                   </li>
                   <li className="relative group">
@@ -123,12 +123,12 @@ const OurBusiness = () => {
                           </Link>
                         </li>
                         <li>
-                          {/* <a
-                            href="/jaguar"
+                          {/* <Link
+                            to="/jaguar"
                             className="block px-5 py-2 hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                           >
                             Jaguar Lubricants
-                          </a> */}
+                          </Link> */}
                            <Link
                             to="/"
                             className="block px-5 py-2 hover:bg-yellow-500/20 hover:text-yellow-300 transition"
@@ -137,12 +137,12 @@ const OurBusiness = () => {
                           </Link>
                         </li>
                         <li>
-                          {/* <a
-                            href="/motul"
+                          {/* <Link
+                            to="/motul"
                             className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                           >
                             Motul
-                          </a> */}
+                          </Link> */}
                            <Link
                             to="/"
                             className="block px-5 py-2 hover:bg-yellow-500/20 hover:text-yellow-300 transition"
@@ -151,12 +151,12 @@ const OurBusiness = () => {
                           </Link>
                         </li>
                         <li>
-                          {/* <a
-                            href="/robinson"
+                          {/* <Link
+                            to="/robinson"
                             className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                           >
                             Robinson Can Industries
-                          </a> */}
+                          </Link> */}
                            <Link
                             to="/"
                             className="block px-5 py-2 hover:bg-yellow-500/20 hover:text-yellow-300 transition"
@@ -170,23 +170,23 @@ const OurBusiness = () => {
 
                   {/* Careers */}
                   <li className="relative group">
-                    <a
-                      href="/careers"
+                    <Link
+                      to="/careers"
                       className="transition-all duration-300 hover:text-yellow-400"
                     >
                       Careers
-                    </a>
+                    </Link>
                     <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                   </li>
 
                   {/* Contact */}
                   <li>
-                    <a
-                      href="/contact"
+                    <Link
+                      to="/contact"
                       className="px-6 py-2 bg-yellow-500 text-black font-semibold rounded-md hover:bg-yellow-600 transition"
                     >
                       CONTACT
-                    </a>
+                    </Link>
                   </li>
                 </ul>
 
@@ -255,80 +255,80 @@ const OurBusiness = () => {
                         {submenuOpen && (
                           <ul className="pl-6 bg-gray-50">
                             <li>
-                              <a
-                                href="/new-construction"
+                              <Link
+                                to="/new-construction"
                                 className="block px-4 py-2 hover:bg-gray-100"
                               >
                                 New Construction
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a
-                                href="/repair-construction"
+                              <Link
+                                to="/repair-construction"
                                 className="block px-4 py-2 hover:bg-gray-100"
                               >
                                 Repair Construction
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a
-                                href="/remover"
+                              <Link
+                                to="/remover"
                                 className="block px-4 py-2 hover:bg-gray-100"
                               >
                                 Remover
-                              </a>
+                              </Link>
                             </li>
                           </ul>
                         )}
                       </li>
 
                       <li>
-                        <a
-                          href="/resource"
+                        <Link
+                          to="/resource"
                           className="block px-5 py-3 hover:bg-gray-100"
                         >
                           RESOURCE
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/certificate"
+                        <Link
+                          to="/certificate"
                           className="block px-5 py-3 hover:bg-gray-100"
                         >
                           CERTIFICATE
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/team"
+                        <Link
+                          to="/team"
                           className="block px-5 py-3 hover:bg-gray-100"
                         >
                           TEAM
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="https://wa.me/yourwhatsapp"
+                        <Link
+                          to="https://wa.me/yourwhatsapp"
                           className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
                         >
                           <span>Let’s Talk</span>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/dealer"
+                        <Link
+                          to="/dealer"
                           className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
                         >
-                          <span>Find a Dealer</span>
-                        </a>
+                          <span>Find Link Dealer</span>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/app"
+                        <Link
+                          to="/app"
                           className="block px-5 py-3 hover:bg-gray-100"
                         >
                           APP FOR CONTRACTOR
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -345,7 +345,7 @@ const OurBusiness = () => {
               Welcome to Fixit Group
             </h1>
             <p className="text-base md:text-xl max-w-2xl mx-auto">
-              Building a stronger, smarter Bangladesh with innovation, quality,
+              Building Link stronger, smarter Bangladesh with innovation, quality,
               and trust.
             </p>
           </div>
@@ -391,15 +391,15 @@ const OurBusiness = () => {
                 <span className="font-bold text-white">Fixit Group</span> began
                 its journey in 2019, entering the construction market in
                 Bangladesh under the <strong>National</strong> brand. We
-                initially introduced a wide range of construction chemical
+                initially introduced Link wide range of construction chemical
                 products, including{" "}
                 <strong>
                   Concrete Admixture, Waterproofing Experts for Leak-free Home,
                   Damp Proofing, Wall Crack & Water Wall Sealer
                 </strong>
-                . Within a short period, these products gained the trust and
+                . Within Link short period, these products gained the trust and
                 confidence of customers nationwide, establishing{" "}
-                <span className="font-bold text-white">Fixit Group</span> as a
+                <span className="font-bold text-white">Fixit Group</span> as Link
                 trusted and reliable name in the{" "}
                 <strong>Construction Chemical Industry of Bangladesh.</strong>
               </p>
@@ -410,16 +410,16 @@ const OurBusiness = () => {
                 goal was to provide high-quality Industrial Lubricants and
                 Automotive Lubricants, ensuring superior performance for both
                 industrial and automotive sectors. Today, Jaguar Lubricants
-                stands as a symbol of quality and long-lasting performance in
+                stands as Link symbol of quality and long-lasting performance in
                 the Bangladesh market.
               </p>
 
               <p>
-                In 2024, our business entered a new era when we officially
+                In 2024, our business entered Link new era when we officially
                 registered with the Bangladesh Government under the name{" "}
                 <span className="font-bold text-white">Dr. Fixit Limited</span>,
                 obtaining RJSC certification along with all required legal and
-                business documents. This milestone marked a significant chapter
+                business documents. This milestone marked Link significant chapter
                 in Fixit Group’s history—a period of strong growth and
                 overwhelming positive feedback from our valued customers.
                 Alhamdulillah!
@@ -438,7 +438,7 @@ const OurBusiness = () => {
 
               <p>
                 However, our entrepreneurial journey began much earlier—back in
-                2014, with a printing business named{" "}
+                2014, with Link printing business named{" "}
                 <span className="italic font-bold">
                   Shadow Design & Printing
                 </span>
@@ -450,7 +450,7 @@ const OurBusiness = () => {
               <p>
                 Today,{" "}
                 <span className="font-bold text-white ">Fixit Group</span>{" "}
-                stands as a symbol of quality, durability, and reliability in{" "}
+                stands as Link symbol of quality, durability, and reliability in{" "}
                 <strong>
                   Bangladesh’s construction, lubricant, and printing industries.
                 </strong>
@@ -467,9 +467,9 @@ const OurBusiness = () => {
             <div className="text-center">
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-10 justify-items-center pb-20 md:pb-[200px]">
                 {businesses.map((item, index) => (
-                  <a
+                  <Link
                     key={index}
-                    href={item.link}
+                    to={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
@@ -484,7 +484,7 @@ const OurBusiness = () => {
                     <p className="mt-3 text-sm sm:text-base font-semibold text-gray-800">
                       {item.name}
                     </p>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -570,11 +570,11 @@ const OurBusiness = () => {
                 after-sales service.
               </li>
               <li>
-                Promote eco-friendly & sustainable practices for a better
+                Promote eco-friendly & sustainable practices for Link better
                 future.
               </li>
               <li>
-                Develop a skilled and dedicated team to drive continuous growth.
+                Develop Link skilled and dedicated team to drive continuous growth.
               </li>
             </ul>
           </div>
@@ -588,7 +588,7 @@ const OurBusiness = () => {
             FIXIT GROUP
           </span>{" "}
           <span className="text-black">
-            is dedicated to quality, sustainability, and innovation – building a
+            is dedicated to quality, sustainability, and innovation – building Link
             stronger, smarter Bangladesh.
           </span>
         </p>

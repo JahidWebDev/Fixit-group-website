@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/Fixit-group-logo-White-color.png";
 import footerbg from "../../assets/Fixit-Group-Logo-Icon.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -41,10 +42,10 @@ const Footer = () => {
         <div className="text-center md:text-left w-full md:w-1/4">
           <h4 className="font-semibold text-lg uppercase mb-2">Quick Links</h4>
           <ul className="space-y-1">
-            <li><a href="#" className="hover:underline">Home</a></li>
-            <li><a href="#" className="hover:underline">Our Business</a></li>
-            <li><a href="#" className="hover:underline">Careers</a></li>
-            <li><a href="#" className="hover:underline">Contact</a></li>
+            <li><Link href="#" className="hover:underline">Home</Link></li>
+            <li><Link href="#" className="hover:underline">Our Business</Link></li>
+            <li><Link href="#" className="hover:underline">Careers</Link></li>
+            <li><Link href="#" className="hover:underline">Contact</Link></li>
           </ul>
         </div>
 
@@ -52,8 +53,8 @@ const Footer = () => {
         <div className="text-center md:text-left w-full md:w-1/4">
           <h4 className="font-semibold text-lg uppercase mb-2">Legal & Press</h4>
           <ul className="space-y-1">
-            <li><a href="#" className="hover:underline">Certificate</a></li>
-            <li><a href="#" className="hover:underline">Papers</a></li>
+            <li><Link href="#" className="hover:underline">Certificate</Link></li>
+            <li><Link href="#" className="hover:underline">Papers</Link></li>
           </ul>
         </div>
       </div>
