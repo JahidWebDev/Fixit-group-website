@@ -88,66 +88,50 @@ const Hero = () => {
         </li>
 
         {/* Dropdown - Our Business */}
-        <li className="relative">
-          <button
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="transition-all duration-300 hover:text-yellow-400 flex items-center"
-          >
-            Our Business
-            <svg
-              className={`ml-1 w-4 h-4 transform transition-transform duration-300 ${
-                dropdownOpen ? "rotate-180" : "rotate-0"
-              }`}
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-
-          {dropdownOpen && (
-            <ul
-              className="absolute top-10 left-0 w-64 rounded-xl shadow-lg py-3 
-                         bg-white/10 backdrop-blur-md border border-white/20 
-                         text-white animate-fadeIn"
-            >
-              <li>
-                <Link
-                  to="/drfixit"
-                  className="block px-5 py-2   hover:bg-yellow-500/20 hover:text-yellow-300 transition"
-                >
-                  Dr. Fixit Ltd.
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/jaguar"
-                  className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
-                >
-                  Jaguar Lubricants
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/motul"
-                  className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
-                >
-                  Motul
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/robinson"
-                  className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
-                >
-                  Robinson Can Industries
-                </Link>
-              </li>
-            </ul>
-          )}
-        </li>
+       <li className="relative">
+         <button
+           onClick={() => setDropdownOpen(!dropdownOpen)}
+           className="transition-all duration-300 hover:text-yellow-400 flex items-center"
+         >
+           Our Business
+           <svg
+             className={`ml-1 w-4 h-4 transform transition-transform duration-300 ${
+               dropdownOpen ? "rotate-180" : "rotate-0"
+             }`}
+             fill="none"
+             stroke="currentColor"
+             strokeWidth="2"
+             viewBox="0 0 24 24"
+           >
+             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+           </svg>
+         </button>
+       
+         {dropdownOpen && (
+           <ul
+             className="absolute top-10 left-0 w-64 rounded-xl shadow-xl py-3
+                        bg-yellow-400/60 backdrop-blur-lg border border-yellow-300/50
+                        text-black animate-fadeIn z-50"
+           >
+             {[
+               { name: "Dr. Fixit Ltd.", to: "/drfixit" },
+               { name: "Jaguar Lubricants", to: "/jaguar" },
+               { name: "Motul", to: "/motul" },
+               { name: "Robinson Can Industries", to: "/robinson" },
+             ].map((item) => (
+               <li key={item.to}>
+                 <Link
+                   to={item.to}
+                   className="block px-5 py-2 font-semibold  transition-all duration-300
+                              hover:bg-red-700/60  hover:text-white"
+                 >
+                   {item.name}
+                 </Link>
+               </li>
+             ))}
+           </ul>
+         )}
+       </li>
 
         {/* Careers */}
         <li className="relative group">
