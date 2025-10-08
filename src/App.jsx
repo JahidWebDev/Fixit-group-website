@@ -7,10 +7,9 @@ import Business from "./Components/Business/Business";
 import Employees from "./Components/Employees/Employees";
 import Admixture from "./Components/Admixture/Admixture";
 import Importing from "./Components/Importing/Importing";
-import Footer from "./Components/Footer/Footer";
 import OurBusiness from "./Components/OurBusiness/OurBusiness";
 import Drfixit from "./Components/Drfixitgroup/drfixit";
-
+import Footer from "./Components/Footer/Footer";
 
 function Home() {
   return (
