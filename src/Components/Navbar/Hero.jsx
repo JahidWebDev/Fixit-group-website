@@ -116,7 +116,7 @@ const Hero = () => {
               <li>
                 <Link
                   to="/drfixit"
-                  className="block px-5 py-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                  className="block px-5 py-2   hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                 >
                   Dr. Fixit Ltd.
                 </Link>
@@ -124,7 +124,7 @@ const Hero = () => {
               <li>
                 <Link
                   to="/jaguar"
-                  className="block px-5 py-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                  className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                 >
                   Jaguar Lubricants
                 </Link>
@@ -132,7 +132,7 @@ const Hero = () => {
               <li>
                 <Link
                   to="/motul"
-                  className="block px-5 py-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                  className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                 >
                   Motul
                 </Link>
@@ -140,7 +140,7 @@ const Hero = () => {
               <li>
                 <Link
                   to="/robinson"
-                  className="block px-5 py-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-300 transition"
+                  className="block px-5 py-2  hover:bg-yellow-500/20 hover:text-yellow-300 transition"
                 >
                   Robinson Can Industries
                 </Link>
