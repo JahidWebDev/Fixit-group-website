@@ -1,16 +1,27 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
+
 // import Container from "../../Container";
-import logo2 from "../../assets/Fixit-Group-Logo-Black-&-White.png";
+import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
 import drfixitLogo from "../../assets/Dr-Fixit-Logo.png";
-import bgImage from "../../assets//Backround.png";
+import callIcon from "../../assets/Call-Icon-Green.png";
+;
+import bgImage from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-Ads-Baneer.png";
 import fixitHelmet from "../../assets/Biulding-&-Cap.png";
-import product1 from "../../assets/Dr-Fixit-Logo.png";
-import product2 from "../../assets/Dr-Fixit-Logo.png";
-import product3 from "../../assets/Dr-Fixit-Logo.png";
-// import product4 from "../../assets/Dr-Fixit-Logo.png";
-// import product5 from "../../assets/Dr-Fixit-Logo.png";
-// import product6 from "../../assets/Dr-Fixit-Logo.png";
+import product1 from "../../assets/Dr-Fixit-Brand-LW+-101-1-Litre.png";
+import product2 from "../../assets/Dr-Fixit-Brand-LW+-101-5-Litre.png";
+import product3 from "../../assets/Dr-Fixit-Brand-LW-101-30-Litre.png";
+import product4 from "../../assets/Dr-Fixit-Brand-LW-101-18-Litre.png";
+import product5 from "../../assets/Dr-Fixit-Brand-5400-Interior-Wall-Selaer.png";
+import product6 from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-18-litre.png";
+import product7 from "../../assets/Dr-Fixit-Brand-5400-Interior-Wall-Selaer.png";
+import product8 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-18-Litre 02.png";
+import product9 from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-18-litre.png";
+import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre.png";
+import product11 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-5-Litre.png";
+import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
+import product13 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-18-Litre.png";
 
 const Drfixit = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,59 +30,196 @@ const Drfixit = () => {
 
   const [selectedCategory, setSelectedCategory] = useState("All Products");
 
-  const products = [
-    {
-      id: 1,
-      name: "Dr Fixit Brand LW 101",
-      desc: "1 Liter Waterproofing Expert",
-      category: "Admixture",
-      img: product1,
-    },
-    {
-      id: 2,
-      name: "Dr Fixit Brand 302 Super Latex",
-      desc: "0.5 Liter Waterproofing Expert",
-      category: "Sealer",
-      img: product2,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand 302 Super Latex",
-      desc: "1 Liter Waterproofing Expert",
-      category: "Febiblock Glue",
-      img: product3,
-    },
-    {
-      id: 4,
-      name: "Dr Fixit Brand 302 Super Latex",
-      desc: "1 Liter Waterproofing Expert",
-      category: "Febiblock Glue",
-      img: product3,
-    },
-    {
-      id: 5,
-      name: "Dr Fixit Brand 302 Super Latex",
-      desc: "1 Liter Waterproofing Expert",
-      category: "Febiblock Glue",
-      img: product3,
-    },
-    {
-      id: 6,
-      name: "Dr Fixit Brand 302 Super Latex",
-      desc: "1 Liter Waterproofing Expert",
-      category: "Febiblock Glue",
-      img: product3,
-    },
-  ];
+const products = [
+  {
+    id: 1,
+    name: "Dr Fixit Brand LW 101",
+    desc: "1 Liter Waterproofing Expert",
+    category: "Admixture",
+    img: product1,
+  },
+  {
+    id: 2,
+    name: "Dr Fixit Brand 302 Super Latex",
+    desc: "0.5 Liter Waterproofing Expert",
+    category: "Admixture",
+    img: product2,
+  },
+ {
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product4,
+},
+{
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product7,
+},
+  {
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product5,
+},
+  {
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product6,
+},
+ {
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product3,
+},
+ {
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product8,
+},
+ {
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product9,
+},
+  {
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product10,
+},
+{
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product11,
+},
+ {
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product11,
+},
+  {
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product12,
+},
+  {
+  id: 3,
+  name: "Dr Fixit Brand 302 Super Latex",
+  desc: "1 Liter Waterproofing Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product13,
+},
+];
 
-  // ✅ Filter logic
-  const filteredProducts =
-    selectedCategory === "All Products"
-      ? products // show all products
-      : products.filter((p) => p.category === selectedCategory);
+// ✅ Filter logic
+const filteredProducts =
+  selectedCategory === "All Products"
+    ? products // show all products
+    : products.filter((p) => p.category === selectedCategory);
 
   // const ProductsGrid = () => {
   //   const [selectedCategory, setSelectedCategory] = useState("All");
+
+    const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    dealer: "",
+    district: "",
+    consent: false,
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_2h4r499",      // 🔹 Your EmailJS Service ID
+        "template_jftpe7b",     // 🔹 Replace with your EmailJS Template ID
+        formData,
+        "VV_o1hjWQVsWaOnT7"     // 🔹 Replace with your EmailJS Public Key
+      )
+      .then(
+        () => {
+          setLoading(false);
+          setSent(true);
+          setFormData({
+            name: "",
+            company: "",
+            dealer: "",
+            district: "",
+            consent: false,
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.error("EmailJS Error:", error);
+          alert("❌ Failed to send email.");
+        }
+      );
+// const [formData, setFormData] = useState({
+//     name: "",
+//     company: "",
+//     dealer: "",
+//     district: "",
+//   });
+
+//   const handleChange = (e) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+
+//     emailjs
+//       .send(
+//         "service_2h4r499", // ← replace this
+//         "template_jftpe7b", // ← replace this
+//         formData,
+//         "VV_o1hjWQVsWaOnT7"   // ← replace this
+//       )
+//       .then(
+//         () => {
+//           alert("✅ Mail sent successfully!");
+//           setFormData({ name: "", company: "", dealer: "", district: "" });
+//         },
+//         (error) => {
+//           console.error("FAILED...", error);
+//           alert("❌ Mail failed to send.");
+//         }
+//       );
+  };
 
   return (
     <section className="w-full  z-50">
@@ -114,51 +262,54 @@ const Drfixit = () => {
             </li>
 
             {/* Dropdown - Our Business */}
-<li className="relative">
-  <button
-    onClick={() => setDropdownOpen(!dropdownOpen)}
-    className="transition-all duration-300 hover:text-yellow-400 flex items-center"
-  >
-    Our Business
-    <svg
-      className={`ml-1 w-4 h-4 transform transition-transform duration-300 ${
-        dropdownOpen ? "rotate-180" : "rotate-0"
-      }`}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-    </svg>
-  </button>
+            <li className="relative">
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="transition-all duration-300 hover:text-yellow-400 flex items-center"
+              >
+                Our Business
+                <svg
+                  className={`ml-1 w-4 h-4 transform transition-transform duration-300 ${
+                    dropdownOpen ? "rotate-180" : "rotate-0"
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
 
-  {dropdownOpen && (
-    <ul
-      className="absolute top-10 left-0 w-64 rounded-xl shadow-xl py-3
+              {dropdownOpen && (
+                <ul
+                  className="absolute top-10 left-0 w-64 rounded-xl shadow-xl py-3
                  bg-yellow-400/60 backdrop-blur-lg border border-yellow-300/50
                  text-black animate-fadeIn z-50"
-    >
-      {[
-        { name: "Dr. Fixit Ltd.", to: "/drfixit" },
-        { name: "Jaguar Lubricants", to: "/jaguar" },
-        { name: "Motul", to: "/motul" },
-        { name: "Robinson Can Industries", to: "/robinson" },
-      ].map((item) => (
-        <li key={item.to}>
-          <Link
-            to={item.to}
-            className="block px-5 py-2 font-semibold  transition-all duration-300
+                >
+                  {[
+                    { name: "Dr. Fixit Ltd.", to: "/drfixit" },
+                    { name: "Jaguar Lubricants", to: "/jaguar" },
+                    { name: "Motul", to: "/motul" },
+                    { name: "Robinson Can Industries", to: "/robinson" },
+                  ].map((item) => (
+                    <li key={item.to}>
+                      <Link
+                        to={item.to}
+                        className="block px-5 py-2 font-semibold  transition-all duration-300
                        hover:bg-red-700/60  hover:text-white"
-          >
-            {item.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  )}
-</li>
-
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
 
             {/* Careers */}
             <li className="relative group">
@@ -345,12 +496,39 @@ const Drfixit = () => {
           />
         </div>
       </section>
-      <section>
-        <div
-          className="h-screen w-full  bg-cover bg-center flex items-center justify-center"
-          style={{ backgroundImage: `url(${bgImage})` }}
-        ></div>
-      </section>
+ <section
+  className="relative h-[700px] w-full bg-cover bg-center"
+  style={{ backgroundImage: `url(${bgImage})` }}
+>
+  {/* Optional overlay */}
+  <div className="absolute inset-0 bg-black/10"></div>
+
+  {/* Banner Content */}
+  <div className="relative z-10 flex items-center justify-center h-full"></div>
+
+  {/* ✅ Fixed Green Rounded Shape with WhatsApp Icon */}
+  <div className="fixed bottom-6 right-0 w-[200px] h-[100px] md:w-[280px] md:h-[140px] bg-[#25D366] rounded-l-[150px] flex items-center justify-center shadow-xl z-50">
+    <a
+      href="https://wa.me/8801712345678"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative flex items-center justify-center bg-white p-3 md:p-4 rounded-full shadow-md hover:scale-110 transition-transform duration-300 overflow-visible"
+    >
+      {/* Glowing Pulse Effect */}
+      <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
+
+      {/* Call Icon */}
+      <img
+        src={callIcon}
+        alt="Call Icon"
+        className="relative w-[55px] md:w-[75px] z-10"
+      />
+    </a>
+  </div>
+</section>
+
+
+
       <section className="bg-[#f5f5f5] py-10 px-10 md:px-16">
         <div className="max-w-[1300px] mx-auto">
           {/* Heading and Image in one line */}
@@ -403,91 +581,121 @@ const Drfixit = () => {
       </section>
 
       {/* ================= PRODUCTS GRID ================= */}
-      <section className="bg-white  py-10 px-6 md:px-12 lg:px-40">
-        <div className=" py-15">
-          <div className="max-w-[1500px]  mx-auto ">
-            <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex items-center justify-between">
-              {/* Left Side - All Products */}
-              <button
-                onClick={() => setSelectedCategory("All Products")}
-                className={`text-[18px] font-medium transition-all duration-300 ${
-                  selectedCategory === "All Products"
-                    ? "text-black font-semibold "
-                    : "text-gray-800 hover:text-black"
-                }`}
-              >
-                ALL PRODUCTS
-              </button>
+<section className="bg-white py-10 px-6 md:px-12 lg:px-40">
+  <div className="py-15">
+    {/* Filter Section */}
+<div className="max-w-[1500px] mx-auto">
+  <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
+    {/* ALL PRODUCTS Button */}
+    <button
+      onClick={() => setSelectedCategory("All Products")}
+      className={`relative text-[18px] font-semibold transition-all duration-300 ${
+        selectedCategory === "All Products"
+          ? "text-black"
+          : "text-gray-700 hover:text-[#fbbf24]"
+      }`}
+    >
+      ALL PRODUCTS
+      {selectedCategory === "All Products" && (
+        <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
+      )}
+    </button>
 
-              {/* Right Side - Other Categories + Dealer Button */}
-              <div className="flex items-center gap-6">
-                {["Admixture", "Sealer", "Febilock Glue"].map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`text-[18px] font-medium transition-all duration-300 ${
-                      selectedCategory === cat
-                        ? "text-black font-semibold"
-                        : "text-gray-800 hover:text-black"
-                    }`}
-                  >
-                    {cat.toUpperCase()}
-                  </button>
-                ))}
-
-                {/* Find a Dealer Button */}
-                <button className="bg-[#fbbf24] text-black font-semibold px-6 py-2 rounded-md hover:bg-[#f59e0b]">
-                  FIND A DEALER
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {filteredProducts.map((p) => (
-                <div
-                  key={p.id}
-                  className="border border-gray-200 rounded-md shadow-sm hover:shadow-md transition-all duration-300 bg-white flex flex-col justify-between"
-                >
-                  <div className="flex justify-center items-center h-[220px] p-4">
-                    <img
-                      src={p.img}
-                      alt={p.name}
-                      className="object-contain h-full w-auto"
-                    />
-                  </div>
-
-                  <div className="p-4 flex flex-col flex-grow">
-                    <h3 className="text-[15px] font-semibold text-center text-[#222] leading-snug">
-                      {p.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 text-center mb-4">
-                      {p.desc}
-                    </p>
-                  </div>
-
-                  <div className="px-4 pb-5 flex flex-col gap-2">
-                    <button className="border border-[#fbbf24] text-[#222] text-sm py-2 rounded hover:bg-[#fbbf24] hover:text-white transition">
-                      Product Details
-                    </button>
-                    <button className="bg-[#fbbf24] text-white text-sm py-2 rounded hover:bg-[#f59e0b] transition">
-                      Find a Dealer
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {filteredProducts.length === 0 && (
-            <p className="text-center text-gray-500 mt-10">
-              No products available in this category.
-            </p>
+    <div className="flex flex-wrap items-center gap-5">
+      {["Admixture", "Sealer", "Febilock Glue"].map((cat) => (
+        <button
+          key={cat}
+          onClick={() => setSelectedCategory(cat)}
+          className={`relative text-[18px] font-semibold transition-all duration-300 ${
+            selectedCategory === cat
+              ? "text-black"
+              : "text-gray-700 hover:text-[#fbbf24]"
+          }`}
+        >
+          {cat.toUpperCase()}
+          {selectedCategory === cat && (
+            <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
           )}
-        </div>
-      </section>
+        </button>
+      ))}
 
+      <button className="bg-[#fbbf24] text-black font-semibold px-6 py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
+        FIND A DEALER
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+    {/* Product Grid */}
+    <div className="max-w-[1400px] mx-auto">
+      <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {filteredProducts.map((p, index) => (
+          <div
+            key={index}
+            className="border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:scale-[1.02]"
+          >
+            {/* Image */}
+            {/* Image */}
+<div className="flex justify-center items-center rounded-t-2xl p-6 h-[260px] border-b border-gray-200">
+  <div className="flex justify-center items-center w-full h-full translate-y-7"> {/* 👈 নিচে হালকা সরানো */}
+    <img
+      src={p.img}
+      alt={p.name}
+      className="object-contain w-auto transition-transform duration-300 hover:scale-105"
+      style={{
+        maxHeight:
+          index % 4 === 0
+            ? "230px"
+            : index % 3 === 0
+            ? "190px"
+            : "210px",
+        transform:
+          index % 5 === 0 ? "scale(1.12)" : "scale(1)",
+      }}
+    />
+  </div>
+</div>
+
+
+            {/* Product Info */}
+            <div className="p-5 flex flex-col flex-grow justify-between text-center leading-tight">
+              <h3 className="text-[18px] font-bold text-[#222] mb-0">
+                {p.name}
+              </h3>
+              <p className="text-[16px] text-gray-600 mt-0 mb-10">{p.desc}</p>
+            </div>
+
+            {/* Buttons */}
+            <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
+              <button className="border  border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300">
+                Product Details
+              </button>
+              <button className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300">
+                Find a Dealer
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {filteredProducts.length === 0 && (
+        <p className="text-center text-gray-500 mt-10">
+          No products available in this category.
+        </p>
+      )}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+{/* ================= from================= */}
       <section className="bg-[#f8f8f8] py-20 px-6 md:px-10">
         <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
           {/* Left Side */}
@@ -532,46 +740,85 @@ const Drfixit = () => {
           </div>
 
           {/* Right Side */}
-          <div className="bg-[#0B63FF] rounded-md p-8 md:w-[420px] text-white shadow-lg">
-            <h3 className="text-2xl font-semibold mb-6">Request a Quote</h3>
+<div className="bg-[#0B63FF] rounded-md p-8 md:w-[420px] text-white shadow-lg mx-auto mt-10">
+      <h3 className="text-2xl font-semibold mb-6">Request a Quote</h3>
 
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-              />
-              <input
-                type="text"
-                placeholder="Your Company or Shop Name"
-                className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-              />
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+          required
+        />
 
-              <div className="flex space-x-3">
-                <select className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none">
-                  <option>Dealer/Depo</option>
-                </select>
-                <select className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none">
-                  <option>District</option>
-                </select>
-              </div>
+        <input
+          type="text"
+          name="company"
+          placeholder="Your Company or Shop Name"
+          value={formData.company}
+          onChange={handleChange}
+          className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+          required
+        />
 
-              <div className="flex items-start space-x-2 text-sm mt-2">
-                <input type="checkbox" className="mt-1" />
-                <p>
-                  I consent to receiving calls based on the information provided
-                  above.
-                </p>
-              </div>
+        <div className="flex space-x-3">
+          <select
+            name="dealer"
+            value={formData.dealer}
+            onChange={handleChange}
+            className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+            required
+          >
+            <option value="">Dealer/Depo</option>
+            <option value="Dealer">Dealer</option>
+            <option value="Depo">Depo</option>
+            
+          </select>
 
-              <button
-                type="submit"
-                className="w-full bg-gray-200 text-gray-600 font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-white transition"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
+          <select
+            name="district"
+            value={formData.district}
+            onChange={handleChange}
+            className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+            required
+          >
+            <option value="">District</option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Chittagong">Chittagong</option>
+            <option value="Khulna">Khulna</option>
+          </select>
+        </div>
+
+        <div className="flex items-start space-x-2 text-sm mt-2">
+          <input
+            type="checkbox"
+            name="consent"
+            checked={formData.consent}
+            onChange={handleChange}
+            className="mt-1"
+          />
+          <p>I consent to receiving calls based on the information provided above.</p>
+        </div>
+
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-gray-200 text-gray-600 font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-white transition disabled:opacity-60"
+        >
+          {loading ? "Sending..." : "Submit"}
+        </button>
+      </form>
+
+      {sent && (
+        <p className="text-green-300 text-center mt-3">
+          ✅ Mail sent successfully!
+        </p>
+      )}
+    </div>
+
         </div>
       </section>
     </section>
