@@ -6,20 +6,21 @@ import emailjs from "emailjs-com";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
 import drfixitLogo from "../../assets/Dr-Fixit-Logo.png";
 import callIcon from "../../assets/Call-Icon-Green.png";
-;
+import LocationIcon from "../../assets/Location-Man-Icon.png";
+
 import bgImage from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-Ads-Baneer.png";
 import fixitHelmet from "../../assets/Biulding-&-Cap.png";
 import product1 from "../../assets/Dr-Fixit-Brand-LW+-101-1-Litre.png";
-import product2 from "../../assets/Dr-Fixit-Brand-LW+-101-5-Litre.png";
+import product2 from "../../assets/Dr-Fixit-Brand-Plaster-Master.png";
 import product3 from "../../assets/Dr-Fixit-Brand-LW-101-30-Litre.png";
 import product4 from "../../assets/Dr-Fixit-Brand-LW-101-18-Litre.png";
 import product5 from "../../assets/Dr-Fixit-Brand-5400-Interior-Wall-Selaer.png";
 import product6 from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-18-litre.png";
 import product7 from "../../assets/Dr-Fixit-Brand-5400-Interior-Wall-Selaer.png";
 import product8 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-18-Litre 02.png";
-import product9 from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-18-litre.png";
+import product9 from "../../assets/Fevilock-500-ml.png";
 import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre.png";
-import product11 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-5-Litre.png";
+import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
 import product13 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-18-Litre.png";
 
@@ -34,51 +35,51 @@ const products = [
   {
     id: 1,
     name: "Dr Fixit Brand LW 101",
+    desc: "05 Liter Waterproofing Expert",
+    category: "Admixture",
+    img: product1,
+  },
+  { 
+    id: 2,
+    name: "Dr Fixit Brand LW 101",
     desc: "1 Liter Waterproofing Expert",
     category: "Admixture",
     img: product1,
   },
-  {
-    id: 2,
-    name: "Dr Fixit Brand 302 Super Latex",
-    desc: "0.5 Liter Waterproofing Expert",
-    category: "Admixture",
-    img: product2,
-  },
  {
   id: 3,
   name: "Dr Fixit Brand 302 Super Latex",
-  desc: "1 Liter Waterproofing Expert",
+  desc: "05 Liter Waterproofing Expert",
   category: "Febilock Glue", // ✅ corrected spelling
-  img: product4,
+  img: product12,
 },
 {
   id: 3,
   name: "Dr Fixit Brand 302 Super Latex",
   desc: "1 Liter Waterproofing Expert",
   category: "Febilock Glue", // ✅ corrected spelling
-  img: product7,
+  img: product12,
 },
   {
   id: 3,
-  name: "Dr Fixit Brand 302 Super Latex",
-  desc: "1 Liter Waterproofing Expert",
+  name: "Dr Fixit Brand LW 101",
+  desc: "30 Liter Paint Expert",
   category: "Febilock Glue", // ✅ corrected spelling
-  img: product5,
+  img: product3,
 },
   {
   id: 3,
-  name: "Dr Fixit Brand 302 Super Latex",
-  desc: "1 Liter Waterproofing Expert",
+  name: "Dr Fixit Brand LW 101",
+  desc: "18 Liter Waterproofing Expert",
   category: "Febilock Glue", // ✅ corrected spelling
-  img: product6,
+  img: product3,
 },
  {
   id: 3,
   name: "Dr Fixit Brand 302 Super Latex",
-  desc: "1 Liter Waterproofing Expert",
+  desc: "30 Liter Waterproofing Expert",
   category: "Febilock Glue", // ✅ corrected spelling
-  img: product3,
+  img: product8,
 },
  {
   id: 3,
@@ -89,46 +90,40 @@ const products = [
 },
  {
   id: 3,
-  name: "Dr Fixit Brand 302 Super Latex",
-  desc: "1 Liter Waterproofing Expert",
+  name: "Dr Fixit Brand 5400 Interior Sealer",
+  desc: " 18 Liter Paint Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product5,
+},
+  {
+  id: 3,
+  name: "Dr Fixit Brand Plaster Master",
+  desc: "1 Liter Muilti-Purpase Rust Remover",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product2,
+},
+{
+  id: 3,
+  name: "Dr Fixit Brand 5100 Exterior Sealer",
+  desc: "18 Liter Paint Expert",
+  category: "Febilock Glue", // ✅ corrected spelling
+  img: product10,
+},
+ {
+  id: 3,
+  name: "Dr Fixit Brand Fevilock",
+  desc: "500ml Liter Bonding Expert",
   category: "Febilock Glue", // ✅ corrected spelling
   img: product9,
 },
   {
   id: 3,
-  name: "Dr Fixit Brand 302 Super Latex",
-  desc: "1 Liter Waterproofing Expert",
-  category: "Febilock Glue", // ✅ corrected spelling
-  img: product10,
-},
-{
-  id: 3,
-  name: "Dr Fixit Brand 302 Super Latex",
-  desc: "1 Liter Waterproofing Expert",
+  name: "Dr Fixit Brand Rust Remover",
+  desc: "1 Liter Muilti-Purpase Rust Remover",
   category: "Febilock Glue", // ✅ corrected spelling
   img: product11,
 },
- {
-  id: 3,
-  name: "Dr Fixit Brand 302 Super Latex",
-  desc: "1 Liter Waterproofing Expert",
-  category: "Febilock Glue", // ✅ corrected spelling
-  img: product11,
-},
-  {
-  id: 3,
-  name: "Dr Fixit Brand 302 Super Latex",
-  desc: "1 Liter Waterproofing Expert",
-  category: "Febilock Glue", // ✅ corrected spelling
-  img: product12,
-},
-  {
-  id: 3,
-  name: "Dr Fixit Brand 302 Super Latex",
-  desc: "1 Liter Waterproofing Expert",
-  category: "Febilock Glue", // ✅ corrected spelling
-  img: product13,
-},
+
 ];
 
 // ✅ Filter logic
@@ -507,12 +502,12 @@ const filteredProducts =
   <div className="relative z-10 flex items-center justify-center h-full"></div>
 
   {/* ✅ Fixed Green Rounded Shape with WhatsApp Icon */}
-  <div className="fixed bottom-6 right-0 w-[200px] h-[100px] md:w-[280px] md:h-[140px] bg-[#25D366] rounded-l-[150px] flex items-center justify-center shadow-xl z-50">
+  <div className="fixed bottom-6 right-0 w-[160px] h-[80px] md:w-[200px] md:h-[100px] bg-[#25D366] rounded-l-[150px] flex items-center justify-center shadow-xl z-50">
     <a
       href="https://wa.me/8801712345678"
       target="_blank"
       rel="noopener noreferrer"
-      className="relative flex items-center justify-center bg-white p-3 md:p-4 rounded-full shadow-md hover:scale-110 transition-transform duration-300 overflow-visible"
+      className="relative mr-[90px] flex items-center justify-center bg-white p-3 md:p-4 rounded-full shadow-md hover:scale-110 transition-transform duration-300 overflow-visible"
     >
       {/* Glowing Pulse Effect */}
       <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
@@ -521,7 +516,7 @@ const filteredProducts =
       <img
         src={callIcon}
         alt="Call Icon"
-        className="relative w-[55px] md:w-[75px] z-10"
+        className="relative  w-[55px] md:w-[40px] z-10"
       />
     </a>
   </div>
@@ -639,18 +634,18 @@ const filteredProducts =
             {/* Image */}
             {/* Image */}
 <div className="flex justify-center items-center rounded-t-2xl p-6 h-[260px] border-b border-gray-200">
-  <div className="flex justify-center items-center w-full h-full translate-y-7"> {/* 👈 নিচে হালকা সরানো */}
+  <div className="flex justify-center items-center w-full h-full translate-y-3"> {/* 👈 নিচে হালকা সরানো */}
     <img
       src={p.img}
       alt={p.name}
       className="object-contain w-auto transition-transform duration-300 hover:scale-105"
       style={{
         maxHeight:
-          index % 4 === 0
-            ? "230px"
-            : index % 3 === 0
+          index % 2 === 0
+            ? "260px"
+            : index % 2 === 0
             ? "190px"
-            : "210px",
+            : "190px",
         transform:
           index % 5 === 0 ? "scale(1.12)" : "scale(1)",
       }}
@@ -661,10 +656,10 @@ const filteredProducts =
 
             {/* Product Info */}
             <div className="p-5 flex flex-col flex-grow justify-between text-center leading-tight">
-              <h3 className="text-[18px] font-bold text-[#222] mb-0">
+              <h3 className="text-[17px] font-bold text-[#222] mb-0">
                 {p.name}
               </h3>
-              <p className="text-[16px] text-gray-600 mt-0 mb-10">{p.desc}</p>
+              <p className="text-[14px] text-gray-600 mt-0 mb-10">{p.desc}</p>
             </div>
 
             {/* Buttons */}
@@ -701,7 +696,9 @@ const filteredProducts =
           {/* Left Side */}
           <div className="flex-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="text-blue-500 text-6xl">👥</div>
+              <div className="text-blue-500 text-6xl">
+                <img src={LocationIcon} className="w-[70px]" alt="LocationIcon" />
+              </div>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-normal leading-snug text-gray-900">
@@ -730,7 +727,9 @@ const filteredProducts =
               </div>
 
               <div className="flex items-center space-x-3">
-                <div className="text-3xl">📧</div>
+                <div className="text-3xl">
+                  <img src={callIcon} className="w-[50px]" alt="callIcon" />
+                </div>
                 <div>
                   <h3 className="text-lg font-semibold">Email Address</h3>
                   <p className="font-medium">support@fixitgroupbd.com</p>
