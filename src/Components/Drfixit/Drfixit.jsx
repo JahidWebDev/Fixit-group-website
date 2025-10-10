@@ -579,80 +579,76 @@ const filteredProducts =
 <section className="bg-white py-10 px-6 md:px-12 lg:px-40">
   <div className="py-15">
     {/* Filter Section */}
-<div className="max-w-[1500px] mx-auto">
-  <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
-    {/* ALL PRODUCTS Button */}
-    <button
-      onClick={() => setSelectedCategory("All Products")}
-      className={`relative text-[18px] font-semibold transition-all duration-300 ${
-        selectedCategory === "All Products"
-          ? "text-black"
-          : "text-gray-700 hover:text-[#fbbf24]"
-      }`}
-    >
-      ALL PRODUCTS
-      {selectedCategory === "All Products" && (
-        <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
-      )}
-    </button>
-
-    <div className="flex flex-wrap items-center gap-5">
-      {["Admixture", "Sealer", "Febilock Glue"].map((cat) => (
+    <div className="max-w-[1500px] mx-auto">
+      <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
+        {/* ALL PRODUCTS Button */}
         <button
-          key={cat}
-          onClick={() => setSelectedCategory(cat)}
+          onClick={() => setSelectedCategory("All Products")}
           className={`relative text-[18px] font-semibold transition-all duration-300 ${
-            selectedCategory === cat
+            selectedCategory === "All Products"
               ? "text-black"
               : "text-gray-700 hover:text-[#fbbf24]"
           }`}
         >
-          {cat.toUpperCase()}
-          {selectedCategory === cat && (
+          ALL PRODUCTS
+          {selectedCategory === "All Products" && (
             <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
           )}
         </button>
-      ))}
 
-      <button className="bg-[#fbbf24] text-black font-semibold px-6 py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
-        FIND A DEALER
-      </button>
+        <div className="flex flex-wrap items-center gap-5">
+          {["Admixture", "Sealer", "Febilock Glue"].map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`relative text-[18px] font-semibold transition-all duration-300 ${
+                selectedCategory === cat
+                  ? "text-black"
+                  : "text-gray-700 hover:text-[#fbbf24]"
+              }`}
+            >
+              {cat.toUpperCase()}
+              {selectedCategory === cat && (
+                <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
+              )}
+            </button>
+          ))}
+
+          <button className="bg-[#fbbf24] text-black font-semibold px-6 py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
+            FIND A DEALER
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
 
     {/* Product Grid */}
     <div className="max-w-[1400px] mx-auto">
-      <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-8">
+      {/* ✅ Reversed grid layout: small=2, medium=3, large=4 */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {filteredProducts.map((p, index) => (
           <div
             key={index}
             className="border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:scale-[1.02]"
           >
             {/* Image */}
-            {/* Image */}
-<div className="flex justify-center items-center rounded-t-2xl p-6 h-[260px] border-b border-gray-200">
-  <div className="flex justify-center items-center w-full h-full translate-y-3"> {/* 👈 নিচে হালকা সরানো */}
-    <img
-      src={p.img}
-      alt={p.name}
-      className="object-contain w-auto transition-transform duration-300 hover:scale-105"
-      style={{
-        maxHeight:
-          index % 2 === 0
-            ? "260px"
-            : index % 2 === 0
-            ? "190px"
-            : "190px",
-        transform:
-          index % 5 === 0 ? "scale(1.12)" : "scale(1)",
-      }}
-    />
-  </div>
+          <div className="flex justify-center items-center w-full h-full translate-y-3">
+  <img
+    src={p.img}
+    alt={p.name}
+    className="object-contain w-auto transition-transform duration-300 hover:scale-105"
+    style={{
+      // 🔄 Pattern: 2 small → 2 big → repeat
+      maxHeight:
+        index % 4 === 0 || index % 4 === 1
+          ? "190px" // small ones
+          : "260px", // big ones
+      transform:
+        index % 4 === 0 || index % 4 === 1
+          ? "scale(0.9)" // smaller
+          : "scale(1.1)", // bigger
+    }}
+  />
 </div>
-
 
             {/* Product Info */}
             <div className="p-5 flex flex-col flex-grow justify-between text-center leading-tight">
@@ -664,7 +660,7 @@ const filteredProducts =
 
             {/* Buttons */}
             <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
-              <button className="border  border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300">
+              <button className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300">
                 Product Details
               </button>
               <button className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300">
@@ -683,6 +679,10 @@ const filteredProducts =
     </div>
   </div>
 </section>
+
+
+
+
 
 
 
