@@ -24,7 +24,7 @@ import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
 import product13 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-18-Litre.png";
 
-const drfixit = () => {
+const Drfixit = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -435,7 +435,7 @@ const drfixit = () => {
                     CERTIFICATE
                   </Link>
                 </li>
-              
+
                 <li>
                   <Link
                     to="https://wa.me/yourwhatsapp"
@@ -452,7 +452,6 @@ const drfixit = () => {
                     <span>Find Link Dealer</span>
                   </Link>
                 </li>
-             
               </ul>
             </div>
           </>
@@ -490,8 +489,8 @@ const drfixit = () => {
     bg-center 
     bg-no-repeat 
   "
-  style={{ backgroundImage: `url(${bgImage})` }}
->
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
         {/* Optional overlay */}
         <div className="absolute inset-0 bg-black/10"></div>
 
@@ -499,7 +498,8 @@ const drfixit = () => {
         <div className="relative z-10 flex items-center justify-center h-full"></div>
 
         {/* ✅ Fixed Green Rounded Shape with WhatsApp Icon */}
-        <div className="  fixed 
+        <div
+          className="  fixed 
     bottom-5 sm:bottom-55
     right-0 
     w-[120px] h-[60px] 
@@ -510,16 +510,17 @@ const drfixit = () => {
     shadow-xl 
     z-50 
 
-   ">
- <a
-  href="https://wa.me/8801712345678"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="
+   "
+        >
+          <a
+            href="https://wa.me/8801712345678"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
     relative 
     flex items-center justify-center 
     bg-white 
-    p-2 sm:p-3 md:p-4           /* 👈 Responsive padding */
+    p-2 sm:p-3 md:p-4         
     rounded-full 
     shadow-md 
     hover:scale-110 
@@ -529,18 +530,17 @@ const drfixit = () => {
     mr-[60px] sm:mr-[60px] md:mr-[70px] 
     
   "
->
-  {/* Glowing Pulse Effect */}
-  <span className="absolute  inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
+          >
+            {/* Glowing Pulse Effect */}
+            <span className="absolute  inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
 
-  {/* WhatsApp Call Icon */}
-  <img
-    src={callIcon}
-    alt="Call Icon"
-    className="relative w-[30px] sm:w-[40px] md:w-[20px] z-10" /* 👈 Responsive icon size */
-  />
-</a>
-
+            {/* WhatsApp Call Icon */}
+            <img
+              src={callIcon}
+              alt="Call Icon"
+              className="relative w-[30px] sm:w-[40px] md:w-[20px] z-10" 
+            />
+          </a>
         </div>
       </section>
 
@@ -596,116 +596,115 @@ const drfixit = () => {
       </section>
 
       {/* ================= PRODUCTS GRID ================= */}
-<section className="bg-white py-10 px-6 md:px-12 lg:px-40">
-  <div className="py-15">
-    {/* 🔹 Filter Section */}
-    <div className="max-w-[1500px] mx-auto">
-      <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
-        {/* ALL PRODUCTS Button */}
-        <button
-          onClick={() => setSelectedCategory("All Products")}
-          className={`relative text-[18px] font-semibold transition-all duration-300 ${
-            selectedCategory === "All Products"
-              ? "text-black"
-              : "text-gray-700 hover:text-[#fbbf24]"
-          }`}
-        >
-          ALL PRODUCTS
-          {selectedCategory === "All Products" && (
-            <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
-          )}
-        </button>
-
-        <div className="flex flex-wrap items-center gap-5">
-          {["Admixture", "Sealer", "Febilock Glue"].map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`relative text-[18px] font-semibold transition-all duration-300 ${
-                selectedCategory === cat
-                  ? "text-black"
-                  : "text-gray-700 hover:text-[#fbbf24]"
-              }`}
-            >
-              {cat.toUpperCase()}
-              {selectedCategory === cat && (
-                <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
-              )}
-            </button>
-          ))}
-
-          <button className="bg-[#fbbf24] text-black font-semibold px-6 py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
-            FIND A DEALER
-          </button>
-        </div>
-      </div>
-    </div>
-
-    {/* 🔹 Product Grid */}
-    <div className="max-w-[1400px] mx-auto">
-      {/* ✅ Responsive Grid: 1 card on mobile, 2 on small, 3 on md, 4 on lg */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {filteredProducts.map((p, index) => (
-          <div
-            key={index}
-            className="border-[2px] border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between hover:scale-[1.02] bg-white"
-          >
-            {/* 🖼 Product Image */}
-            <div className="flex justify-center items-end w-full h-[260px] border-b-[2px] border-gray-200 rounded-t-2xl mt-5">
-              <img
-                src={p.img}
-                alt={p.name}
-                className="object-contain w-auto transition-transform duration-300 hover:scale-105"
-                style={{
-                  maxHeight:
-                    index === 8 || index === 10 || index === 9
-                      ? "260px"
-                      : index % 4 === 0 || index % 4 === 1
-                      ? "220px"
-                      : "260px",
-                  transform:
-                    index === 8 || index === 10 || index === 9
-                      ? "scale(0.9)"
-                      : index % 4 === 0 || index % 4 === 1
-                      ? "scale(0.9)"
-                      : "scale(1.1)",
-                }}
-              />
-            </div>
-
-            {/* 🧾 Product Info */}
-            <div className="p-5 flex flex-col flex-grow justify-between text-center">
-              <h3 className="text-[17px] font-bold text-[#222] mb-0 leading-[1.1]">
-                {p.name}
-              </h3>
-              <p className="text-[14px] text-gray-600 mt-0 mb-10 leading-[1.4]">
-                {p.desc}
-              </p>
-            </div>
-
-            {/* 🔘 Buttons */}
-            <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
-              <button className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300">
-                Product Details
+      <section className="bg-white py-10 px-6 md:px-12 lg:px-40">
+        <div className="py-15">
+          {/* 🔹 Filter Section */}
+          <div className="max-w-[1500px] mx-auto">
+            <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
+              {/* ALL PRODUCTS Button */}
+              <button
+                onClick={() => setSelectedCategory("All Products")}
+                className={`relative text-[18px] font-semibold transition-all duration-300 ${
+                  selectedCategory === "All Products"
+                    ? "text-black"
+                    : "text-gray-700 hover:text-[#fbbf24]"
+                }`}
+              >
+                ALL PRODUCTS
+                {selectedCategory === "All Products" && (
+                  <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
+                )}
               </button>
-              <button className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300">
-                Find a Dealer
-              </button>
+
+              <div className="flex flex-wrap items-center gap-5">
+                {["Admixture", "Sealer", "Febilock Glue"].map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`relative text-[18px] font-semibold transition-all duration-300 ${
+                      selectedCategory === cat
+                        ? "text-black"
+                        : "text-gray-700 hover:text-[#fbbf24]"
+                    }`}
+                  >
+                    {cat.toUpperCase()}
+                    {selectedCategory === cat && (
+                      <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
+                    )}
+                  </button>
+                ))}
+
+                <button className="bg-[#fbbf24] text-black font-semibold px-6 py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
+                  FIND A DEALER
+                </button>
+              </div>
             </div>
           </div>
-        ))}
-      </div>
 
-      {/* Empty State */}
-      {filteredProducts.length === 0 && (
-        <p className="text-center text-gray-500 mt-10">
-          No products available in this category.
-        </p>
-      )}
-    </div>
-  </div>
-</section>
+          {/* 🔹 Product Grid */}
+          <div className="max-w-[1400px] mx-auto">
+            {/* ✅ Responsive Grid: 1 card on mobile, 2 on small, 3 on md, 4 on lg */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {filteredProducts.map((p, index) => (
+                <div
+                  key={index}
+                  className="border-[2px] border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between hover:scale-[1.02] bg-white"
+                >
+                  {/* 🖼 Product Image */}
+                  <div className="flex justify-center items-end w-full h-[260px] border-b-[2px] border-gray-200 rounded-t-2xl mt-5">
+                    <img
+                      src={p.img}
+                      alt={p.name}
+                      className="object-contain w-auto transition-transform duration-300 hover:scale-105"
+                      style={{
+                        maxHeight:
+                          index === 8 || index === 10 || index === 9
+                            ? "260px"
+                            : index % 4 === 0 || index % 4 === 1
+                            ? "220px"
+                            : "260px",
+                        transform:
+                          index === 8 || index === 10 || index === 9
+                            ? "scale(0.9)"
+                            : index % 4 === 0 || index % 4 === 1
+                            ? "scale(0.9)"
+                            : "scale(1.1)",
+                      }}
+                    />
+                  </div>
 
+                  {/* 🧾 Product Info */}
+                  <div className="p-5 flex flex-col flex-grow justify-between text-center">
+                    <h3 className="text-[17px] font-bold text-[#222] mb-0 leading-[1.1]">
+                      {p.name}
+                    </h3>
+                    <p className="text-[14px] text-gray-600 mt-0 mb-10 leading-[1.4]">
+                      {p.desc}
+                    </p>
+                  </div>
+
+                  {/* 🔘 Buttons */}
+                  <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
+                    <button className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300">
+                      Product Details
+                    </button>
+                    <button className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300">
+                      Find a Dealer
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Empty State */}
+            {filteredProducts.length === 0 && (
+              <p className="text-center text-gray-500 mt-10">
+                No products available in this category.
+              </p>
+            )}
+          </div>
+        </div>
+      </section>
 
       {/* ================= from================= */}
       <section className="bg-[#f8f8f8] py-20 px-6 md:px-10">
@@ -741,34 +740,36 @@ const drfixit = () => {
             </p>
 
             {/* Contact Info */}
-<div className="bg-black text-white mt-8 flex flex-col md:flex-row items-center justify-between p-6 rounded-md relative overflow-hidden">
-  {/* Left Side - Emergency Contact */}
-  <div className="text-center md:text-left mb-6 md:mb-0">
-    <h3 className="text-lg font-semibold">Emergency</h3>
-    <p className="text-white font-medium">+8801788360303</p>
-  </div>
+            <div className="bg-black text-white mt-8 flex flex-col md:flex-row items-center justify-between p-6 rounded-md relative overflow-hidden">
+              {/* Left Side - Emergency Contact */}
+              <div className="text-center md:text-left mb-6 md:mb-0">
+                <h3 className="text-lg font-semibold">Emergency</h3>
+                <p className="text-white font-medium">+8801788360303</p>
+              </div>
 
-  {/* Middle - Call Icon with WhatsApp Link + Red Pulse */}
-  <div className="relative flex items-center justify-center">
-    <div className="absolute w-[70px] h-[70px] bg-white rounded-full animate-redPulse"></div>
-    <a
-      href="https://wa.me/8801788360303"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative z-10 flex items-center justify-center bg-white rounded-full w-[60px] h-[60px] shadow-lg hover:scale-110 transition-transform duration-300"
-    >
-      <img src={callIcon} alt="WhatsApp Call Icon" className="w-[35px] h-[35px]" />
-    </a>
-  </div>
+              {/* Middle - Call Icon with WhatsApp Link + Red Pulse */}
+              <div className="relative flex items-center justify-center">
+                <div className="absolute w-[70px] h-[70px] bg-white rounded-full animate-redPulse"></div>
+                <a
+                  href="https://wa.me/8801788360303"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[60px] h-[60px] shadow-lg hover:scale-110 transition-transform duration-300"
+                >
+                  <img
+                    src={callIcon}
+                    alt="WhatsApp Call Icon"
+                    className="w-[35px] h-[35px]"
+                  />
+                </a>
+              </div>
 
-  {/* Right Side - Email Info */}
-  <div className="text-center md:text-right mt-6 md:mt-0">
-    <h3 className="text-lg font-semibold">Email Address</h3>
-    <p className="font-medium">support@fixitgroupbd.com</p>
-  </div>
-</div>
-
-
+              {/* Right Side - Email Info */}
+              <div className="text-center md:text-right mt-6 md:mt-0">
+                <h3 className="text-lg font-semibold">Email Address</h3>
+                <p className="font-medium">support@fixitgroupbd.com</p>
+              </div>
+            </div>
           </div>
 
           {/* Right Side */}
@@ -796,39 +797,38 @@ const drfixit = () => {
                 required
               />
 
-            <div className="flex space-x-3">
-  {/* Dealer/Depo Dropdown */}
-  <select
-    name="dealer"
-    value={formData.dealer}
-    onChange={handleChange}
-    className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-    required
-  >
-    <option value="" disabled selected>
-      Dealer/Depo
-    </option>
-    <option value="Dealer">Dealer</option>
-    <option value="Depo">Depo</option>
-  </select>
+              <div className="flex space-x-3">
+                {/* Dealer/Depo Dropdown */}
+                <select
+                  name="dealer"
+                  value={formData.dealer}
+                  onChange={handleChange}
+                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Dealer/Depo
+                  </option>
+                  <option value="Dealer">Dealer</option>
+                  <option value="Depo">Depo</option>
+                </select>
 
-  {/* District Dropdown */}
-  <select
-    name="district"
-    value={formData.district}
-    onChange={handleChange}
-    className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-    required
-  >
-    <option value="" disabled selected>
-      District
-    </option>
-    <option value="Dhaka">Dhaka</option>
-    <option value="Chittagong">Chittagong</option>
-    <option value="Khulna">Khulna</option>
-  </select>
-</div>
-
+                {/* District Dropdown */}
+                <select
+                  name="district"
+                  value={formData.district}
+                  onChange={handleChange}
+                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                  required
+                >
+                  <option value="" disabled selected>
+                    District
+                  </option>
+                  <option value="Dhaka">Dhaka</option>
+                  <option value="Chittagong">Chittagong</option>
+                  <option value="Khulna">Khulna</option>
+                </select>
+              </div>
 
               <div className="flex items-start space-x-2 text-sm mt-2">
                 <input
@@ -865,4 +865,4 @@ const drfixit = () => {
   );
 };
 
-export default drfixit;
+export default Drfixit;
