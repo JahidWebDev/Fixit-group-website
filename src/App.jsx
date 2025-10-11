@@ -13,6 +13,7 @@ import Drfixit from "./Components/Drfixit/drfixit";
 
 
 
+
 function Home() {
   return (
     <>
@@ -31,7 +32,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ourbusiness" element={<OurBusiness />} />
-        <Route path="/drfixit" element={<Drfixit/>} />
+        <Route path="/drfixit" element={<Drfixit />} />
+        
         <Route path="/admixture" element={<Admixture />} />
         <Route path="/importing" element={<Importing />} />
         <Route path="/employees" element={<Employees />} />

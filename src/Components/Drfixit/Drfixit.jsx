@@ -24,7 +24,7 @@ import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
 import product13 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-18-Litre.png";
 
-const Drfixit = () => {
+const drfixit = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -835,4 +835,4 @@ const Drfixit = () => {
   );
 };
 
-export default Drfixit;
+export default drfixit;
