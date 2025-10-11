@@ -9,7 +9,7 @@ import Admixture from "./Components/Admixture/Admixture";
 import Importing from "./Components/Importing/Importing";
 import OurBusiness from "./Components/OurBusiness/OurBusiness";
 import Footer from "./Components/Footer/Footer";
-import Drfixit from "./Components/Drfixit/drfixit";
+import Drfixit from "./Components/Drfixit/Drfixit";
 
 
 

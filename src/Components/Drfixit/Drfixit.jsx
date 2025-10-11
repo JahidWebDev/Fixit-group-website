@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
@@ -24,7 +25,7 @@ import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
 import product13 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-18-Litre.png";
 
-const drfixit = () => {
+const Drfixit  = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -835,4 +836,6 @@ const drfixit = () => {
   );
 };
 
-export default drfixit;
+export default Drfixit;
+
+
