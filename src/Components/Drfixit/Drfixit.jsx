@@ -182,37 +182,7 @@ const Drfixit = () => {
           alert("❌ Failed to send email.");
         }
       );
-    // const [formData, setFormData] = useState({
-    //     name: "",
-    //     company: "",
-    //     dealer: "",
-    //     district: "",
-    //   });
-
-    //   const handleChange = (e) => {
-    //     setFormData({ ...formData, [e.target.name]: e.target.value });
-    //   };
-
-    //   const handleSubmit = (e) => {
-    //     e.preventDefault();
-
-    //     emailjs
-    //       .send(
-    //         "service_2h4r499", // ← replace this
-    //         "template_jftpe7b", // ← replace this
-    //         formData,
-    //         "VV_o1hjWQVsWaOnT7"   // ← replace this
-    //       )
-    //       .then(
-    //         () => {
-    //           alert("✅ Mail sent successfully!");
-    //           setFormData({ name: "", company: "", dealer: "", district: "" });
-    //         },
-    //         (error) => {
-    //           console.error("FAILED...", error);
-    //           alert("❌ Mail failed to send.");
-    //         }
-    //       );
+ 
   };
 
   return (
