@@ -10,6 +10,7 @@ import Importing from "./Components/Importing/Importing";
 import OurBusiness from "./Components/OurBusiness/OurBusiness";
 import Footer from "./Components/Footer/Footer";
 import Drfixit from "./Components/Drfixit/Drfixit";
+import ProductDetails from "./Components/ProductDetails/ProductDetails";
 
 
 
@@ -33,7 +34,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/ourbusiness" element={<OurBusiness />} />
         <Route path="/drfixit" element={<Drfixit />} />
-        
+        <Route path="/productdetails" element={<ProductDetails />} />
         <Route path="/admixture" element={<Admixture />} />
         <Route path="/importing" element={<Importing />} />
         <Route path="/employees" element={<Employees />} />

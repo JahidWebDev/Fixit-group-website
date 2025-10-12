@@ -1,16 +1,17 @@
 
 import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import emailjs from "emailjs-com";
+import LocationIcon from "../../assets/Location-Man-Icon.png";
 
 // import Container from "../../Container";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
 import drfixitLogo from "../../assets/Dr-Fixit-Logo.png";
 import callIcon from "../../assets/Call-Icon-Green.png";
-import LocationIcon from "../../assets/Location-Man-Icon.png";
+import bgImage from "../../assets/bg-images.png";
 
-import bgImage from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-Ads-Baneer.png";
-import fixitHelmet from "../../assets/Biulding-&-Cap.png";
 import product1 from "../../assets/Dr-Fixit-Brand-LW+-101-1-Litre.png";
 import product2 from "../../assets/Dr-Fixit-Brand-Plaster-Master.png";
 import product3 from "../../assets/Dr-Fixit-Brand-LW-101-30-Litre.png";
@@ -22,115 +23,135 @@ import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre
 import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
 
-const Drfixit  = () => {
+
+
+
+
+const products = [
+  
+  {
+    id: 1,
+    title: "Dr. Fixit LW+ 101 (1 Litre)",
+    brand: "Dr. Fixit",
+    category: "Waterproofing",
+    quantity: "1 Litre",
+    name: "LW+ 101",
+    subtitle: "Liquid Waterproofing Compound",
+    description:
+      "Enhances waterproofing in concrete and mortar, improving workability and reducing shrinkage. Ideal for cement concrete and plaster to enhance cohesiveness, reduce cracks, and improve durability.",
+    image: product1,
+  },
+  {
+    id: 2,
+    title: "Dr. Fixit Plaster Master",
+    brand: "Dr. Fixit",
+    category: "Surface Protection",
+    quantity: "20 Kg",
+    name: "Plaster Master",
+    subtitle: "Durable Surface Protection Compound",
+    description:
+      "Provides excellent bonding between old and new concrete surfaces while increasing durability. Ensures stronger adhesion and reduced cracking over time.",
+    image: product2,
+  },
+  {
+    id: 3,
+    title: "Dr. Fixit LW+ 101 (30 Litre)",
+    brand: "Dr. Fixit",
+    category: "Waterproofing",
+    quantity: "30 Litre",
+    name: "LW+ 101",
+    subtitle: "Liquid Waterproofing Compound",
+    description:
+      "Large volume waterproofing additive ideal for concrete and plaster to ensure long-term protection and durability.",
+    image: product3,
+  },
+  {
+    id: 4,
+    title: "Dr. Fixit 5400 Interior Wall Sealer",
+    brand: "Dr. Fixit",
+    category: "Paint Base",
+    quantity: "18 Litre",
+    name: "5400 Sealer",
+    subtitle: "Interior Wall Sealer",
+    description:
+      "Protects walls from dampness and efflorescence, providing a smooth surface for painting.",
+    image: product5,
+  },
+  {
+    id: 5,
+    title: "Fevilock 500 ml",
+    brand: "Fevilock",
+    category: "Adhesive",
+    quantity: "500 ml",
+    name: "Fevilock",
+    subtitle: "Instant Adhesive",
+    description:
+      "High-strength bonding adhesive suitable for wood, metal, ceramics, and plastics.",
+    image: product8,
+  },
+  {
+    id: 6,
+    title: "Dr. Fixit 5100 Exterior Sealer",
+    brand: "Dr. Fixit",
+    category: "Paint Base",
+    quantity: "18 Litre",
+    name: "5100 Sealer",
+    subtitle: "Exterior Wall Sealer",
+    description:
+      "Long-lasting exterior wall protection from moisture and UV damage.",
+    image: product9,
+  },
+  {
+    id: 7,
+    title: "Rust Remover (1 Litre)",
+    brand: "Fixit",
+    category: "Cleaning",
+    quantity: "1 Litre",
+    name: "Rust Remover",
+    subtitle: "Metal Surface Cleaner",
+    description:
+      "Removes rust from metal surfaces effectively without damaging the base material.",
+    image: product10,
+  },
+  {
+    id: 8,
+    title: "Dr. Fixit 302 Super Latex (1 Litre)",
+    brand: "Dr. Fixit",
+    category: "Bonding Agent",
+    quantity: "1 Litre",
+    name: "302 Latex",
+    subtitle: "Super Latex Bonding Agent",
+    description:
+      "Improves adhesion between old and new concrete surfaces and enhances waterproofing.",
+    image: product11,
+  },
+  {
+    id: 9,
+    title: "Dr. Fixit 302 Super Latex (1 Litre)",
+    brand: "Dr. Fixit",
+    category: "Bonding Agent",
+    quantity: "1 Litre",
+    name: "302 Latex",
+    subtitle: "Super Latex Bonding Agent",
+    description:
+      "Improves adhesion between old and new concrete surfaces and enhances waterproofing.",
+    image: product12,
+  },
+]
+
+const ProductDetails = () => {
+
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+  const p = products[index];
 
-  const [selectedCategory, setSelectedCategory] = useState("All Products");
+  const next = () => setIndex((prev) => (prev + 1) % products.length);
+  const prev = () =>
+    setIndex((prev) => (prev - 1 + products.length) % products.length);
 
-  const products = [
-    {
-      id: 1,
-      name: "Dr Fixit Brand LW 101",
-      desc: "1 Liter Waterproofing Expert",
-      category: "Admixture",
-      img: product1,
-    },
-    {
-      id: 2,
-      name: "Dr Fixit Brand 302 Super Latex",
-      desc: "1 Liter Waterproofing Expert",
-      category: "Admixture",
-      img: product12,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand LW 101",
-      desc: "05 Liter Waterproofing Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product1,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand 302 Super Latex",
-      desc: "05 Liter Waterproofing Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product12,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand LW 101",
-      desc: "18 Liter Paint Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product3,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand 302 Super Latex",
-      desc: "18 Liter Waterproofing Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product8,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand LW 101",
-      desc: "30 Liter Waterproofing Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product8,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand 302 Super Latex",
-      desc: "30 Liter Waterproofing Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product3,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand 5400 Interior Sealer",
-      desc: " 18 Liter Paint Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product5,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand Plaster Master",
-      desc: "18 Liter Muilti-Purpase Rust Remover",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product2,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand 5100 Exterior Sealer",
-      desc: "18 Liter Paint Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product10,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand Rust Remover",
-      desc: "1 Liter Muilti-Purpase Rust Remover",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product11,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand Fevilock",
-      desc: "500ml Liter Bonding Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product9,
-    },
-  ];
 
-  // ✅ Filter logic
-  const filteredProducts =
-    selectedCategory === "All Products"
-      ? products // show all products
-      : products.filter((p) => p.category === selectedCategory);
-
-  // const ProductsGrid = () => {
-  //   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -183,9 +204,10 @@ const Drfixit  = () => {
  
   };
 
+
   return (
-    <section className="w-full  z-50">
-      <header className="top-0 bg-[#B71C1C] left-0 w-full z-50">
+    <section>
+              <header className="top-0 bg-[#B71C1C] left-0 w-full z-50">
         {/* Main Container */}
         <div className="max-w-[1600px] mx-auto flex justify-between items-center px-5 py-3 md:px-10">
           {/* Logo */}
@@ -512,176 +534,169 @@ const Drfixit  = () => {
         </div>
       </section>
 
-      <section className="bg-[#F0F2F1] py-10 px-10 md:px-16">
-        <div className="max-w-[1300px] mx-auto">
-          {/* Heading and Image in one line */}
-          <div className="flex flex-col md:flex-row justify-between items-center lg:items-end mb-8">
-            {/* Heading */}
-            <h2 className="text-10xl md:text-[43px] font-normal text-black mb-6 md:mb-0 lg:mb-2">
-              About <span className="font-bold">Dr. Fixit Limited</span>
-            </h2>
 
-            {/* Image */}
-            <div className="w-[180px] md:w-[260px] lg:w-[600px] flex justify-center md:justify-end">
-              <img
-                src={fixitHelmet}
-                alt="Dr. Fixit Helmet"
-                className="object-contain lg:translate-y-1"
-              />
-            </div>
-          </div>
+      {/* ******************************************* */}
+          <div className="w-full bg-[#F8F8F8] py-25 px-6 md:px-12">
+        <div className="max-w-[1700px] mx-auto relative">
+          {/* Arrows */}
+          <button
+            onClick={prev}
+            className="absolute left-0 top-1/2 -translate-y-1/2 p-3 rounded-full  transition"
+          >
+            <FaChevronLeft className="w-6 h-6 text-gray-700" />
+          </button>
+          <button
+            onClick={next}
+            className="absolute right-0 top-1/2 -translate-y-1/2  p-3 rounded-full  transition"
+          >
+            <FaChevronRight className="w-6 h-6 text-gray-700" />
+          </button>
 
-          {/* Paragraphs */}
-          <p className="text-[15px] md:text-[30px] text-[#222] leading-relaxed mb-5 text-justify">
-            In 2024, our business entered a new phase when we officially
-            registered with the Government of Bangladesh under the name{" "}
-            <span className="font-bold">Dr. Fixit Limited</span>, completing all
-            legal and business documentation along with{" "}
-            <span className="font-bold">RJSC certification</span>. This
-            significant milestone marked the beginning of a new era in{" "}
-            <span className="font-bold">Fixit Group’s</span> history, where we
-            received overwhelming positive feedback from our valued customers.
-            Alhamdulillah!
-          </p>
+          {/* Product Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2  items-start mt-4">
+            <div className="flex flex-col items-center">
+ <div className="border h-[500px] w-[400px] border-gray-200 rounded-2xl shadow-sm p-4 flex items-center justify-center">
+  <img
+    src={p.image}
+    alt={p.title}
+    className="max-w-full max-h-full object-contain"
+  />
+</div>
 
-          <p className="text-[15px] md:text-[30px] text-[#222] leading-relaxed text-justify">
-            We quickly gained the trust of our customers, and within a short
-            period, <span className="font-bold">Dr. Fixit Limited</span>{" "}
-            established itself as a trusted and reliable name in Bangladesh’s{" "}
-            <span className="font-bold">Construction Chemical Industry</span>.
-            We offer a wide range of products including{" "}
-            <span className="font-bold">
-              Concrete Admixture, Waterproofing Solutions for Leak-free Homes,
-              Damp Proofing, Damp Guard, Heat Proofing, and Wall Crack Solutions
-            </span>
-            , which have become a symbol of quality and reliability for our
-            clients. Today, <span className="font-bold">Dr. Fixit Limited</span>{" "}
-            maintains a leading position in the construction industry in
-            Bangladesh, and every product and service we provide ensures
-            customer trust and satisfaction.
-          </p>
-        </div>
-      </section>
 
-      {/* ================= PRODUCTS GRID ================= */}
-      <section className="bg-white py-10 px-6 md:px-12 lg:px-40">
-        <div className="py-15">
-          {/* 🔹 Filter Section */}
-          <div className="max-w-[1500px] mx-auto">
-            <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
-              {/* ALL PRODUCTS Button */}
-              <button
-                onClick={() => setSelectedCategory("All Products")}
-                className={`relative text-[18px] font-semibold transition-all duration-300 ${
-                  selectedCategory === "All Products"
-                    ? "text-black"
-                    : "text-gray-700 hover:text-[#fbbf24]"
-                }`}
-              >
-                ALL PRODUCTS
-                {selectedCategory === "All Products" && (
-                  <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
-                )}
-              </button>
-
-              <div className="flex flex-wrap items-center gap-5">
-                {["Admixture", "Sealer", "Febilock Glue"].map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`relative text-[18px] font-semibold transition-all duration-300 ${
-                      selectedCategory === cat
-                        ? "text-black"
-                        : "text-gray-700 hover:text-[#fbbf24]"
-                    }`}
-                  >
-                    {cat.toUpperCase()}
-                    {selectedCategory === cat && (
-                      <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
-                    )}
-                  </button>
-                ))}
-
-                <button className="bg-[#fbbf24] text-black font-semibold px-6 py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
-                  FIND A DEALER
+              <div className="mt-8">
+                <button className="bg-[#f6b400] hover:bg-[#e0a200] text-black font-semibold px-8 py-3 rounded-md shadow-md transition">
+                  Find a Dealer
                 </button>
               </div>
             </div>
+<div className="space-y-4 lg:ml-[-130px] text-gray-800">
+  {/* Product Title */}
+  <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+    {p.title}
+  </h2>
+
+  {/* Product Info */}
+  <div className="space-y-2 text-lg md:text-1xl text-gray-700">
+    <p>
+      <span className="font-semibold">Brand:</span> {p.brand}
+    </p>
+    <p>
+      <span className="font-semibold">Category:</span> {p.category}
+    </p>
+    <p>
+      <span className="font-semibold">Quantity:</span> {p.quantity}
+    </p>
+    <p>
+      <span className="font-semibold">Availability:</span>{" "}
+      <span className="text-green-600 font-medium">In Stock</span>
+    </p>
+  </div>
+
+  {/* Subtitle & Description */}
+  <div className="pt-6">
+    <h3 className="text-xl md:text-2xl font-semibold mb-3">{p.subtitle}</h3>
+    <p className="text-lg md:text-xl w-[700px] text-gray-700 leading-relaxed">{p.description}</p>
+  </div>
+</div>
+
           </div>
 
-          {/* 🔹 Product Grid */}
-          <div className="max-w-[1400px] mx-auto">
-            {/* ✅ Responsive Grid: 1 card on mobile, 2 on small, 3 on md, 4 on lg */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {filteredProducts.map((p, index) => (
-                <div
-                  key={index}
-                  className="border-[2px] border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between hover:scale-[1.02] bg-white"
-                >
-                  {/* 🖼 Product Image */}
-                  <div className="flex justify-center items-end w-full h-[260px] border-b-[2px] border-gray-200 rounded-t-2xl mt-5">
-                    <img
-                      src={p.img}
-                      alt={p.name}
-                      className="object-contain w-auto transition-transform duration-300 hover:scale-105"
-                      style={{
-                        maxHeight:
-                          index === 8 || index === 10 || index === 9
-                            ? "260px"
-                            : index % 4 === 0 || index % 4 === 1
-                            ? "220px"
-                            : "260px",
-                        transform:
-                          index === 8 || index === 10 || index === 9
-                            ? "scale(0.9)"
-                            : index % 4 === 0 || index % 4 === 1
-                            ? "scale(0.9)"
-                            : "scale(1.1)",
-                      }}
-                    />
-                  </div>
-
-                  {/* 🧾 Product Info */}
-                  <div className="p-5 flex flex-col flex-grow justify-between text-center">
-                    <h3 className="text-[17px] font-bold text-[#222] mb-0 leading-[1.1]">
-                      {p.name}
-                    </h3>
-                    <p className="text-[14px] text-gray-600 mt-0 mb-10 leading-[1.4]">
-                      {p.desc}
-                    </p>
-                  </div>
-
-                  {/* 🔘 Buttons */}
-                    <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
-      <Link
-        to="/productdetails"
-        className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center"
-      >
-        Product Details
-      </Link>
-
-      <Link
-        to="/find-dealer"
-        className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300 text-center"
-      >
-        Find a Dealer
-      </Link>
-    </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Empty State */}
-            {filteredProducts.length === 0 && (
-              <p className="text-center text-gray-500 mt-10">
-                No products available in this category.
-              </p>
-            )}
+          {/* Thumbnail Preview Bar */}
+          <div className="flex justify-center gap-4 mt-16 flex-wrap">
+            {products.map((prod, i) => (
+              <button
+                key={prod.id}
+                onClick={() => setIndex(i)}
+                className={`border rounded-xl p-2 transition-all ${
+                  index === i
+                    ? "border-[#f6b400] bg-[#fff8e1]"
+                    : "border-gray-200 bg-white hover:border-[#f6b400]"
+                }`}
+              >
+                <img
+                  src={prod.image}
+                  alt={prod.name}
+                  className="w-[70px] h-auto object-contain"
+                />
+              </button>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
+    {/* =================================== */}
+  <div className="min-h-screen bg-white flex justify-center py-16 px-6">
+  <div className="w-full max-w-[1100px] text-gray-800 leading-relaxed text-[18px]">
+    <h1 className="text-2xl font-semibold mb-10">
+      Benefits of Water-Reducing and Waterproofing Admixture (LW+ 101)
+    </h1>
 
-      {/* ================= from================= */}
+    <div className="space-y-8">
+      <div>
+        <h2 className="text-xl font-semibold mb-1">Improved Concrete Strength</h2>
+        <p>
+          Water-reducing admixtures like LW+ 101 lower the water-cement ratio,
+          resulting in higher compressive strength and improved long-term
+          durability.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-xl font-semibold mb-1">Enhanced Waterproofing</h2>
+        <p>
+          By reducing concrete porosity, LW+ 101 prevents water
+          penetration—effectively protecting structures from leaks, dampness,
+          and corrosion.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-xl font-semibold mb-1">Increased Workability</h2>
+        <p>
+          LW+ 101 improves the flow and ease of concrete placement without
+          compromising strength, making construction more efficient and
+          consistent.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-xl font-semibold mb-1">Reduced Shrinkage and Cracking</h2>
+        <p>
+          The lower water content helps minimize shrinkage and cracking, which
+          in turn reduces long-term maintenance and repair costs.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-xl font-semibold mb-1">Better Durability and Longevity</h2>
+        <p>
+          LW+ 101 enhances resistance to environmental damage such as
+          freeze-thaw cycles, sulfate attacks, and chloride penetration,
+          extending the lifespan of the structure.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-xl font-semibold mb-1">Cost Savings</h2>
+        <p>
+          With increased durability and reduced repair needs, LW+ 101 offers
+          significant long-term cost efficiency for construction projects.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-xl font-semibold mb-1">Applications:</h2>
+        <p>
+          LW+ 101 is ideal for use in foundations, basements, bridges, tunnels,
+          and water-retaining structures, ensuring strong, durable, and
+          moisture-resistant concrete in a variety of challenging environments.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+ {/* ================= from================= */}
       <section className="bg-[#f8f8f8] py-20 px-6 md:px-10">
         <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
           {/* Left Side */}
@@ -836,10 +851,9 @@ const Drfixit  = () => {
           </div>
         </div>
       </section>
+
     </section>
-  );
-};
+  )
+}
 
-export default Drfixit;
-
-
+export default ProductDetails
