@@ -48,77 +48,77 @@ const Drfixit  = () => {
       id: 3,
       name: "Dr Fixit Brand LW 101",
       desc: "05 Liter Waterproofing Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
+      category: "Febilock Glue",
       img: product1,
     },
     {
-      id: 3,
+      id: 4,
       name: "Dr Fixit Brand 302 Super Latex",
       desc: "05 Liter Waterproofing Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
+      category: "Febilock Glue", 
       img: product12,
     },
     {
-      id: 3,
+      id: 5,
       name: "Dr Fixit Brand LW 101",
       desc: "18 Liter Paint Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product3,
+      category: "Febilock Glue", 
+      img: product12,
     },
     {
-      id: 3,
+      id: 6,
       name: "Dr Fixit Brand 302 Super Latex",
       desc: "18 Liter Waterproofing Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product8,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand LW 101",
-      desc: "30 Liter Waterproofing Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product8,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand 302 Super Latex",
-      desc: "30 Liter Waterproofing Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product3,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand 5400 Interior Sealer",
-      desc: " 18 Liter Paint Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product5,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand Plaster Master",
-      desc: "18 Liter Muilti-Purpase Rust Remover",
-      category: "Febilock Glue", // ✅ corrected spelling
-      img: product2,
-    },
-    {
-      id: 3,
-      name: "Dr Fixit Brand 5100 Exterior Sealer",
-      desc: "18 Liter Paint Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
+      category: "Febilock Glue", 
       img: product10,
     },
     {
-      id: 3,
+      id: 7,
+      name: "Dr Fixit Brand LW 101",
+      desc: "30 Liter Waterproofing Expert",
+      category: "Febilock Glue", 
+      img: product8,
+    },
+    {
+      id: 8,
+      name: "Dr Fixit Brand 302 Super Latex",
+      desc: "30 Liter Waterproofing Expert",
+      category: "Febilock Glue", 
+      img: product3,
+    },
+    {
+      id: 9,
+      name: "Dr Fixit Brand 5400 Interior Sealer",
+      desc: " 18 Liter Paint Expert",
+      category: "Febilock Glue", 
+      img: product5,
+    },
+    {
+      id: 10,
+      name: "Dr Fixit Brand Plaster Master",
+      desc: "18 Liter Muilti-Purpase Rust Remover",
+      category: "Febilock Glue",
+      img: product2,
+    },
+    {
+      id: 11,
+      name: "Dr Fixit Brand 5100 Exterior Sealer",
+      desc: "18 Liter Paint Expert",
+      category: "Febilock Glue", 
+      img: product10,
+    },
+    {
+      id: 12,
       name: "Dr Fixit Brand Rust Remover",
       desc: "1 Liter Muilti-Purpase Rust Remover",
-      category: "Febilock Glue", // ✅ corrected spelling
+      category: "Febilock Glue", 
       img: product11,
     },
     {
-      id: 3,
+      id: 13,
       name: "Dr Fixit Brand Fevilock",
       desc: "500ml Liter Bonding Expert",
-      category: "Febilock Glue", // ✅ corrected spelling
+      category: "Febilock Glue", 
       img: product9,
     },
   ];
@@ -653,12 +653,12 @@ const Drfixit  = () => {
 
                   {/* 🔘 Buttons */}
                     <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
-      <Link
-        to="/productdetails"
-        className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center"
-      >
-        Product Details
-      </Link>
+    <Link
+to={`/productdetails/${p.id}`}  // ← প্রতিটি প্রোডাক্টের জন্য আলাদা রুট
+  className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center"
+>
+  Product Details
+</Link>
 
       <Link
         to="/find-dealer"
