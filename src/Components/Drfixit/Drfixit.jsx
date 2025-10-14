@@ -63,7 +63,7 @@ const Drfixit  = () => {
       name: "Dr Fixit Brand LW 101",
       desc: "18 Liter Paint Expert",
       category: "Febilock Glue", 
-      img: product12,
+      img: product3,
     },
     {
       id: 6,
