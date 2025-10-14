@@ -17,8 +17,8 @@ import product9 from "../../assets/Fevilock-500-ml.png";
 import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre.png";
 import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
-
-export const products = [
+import { useLocation } from "react-router-dom";
+ const products = [
   {
     id: 1,
     title: "Dr. Fixit LW+ 101 (1 Litre)",
@@ -160,7 +160,11 @@ export const products = [
   },
 ];
 
-const ProductDetails = () => {
+const ProductDetails = ({  }) => {
+
+
+
+
 
 
  const [menuOpen, setMenuOpen] = useState(false);
@@ -182,6 +186,8 @@ const ProductDetails = () => {
   const prev = () =>
     setIndex((prev) => (prev - 1 + products.length) % products.length);
 
+
+  
   return (
 
 
@@ -528,13 +534,13 @@ const ProductDetails = () => {
       </section>
 
       {/* ============================= */}
-    <section className=" bg-[#F8F8F8]">
-        <div className="max-w-full  mx-auto py-40 px-6 md:px-70">
+    <section id="navigate" className="bg-[#F8F8F8]">
+      <div className="max-w-full mx-auto py-40 px-6 md:px-70">
         {/* Product Details */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Left: Image */}
           <div className="flex flex-col items-center">
-            <div className="border h-[560px] w-[450px] border-gray-200 rounded-2xl shadow-sm p-4 flex items-center  justify-center bg-[#F8F8F8]">
+            <div className="border h-[560px] w-[450px] border-gray-200 rounded-2xl shadow-sm p-4 flex items-center justify-center bg-[#F8F8F8]">
               <img
                 src={p.image}
                 alt={p.title}
@@ -553,43 +559,42 @@ const ProductDetails = () => {
           </div>
 
           {/* Right: Info */}
-   <div className="lg:pt-[30px] "> 
-        <div className="space-y-2 text-gray-800 md:pl-10 lg:pl-0">
-  <h2 className="text-4xl md:text-5xl lg:text-4xl font-bold text-gray-900">
-    {p.title}
-  </h2>
+          <div className="lg:pt-[30px]">
+            <div className="space-y-2 text-gray-800 md:pl-10 lg:pl-0">
+              <h2 className="text-4xl md:text-5xl lg:text-4xl font-bold text-gray-900">
+                {p.title}
+              </h2>
 
-  <div className="lg:pt-[50px]">
-    <p className="text-lg md:text-xl">
-    <span className="font-semibold">Brand:</span> {p.brand}
-  </p>
+              <div className="lg:pt-[50px]">
+                <p className="text-lg md:text-xl">
+                  <span className="font-semibold">Brand:</span> {p.brand}
+                </p>
+                <p className="text-lg md:text-xl">
+                  <span className="font-semibold">Category:</span> {p.category}
+                </p>
+                <p className="text-lg md:text-xl">
+                  <span className="font-semibold">Quantity:</span> {p.quantity}
+                </p>
+              </div>
 
-  <p className="text-lg md:text-xl">
-    <span className="font-semibold">Category:</span> {p.category}
-  </p>
+              <p className="text-lg md:text-xl">
+                <span className="font-semibold">Availability:</span>{" "}
+                <span className="text-green-600 font-medium">In Stock</span>
+              </p>
 
-  <p className="text-lg md:text-xl">
-    <span className="font-semibold">Quantity:</span> {p.quantity}
-  </p>
-  </div>
-
-  <p className="text-lg md:text-xl">
-    <span className="font-semibold">Availability:</span>{" "}
-    <span className="text-green-600 font-medium">In Stock</span>
-  </p>
-
-  <div className="pt-6">
-    <h3 className="text-2xl md:text-3xl font-semibold mb-3">{p.subtitle}</h3>
-    <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-      {p.description}
-    </p>
-  </div>
-</div>
-   </div>
-
+              <div className="pt-6">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-3">
+                  {p.subtitle}
+                </h3>
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  {p.description}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Thumbnails */}
+        {/* 🔹 Thumbnails */}
         <div className="flex justify-center gap-4 mt-12 flex-wrap">
           {products.map((prod, i) => (
             <button
@@ -608,6 +613,159 @@ const ProductDetails = () => {
               />
             </button>
           ))}
+        </div>
+
+        {/* 🔹 Dynamic Text Content */}
+        <div className="mt-20 ">
+          {p.id === 1 && (
+             <section className="bg-[#F9FAFB] py-16 px-6">
+      <div className="max-w-[1700px] mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+          Benefits of Water-Reducing and Waterproofing Admixture (LW+ 101)
+        </h2>
+
+        <div className="space-y-8 text-gray-800 leading-relaxed">
+          {/* Improved Concrete Strength */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900">
+              Improved Concrete Strength:
+            </h3>
+            <p>
+              Water-reducing admixtures like LW+ 101 lower the water-cement ratio,
+              resulting in higher compressive strength and improved long-term durability.
+            </p>
+          </div>
+
+          {/* Enhanced Waterproofing */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900">
+              Enhanced Waterproofing:
+            </h3>
+            <p>
+              By reducing concrete porosity, LW+ 101 prevents water penetration—
+              effectively protecting structures from leaks, dampness, and corrosion.
+            </p>
+          </div>
+
+          {/* Increased Workability */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900">
+              Increased Workability:
+            </h3>
+            <p>
+              LW+ 101 improves the flow and ease of concrete placement without compromising
+              strength, making construction more efficient and consistent.
+            </p>
+          </div>
+
+          {/* Reduced Shrinkage and Cracking */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900">
+              Reduced Shrinkage and Cracking:
+            </h3>
+            <p>
+              The lower water content helps minimize shrinkage and cracking, reducing
+              long-term maintenance and repair costs.
+            </p>
+          </div>
+
+          {/* Dosage */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900">Dosage:</h3>
+            <p>200 ml per 50 kg bag of cement</p>
+          </div>
+
+          {/* Shelf Life */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900">Shelf Life:</h3>
+            <p>
+              Best before 2 years from the date of manufacture (in sealed pack).
+            </p>
+          </div>
+
+          {/* Storage */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900">Storage:</h3>
+            <p>
+              Store in a cool and dry place away from direct sunlight.
+            </p>
+          </div>
+
+          {/* Better Durability and Longevity */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900">
+              Better Durability and Longevity:
+            </h3>
+            <p>
+              LW+ 101 enhances resistance to environmental damage such as freeze-thaw cycles,
+              sulfate attacks, and chloride penetration, extending the lifespan of the structure.
+            </p>
+          </div>
+
+          {/* Cost Savings */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900">Cost Savings:</h3>
+            <p>
+              With increased durability and reduced repair needs, LW+ 101 offers significant
+              long-term cost efficiency for construction projects.
+            </p>
+          </div>
+
+          {/* Applications */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900">Applications:</h3>
+            <p>
+              LW+ 101 is ideal for use in foundations, basements, bridges, tunnels, and
+              water-retaining structures, ensuring strong, durable, and moisture-resistant
+              concrete in a variety of challenging environments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+          )}
+
+          {p.id === 2 && (
+            <div className="space-y-8 text-gray-800 leading-relaxed">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">
+                Benefits of Dr. Fixit Plaster Master
+              </h3>
+              <div>
+                <h4 className="text-2xl font-semibold text-gray-900">
+                  Better Bonding:
+                </h4>
+                <p>
+                  Improves adhesion between plaster and concrete, preventing
+                  delamination.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-2xl font-semibold text-gray-900">
+                  Reduced Cracks:
+                </h4>
+                <p>Minimizes cracking and shrinkage during plastering.</p>
+              </div>
+              <div>
+                <h4 className="text-2xl font-semibold text-gray-900">
+                  Durability:
+                </h4>
+                <p>Increases life and performance of plastered surfaces.</p>
+              </div>
+            </div>
+          )}
+
+          {p.id === 3 && (
+            <div className="space-y-8 text-gray-800 leading-relaxed">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">
+                Benefits of LW 101 (30 Litre)
+              </h3>
+              <p>
+                Designed for large-scale construction, providing the same
+                waterproofing and strength benefits as LW+ 101 but in a large,
+                economical pack size.
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>
