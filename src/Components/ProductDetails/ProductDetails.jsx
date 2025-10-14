@@ -28,8 +28,9 @@ const products = [
     category: "Admixture",
     quantity: "1 Litre",
     subtitle: "Dr. Fixit Drproof LW+",
+    subtitletwo: "Integral Liquid Waterproofing Compound for Concrete & Plaster",
     description:
-      " Integral Liquid Waterproofing Compound for Concrete & Plaster Dr. Fixit Dr.proof LW+ is a specially formulated integral liquid  waterproofing compound made from high-quality plasticising agents, polymers, and active additives. It is used as a waterproof additive for cement concrete, mortar, and plaster. The compound  enhances the cohesiveness of concrete, reduces segregation minimizes shrinkage cracks, and provides superior waterproofing  and durability to structures.",
+      "Dr. Fixit Dr.proof LW+ is a specially formulated integral liquid  waterproofing compound made from high-quality plasticising agents, polymers, and active additives. It is used as a waterproof additive for cement concrete, mortar, and plaster. The compound  enhances the cohesiveness of concrete, reduces segregation minimizes shrinkage cracks, and provides superior waterproofing  and durability to structures.",
  
       availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
    image: product1,
@@ -39,9 +40,10 @@ const products = [
   title: "1kg Dr. Fixit 302 Super Latex-Premium | SBR Waterproofing & Bonding Agent for Concrete Repair",
   brand: "Dr. Fixit Limited",
   category: "Admixture",
-  quantity: "1 Kg",
-  subtitle: "Dr. Fixit 302 Super Latex - SBR Latex for Repairs & Waterproofing",
-  availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
+  quantity: "1 Litre",
+  subtitle: "Dr. Fixit 302 Super Latex",
+
+  subtitletwo: "SBR Latex for repairs & waterproofing",
   description:
     "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applications. This URP-based formulation enhances the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
   image: product12, // make sure this matches your actual image import for this product
@@ -62,11 +64,12 @@ const products = [
 
 {
   id: 4,
-  title: "5kg Dr. Fixit 302 Super Latex–Premium | SBR Waterproofing & Bonding Agent for Concrete Repair",
+  title: "5kg Dr. Fixit 302 Super Latex-Premium | SBR Waterproofing & Bonding Agent for Concrete Repair",
   brand: "Dr. Fixit Limited",
   category: "Admixture",
-  quantity: "5 Kg",
-  subtitle: "Dr. Fixit 302 Super Latex — SBR Latex for Repairs & Waterproofing",
+  quantity: "5 Litre", 
+  subtitle: "Dr. Fixit 302 Super Latex",
+    subtitletwo: "SBR Latex for repairs & waterproofing",
   description:
     "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applications. This URP-based formulation enhances the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
   image: product12, // replace with your correct 5kg Dr. Fixit 302 Super Latex image import
@@ -74,62 +77,83 @@ const products = [
 
 {
   id: 5,
-  title: "30kg Water Proofing & Water-Reducing Admixture, LW+ 101 Dr Fixit Brand",
-  brand: "Dr. Fixit Limited",
+  title: "18kg Water Proofing & Water-Reducing Admixture, LW+ 101 Dr Fixit Brand",
+
+  brand: "Fixit Limited",
   category: "Admixture",
-  quantity: "30 Kg",
-  subtitle: "Dr. Fixit Drproof LW+ - Integral Liquid Waterproofing Compound for Concrete & Plaster",
+  quantity: "18 Liter",
+  subtitle: "Dr. Fixit Drproof LW+",
+   subtitletwo: "Integral Liquid Waterproofing Compound for Concrete & Plaster",
   description:
-    "Dr. Fixit Dr.proof LW+ is a specially formulated integral liquid waterproofing compound made from high-quality plasticising agents, polymers, and active additives. It is used as a waterproof additive for cement concrete, mortar, and plaster. The compound enhances the cohesiveness of concrete, reduces segregation, minimizes shrinkage cracks, and provides superior waterproofing and durability to structures.",
+    "Dr. Fixit Dr.proof LW+ is a specially formulated integral liquid waterproofing compound made from high-quality plasticising agents, polymers, and active additives. It is used as a waterproof additive for cement concrete, mortar, and plaster. The compound enhances the cohesiveness of concrete, reduces segregation minimizes shrinkage cracks, and provides superior waterproofing and durability to structures.",
   availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
   image: product3, // update this with the correct 30kg LW+ 101 image import
 },
 
  {
   id: 6,
-  title: "18kg Dr. Fixit 5100 Exterior Wall Sealer | High-Performance Water-Based Wall Primer for Interior Walls",
+  title: "30kg Dr. Fixit 302 Super Latex-Premium SBR Waterproofing & Bonding Agent for Concrete Repair",
+
+
   brand: "Dr. Fixit Limited",
-  category: "Paints",
-  quantity: "18 Kg",
-  subtitle: "Dr. Fixit 5100 Exterior Wall Sealer - Excellent Finish & Leveling",
+  category: "Admixture",
+  quantity: "30kg",
+  subtitle: "Dr. Fixit 302 Super Latex",
+  subtitletwo: "SBR Latex for repairs & waterproofing",
   description:
-    "Dr. Fixit 5100 Wall Sealer is a high-performance, water-based sealer specially formulated for exterior walls, whether new or repainted. It enhances the durability and performance of the finishing coat while providing effective protection against moisture and alkalinity. Ideal when used with Weatherbond, it ensures long-lasting exterior wall protection and a superior finish.",
-  availablePackaging: "1 litre, 5 litre, 10 litre, and 18 litre",
-  image: product10, // make sure this references your actual 5100 image import
+    "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applications. This URP-based formulation is known for enhancing the tstrength, flexibility, and water resistance of cementitious mixes making it an ideal solution for long-lasting repairs and surface promaking it an ideal solution for long-lasting repairs and surface protection.",
+
+  
+
+  image: product8, // make sure this references your actual 5100 image import
 },
 
   {
   id: 7,
-  title: "Rust Remover (1 Litre)",
+  title: "30kg Dr. Fixit 302 Super Latex–Premium SBR Waterproofing & Bonding Agent for Concrete Repair",
+
+
   brand: "Fixit",
   category: "Cleaning",
   quantity: "1 Litre",
   subtitle: "Metal Surface Cleaner",
   description:
     "Removes rust from metal surfaces effectively without damaging the base material.",
-  image: product8,
+  image: product3,
   },
   {
     id: 8,
-    title: "Dr. Fixit 302 Super Latex (1 Litre)",
-    brand: "Dr. Fixit",
-    category: "Bonding Agent",
-    quantity: "1 Litre",
-    subtitle: "Super Latex Bonding Agent",
-    description:
-      "Improves adhesion between old and new concrete surfaces and enhances waterproofing.",
-    image: product3,
+   title: "30kg Dr. Fixit 302 Super Latex-Premium SBR Waterproofing & Bonding Agent for Concrete Repair",
+
+
+  brand: "Dr. Fixit Limited",
+  category: "Admixture",
+  quantity: "30 Litre",
+  subtitle: "Dr. Fixit 302 Super Latex",
+  subtitletwo: "SBR Latex for repairs & waterproofing",
+  
+  description:
+    "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applications. This URP-based formulation is known for enhancing the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
+    image: product8,
   },
   {
     id: 9,
-    title: "Dr. Fixit 302 Super Latex (18 Litre)",
-    brand: "Dr. Fixit",
-    category: "Bonding Agent",
+    title: "18kg Dr. Fixit 5400 Interior Wall Sealer High-Performance Water-Based Wall Primer for Interior Walls",
+
+
+    brand: "Fixit Limited",
+    category: "Paints",
     quantity: "18 Litre",
-    subtitle: "Super Latex Bonding Agent",
+    subtitle: "Dr. Fixit 5400 Interior Wall Sealer.",
+      subtitletwo: "Excelient Finish Leveling",
     description:
-      "Ideal for large-scale bonding and waterproofing applications in construction.",
+      "Dr. Fixit 5400 Interior Wall Sealer is a high-quality, water-based primer and sealer designed for interior walls. It effectively seals porous surfaces, provides a uniform base for paint, and improves paint adhesion and durability. It is ideal for use on plaster, cement, and masonry surfaces before applying emulsion or acrylic paints.",
+
+
+
+
     image: product5,
+    availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
   },
   {
     id: 10,
@@ -646,6 +670,7 @@ const ProductDetails = ({}) => {
       <h3 className="text-xl md:text-2xl font-semibold mb-2">
         {p.subtitle}
       </h3>
+      <p className="text-base md:text-lg text-gray-700 leading-relaxed lg:mb-2.5" >{p.subtitletwo}</p>
       <p className="text-base md:text-lg text-gray-700 leading-relaxed">
         {p.description}
       </p>
@@ -1249,7 +1274,7 @@ const ProductDetails = ({}) => {
           <ul className="list-disc pl-8 text-lg space-y-2">
             <li>
               <span className="font-semibold">Waterproof Coating:</span>{" "}
-              Approximately 2–2.2 m²/kg for 2 coats when mixed in 1:2 ratio.
+              Approximately 2-2.2 m²/kg for 2 coats when mixed in 1:2 ratio.
             </li>
             <li>
               <span className="font-semibold">Mortar Modifier:</span> Use
@@ -1600,9 +1625,9 @@ const ProductDetails = ({}) => {
         Coverage
       </h2>
       <ul className="list-disc list-inside space-y-3">
-        <li><strong>Waterproof Coating:</strong> 2–2.2 m²/kg for 2 coats (cement:latex = 2:1).</li>
-        <li><strong>Mortar Modifier:</strong> 6–7.5 kg per 50 kg bag of cement.</li>
-        <li><strong>Bonding Agent:</strong> 4.2–4.5 m²/kg per coat depending on surface texture.</li>
+        <li><strong>Waterproof Coating:</strong> 2-2.2 m²/kg for 2 coats (cement:latex = 2:1).</li>
+        <li><strong>Mortar Modifier:</strong> 6-7.5 kg per 50 kg bag of cement.</li>
+        <li><strong>Bonding Agent:</strong> 4.2-4.5 m²/kg per coat depending on surface texture.</li>
       </ul>
     </div>
 
@@ -1898,7 +1923,7 @@ const ProductDetails = ({}) => {
             {p.id === 11 && (
           <section className=" py-16 px-6 md:px-16 max-w-[1700px] mx-auto text-gray-800">
   {/* Heading */}
-  <div className="mb-12">S
+  <div className="mb-12">
     <h1 className="text-4xl md:text-5xl font-bold mb-4">
       Dr. Fixit 5100 Exterior Sealer
     </h1>
@@ -1956,7 +1981,7 @@ const ProductDetails = ({}) => {
       <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
         Theoretical Coverage
       </h2>
-      <p>Approximately 10–12 m² per liter per coat, depending on surface porosity and texture.</p>
+      <p>Approximately 10-12 m² per liter per coat, depending on surface porosity and texture.</p>
     </div>
 
     {/* Key Benefits */}
