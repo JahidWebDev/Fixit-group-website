@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
 import drfixitLogo from "../../assets/Dr-Fixit-Logo.png";
-
+import emailjs from "emailjs-com";
 import callIcon from "../../assets/Call-Icon-Green.png"; // WhatsApp icon
+import LocationIcon from "../../assets/Location-Man-Icon.png";
 
 import bgImage from "../../assets/bg-images.png";
 
@@ -16,11 +17,13 @@ import product9 from "../../assets/Fevilock-500-ml.png";
 import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre.png";
 import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
-import { useLocation } from "react-router-dom";
+
 const products = [
   {
     id: 1,
-    title: "Dr. Fixit LW+ 101 (1 Litre)",
+    title: "1kg Water Proofing & Water-Reducing Admixture, LW+ 101 Dr Fixit Brand",
+
+  
     brand: "Dr. Fixit",
     category: "Waterproofing",
     quantity: "1 Litre",
@@ -180,6 +183,63 @@ const ProductDetails = ({}) => {
   const prev = () =>
     setIndex((prev) => (prev - 1 + products.length) % products.length);
 
+
+
+
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    dealer: "",
+    district: "",
+    consent: false,
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_2h4r499", // 🔹 Your EmailJS Service ID
+        "template_jftpe7b", // 🔹 Replace with your EmailJS Template ID
+        formData,
+        "VV_o1hjWQVsWaOnT7" // 🔹 Replace with your EmailJS Public Key
+      )
+      .then(
+        () => {
+          setLoading(false);
+          setSent(true);
+          setFormData({
+            name: "",
+            company: "",
+            dealer: "",
+            district: "",
+            consent: false,
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.error("EmailJS Error:", error);
+          alert("❌ Failed to send email.");
+        }
+      );
+    }
+
+
+
+
+  
   return (
     <section className="w-full  z-50">
       <header className="top-0 bg-[#B71C1C] left-0 w-full z-50">
@@ -540,11 +600,11 @@ const ProductDetails = ({}) => {
             {/* Right: Info */}
             <div className="lg:pt-[30px]">
               <div className="space-y-2 text-gray-800 md:pl-10 lg:pl-0">
-                <h2 className="text-4xl md:text-5xl lg:text-4xl font-bold text-gray-900">
+                <h2 className="text-4xl md:text-5xl lg:text-3xl font-bold text-gray-900">
                   {p.title}
                 </h2>
 
-                <div className="lg:pt-[50px]">
+                <div className="lg:pt-[25px]">
                   <p className="text-lg md:text-xl">
                     <span className="font-semibold">Brand:</span> {p.brand}
                   </p>
@@ -1990,6 +2050,160 @@ const ProductDetails = ({}) => {
           </div>
         </div>
       </section>
+           <section className="bg-[#f8f8f8] py-20 px-6 md:px-10">
+              <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
+                {/* Left Side */}
+                <div className="flex-1">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="text-blue-500 text-6xl">
+                      <img
+                        src={LocationIcon}
+                        className="w-[70px]"
+                        alt="LocationIcon"
+                      />
+                    </div>
+                  </div>
+      
+                  <h2 className="text-3xl md:text-4xl font-normal leading-snug text-gray-900">
+                    Fill out the form below to become an <br />
+                    <span className="font-bold">Authorized Dealer</span> of{" "}
+                    <span className="font-bold">Dr. Fixit Limited.</span>
+                  </h2>
+      
+                  <p className="text-gray-700 mt-6 leading-relaxed">
+                    <span className="font-bold">Dr. Fixit Limited</span> is committed
+                    to building strong, trustworthy, and sustainable business
+                    relationships with each of its dealers.
+                  </p>
+      
+                  <p className="text-gray-700 mt-4 leading-relaxed">
+                    Our sole objective is to work together to establish a new standard
+                    of quality, durability, and reliability in Bangladesh’s
+                    construction industry.
+                  </p>
+      
+                  {/* Contact Info */}
+                  <div className="bg-black text-white mt-8 flex flex-col md:flex-row items-center justify-between p-6 rounded-md relative overflow-hidden">
+                    {/* Left Side - Emergency Contact */}
+                    <div className="text-center md:text-left mb-6 md:mb-0">
+                      <h3 className="text-lg font-semibold">Emergency</h3>
+                      <p className="text-white font-medium">+8801788360303</p>
+                    </div>
+      
+                    {/* Middle - Call Icon with WhatsApp Link + Red Pulse */}
+                    <div className="relative flex items-center justify-center">
+                      <div className="absolute w-[70px] h-[70px] bg-white rounded-full animate-redPulse"></div>
+                      <a
+                        href="https://wa.me/8801788360303"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative z-10 flex items-center justify-center bg-white rounded-full w-[60px] h-[60px] shadow-lg hover:scale-110 transition-transform duration-300"
+                      >
+                        <img
+                          src={callIcon}
+                          alt="WhatsApp Call Icon"
+                          className="w-[35px] h-[35px]"
+                        />
+                      </a>
+                    </div>
+      
+                    {/* Right Side - Email Info */}
+                    <div className="text-center md:text-right mt-6 md:mt-0">
+                      <h3 className="text-lg font-semibold">Email Address</h3>
+                      <p className="font-medium">support@fixitgroupbd.com</p>
+                    </div>
+                  </div>
+                </div>
+      
+                {/* Right Side */}
+                <div className="bg-[#0B63FF] rounded-md p-8 md:w-[420px] text-white shadow-lg mx-auto mt-10">
+                  <h3 className="text-2xl font-semibold mb-6">Request a Quote</h3>
+      
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                      required
+                    />
+      
+                    <input
+                      type="text"
+                      name="company"
+                      placeholder="Your phone Number"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                      required
+                    />
+      
+                    <div className="flex space-x-3">
+                      {/* Dealer/Depo Dropdown */}
+                      <select
+                        name="dealer"
+                        value={formData.dealer}
+                        onChange={handleChange}
+                        className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                        required
+                      >
+                        <option value="" disabled selected>
+                          Dealer/Depo
+                        </option>
+                        <option value="Dealer">Dealer</option>
+                        <option value="Depo">Depo</option>
+                      </select>
+      
+                      {/* District Dropdown */}
+                      <select
+                        name="district"
+                        value={formData.district}
+                        onChange={handleChange}
+                        className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                        required
+                      >
+                        <option value="" disabled selected>
+                          District
+                        </option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Khulna">Khulna</option>
+                      </select>
+                    </div>
+      
+                    <div className="flex items-start space-x-2 text-sm mt-2">
+                      <input
+                        type="checkbox"
+                        name="consent"
+                        checked={formData.consent}
+                        onChange={handleChange}
+                        className="mt-1"
+                      />
+                      <p>
+                        I consent to receiving calls based on the information provided
+                        above.
+                      </p>
+                    </div>
+      
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="w-full bg-gray-200 text-gray-600 font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-white transition disabled:opacity-60"
+                    >
+                      {loading ? "Sending..." : "Submit"}
+                    </button>
+                  </form>
+      
+                  {sent && (
+                    <p className="text-green-300 text-center mt-3">
+                      ✅ Mail sent successfully!
+                    </p>
+                  )}
+                </div>
+              </div>
+            </section>
     </section>
   );
 };
