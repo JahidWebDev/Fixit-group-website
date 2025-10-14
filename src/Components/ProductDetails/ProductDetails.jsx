@@ -24,79 +24,90 @@ const products = [
     title: "1kg Water Proofing & Water-Reducing Admixture, LW+ 101 Dr Fixit Brand",
 
   
-    brand: "Dr. Fixit",
-    category: "Waterproofing",
+    brand: "Dr. Fixit Limited",
+    category: "Admixture",
     quantity: "1 Litre",
-    subtitle: "Liquid Waterproofing Compound",
+    subtitle: "Dr. Fixit Drproof LW+",
     description:
-      "Enhances waterproofing in concrete and mortar, improving workability and reducing shrinkage. Ideal for cement concrete and plaster to enhance cohesiveness, reduce cracks, and improve durability.",
-    image: product1,
+      " Integral Liquid Waterproofing Compound for Concrete & Plaster Dr. Fixit Dr.proof LW+ is a specially formulated integral liquid  waterproofing compound made from high-quality plasticising agents, polymers, and active additives. It is used as a waterproof additive for cement concrete, mortar, and plaster. The compound  enhances the cohesiveness of concrete, reduces segregation minimizes shrinkage cracks, and provides superior waterproofing  and durability to structures.",
+ 
+      availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
+   image: product1,
   },
+{
+  id: 2,
+  title: "1kg Dr. Fixit 302 Super Latex-Premium | SBR Waterproofing & Bonding Agent for Concrete Repair",
+  brand: "Dr. Fixit Limited",
+  category: "Admixture",
+  quantity: "1 Kg",
+  subtitle: "Dr. Fixit 302 Super Latex - SBR Latex for Repairs & Waterproofing",
+  availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
+  description:
+    "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applications. This URP-based formulation enhances the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
+  image: product12, // make sure this matches your actual image import for this product
+},
+
+ {
+  id: 3,
+  title: "5kg Water Proofing & Water-Reducing Admixture, LW+ 101 Dr Fixit Brand",
+  brand: "Dr. Fixit Limited",
+  category: "Admixture",
+  quantity: "5 Litre",
+  subtitle: "Dr. Fixit Drproof LW+",
+  description:
+    "Integral Liquid Waterproofing Compound for Concrete & Plaster. Dr. Fixit Drproof LW+ is a specially formulated integral liquid waterproofing compound made from high-quality plasticising agents, polymers, and active additives. It is used as a waterproof additive for cement concrete, mortar, and plaster. The compound enhances the cohesiveness of concrete, reduces segregation, minimizes shrinkage cracks, and provides superior waterproofing and durability to structures.",
+  availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
+  image: product1,
+},
+
+{
+  id: 4,
+  title: "5kg Dr. Fixit 302 Super Latex–Premium | SBR Waterproofing & Bonding Agent for Concrete Repair",
+  brand: "Dr. Fixit Limited",
+  category: "Admixture",
+  quantity: "5 Kg",
+  subtitle: "Dr. Fixit 302 Super Latex — SBR Latex for Repairs & Waterproofing",
+  description:
+    "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applications. This URP-based formulation enhances the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
+  image: product12, // replace with your correct 5kg Dr. Fixit 302 Super Latex image import
+},
+
+{
+  id: 5,
+  title: "30kg Water Proofing & Water-Reducing Admixture, LW+ 101 Dr Fixit Brand",
+  brand: "Dr. Fixit Limited",
+  category: "Admixture",
+  quantity: "30 Kg",
+  subtitle: "Dr. Fixit Drproof LW+ - Integral Liquid Waterproofing Compound for Concrete & Plaster",
+  description:
+    "Dr. Fixit Dr.proof LW+ is a specially formulated integral liquid waterproofing compound made from high-quality plasticising agents, polymers, and active additives. It is used as a waterproof additive for cement concrete, mortar, and plaster. The compound enhances the cohesiveness of concrete, reduces segregation, minimizes shrinkage cracks, and provides superior waterproofing and durability to structures.",
+  availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
+  image: product3, // update this with the correct 30kg LW+ 101 image import
+},
+
+ {
+  id: 6,
+  title: "18kg Dr. Fixit 5100 Exterior Wall Sealer | High-Performance Water-Based Wall Primer for Interior Walls",
+  brand: "Dr. Fixit Limited",
+  category: "Paints",
+  quantity: "18 Kg",
+  subtitle: "Dr. Fixit 5100 Exterior Wall Sealer - Excellent Finish & Leveling",
+  description:
+    "Dr. Fixit 5100 Wall Sealer is a high-performance, water-based sealer specially formulated for exterior walls, whether new or repainted. It enhances the durability and performance of the finishing coat while providing effective protection against moisture and alkalinity. Ideal when used with Weatherbond, it ensures long-lasting exterior wall protection and a superior finish.",
+  availablePackaging: "1 litre, 5 litre, 10 litre, and 18 litre",
+  image: product10, // make sure this references your actual 5100 image import
+},
+
   {
-    id: 2,
-    title: "Dr. Fixit Plaster Master",
-    brand: "Dr. Fixit",
-    category: "Surface Protection",
-    quantity: "20 Kg",
-    subtitle: "Durable Surface Protection Compound",
-    description:
-      "Provides excellent bonding between old and new concrete surfaces while increasing durability. Ensures stronger adhesion and reduced cracking over time.",
-    image: product12,
-  },
-  {
-    id: 3,
-    title: "Dr. Fixit LW+ 101 (30 Litre)",
-    brand: "Dr. Fixit",
-    category: "Waterproofing",
-    quantity: "30 Litre",
-    subtitle: "Large Volume Waterproofing Additive",
-    description:
-      "Ideal for concrete and plaster to ensure long-term protection and durability.",
-    image: product1,
-  },
-  {
-    id: 4,
-    title: "Dr. Fixit 5400 Interior Wall Sealer",
-    brand: "Dr. Fixit",
-    category: "Paint Base",
-    quantity: "18 Litre",
-    subtitle: "Interior Wall Sealer",
-    description:
-      "Protects walls from dampness and efflorescence, providing a smooth surface for painting.",
-    image: product12,
-  },
-  {
-    id: 5,
-    title: "Fevilock 500 ml",
-    brand: "Fevilock",
-    category: "Adhesive",
-    quantity: "500 ml",
-    subtitle: "Instant Adhesive",
-    description:
-      "High-strength bonding adhesive suitable for wood, metal, ceramics, and plastics.",
-    image: product3,
-  },
-  {
-    id: 6,
-    title: "Dr. Fixit 5100 Exterior Sealer",
-    brand: "Dr. Fixit",
-    category: "Paint Base",
-    quantity: "18 Litre",
-    subtitle: "Exterior Wall Sealer",
-    description:
-      "Long-lasting exterior wall protection from moisture and UV damage.",
-    image: product10,
-  },
-  {
-    id: 7,
-    title: "Rust Remover (1 Litre)",
-    brand: "Fixit",
-    category: "Cleaning",
-    quantity: "1 Litre",
-    subtitle: "Metal Surface Cleaner",
-    description:
-      "Removes rust from metal surfaces effectively without damaging the base material.",
-    image: product8,
+  id: 7,
+  title: "Rust Remover (1 Litre)",
+  brand: "Fixit",
+  category: "Cleaning",
+  quantity: "1 Litre",
+  subtitle: "Metal Surface Cleaner",
+  description:
+    "Removes rust from metal surfaces effectively without damaging the base material.",
+  image: product8,
   },
   {
     id: 8,
@@ -140,26 +151,32 @@ const products = [
     description: "Description for extra product 2.",
     image: product10,
   },
+{
+  id: 12,
+  title: "1kg Dr. Fixit Multi Purpose Rust Remover",
+  brand: "Dr. Fixit Limited",
+  category: "Rust Remover",
+  quantity: "1 Kg",
+  subtitle: "Dr. Fixit Rust Remover — Multi-Purpose",
+  description:
+    "Dr. Fixit Rust Remover is a highly effective chemical solution designed to remove rust, corrosion, and stubborn iron oxide deposits from metal surfaces, tools, and construction equipment. It restores metal surfaces to their original clean condition without causing damage to the base metal.",
+  availablePackaging: "5ml, 1 litre, and 5 litre",
+  image: product11, // ensure this is your correct rust remover image import
+},
+
   {
-    id: 12,
-    title: "Dr. Fixit Extra Product 3",
-    brand: "Dr. Fixit",
-    category: "Specialty",
-    quantity: "15 Litre",
-    subtitle: "Example Product Subtitle",
-    description: "Description for extra product 3.",
-    image: product11,
-  },
-  {
-    id: 13,
-    title: "Dr. Fixit Extra Product 3",
-    brand: "Dr. Fixit",
-    category: "Specialty",
-    quantity: "15 Litre",
-    subtitle: "Example Product Subtitle",
-    description: "Description for extra product 3.",
-    image: product9,
-  },
+  id: 13,
+  title: "Fevilock – Premium Synthetic Resin Adhesive (Glue) – 250 gm",
+  brand: "Dr. Fixit Limited",
+  category: "Glue",
+  quantity: "250 gm",
+  subtitle: "Fevilock (Glue) — Premium Synthetic Resin Adhesive",
+  description:
+    "Fevilock is a high-quality, water-based synthetic resin adhesive designed for strong and reliable bonding on wood, paper, cardboard, and other surfaces. Perfect for household, school, and office use, it combines safety, hygiene, and excellent performance.",
+  availablePackaging: "20gm, 50gm, 100gm, 200gm, and 250gm",
+  image: product9, // update with your actual Fevilock image import
+}
+
 ];
 
 const ProductDetails = ({}) => {
@@ -598,41 +615,49 @@ const ProductDetails = ({}) => {
             </div>
 
             {/* Right: Info */}
-            <div className="lg:pt-[30px]">
-              <div className="space-y-2 text-gray-800 md:pl-10 lg:pl-0">
-                <h2 className="text-4xl md:text-5xl lg:text-3xl font-bold text-gray-900">
-                  {p.title}
-                </h2>
+   <div className="lg:pt-[10px]">
+  <div className="space-y-2 text-gray-800 md:pl-10 lg:pl-0">
+    {/* Title */}
+    <h2 className="text-2xl md:text-3xl lg:text-2xl font-bold text-gray-900">
+      {p.title}
+    </h2>
 
-                <div className="lg:pt-[25px]">
-                  <p className="text-lg md:text-xl">
-                    <span className="font-semibold">Brand:</span> {p.brand}
-                  </p>
-                  <p className="text-lg md:text-xl">
-                    <span className="font-semibold">Category:</span>{" "}
-                    {p.category}
-                  </p>
-                  <p className="text-lg md:text-xl">
-                    <span className="font-semibold">Quantity:</span>{" "}
-                    {p.quantity}
-                  </p>
-                </div>
+    {/* Product Info */}
+    <div className="lg:pt-[10px]">
+      <p className="text-base md:text-lg">
+        <span className="font-semibold">Brand:</span> {p.brand}
+      </p>
+      <p className="text-base md:text-lg">
+        <span className="font-semibold">Category:</span> {p.category}
+      </p>
+      <p className="text-base md:text-lg">
+        <span className="font-semibold">Quantity:</span> {p.quantity}
+      </p>
+    </div>
 
-                <p className="text-lg md:text-xl">
-                  <span className="font-semibold">Availability:</span>{" "}
-                  <span className="text-green-600 font-medium">In Stock</span>
-                </p>
+    {/* Availability */}
+    <p className="text-base md:text-lg">
+      <span className="font-semibold">Availability:</span>{" "}
+      <span className="text-green-600 font-medium">In Stock</span>
+    </p>
 
-                <div className="pt-6">
-                  <h3 className="text-2xl md:text-3xl font-semibold mb-3">
-                    {p.subtitle}
-                  </h3>
-                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                    {p.description}
-                  </p>
-                </div>
-              </div>
-            </div>
+    {/* Description */}
+    <div className="pt-4">
+      <h3 className="text-xl md:text-2xl font-semibold mb-2">
+        {p.subtitle}
+      </h3>
+      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+        {p.description}
+      </p>
+      <p className="text-base md:text-lg text-gray-700 leading-relaxed pt-2">
+        <span className="font-semibold">Available Packaging:</span>{" "}
+        {p.availablePackaging}
+      </p>
+    </div>
+  </div>
+</div>
+
+
           </div>
 
           {/* 🔹 Thumbnails */}
