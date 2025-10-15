@@ -21,7 +21,7 @@ import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre
 import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
 
-const jaguar = () => {
+const Jaguar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -878,4 +878,4 @@ const jaguar = () => {
   );
 };
 
-export default jaguar;
+export default Jaguar;

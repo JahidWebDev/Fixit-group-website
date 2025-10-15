@@ -11,7 +11,7 @@ import OurBusiness from "./Components/OurBusiness/OurBusiness";
 import Footer from "./Components/Footer/Footer";
 import Drfixit from "./Components/Drfixit/Drfixit";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
-import Jaguar from "./Components/Jaguar/jaguar";
+import Jaguar from "./Components/Jaguar/Jaguar";
 
 
 
