@@ -566,10 +566,10 @@ const Drfixit  = () => {
       {/* ================= PRODUCTS GRID ================= */}
       <section className="bg-white py-10 px-6 md:px-12 lg:px-40">
         <div className="py-15">
-          {/* 🔹 Filter Section */}
+       
           <div className="max-w-[1500px] mx-auto">
             <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
-              {/* ALL PRODUCTS Button */}
+            
               <button
                 onClick={() => setSelectedCategory("All Products")}
                 className={`relative text-[18px] font-semibold transition-all duration-300 ${
