@@ -11,7 +11,10 @@ import OurBusiness from "./Components/OurBusiness/OurBusiness";
 import Footer from "./Components/Footer/Footer";
 import Drfixit from "./Components/Drfixit/Drfixit";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
-import ScrollToTop from "./Components/ScrollToTop"; // ✅ এটা যোগ করো
+import Jaguar from "./Components/Jaguar/jaguar";
+
+
+
 
 function Home() {
   return (
@@ -28,15 +31,15 @@ function Home() {
 function App() {
   return (
     <Router>
-      <ScrollToTop /> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ourbusiness" element={<OurBusiness />} />
         <Route path="/drfixit" element={<Drfixit />} />
-        <Route path="/productdetails/:id" element={<ProductDetails />} />
-        <Route path="/admixture" element={<Admixture />} />
+         <Route path="/productdetails/:id" element={<ProductDetails />} />
+       <Route path="/admixture" element={<Admixture />} />
         <Route path="/importing" element={<Importing />} />
         <Route path="/employees" element={<Employees />} />
+        <Route path="/jaguar" element={<Jaguar/>} />
       </Routes>
       <Footer />
     </Router>
