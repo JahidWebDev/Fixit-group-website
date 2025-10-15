@@ -655,6 +655,7 @@ const Drfixit  = () => {
                     <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
 <Link
   to={`/productdetails/${p.id}`}
+  state={{ showBanner: true }} // 👉 এটি ট্রিগার করবে scrollIntoView
   className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center"
 >
   Product Details
