@@ -617,7 +617,7 @@ const ProductDetails = ({}) => {
 
       {/* ============================= */}
       <section id="banner"  className="bg-white">
-        <div className="max-w-full mx-auto py-40 px-6 md:px-70">
+        <div className="max-w-full mx-auto py-30 px-6 md:px-70">
           {/* Product Details */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Left: Image */}
