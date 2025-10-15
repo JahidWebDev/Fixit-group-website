@@ -712,145 +712,107 @@ const ProductDetails = ({}) => {
 
           {/* 🔹 Dynamic Text Content */}
           <div className="mt-20 ">
-            {p.id === 1 && (
-              <section className=" py-20 px-6">
-                <div className="max-w-[1700px] mx-auto text-gray-800 leading-relaxed">
-                  {/* Header */}
-                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-start">
-                    Dr Fixit Brand LW+ 101
-                  </h2>
+           {p.id === 1 && (
+  <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
+    {/* Header */}
+    <div className="mb-12">
+      <h1 className="text-4xl md:text-5xl font-bold mb-4">
+        Dr. Fixit LW+ 101 (1 Litre)
+      </h1>
+      <p className="text-lg md:text-xl">
+        Integral liquid waterproofing compound designed to enhance concrete
+        strength, reduce permeability, and ensure long-term durability in all
+        types of structures.
+      </p>
+    </div>
 
-                  {/* Benefits Section */}
-                  <div className="space-y-8 pl-4 border-l-4 border-yellow-400">
-                    {/* Benefit 1 */}
-                    <div>
-                      <h3 className="text-3xl font-semibold text-gray-900 mb-2">
-                        Improved Concrete Strength
-                      </h3>
-                      <p className="text-lg md:text-xl">
-                        Water-reducing admixtures like LW+ 101 lower the
-                        water-cement ratio, resulting in higher compressive
-                        strength and improved long-term durability.
-                      </p>
-                    </div>
+    {/* Content Sections */}
+    <div className="space-y-10">
+      {/* Key Benefits */}
+      <div>
+        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+          Key Benefits
+        </h2>
+        <ul className="list-disc list-inside text-lg md:text-xl space-y-3">
+          <li>
+            <span className="font-semibold">Improved Concrete Strength:</span>{" "}
+            Water reduction improves compressive strength and long-term
+            durability.
+          </li>
+          <li>
+            <span className="font-semibold">Enhanced Waterproofing:</span>{" "}
+            Reduces concrete porosity to prevent leaks and dampness.
+          </li>
+          <li>
+            <span className="font-semibold">Increased Workability:</span>{" "}
+            Improves ease of placement without compromising strength.
+          </li>
+          <li>
+            <span className="font-semibold">Reduced Shrinkage:</span> Minimizes
+            cracking and surface shrinkage for better finish.
+          </li>
+          <li>
+            <span className="font-semibold">Better Durability:</span> Resists
+            damage from environmental exposure and chemical attacks.
+          </li>
+          <li>
+            <span className="font-semibold">Cost Efficiency:</span> Reduces
+            maintenance cost with improved life of concrete.
+          </li>
+        </ul>
+      </div>
 
-                    {/* Benefit 2 */}
-                    <div>
-                      <h3 className="text-3xl font-semibold text-gray-900 mb-2">
-                        Enhanced Waterproofing
-                      </h3>
-                      <p className="text-lg md:text-xl">
-                        By reducing concrete porosity, LW+ 101 prevents water
-                        penetration — effectively protecting structures from
-                        leaks, dampness, and corrosion.
-                      </p>
-                    </div>
+      {/* Dosage */}
+      <div>
+        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+          Dosage
+        </h2>
+        <p className="text-lg md:text-xl">
+          Use <span className="font-semibold">200 ml</span> of Dr. Fixit LW+ 101
+          for every <span className="font-semibold">50 kg</span> bag of cement.
+          Mix properly for best waterproofing and strength results.
+        </p>
+      </div>
 
-                    {/* Benefit 3 */}
-                    <div>
-                      <h3 className="text-3xl font-semibold text-gray-900 mb-2">
-                        Increased Workability
-                      </h3>
-                      <p className="text-lg md:text-xl">
-                        LW+ 101 improves the flow and ease of concrete placement
-                        without compromising strength, making construction more
-                        efficient and consistent.
-                      </p>
-                    </div>
+      {/* Shelf Life */}
+      <div>
+        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+          Shelf Life
+        </h2>
+        <p className="text-lg md:text-xl">
+          Best before <span className="font-semibold">2 years</span> from date of
+          manufacture when stored in sealed packaging.
+        </p>
+      </div>
 
-                    {/* Benefit 4 */}
-                    <div>
-                      <h3 className="text-3xl font-semibold text-gray-900 mb-2">
-                        Reduced Shrinkage and Cracking
-                      </h3>
-                      <p className="text-lg md:text-xl">
-                        The lower water content helps minimize shrinkage and
-                        cracking, reducing long-term maintenance and repair
-                        costs.
-                      </p>
-                    </div>
+      {/* Storage */}
+      <div>
+        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+          Storage
+        </h2>
+        <p className="text-lg md:text-xl">
+          Store in a cool, dry place away from direct sunlight and heat.
+        </p>
+      </div>
 
-                    {/* Benefit 5 */}
-                    <div>
-                      <h3 className="text-3xl font-semibold text-gray-900 mb-2">
-                        Better Durability and Longevity
-                      </h3>
-                      <p className="text-lg md:text-xl">
-                        LW+ 101 enhances resistance to environmental damage such
-                        as freeze-thaw cycles, sulfate attacks, and chloride
-                        penetration, extending the lifespan of the structure.
-                      </p>
-                    </div>
+      {/* Applications */}
+      <div>
+        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+          Applications
+        </h2>
+        <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
+          <li>Foundations and basements</li>
+          <li>RCC roofs, slabs, and terraces</li>
+          <li>Columns and beams</li>
+          <li>Tunnels and bridges</li>
+          <li>Water-retaining structures</li>
+          <li>Plastering for internal & external walls</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+)}
 
-                    {/* Benefit 6 */}
-                    <div>
-                      <h3 className="text-3xl font-semibold text-gray-900 mb-2">
-                        Cost Savings
-                      </h3>
-                      <p className="text-lg md:text-xl">
-                        With increased durability and reduced repair needs, LW+
-                        101 offers significant long-term cost efficiency for
-                        construction projects.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Dosage */}
-                  <div className="mt-16 space-y-4">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Dosage
-                    </h3>
-                    <p className="text-lg md:text-xl">
-                      Use <span className="font-semibold">200 ml</span> per{" "}
-                      <span className="font-semibold">50 kg</span> bag of
-                      cement.
-                    </p>
-                  </div>
-
-                  {/* Shelf Life */}
-                  <div className="mt-10 space-y-4">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Shelf Life
-                    </h3>
-                    <p className="text-lg md:text-xl">
-                      Best before <span className="font-semibold">2 years</span>{" "}
-                      from the date of manufacture (in sealed pack).
-                    </p>
-                  </div>
-
-                  {/* Storage */}
-                  <div className="mt-10 space-y-4">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Storage
-                    </h3>
-                    <p className="text-lg md:text-xl">
-                      Store in a cool and dry place away from direct sunlight.
-                    </p>
-                  </div>
-
-                  {/* Applications */}
-                  <div className="mt-16 space-y-6">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Applications
-                    </h3>
-                    <p className="text-lg md:text-xl">
-                      LW+ 101 is ideal for use in:
-                    </p>
-                    <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
-                      <li>Foundations</li>
-                      <li>Basements</li>
-                      <li>Bridges</li>
-                      <li>Tunnels</li>
-                      <li>Water-retaining structures</li>
-                    </ul>
-                    <p className="text-lg md:text-xl">
-                      Ensuring strong, durable, and moisture-resistant concrete
-                      in a variety of challenging environments.
-                    </p>
-                  </div>
-                </div>
-              </section>
-            )}
 
             {p.id === 2 && (
               <section className=" py-20 px-6">
@@ -967,7 +929,7 @@ const ProductDetails = ({}) => {
                       </li>
                       <li>
                         <span className="font-semibold">Bonding Agent:</span>{" "}
-                        Coverage is about 4.2–4.5 m²/kg per coat depending on
+                        Coverage is about 4.2-4.5 m²/kg per coat depending on
                         surface condition.
                       </li>
                     </ul>
@@ -1233,7 +1195,7 @@ const ProductDetails = ({}) => {
                       </span>{" "}
                       This integral waterproofing admixture improves concrete
                       durability, minimizes cracks, and protects against
-                      moisture — making it the ideal choice for long-lasting
+                      moisture - making it the ideal choice for long-lasting
                       waterproof concrete applications.
                     </p>
                   </div>
@@ -1296,7 +1258,7 @@ const ProductDetails = ({}) => {
           </li>
           <li>
             Apply two coats of the slurry with a brush, keeping an interval of{" "}
-            <span className="font-semibold">4–6 hours</span> between coats.
+            <span className="font-semibold">4-6 hours</span> between coats.
           </li>
           <li>
             For bonding coats, mix in{" "}
@@ -1316,15 +1278,15 @@ const ProductDetails = ({}) => {
         <h3 className="text-3xl font-semibold text-gray-900">Coverage</h3>
         <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
           <li>
-            <span className="font-semibold">Waterproof coating:</span> 2–2.2 m²/kg
+            <span className="font-semibold">Waterproof coating:</span> 2-2.2 m²/kg
             for 2 coats (1:2 ratio)
           </li>
           <li>
-            <span className="font-semibold">Bonding coat:</span> 4–4.5 m²/kg per coat
+            <span className="font-semibold">Bonding coat:</span> 4-4.5 m²/kg per coat
             (1:1 ratio)
           </li>
           <li>
-            <span className="font-semibold">Repair mortar modifier:</span> 6–7.5 kg per
+            <span className="font-semibold">Repair mortar modifier:</span> 6-7.5 kg per
             50 kg of cement
           </li>
         </ul>
@@ -1561,14 +1523,14 @@ const ProductDetails = ({}) => {
         </h2>
         <ul className="list-disc list-inside space-y-3">
           <li>
-            <strong>Waterproof Coating:</strong> 2–2.2 m²/kg for 2 coats
+            <strong>Waterproof Coating:</strong> 2-2.2 m²/kg for 2 coats
             (cement:latex = 2:1).
           </li>
           <li>
-            <strong>Mortar Modifier:</strong> 6–7.5 kg per 50 kg bag of cement.
+            <strong>Mortar Modifier:</strong> 6-7.5 kg per 50 kg bag of cement.
           </li>
           <li>
-            <strong>Bonding Agent:</strong> 4.2–4.5 m²/kg per coat depending on
+            <strong>Bonding Agent:</strong> 4.2-4.5 m²/kg per coat depending on
             surface texture.
           </li>
         </ul>
@@ -1948,7 +1910,7 @@ const ProductDetails = ({}) => {
                       Theoretical Coverage
                     </h2>
                     <p>
-                      Approximately 10–12 m² per liter per coat, depending on
+                      Approximately 10-12 m² per liter per coat, depending on
                       surface porosity and texture.
                     </p>
                   </div>
@@ -2012,7 +1974,7 @@ const ProductDetails = ({}) => {
                         bonding old and new concrete/plaster surfaces.
                       </li>
                       <li>
-                        <strong>Repair Mortars:</strong> Add to cement–sand
+                        <strong>Repair Mortars:</strong> Add to cement-sand
                         mortar to improve bond strength, flexibility, and water
                         resistance.
                       </li>
@@ -2052,15 +2014,15 @@ const ProductDetails = ({}) => {
                     </h2>
                     <ul className="list-disc list-inside space-y-2">
                       <li>
-                        <strong>Waterproof Coating:</strong> 2–2.2 m²/kg for 2
+                        <strong>Waterproof Coating:</strong> 2-2.2 m²/kg for 2
                         coats (cement:latex = 2:1)
                       </li>
                       <li>
-                        <strong>Mortar Modifier:</strong> 6–7.5 kg per 50 kg bag
+                        <strong>Mortar Modifier:</strong> 6-7.5 kg per 50 kg bag
                         of cement
                       </li>
                       <li>
-                        <strong>Bonding Agent:</strong> 4.2–4.5 m²/kg per coat
+                        <strong>Bonding Agent:</strong> 4.2-4.5 m²/kg per coat
                         depending on surface porosity
                       </li>
                     </ul>
