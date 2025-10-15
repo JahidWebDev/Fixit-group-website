@@ -43,7 +43,7 @@ const jaguar = () => {
       id: 2,
       name: "JAGUAR 4T Motor Engine Oil",
       desc: "1 Litre API SM JASO MA2",
-       descone: "20W50, 20W40, 10W30, 10W40",
+      descone: "20W50, 20W40, 10W30, 10W40",
       desctwo: "Semi Synthetic",
       descthree: "Formulated by U.A.S",
       category: "Admixture",
@@ -53,7 +53,7 @@ const jaguar = () => {
       id: 3,
       name: " JAGUAR High Performance Gasoline (CNG) Engine Oil",
       desc: "2 Litre API-SL 20W-50",
-       descone: "Semi Synthetic",
+      descone: "Semi Synthetic",
       desctwo: "Formulated by U.A.S",
       descthree: "",
       category: "Febilock Glue",
@@ -63,7 +63,7 @@ const jaguar = () => {
       id: 4,
       name: "JAGUAR Multi-Grade Engine Oil",
       desc: "04 Litre SAE 20W50, API: SM",
-       descone: "Fully Synthetic",
+      descone: "Fully Synthetic",
       desctwo: "Formulated by U.A.S",
       descthree: "",
       category: "Febilock Glue",
@@ -73,7 +73,7 @@ const jaguar = () => {
       id: 5,
       name: "JAGUAR Multi-Grade Engine Oil",
       desc: "05 Litre SAE 20W50, API: CH-4",
-       descone: "Fully Synthetic",
+      descone: "Fully Synthetic",
       desctwo: "Formulated by U.A.S",
       descthree: "",
       category: "Febilock Glue",
@@ -83,7 +83,7 @@ const jaguar = () => {
       id: 6,
       name: "JAGUAR Diesel (Heavy Duty) Engine Oil",
       desc: "10 Litre SAE 15W40, API-CI4/SM",
-       descone: "Semi Synthetic",
+      descone: "Semi Synthetic",
       desctwo: "Formulated by U.A.S ",
       descthree: "",
       category: "Febilock Glue",
@@ -93,7 +93,7 @@ const jaguar = () => {
       id: 7,
       name: "JAGUAR Diesel (HD-50) Engine Oil",
       desc: "10 Litre API-SF/CD",
-       descone: " Formulated by U.A.S",
+      descone: " Formulated by U.A.S",
       desctwo: "",
       descthree: "",
       category: "Febilock Glue",
@@ -103,7 +103,7 @@ const jaguar = () => {
       id: 8,
       name: "JAGUAR Diesel (Extra Mileage) Engine Oil",
       desc: "18 Liter Waterproofing Expert",
-       descone: "10 Litre API-CH4",
+      descone: "10 Litre API-CH4",
       desctwo: "Formulated by U.A.S",
       descthree: "",
       category: "Febilock Glue",
@@ -113,7 +113,7 @@ const jaguar = () => {
       id: 9,
       name: "JAGUAR Diesel (Extream Power) Engine Oil",
       desc: "11 Litre API-CF/SF",
-       descone: "Formulated by U.A.S",
+      descone: "Formulated by U.A.S",
       desctwo: "",
       descthree: "",
       category: "Febilock Glue",
@@ -123,7 +123,7 @@ const jaguar = () => {
       id: 10,
       name: "JAGUAR Hydralic Oil HV  Engine Oil",
       desc: "1 Liter Muilti-Purpase Rust Remover",
-       descone: "20 Litre AW ISO C8",
+      descone: "20 Litre AW ISO C8",
       desctwo: "Formulated by U.A.S",
       descthree: "",
       category: "Febilock Glue",
@@ -133,7 +133,7 @@ const jaguar = () => {
       id: 11,
       name: "JAGUAR Hydralic Oil AW Engine Oil",
       desc: "20 Litre AW ISO 100",
-       descone: "Formulated by U.A.S ",
+      descone: "Formulated by U.A.S ",
       desctwo: "",
       descthree: "",
       category: "Febilock Glue",
@@ -143,7 +143,7 @@ const jaguar = () => {
       id: 12,
       name: "AGUAR Gear Oil GL-4",
       desc: "20 Litre SAE-90",
-       descone: "API-GL-4",
+      descone: "API-GL-4",
       desctwo: "Formulated by U.A.S ",
       descthree: "",
       category: "Febilock Glue",
@@ -153,7 +153,7 @@ const jaguar = () => {
       id: 13,
       name: "JAGUAR Industrial & Marine Oil",
       desc: "20 Litre SAE-90",
-       descone: "API-GL-4",
+      descone: "API-GL-4",
       desctwo: "Formulated by U.A.S",
       descthree: "",
       category: "Febilock Glue",
@@ -620,7 +620,14 @@ const jaguar = () => {
               </button>
 
               <div className="flex flex-wrap items-center gap-9">
-                {["Bike", "CNG", " Car", "Bus", "Truc", "Industrial & Marine"].map((cat) => (
+                {[
+                  "Bike",
+                  "CNG",
+                  " Car",
+                  "Bus",
+                  "Truc",
+                  "Industrial & Marine",
+                ].map((cat) => (
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat)}
@@ -663,24 +670,23 @@ const jaguar = () => {
                   </div>
 
                   {/* 🧾 Product Info */}
-                 <div className="p-5 flex flex-col flex-grow justify-between text-center gap-2">
-  <h3 className="text-[17px] font-bold text-[#222] leading-[1.1]">
-    {p.name}
-  </h3>
-  <p className="text-[14px] text-gray-600 leading-[1.4]">
-    {p.desc}
-  </p>
-  <p className="text-[14px] text-gray-600 leading-[1.4]">
-    {p.descone}
-  </p>
-  <p className="text-[14px] text-gray-600 leading-[1.4]">
-    {p.desctwo}
-  </p>
-  <p className="text-[14px] text-gray-600 leading-[1.4]">
-    {p.descthree}
-  </p>
-</div>
-
+                  <div className="p-5 flex flex-col flex-grow justify-between text-center gap-2">
+                    <h3 className="text-[17px] font-bold text-[#222] leading-[1.1]">
+                      {p.name}
+                    </h3>
+                    <p className="text-[14px] text-gray-600 leading-[1.4]">
+                      {p.desc}
+                    </p>
+                    <p className="text-[14px] text-gray-600 leading-[1.4]">
+                      {p.descone}
+                    </p>
+                    <p className="text-[14px] text-gray-600 leading-[1.4]">
+                      {p.desctwo}
+                    </p>
+                    <p className="text-[14px] text-gray-600 leading-[1.4]">
+                      {p.descthree}
+                    </p>
+                  </div>
 
                   {/* 🔘 Buttons */}
                   <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">

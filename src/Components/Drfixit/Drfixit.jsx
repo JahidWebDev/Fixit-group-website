@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
@@ -22,7 +21,7 @@ import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre
 import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
 
-const Drfixit  = () => {
+const Drfixit = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -55,42 +54,42 @@ const Drfixit  = () => {
       id: 4,
       name: "Dr Fixit Brand 302 Super Latex",
       desc: "05 Liter Waterproofing Expert",
-      category: "Febilock Glue", 
+      category: "Febilock Glue",
       img: product12,
     },
     {
       id: 5,
       name: "Dr Fixit Brand LW 101",
       desc: "18 Liter Paint Expert",
-      category: "Febilock Glue", 
+      category: "Febilock Glue",
       img: product3,
     },
     {
       id: 6,
       name: "Dr Fixit Brand 302 Super Latex",
       desc: "18 Liter Waterproofing Expert",
-      category: "Febilock Glue", 
+      category: "Febilock Glue",
       img: product8,
     },
     {
       id: 7,
       name: "Dr Fixit Brand LW 101",
       desc: "30 Liter Paint Expert",
-      category: "Febilock Glue", 
+      category: "Febilock Glue",
       img: product3,
     },
     {
       id: 8,
       name: "Dr Fixit Brand 302 Super Latex",
       desc: "18 Liter Waterproofing Expert",
-      category: "Febilock Glue", 
+      category: "Febilock Glue",
       img: product8,
     },
     {
       id: 9,
       name: "Dr Fixit Brand 5400 Interior Sealer",
       desc: " 18 Liter Paint Expert",
-      category: "Febilock Glue", 
+      category: "Febilock Glue",
       img: product5,
     },
     {
@@ -104,21 +103,21 @@ const Drfixit  = () => {
       id: 11,
       name: "Dr Fixit Brand 5100 Exterior Sealer",
       desc: "18 Liter Paint Expert",
-      category: "Febilock Glue", 
+      category: "Febilock Glue",
       img: product10,
     },
     {
       id: 12,
       name: "Dr Fixit Brand Rust Remover",
       desc: "1 Liter Muilti-Purpase Rust Remover",
-      category: "Febilock Glue", 
+      category: "Febilock Glue",
       img: product11,
     },
     {
       id: 13,
       name: "Dr Fixit Brand Fevilock",
       desc: "500ml Liter Bonding Expert",
-      category: "Febilock Glue", 
+      category: "Febilock Glue",
       img: product9,
     },
   ];
@@ -180,7 +179,6 @@ const Drfixit  = () => {
           alert("❌ Failed to send email.");
         }
       );
- 
   };
 
   return (
@@ -506,7 +504,7 @@ const Drfixit  = () => {
             <img
               src={callIcon}
               alt="Call Icon"
-              className="relative w-[30px] sm:w-[40px] md:w-[20px] z-10" 
+              className="relative w-[30px] sm:w-[40px] md:w-[20px] z-10"
             />
           </a>
         </div>
@@ -566,10 +564,8 @@ const Drfixit  = () => {
       {/* ================= PRODUCTS GRID ================= */}
       <section className="bg-white py-10 px-6 md:px-12 lg:px-40">
         <div className="py-15">
-       
           <div className="max-w-[1500px] mx-auto">
             <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
-            
               <button
                 onClick={() => setSelectedCategory("All Products")}
                 className={`relative text-[18px] font-semibold transition-all duration-300 ${
@@ -652,22 +648,22 @@ const Drfixit  = () => {
                   </div>
 
                   {/* 🔘 Buttons */}
-                    <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
-<Link
-  to={`/productdetails/${p.id}`}
-  state={{ showBanner: true }} // 👉 এটি ট্রিগার করবে scrollIntoView
-  className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center"
->
-  Product Details
-</Link>
+                  <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
+                    <Link
+                      to={`/productdetails/${p.id}`}
+                      state={{ showBanner: true }} // 👉 এটি ট্রিগার করবে scrollIntoView
+                      className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center"
+                    >
+                      Product Details
+                    </Link>
 
-      <Link
-        to="/find-dealer"
-        className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300 text-center"
-      >
-        Find a Dealer
-      </Link>
-    </div>
+                    <Link
+                      to="/find-dealer"
+                      className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300 text-center"
+                    >
+                      Find a Dealer
+                    </Link>
+                  </div>
                 </div>
               ))}
             </div>
@@ -842,5 +838,3 @@ const Drfixit  = () => {
 };
 
 export default Drfixit;
-
-
