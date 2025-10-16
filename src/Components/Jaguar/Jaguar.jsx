@@ -9,6 +9,8 @@ import callIcon from "../../assets/Call-Icon-Green.png";
 import LocationIcon from "../../assets/Location-Man-Icon.png";
 
 import bgImage from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-Ads-Baneer.png";
+import bgImage1 from "../../assets/ales-krivec-4miBe6zg5r0-unsplash.jpg";
+import bgImage2 from "../../assets/claudio-testa--SO3JtE3gZo-unsplash.jpg";
 import Phuter from "../../assets/Phuter.png";
 
 
@@ -17,17 +19,17 @@ import Phuter from "../../assets/Phuter.png";
 
 import product1 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SM.png";
 import product2 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SN.png";
-import product3 from "../../assets/JAGUAR-Diesel-Extra-Mileage-Engine-Oil.png";
-import product4 from "../../assets/JAGUAR-Diesel-Extream-Power-Engine-Oil.png";
-import product5 from "../../assets/JAGUAR-Diesel-HD-50-Engine-Oil.png";
+import product8 from "../../assets/JAGUAR-Diesel-Extra-Mileage-Engine-Oil.png";
+import product9 from "../../assets/JAGUAR-Diesel-Extream-Power-Engine-Oil.png";
+import product7 from "../../assets/JAGUAR-Diesel-HD-50-Engine-Oil.png";
 import product6 from "../../assets/JAGUAR-Diesel-Heavy-Duty-Engine-Oil.png";
-import product7 from "../../assets/JAGUAR-Gear-Oil-GL-4.png";
-import product8 from "../../assets/JAGUAR-High-Performance-Gasoline-CNG-Engine-Oil-01.png";
-import product9 from "../../assets/JAGUAR-Hydralic-Oil-AW-Engine-Oil.png";
+import product12 from "../../assets/JAGUAR-Gear-Oil-GL-4.png";
+import product3 from "../../assets/JAGUAR-High-Performance-Gasoline-CNG-Engine-Oil-01.png";
+import product11 from "../../assets/JAGUAR-Hydralic-Oil-AW-Engine-Oil.png";
 import product10 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
-import product11 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
-import product12 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil-CH-4.png";
-import product13 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil.png";
+import product13 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
+import product5 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil-CH-4.png";
+import product4 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil.png";
 
 const Jaguar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -648,60 +650,66 @@ const Jaguar = () => {
           {/* 🔹 Product Grid */}
           <div className="max-w-[1400px] mx-auto">
             {/* ✅ Responsive Grid: 1 card on mobile, 2 on small, 3 on md, 4 on lg */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {filteredProducts.map((p, index) => (
-                <div
-                  key={index}
-                  className="border-[2px] border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between hover:scale-[1.02] bg-white"
-                >
-                  {/* 🖼 Product Image */}
-                  <div className="flex justify-center items-end w-full h-[260px] border-b-[2px] border-gray-200 rounded-t-2xl mt-5">
-                    <img
-                      src={p.img}
-                      alt={p.name}
-                      className="object-contain w-auto h-[220px] transition-transform duration-300 hover:scale-105"
-                    />
-                  </div>
+           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+  {filteredProducts.map((p, index) => (
+    <React.Fragment key={index}>
+      {/* Product Card */}
+      <div
+        className="border-[2px] border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between hover:scale-[1.02] bg-white"
+      >
+        {/* Product Image */}
+        <div className="flex justify-center items-center w-full h-[260px] border-b-[2px] border-gray-200 rounded-t-2xl mt-5">
+  <img
+    src={p.img}
+    alt={p.name}
+    className="object-contain w-auto h-[220px] transition-transform duration-300 hover:scale-105"
+  />
+</div>
 
-                  {/* 🧾 Product Info */}
-                  <div className="p-5 flex flex-col flex-grow justify-between text-center gap-2">
-                    <h3 className="text-[17px] font-bold text-[#222] leading-[1.1]">
-                      {p.name}
-                    </h3>
-                    <p className="text-[14px] text-gray-600 leading-[1.4]">
-                      {p.desc}
-                    </p>
-                    <p className="text-[14px] text-gray-600 leading-[1.4]">
-                      {p.descone}
-                    </p>
-                    <p className="text-[14px] text-gray-600 leading-[1.4]">
-                      {p.desctwo}
-                    </p>
-                    <p className="text-[14px] text-gray-600 leading-[1.4]">
-                      {p.descthree}
-                    </p>
-                  </div>
 
-                  {/* 🔘 Buttons */}
-                  <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
-                    <Link
-                      // to={`/productdetails/${p.id}`}
-                      // state={{ showBanner: true }} // 👉 এটি ট্রিগার করবে scrollIntoView
-                      className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center"
-                    >
-                      Product Details
-                    </Link>
+        {/* Product Info */}
+        <div className="p-5 flex flex-col flex-grow justify-between text-center gap-2">
+          <h3 className="text-[17px] font-bold text-[#222] leading-[1.1]">
+            {p.name}
+          </h3>
+          <p className="text-[14px] text-gray-600 leading-[1.4]">{p.desc}</p>
+          <p className="text-[14px] text-gray-600 leading-[1.4]">{p.descone}</p>
+          <p className="text-[14px] text-gray-600 leading-[1.4]">{p.desctwo}</p>
+          <p className="text-[14px] text-gray-600 leading-[1.4]">{p.descthree}</p>
+        </div>
 
-                    <Link
-                      to="/find-dealer"
-                      className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300 text-center"
-                    >
-                      Find a Dealer
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* Buttons */}
+        <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
+          <Link
+            className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center"
+          >
+            Product Details
+          </Link>
+
+          <Link
+            to="/find-dealer"
+            className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300 text-center"
+          >
+            Find a Dealer
+          </Link>
+        </div>
+      </div>
+
+      {/* 🎨 Background Image after every 4 products */}
+{(index + 1) % 4 === 0 && (index + 1) / 4 <= 2 && (
+  <div
+    className="block col-span-full w-full h-[250px] bg-cover bg-center rounded-2xl shadow-inner"
+    style={{
+      backgroundImage: `url(${
+        ((index + 1) / 4) % 2 === 1 ? bgImage1 : bgImage2
+      })`,
+    }}
+  ></div>
+)}
+    </React.Fragment>
+  ))}
+</div>
+
 
             {/* Empty State */}
             {filteredProducts.length === 0 && (
@@ -715,7 +723,7 @@ const Jaguar = () => {
 
       {/* ================= from================= */}
      <section
-  className="relative mb-[100px] bg-black bg-cover bg-center py-20 px-6 md:px-10 text-white"
+  className="relative mb-[50px] bg-black bg-cover bg-center py-20 px-6 md:px-10 text-white"
   style={{ backgroundImage: `url(${Phuter})` }}
 >
   {/* Overlay for better readability */}
@@ -760,7 +768,7 @@ const Jaguar = () => {
       </p>
 
       {/* Contact Info */}
-   <div className="flex flex-col md:flex-row items-center py-3 rounded-md mt-6 text-white ">
+   <div className="flex flex-col md:flex-row items-center py-3 rounded-md mt-50 text-white ">
 
       {/* Left – Emergency */}
       <div className="text-center md:text-left mb-2 md:mb-0 space-y-0.5">
