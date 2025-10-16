@@ -3,21 +3,26 @@ import { useLocation } from "react-router-dom";
 
 export default function ScrollToTop() {
   const location = useLocation();
-  const { pathname, state } = location;
+  const { state } = location;
 
   useEffect(() => {
-    if (state?.showBanner) {
-      // যদি showBanner = true হয় → banner এ স্ক্রল করো
-      const bannerSection = document.getElementById("banner");
-      if (bannerSection) {
-        bannerSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    const timer = setTimeout(() => {
+      if (state?.showBanner) {
+        const bannerSection = document.getElementById("banner");
+        if (bannerSection) {
+          bannerSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else if (state?.scrollTop) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0 });
       }
-    } else if (state?.scrollTop) {
-      // scrollTop থাকলে উপরে স্ক্রল করো
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [pathname, state]);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [location.key]);
 
   return null;
 }
+
 

@@ -4,22 +4,30 @@ import emailjs from "emailjs-com";
 
 // import Container from "../../Container";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
-import drfixitLogo from "../../assets/Dr-Fixit-Logo.png";
+import jaguarLogo from "../../assets/Jaguar-logo.png";
 import callIcon from "../../assets/Call-Icon-Green.png";
 import LocationIcon from "../../assets/Location-Man-Icon.png";
 
 import bgImage from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-Ads-Baneer.png";
-import fixitHelmet from "../../assets/Biulding-&-Cap.png";
-import product1 from "../../assets/Dr-Fixit-Brand-LW+-101-1-Litre.png";
-import product2 from "../../assets/Dr-Fixit-Brand-Plaster-Master.png";
-import product3 from "../../assets/Dr-Fixit-Brand-LW-101-30-Litre.png";
-import product5 from "../../assets/Dr-Fixit-Brand-5400-Interior-Wall-Selaer.png";
+import Phuter from "../../assets/Phuter.png";
 
-import product8 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-18-Litre 02.png";
-import product9 from "../../assets/Fevilock-500-ml.png";
-import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre.png";
-import product11 from "../../assets/Rust-Remover-01-Litre.png";
-import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
+
+
+
+
+import product1 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SM.png";
+import product2 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SN.png";
+import product3 from "../../assets/JAGUAR-Diesel-Extra-Mileage-Engine-Oil.png";
+import product4 from "../../assets/JAGUAR-Diesel-Extream-Power-Engine-Oil.png";
+import product5 from "../../assets/JAGUAR-Diesel-HD-50-Engine-Oil.png";
+import product6 from "../../assets/JAGUAR-Diesel-Heavy-Duty-Engine-Oil.png";
+import product7 from "../../assets/JAGUAR-Gear-Oil-GL-4.png";
+import product8 from "../../assets/JAGUAR-High-Performance-Gasoline-CNG-Engine-Oil-01.png";
+import product9 from "../../assets/JAGUAR-Hydralic-Oil-AW-Engine-Oil.png";
+import product10 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
+import product11 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
+import product12 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil-CH-4.png";
+import product13 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil.png";
 
 const Jaguar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,7 +55,7 @@ const Jaguar = () => {
       desctwo: "Semi Synthetic",
       descthree: "Formulated by U.A.S",
       category: "Admixture",
-      img: product12,
+      img: product2,
     },
     {
       id: 3,
@@ -57,7 +65,7 @@ const Jaguar = () => {
       desctwo: "Formulated by U.A.S",
       descthree: "",
       category: "Febilock Glue",
-      img: product1,
+      img: product3,
     },
     {
       id: 4,
@@ -67,7 +75,7 @@ const Jaguar = () => {
       desctwo: "Formulated by U.A.S",
       descthree: "",
       category: "Febilock Glue",
-      img: product12,
+      img: product4,
     },
     {
       id: 5,
@@ -77,7 +85,7 @@ const Jaguar = () => {
       desctwo: "Formulated by U.A.S",
       descthree: "",
       category: "Febilock Glue",
-      img: product3,
+      img: product5,
     },
     {
       id: 6,
@@ -87,7 +95,7 @@ const Jaguar = () => {
       desctwo: "Formulated by U.A.S ",
       descthree: "",
       category: "Febilock Glue",
-      img: product8,
+      img: product6,
     },
     {
       id: 7,
@@ -97,7 +105,7 @@ const Jaguar = () => {
       desctwo: "",
       descthree: "",
       category: "Febilock Glue",
-      img: product3,
+      img: product7,
     },
     {
       id: 8,
@@ -117,7 +125,7 @@ const Jaguar = () => {
       desctwo: "",
       descthree: "",
       category: "Febilock Glue",
-      img: product5,
+      img: product9,
     },
     {
       id: 10,
@@ -127,7 +135,7 @@ const Jaguar = () => {
       desctwo: "Formulated by U.A.S",
       descthree: "",
       category: "Febilock Glue",
-      img: product2,
+      img: product10,
     },
     {
       id: 11,
@@ -137,7 +145,7 @@ const Jaguar = () => {
       desctwo: "",
       descthree: "",
       category: "Febilock Glue",
-      img: product10,
+      img: product11,
     },
     {
       id: 12,
@@ -147,7 +155,7 @@ const Jaguar = () => {
       desctwo: "Formulated by U.A.S ",
       descthree: "",
       category: "Febilock Glue",
-      img: product11,
+      img: product12,
     },
     {
       id: 13,
@@ -157,7 +165,7 @@ const Jaguar = () => {
       desctwo: "Formulated by U.A.S",
       descthree: "",
       category: "Febilock Glue",
-      img: product9,
+      img: product13,
     },
   ];
 
@@ -218,6 +226,8 @@ const Jaguar = () => {
           alert("❌ Failed to send email.");
         }
       );
+ 
+      
   };
 
   return (
@@ -462,27 +472,28 @@ const Jaguar = () => {
           </>
         )}
       </header>
-      <section className="relative z-[-9999]  border-[#b71c1c] bg-white py-10 px-10 md:px-44 flex flex-col md:flex-row items-center justify-between">
-        {/* Left text */}
-        <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4">
-          <p className="text-lg md:text-xl text-black">
-            Business / <span className="font-bold">Dr. Fixit Limited</span>
-          </p>
-          <span className="hidden md:block w-[1px] h-6 bg-black"></span>
-          <p className="text-gray-800 text-base md:text-lg">
-            Waterproofing Solution Expert
-          </p>
-        </div>
+      <section className="relative z-[-9999] border-b border-gray-200 bg-white py-10 px-10 md:px-48 flex flex-col md:flex-row items-center justify-between">
+      {/* Left text */}
+      <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4">
+        <p className="text-lg md:text-xl text-black">
+          Business / <span className="font-bold">Jaguar Lubricants</span>
+        </p>
+        <span className="hidden md:block w-[2px] h-9 bg-black"></span>
+        <p className="text-gray-800 text-base md:text-lg leading-tight">
+          High-Performance Engine Oil in Bangladesh
+          <br className="hidden md:block" /> Imported from UAE
+        </p>
+      </div>
 
-        {/* Right logo */}
-        <div className="mt-4 md:mt-0">
-          <img
-            src={drfixitLogo}
-            alt="Dr. Fixit Logo"
-            className="w-[180px] md:w-[220px] object-contain"
-          />
-        </div>
-      </section>
+      {/* Right logo */}
+      <div className="mt-4 md:mt-0">
+        <img
+          src={jaguarLogo}
+          alt="Jaguar Logo"
+          className="w-[160px] md:w-[200px] object-contain"
+        />
+      </div>
+    </section>
       <section
         className="
     relative 
@@ -549,56 +560,39 @@ const Jaguar = () => {
         </div>
       </section>
 
-      <section className="bg-[#F0F2F1] py-10 px-10 md:px-16">
-        <div className="max-w-[1300px] mx-auto">
-          {/* Heading and Image in one line */}
-          <div className="flex flex-col md:flex-row justify-between items-center lg:items-end mb-8">
-            {/* Heading */}
-            <h2 className="text-10xl md:text-[43px] font-normal text-black mb-6 md:mb-0 lg:mb-2">
-              About <span className="font-bold">Dr. Fixit Limited</span>
-            </h2>
+   <section className="bg-[#F0F2F1] py-24 px-8 md:px-24">
+  <div className="max-w-[1500px] mx-auto">
+    {/* === Heading === */}
+    <h2 className="text-5xl md:text-6xl font-semibold mb-10 text-[#111]">
+      About <span className="font-bold">JAGUAR Lubricants</span>
+    </h2>
 
-            {/* Image */}
-            <div className="w-[180px] md:w-[260px] lg:w-[600px] flex justify-center md:justify-end">
-              <img
-                src={fixitHelmet}
-                alt="Dr. Fixit Helmet"
-                className="object-contain lg:translate-y-1"
-              />
-            </div>
-          </div>
+    {/* === Paragraphs === */}
+    <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] mb-8 text-justify">
+      <span className="font-bold">JAGUAR Lubricants</span>, established in 2021 under the National Groups,
+      is a trusted name in premium engine oils and industrial lubricants in Bangladesh.
+      We <span className="font-bold">import our high-quality products directly from the United Arab Emirates (UAE)</span>
+      to ensure world-class performance and reliability.
+    </p>
 
-          {/* Paragraphs */}
-          <p className="text-[15px] md:text-[30px] text-[#222] leading-relaxed mb-5 text-justify">
-            In 2024, our business entered a new phase when we officially
-            registered with the Government of Bangladesh under the name{" "}
-            <span className="font-bold">Dr. Fixit Limited</span>, completing all
-            legal and business documentation along with{" "}
-            <span className="font-bold">RJSC certification</span>. This
-            significant milestone marked the beginning of a new era in{" "}
-            <span className="font-bold">Fixit Group’s</span> history, where we
-            received overwhelming positive feedback from our valued customers.
-            Alhamdulillah!
-          </p>
+    <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] mb-8 text-justify">
+      Our mission is to meet <span className="font-bold">Bangladesh’s automotive and industrial lubrication needs</span>
+      by providing <span className="font-bold">international-standard lubricants</span> that deliver maximum efficiency
+      and engine protection. We aim to become <span className="font-bold">the leading lubricant brand in Bangladesh</span>,
+      expand to <span className="font-bold">global markets</span>, and set new benchmarks through
+      <span className="font-bold"> advanced technology and innovation</span>.
+    </p>
 
-          <p className="text-[15px] md:text-[30px] text-[#222] leading-relaxed text-justify">
-            We quickly gained the trust of our customers, and within a short
-            period, <span className="font-bold">Dr. Fixit Limited</span>{" "}
-            established itself as a trusted and reliable name in Bangladesh’s{" "}
-            <span className="font-bold">Construction Chemical Industry</span>.
-            We offer a wide range of products including{" "}
-            <span className="font-bold">
-              Concrete Admixture, Waterproofing Solutions for Leak-free Homes,
-              Damp Proofing, Damp Guard, Heat Proofing, and Wall Crack Solutions
-            </span>
-            , which have become a symbol of quality and reliability for our
-            clients. Today, <span className="font-bold">Dr. Fixit Limited</span>{" "}
-            maintains a leading position in the construction industry in
-            Bangladesh, and every product and service we provide ensures
-            customer trust and satisfaction.
-          </p>
-        </div>
-      </section>
+    <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] text-justify">
+      Currently, <span className="font-bold">JAGUAR Lubricants</span> operates through an extensive dealer and service
+      network across Bangladesh, with <span className="font-bold">depots in every division</span> to ensure fast and
+      dependable supply to our valued customers.
+    </p>
+  </div>
+</section>
+
+
+
 
       {/* ================= PRODUCTS GRID ================= */}
       <section className="bg-white py-10 px-6 md:px-12 lg:px-40">
@@ -691,8 +685,8 @@ const Jaguar = () => {
                   {/* 🔘 Buttons */}
                   <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
                     <Link
-                      to={`/productdetails/${p.id}`}
-                      state={{ showBanner: true }} // 👉 এটি ট্রিগার করবে scrollIntoView
+                      // to={`/productdetails/${p.id}`}
+                      // state={{ showBanner: true }} // 👉 এটি ট্রিগার করবে scrollIntoView
                       className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center"
                     >
                       Product Details
@@ -720,160 +714,173 @@ const Jaguar = () => {
       </section>
 
       {/* ================= from================= */}
-      <section className="bg-[#f8f8f8] py-20 px-6 md:px-10">
-        <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
-          {/* Left Side */}
-          <div className="flex-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="text-blue-500 text-6xl">
-                <img
-                  src={LocationIcon}
-                  className="w-[70px]"
-                  alt="LocationIcon"
-                />
-              </div>
-            </div>
+     <section
+  className="relative mb-[100px] bg-black bg-cover bg-center py-20 px-6 md:px-10 text-white"
+  style={{ backgroundImage: `url(${Phuter})` }}
+>
+  {/* Overlay for better readability */}
+  <div className="absolute inset-0 bg-black/70"></div>
 
-            <h2 className="text-3xl md:text-4xl font-normal leading-snug text-gray-900">
-              Fill out the form below to become an <br />
-              <span className="font-bold">Authorized Dealer</span> of{" "}
-              <span className="font-bold">Dr. Fixit Limited.</span>
-            </h2>
-
-            <p className="text-gray-700 mt-6 leading-relaxed">
-              <span className="font-bold">Dr. Fixit Limited</span> is committed
-              to building strong, trustworthy, and sustainable business
-              relationships with each of its dealers.
-            </p>
-
-            <p className="text-gray-700 mt-4 leading-relaxed">
-              Our sole objective is to work together to establish a new standard
-              of quality, durability, and reliability in Bangladesh’s
-              construction industry.
-            </p>
-
-            {/* Contact Info */}
-            <div className="bg-black text-white mt-8 flex flex-col md:flex-row items-center justify-between p-6 rounded-md relative overflow-hidden">
-              {/* Left Side - Emergency Contact */}
-              <div className="text-center md:text-left mb-6 md:mb-0">
-                <h3 className="text-lg font-semibold">Emergency</h3>
-                <p className="text-white font-medium">+8801788360303</p>
-              </div>
-
-              {/* Middle - Call Icon with WhatsApp Link + Red Pulse */}
-              <div className="relative flex items-center justify-center">
-                <div className="absolute w-[70px] h-[70px] bg-white rounded-full animate-redPulse"></div>
-                <a
-                  href="https://wa.me/8801788360303"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[60px] h-[60px] shadow-lg hover:scale-110 transition-transform duration-300"
-                >
-                  <img
-                    src={callIcon}
-                    alt="WhatsApp Call Icon"
-                    className="w-[35px] h-[35px]"
-                  />
-                </a>
-              </div>
-
-              {/* Right Side - Email Info */}
-              <div className="text-center md:text-right mt-6 md:mt-0">
-                <h3 className="text-lg font-semibold">Email Address</h3>
-                <p className="font-medium">support@fixitgroupbd.com</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side */}
-          <div className="bg-[#0B63FF] rounded-md p-8 md:w-[420px] text-white shadow-lg mx-auto mt-10">
-            <h3 className="text-2xl font-semibold mb-6">Request a Quote</h3>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                required
-              />
-
-              <input
-                type="text"
-                name="company"
-                placeholder="Your phone Number"
-                value={formData.company}
-                onChange={handleChange}
-                className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                required
-              />
-
-              <div className="flex space-x-3">
-                {/* Dealer/Depo Dropdown */}
-                <select
-                  name="dealer"
-                  value={formData.dealer}
-                  onChange={handleChange}
-                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                  required
-                >
-                  <option value="" disabled selected>
-                    Dealer/Depo
-                  </option>
-                  <option value="Dealer">Dealer</option>
-                  <option value="Depo">Depo</option>
-                </select>
-
-                {/* District Dropdown */}
-                <select
-                  name="district"
-                  value={formData.district}
-                  onChange={handleChange}
-                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                  required
-                >
-                  <option value="" disabled selected>
-                    District
-                  </option>
-                  <option value="Dhaka">Dhaka</option>
-                  <option value="Chittagong">Chittagong</option>
-                  <option value="Khulna">Khulna</option>
-                </select>
-              </div>
-
-              <div className="flex items-start space-x-2 text-sm mt-2">
-                <input
-                  type="checkbox"
-                  name="consent"
-                  checked={formData.consent}
-                  onChange={handleChange}
-                  className="mt-1"
-                />
-                <p>
-                  I consent to receiving calls based on the information provided
-                  above.
-                </p>
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-gray-200 text-gray-600 font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-white transition disabled:opacity-60"
-              >
-                {loading ? "Sending..." : "Submit"}
-              </button>
-            </form>
-
-            {sent && (
-              <p className="text-green-300 text-center mt-3">
-                ✅ Mail sent successfully!
-              </p>
-            )}
-          </div>
+  <div className="relative max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
+    {/* Left Side */}
+    <div className="flex-1">
+      <div className="flex items-center space-x-3 mb-6">
+        <div className="text-yellow-400 text-6xl">
+          <img
+            src={LocationIcon}
+            className="w-[70px]"
+            alt="Location Icon"
+          />
         </div>
-      </section>
+      </div>
+
+      <h2 className="text-3xl md:text-4xl font-normal leading-snug">
+        Fill out the form below to become an <br />
+        <span className="font-bold text-yellow-400">
+          Authorized Dealer
+        </span>{" "}
+        of{" "}
+        <span className="font-bold text-yellow-400">
+          Jaguar Lubricants
+        </span>
+      </h2>
+
+      <p className="mt-6 text-gray-300 leading-relaxed">
+        <span className="font-bold text-white">Jaguar Lubricants</span> is
+        committed to building strong, trustworthy, and sustainable business
+        relationships with each of its dealers.
+      </p>
+
+      <p className="mt-4 text-gray-300 leading-relaxed">
+        Our goal is to establish a new benchmark of{" "}
+        <span className="font-semibold text-yellow-400">
+          quality, durability, and reliability
+        </span>{" "}
+        in Bangladesh’s lubricant industry.
+      </p>
+
+      {/* Contact Info */}
+   <div className="flex flex-col md:flex-row items-center py-3 rounded-md mt-6 text-white ">
+
+      {/* Left – Emergency */}
+      <div className="text-center md:text-left mb-2 md:mb-0 space-y-0.5">
+        <h3 className="text-sm font-semibold text-yellow-400">Emergency</h3>
+        <p className="text-xs font-medium text-gray-300">+8801788360303</p>
+      </div>
+
+      {/* Center – Call Icon */}
+      <div className="relative flex items-center justify-center mx-6 my-2 md:my-0">
+        <div className="absolute w-[45px] h-[45px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
+        <a
+          href="https://wa.me/8801788360303"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative z-10 flex items-center justify-center bg-white rounded-full w-[40px] h-[40px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
+        >
+          <img
+            src={callIcon}
+            alt="WhatsApp Call Icon"
+            className="w-[22px] h-[22px]"
+          />
+        </a>
+      </div>
+
+      {/* Right – Email */}
+      <div className="text-center md:text-right mt-2 md:mt-0 space-y-0.5">
+        <h3 className="text-sm font-semibold text-yellow-400">Email Address</h3>
+        <p className="text-xs font-medium text-gray-300">support@fixitgroupbd.com</p>
+      </div>
+    </div>
+
+    </div>
+
+    {/* Right Side Form */}
+    <div className="bg-[#1A1A1A] rounded-md p-8 md:w-[420px] shadow-lg mx-auto mt-10">
+      <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
+        Request a Quote
+      </h3>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+          required
+        />
+
+        <input
+          type="text"
+          name="company"
+          placeholder="Your Phone Number"
+          value={formData.company}
+          onChange={handleChange}
+          className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+          required
+        />
+
+        <div className="flex space-x-3">
+          <select
+            name="dealer"
+            value={formData.dealer}
+            onChange={handleChange}
+            className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+            required
+          >
+            <option value="" disabled>
+              Dealer/Depo
+            </option>
+            <option value="Dealer">Dealer</option>
+            <option value="Depo">Depo</option>
+          </select>
+
+          <select
+            name="district"
+            value={formData.district}
+            onChange={handleChange}
+            className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+            required
+          >
+            <option value="" disabled>
+              District
+            </option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Chittagong">Chittagong</option>
+            <option value="Khulna">Khulna</option>
+          </select>
+        </div>
+
+        <div className="flex items-start space-x-2 text-sm mt-2">
+          <input
+            type="checkbox"
+            name="consent"
+            checked={formData.consent}
+            onChange={handleChange}
+            className="mt-1"
+          />
+          <p>I consent to receiving calls based on the information provided above.</p>
+        </div>
+
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-yellow-400 text-black font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-yellow-300 transition disabled:opacity-60"
+        >
+          {loading ? "Sending..." : "Submit"}
+        </button>
+      </form>
+
+      {sent && (
+        <p className="text-green-400 text-center mt-3">
+          ✅ Mail sent successfully!
+        </p>
+      )}
+    </div>
+  </div>
+</section>
+
     </section>
   );
 };

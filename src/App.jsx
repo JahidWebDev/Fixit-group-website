@@ -13,8 +13,8 @@ import Drfixit from "./Components/Drfixit/Drfixit";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import Jaguar from "./Components/Jaguar/Jaguar";
 
-
-
+// ✅ ScrollToTop Component import করো
+import ScrollToTop from "./Components/ScrollToTop";
 
 function Home() {
   return (
@@ -31,16 +31,20 @@ function Home() {
 function App() {
   return (
     <Router>
+     
+      <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ourbusiness" element={<OurBusiness />} />
         <Route path="/drfixit" element={<Drfixit />} />
-         <Route path="/productdetails/:id" element={<ProductDetails />} />
-       <Route path="/admixture" element={<Admixture />} />
+        <Route path="/productdetails/:id" element={<ProductDetails />} />
+        <Route path="/admixture" element={<Admixture />} />
         <Route path="/importing" element={<Importing />} />
         <Route path="/employees" element={<Employees />} />
-        <Route path="/jaguar" element={<Jaguar/>} />
+        <Route path="/jaguar" element={<Jaguar />} />
       </Routes>
+
       <Footer />
     </Router>
   );
