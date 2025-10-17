@@ -8,7 +8,6 @@ import LocationIcon from "../../assets/Location-Man-Icon.png";
 import jaguarLogo from "../../assets/Jaguar-logo.png";
 import Phuter from "../../assets/Phuter.png";
 
-
 import product1 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SM.png";
 import product2 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SN.png";
 import product3 from "../../assets/JAGUAR-High-Performance-Gasoline-CNG-Engine-Oil-01.png";
@@ -166,25 +165,29 @@ const products = [
   },
   {
     id: 10,
-    title: "18kg Dr. Fixit 302 Super Latex-Premium SBR Waterproofing & Bonding Agent for Concrete Repair",
+    title:
+      "18kg Dr. Fixit 302 Super Latex-Premium SBR Waterproofing & Bonding Agent for Concrete Repair",
     brand: "Dr. Fixit Limited",
     category: "Admixture",
     quantity: "1 Litre",
     subtitle: "Dr. Fixit 302 Super Latex",
-    description: "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applica-tions. This URP-based formulation is known for enhancing the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
+    description:
+      "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applica-tions. This URP-based formulation is known for enhancing the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
     subtitletwo: "SBR Latex for repairs & waterproofing",
     image: product10,
     availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
   },
   {
     id: 11,
-    title: "18kg Dr. Fixit 5100 Exterior Wall Sealer High-Performance Water-Based Wall Primer for Interior Walls",
+    title:
+      "18kg Dr. Fixit 5100 Exterior Wall Sealer High-Performance Water-Based Wall Primer for Interior Walls",
     brand: "Dr. Fixit Limited",
     category: "Paints",
     quantity: "18 Litre",
     subtitle: "Dr. Fixit 5100 Exterior Wall Sealer.",
     subtitletwo: "Excelient Finish Leveling",
-    description: "Dr. Fixit 5100 Wall Sealer is a high-performance, water-based sealer specially formulated for exterior walls, whether new or repainted. It enhances the durability and performance of the finishing coat while providing effective protection against moisture and alkalinity. Ideal when used with Weatherbond, it ensures long-lasting exterior wall protection and a superior finish.",
+    description:
+      "Dr. Fixit 5100 Wall Sealer is a high-performance, water-based sealer specially formulated for exterior walls, whether new or repainted. It enhances the durability and performance of the finishing coat while providing effective protection against moisture and alkalinity. Ideal when used with Weatherbond, it ensures long-lasting exterior wall protection and a superior finish.",
     availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
     image: product11,
   },
@@ -284,8 +287,6 @@ const JaguarDetails = ({}) => {
           alert("❌ Failed to send email.");
         }
       );
-
-      
   };
 
   return (
@@ -531,46 +532,42 @@ const JaguarDetails = ({}) => {
         )}
       </header>
       {/* =========================== */}
-         <section className="relative z-[-9999] border-b border-gray-200 bg-white py-10 px-10 md:px-48 flex flex-col md:flex-row items-center justify-between">
-              {/* Left text */}
-              <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4">
-                <p className="text-lg md:text-xl text-black">
-                  Business / <span className="font-bold">Jaguar Lubricants</span>
-                </p>
-                <span className="hidden md:block w-[2px] h-9 bg-black"></span>
-                <p className="text-gray-800 text-base md:text-lg leading-tight">
-                  High-Performance Engine Oil in Bangladesh
-                  <br className="hidden md:block" /> Imported from UAE
-                </p>
-              </div>
-      
-              {/* Right logo */}
-              <div className="mt-4 md:mt-0">
-                <img
-                  src={jaguarLogo}
-                  alt="Jaguar Logo"
-                  className="w-[160px] md:w-[200px] object-contain"
-                />
-              </div>
-            </section>
+      <section className="relative z-[-9999] border-b border-gray-200 bg-white py-10 px-10 md:px-48 flex flex-col md:flex-row items-center justify-between">
+        {/* Left text */}
+        <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4">
+          <p className="text-lg md:text-xl text-black">
+            Business / <span className="font-bold">Jaguar Lubricants</span>
+          </p>
+          <span className="hidden md:block w-[2px] h-9 bg-black"></span>
+          <p className="text-gray-800 text-base md:text-lg leading-tight">
+            High-Performance Engine Oil in Bangladesh
+            <br className="hidden md:block" /> Imported from UAE
+          </p>
+        </div>
+
+        {/* Right logo */}
+        <div className="mt-4 md:mt-0">
+          <img
+            src={jaguarLogo}
+            alt="Jaguar Logo"
+            className="w-[160px] md:w-[200px] object-contain"
+          />
+        </div>
+      </section>
       {/* ============================ */}
 
- 
-
       {/* ============================= */}
-      <section id="banner"  className="bg-white">
+      <section id="banner" className="bg-white">
         <div className="max-w-full mx-auto py-30 px-6 md:px-70">
           {/* Product Details */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Left: Image */}
             <div className="flex flex-col items-center">
-              <div className="border h-[560px] w-[450px] border-gray-200 rounded-2xl shadow-sm p-4 flex items-center justify-center">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="max-w-[160%] max-h-[100%] mt-[60px] object-contain"
-                />
-              </div>
+<div className="h-[600px] w-[500px] rounded-2xl shadow-sm p-4 flex items-center justify-center overflow-hidden border border-black/20">
+  <img src={p.image} alt={p.title} className="max-w-full max-h-full object-contain" />
+</div>
+
+
 
               <div className="mt-8">
                 <Link
@@ -632,129 +629,145 @@ const JaguarDetails = ({}) => {
           </div>
 
           {/* 🔹 Thumbnails */}
-          <div className="flex justify-center gap-4 mt-12 flex-wrap">
-            {products.map((prod, i) => (
-              <button
-                key={prod.id}
-                onClick={() => setIndex(i)}
-                className={`border rounded-xl p-2 transition-all ${
-                  index === i
-                    ? "border-[#f6b400] bg-[#fff8e1] scale-105"
-                    : "border-gray-200  hover:border-[#f6b400]"
-                }`}
-              >
-                <img
-                  src={prod.image}
-                  alt={prod.title}
-                  className="w-[70px] h-auto object-contain"
-                />
-              </button>
-            ))}
-          </div>
+     <div className="flex justify-center gap-4 mt-12 flex-wrap">
+  {products.map((prod, i) => (
+    <button
+      key={prod.id}
+      onClick={() => setIndex(i)}
+      className={`border rounded-xl p-2 transition-all flex items-center justify-center w-[90px] h-[90px] ${
+        index === i
+          ? "border-[#f6b400] bg-[#fff8e1] scale-105"
+          : "border-gray-200 hover:border-[#f6b400]"
+      }`}
+    >
+      <img
+        src={prod.image}
+        alt={prod.title}
+        className="max-w-[70px] max-h-[70px] object-contain"
+      />
+    </button>
+  ))}
+</div>
+
 
           {/* 🔹 Dynamic Text Content */}
           <div className="mt-20 ">
-           {p.id === 1 && (
-  <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
-    {/* Header */}
-    <div className="mb-12">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4">
-        Dr. Fixit LW+ 101 (1 Litre)
-      </h1>
-      <p className="text-lg md:text-xl">
-        Integral liquid waterproofing compound designed to enhance concrete
-        strength, reduce permeability, and ensure long-term durability in all
-        types of structures.
-      </p>
-    </div>
+            {p.id === 1 && (
+              <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
+                {/* Header */}
+                <div className="mb-12">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                    Dr. Fixit LW+ 101 (1 Litre)
+                  </h1>
+                  <p className="text-lg md:text-xl">
+                    Integral liquid waterproofing compound designed to enhance
+                    concrete strength, reduce permeability, and ensure long-term
+                    durability in all types of structures.
+                  </p>
+                </div>
 
-    {/* Content Sections */}
-    <div className="space-y-10">
-      {/* Key Benefits */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Key Benefits
-        </h2>
-        <ul className="list-disc list-inside text-lg md:text-xl space-y-3">
-          <li>
-            <span className="font-semibold">Improved Concrete Strength:</span>{" "}
-            Water reduction improves compressive strength and long-term
-            durability.
-          </li>
-          <li>
-            <span className="font-semibold">Enhanced Waterproofing:</span>{" "}
-            Reduces concrete porosity to prevent leaks and dampness.
-          </li>
-          <li>
-            <span className="font-semibold">Increased Workability:</span>{" "}
-            Improves ease of placement without compromising strength.
-          </li>
-          <li>
-            <span className="font-semibold">Reduced Shrinkage:</span> Minimizes
-            cracking and surface shrinkage for better finish.
-          </li>
-          <li>
-            <span className="font-semibold">Better Durability:</span> Resists
-            damage from environmental exposure and chemical attacks.
-          </li>
-          <li>
-            <span className="font-semibold">Cost Efficiency:</span> Reduces
-            maintenance cost with improved life of concrete.
-          </li>
-        </ul>
-      </div>
+                {/* Content Sections */}
+                <div className="space-y-10">
+                  {/* Key Benefits */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Key Benefits
+                    </h2>
+                    <ul className="list-disc list-inside text-lg md:text-xl space-y-3">
+                      <li>
+                        <span className="font-semibold">
+                          Improved Concrete Strength:
+                        </span>{" "}
+                        Water reduction improves compressive strength and
+                        long-term durability.
+                      </li>
+                      <li>
+                        <span className="font-semibold">
+                          Enhanced Waterproofing:
+                        </span>{" "}
+                        Reduces concrete porosity to prevent leaks and dampness.
+                      </li>
+                      <li>
+                        <span className="font-semibold">
+                          Increased Workability:
+                        </span>{" "}
+                        Improves ease of placement without compromising
+                        strength.
+                      </li>
+                      <li>
+                        <span className="font-semibold">
+                          Reduced Shrinkage:
+                        </span>{" "}
+                        Minimizes cracking and surface shrinkage for better
+                        finish.
+                      </li>
+                      <li>
+                        <span className="font-semibold">
+                          Better Durability:
+                        </span>{" "}
+                        Resists damage from environmental exposure and chemical
+                        attacks.
+                      </li>
+                      <li>
+                        <span className="font-semibold">Cost Efficiency:</span>{" "}
+                        Reduces maintenance cost with improved life of concrete.
+                      </li>
+                    </ul>
+                  </div>
 
-      {/* Dosage */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Dosage
-        </h2>
-        <p className="text-lg md:text-xl">
-          Use <span className="font-semibold">200 ml</span> of Dr. Fixit LW+ 101
-          for every <span className="font-semibold">50 kg</span> bag of cement.
-          Mix properly for best waterproofing and strength results.
-        </p>
-      </div>
+                  {/* Dosage */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Dosage
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Use <span className="font-semibold">200 ml</span> of Dr.
+                      Fixit LW+ 101 for every{" "}
+                      <span className="font-semibold">50 kg</span> bag of
+                      cement. Mix properly for best waterproofing and strength
+                      results.
+                    </p>
+                  </div>
 
-      {/* Shelf Life */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Shelf Life
-        </h2>
-        <p className="text-lg md:text-xl">
-          Best before <span className="font-semibold">2 years</span> from date of
-          manufacture when stored in sealed packaging.
-        </p>
-      </div>
+                  {/* Shelf Life */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Shelf Life
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Best before <span className="font-semibold">2 years</span>{" "}
+                      from date of manufacture when stored in sealed packaging.
+                    </p>
+                  </div>
 
-      {/* Storage */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Storage
-        </h2>
-        <p className="text-lg md:text-xl">
-          Store in a cool, dry place away from direct sunlight and heat.
-        </p>
-      </div>
+                  {/* Storage */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Storage
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Store in a cool, dry place away from direct sunlight and
+                      heat.
+                    </p>
+                  </div>
 
-      {/* Applications */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Applications
-        </h2>
-        <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
-          <li>Foundations and basements</li>
-          <li>RCC roofs, slabs, and terraces</li>
-          <li>Columns and beams</li>
-          <li>Tunnels and bridges</li>
-          <li>Water-retaining structures</li>
-          <li>Plastering for internal & external walls</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-)}
-
+                  {/* Applications */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Applications
+                    </h2>
+                    <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
+                      <li>Foundations and basements</li>
+                      <li>RCC roofs, slabs, and terraces</li>
+                      <li>Columns and beams</li>
+                      <li>Tunnels and bridges</li>
+                      <li>Water-retaining structures</li>
+                      <li>Plastering for internal & external walls</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            )}
 
             {p.id === 2 && (
               <section className=" py-20 px-6">
@@ -1144,389 +1157,466 @@ const JaguarDetails = ({}) => {
                 </div>
               </section>
             )}
-{p.id === 4 && (
-  <section className="py-20 px-6">
-    <div className="max-w-[1700px] mx-auto text-gray-800 leading-relaxed">
-      {/* Header */}
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-start">
-        Dr Fixit 302 Super Latex (30kg)
-      </h2>
+            {p.id === 4 && (
+              <section className="py-20 px-6">
+                <div className="max-w-[1700px] mx-auto text-gray-800 leading-relaxed">
+                  {/* Header */}
+                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-start">
+                    Dr Fixit 302 Super Latex (30kg)
+                  </h2>
 
-      {/* Introduction */}
-      <div className="space-y-8 pl-4 border-l-4 border-yellow-400">
-        <p className="text-lg md:text-xl">
-          <span className="font-semibold">Dr. Fixit 302 Super Latex</span> is a
-          Styrene Butadiene Rubber (SBR) based waterproofing and bonding agent
-          designed for use with cement for concrete and mortar repair. It
-          enhances adhesion, flexibility, and water resistance, ensuring
-          long-lasting durability in construction and repair applications.
-        </p>
+                  {/* Introduction */}
+                  <div className="space-y-8 pl-4 border-l-4 border-yellow-400">
+                    <p className="text-lg md:text-xl">
+                      <span className="font-semibold">
+                        Dr. Fixit 302 Super Latex
+                      </span>{" "}
+                      is a Styrene Butadiene Rubber (SBR) based waterproofing
+                      and bonding agent designed for use with cement for
+                      concrete and mortar repair. It enhances adhesion,
+                      flexibility, and water resistance, ensuring long-lasting
+                      durability in construction and repair applications.
+                    </p>
 
-        <p className="text-lg md:text-xl">
-          This polymer latex is ideal for applications such as waterproof
-          coatings, bonding old and new concrete, patch repairs, and protective
-          coatings for slabs, terraces, and bathrooms.
-        </p>
-      </div>
+                    <p className="text-lg md:text-xl">
+                      This polymer latex is ideal for applications such as
+                      waterproof coatings, bonding old and new concrete, patch
+                      repairs, and protective coatings for slabs, terraces, and
+                      bathrooms.
+                    </p>
+                  </div>
 
-      {/* Recommended Areas of Application */}
-      <div className="mt-16 space-y-6">
-        <h3 className="text-3xl font-semibold text-gray-900">
-          Recommended Areas of Application
-        </h3>
-        <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
-          <li>Waterproofing of bathrooms, terraces, and roofs</li>
-          <li>Bonding coat for old and new concrete or plaster</li>
-          <li>Repair mortar and concrete modification</li>
-          <li>Chhajjas, balconies, and slabs</li>
-          <li>Protective coating for RCC structures</li>
-        </ul>
-      </div>
+                  {/* Recommended Areas of Application */}
+                  <div className="mt-16 space-y-6">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      Recommended Areas of Application
+                    </h3>
+                    <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
+                      <li>Waterproofing of bathrooms, terraces, and roofs</li>
+                      <li>Bonding coat for old and new concrete or plaster</li>
+                      <li>Repair mortar and concrete modification</li>
+                      <li>Chhajjas, balconies, and slabs</li>
+                      <li>Protective coating for RCC structures</li>
+                    </ul>
+                  </div>
 
-      {/* Application Method */}
-      <div className="mt-16 space-y-8">
-        <h3 className="text-3xl font-semibold text-gray-900">
-          Application Method
-        </h3>
-        <ol className="list-decimal pl-8 text-lg md:text-xl space-y-3">
-          <li>
-            Clean the surface to remove dust, oil, grease, or loose particles.
-          </li>
-          <li>
-            Mix <span className="font-semibold">Dr. Fixit 302 Super Latex</span> with
-            cement in the ratio of{" "}
-            <span className="font-semibold">1:2 (Latex : Cement)</span> to form a
-            smooth, brushable slurry.
-          </li>
-          <li>
-            Apply two coats of the slurry with a brush, keeping an interval of{" "}
-            <span className="font-semibold">4-6 hours</span> between coats.
-          </li>
-          <li>
-            For bonding coats, mix in{" "}
-            <span className="font-semibold">1:1 (Latex : Cement)</span> ratio and
-            apply before new concrete placement.
-          </li>
-          <li>
-            For repair mortars, add{" "}
-            <span className="font-semibold">10–15% Latex</span> by weight of
-            cement for enhanced adhesion and strength.
-          </li>
-        </ol>
-      </div>
+                  {/* Application Method */}
+                  <div className="mt-16 space-y-8">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      Application Method
+                    </h3>
+                    <ol className="list-decimal pl-8 text-lg md:text-xl space-y-3">
+                      <li>
+                        Clean the surface to remove dust, oil, grease, or loose
+                        particles.
+                      </li>
+                      <li>
+                        Mix{" "}
+                        <span className="font-semibold">
+                          Dr. Fixit 302 Super Latex
+                        </span>{" "}
+                        with cement in the ratio of{" "}
+                        <span className="font-semibold">
+                          1:2 (Latex : Cement)
+                        </span>{" "}
+                        to form a smooth, brushable slurry.
+                      </li>
+                      <li>
+                        Apply two coats of the slurry with a brush, keeping an
+                        interval of{" "}
+                        <span className="font-semibold">4-6 hours</span> between
+                        coats.
+                      </li>
+                      <li>
+                        For bonding coats, mix in{" "}
+                        <span className="font-semibold">
+                          1:1 (Latex : Cement)
+                        </span>{" "}
+                        ratio and apply before new concrete placement.
+                      </li>
+                      <li>
+                        For repair mortars, add{" "}
+                        <span className="font-semibold">10–15% Latex</span> by
+                        weight of cement for enhanced adhesion and strength.
+                      </li>
+                    </ol>
+                  </div>
 
-      {/* Coverage */}
-      <div className="mt-16 space-y-4">
-        <h3 className="text-3xl font-semibold text-gray-900">Coverage</h3>
-        <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
-          <li>
-            <span className="font-semibold">Waterproof coating:</span> 2-2.2 m²/kg
-            for 2 coats (1:2 ratio)
-          </li>
-          <li>
-            <span className="font-semibold">Bonding coat:</span> 4-4.5 m²/kg per coat
-            (1:1 ratio)
-          </li>
-          <li>
-            <span className="font-semibold">Repair mortar modifier:</span> 6-7.5 kg per
-            50 kg of cement
-          </li>
-        </ul>
-        <p className="text-gray-700 text-base italic">
-          *Coverage may vary depending on surface texture and site conditions.*
-        </p>
-      </div>
+                  {/* Coverage */}
+                  <div className="mt-16 space-y-4">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      Coverage
+                    </h3>
+                    <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
+                      <li>
+                        <span className="font-semibold">
+                          Waterproof coating:
+                        </span>{" "}
+                        2-2.2 m²/kg for 2 coats (1:2 ratio)
+                      </li>
+                      <li>
+                        <span className="font-semibold">Bonding coat:</span>{" "}
+                        4-4.5 m²/kg per coat (1:1 ratio)
+                      </li>
+                      <li>
+                        <span className="font-semibold">
+                          Repair mortar modifier:
+                        </span>{" "}
+                        6-7.5 kg per 50 kg of cement
+                      </li>
+                    </ul>
+                    <p className="text-gray-700 text-base italic">
+                      *Coverage may vary depending on surface texture and site
+                      conditions.*
+                    </p>
+                  </div>
 
-      {/* Key Benefits */}
-      <div className="mt-16 space-y-4">
-        <h3 className="text-3xl font-semibold text-gray-900">
-          Key Benefits
-        </h3>
-        <ol className="list-decimal pl-8 text-lg md:text-xl space-y-3">
-          <li>
-            Provides excellent bonding between old and new concrete or plaster.
-          </li>
-          <li>
-            Prevents water seepage and dampness through treated surfaces.
-          </li>
-          <li>
-            Enhances flexibility and tensile strength of cement mortar.
-          </li>
-          <li>Reduces shrinkage cracks and increases durability.</li>
-          <li>
-            Improves resistance to chemicals and corrosion in RCC structures.
-          </li>
-        </ol>
-      </div>
+                  {/* Key Benefits */}
+                  <div className="mt-16 space-y-4">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      Key Benefits
+                    </h3>
+                    <ol className="list-decimal pl-8 text-lg md:text-xl space-y-3">
+                      <li>
+                        Provides excellent bonding between old and new concrete
+                        or plaster.
+                      </li>
+                      <li>
+                        Prevents water seepage and dampness through treated
+                        surfaces.
+                      </li>
+                      <li>
+                        Enhances flexibility and tensile strength of cement
+                        mortar.
+                      </li>
+                      <li>
+                        Reduces shrinkage cracks and increases durability.
+                      </li>
+                      <li>
+                        Improves resistance to chemicals and corrosion in RCC
+                        structures.
+                      </li>
+                    </ol>
+                  </div>
 
-      {/* Dosage */}
-      <div className="mt-16 space-y-4">
-        <h3 className="text-3xl font-semibold text-gray-900">Dosage</h3>
-        <p className="text-lg md:text-xl">
-          Use <span className="font-semibold">6–7.5 kg</span> of Dr. Fixit 302 Super
-          Latex per <span className="font-semibold">50 kg</span> of cement when used
-          as a modifier. Adjust ratios according to use type as recommended above.
-        </p>
-      </div>
+                  {/* Dosage */}
+                  <div className="mt-16 space-y-4">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      Dosage
+                    </h3>
+                    <p className="text-lg md:text-xl">
+                      Use <span className="font-semibold">6–7.5 kg</span> of Dr.
+                      Fixit 302 Super Latex per{" "}
+                      <span className="font-semibold">50 kg</span> of cement
+                      when used as a modifier. Adjust ratios according to use
+                      type as recommended above.
+                    </p>
+                  </div>
 
-      {/* SBR Waterproofing Section */}
-      <div className="mt-16 space-y-4">
-        <h3 className="text-3xl font-semibold text-gray-900">
-          SBR Waterproofing Advantages
-        </h3>
-        <p className="text-lg md:text-xl">
-          Being an SBR-based polymer, Dr. Fixit 302 Super Latex forms a flexible,
-          seamless, and durable waterproof barrier. It protects concrete from
-          cracks, seepage, and deterioration caused by water ingress.
-        </p>
-        <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
-          <li>Provides long-lasting waterproof protection</li>
-          <li>Enhances structural bonding and strength</li>
-          <li>Ideal for repairing damaged concrete surfaces</li>
-          <li>Minimizes future maintenance and leakage issues</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-)}
+                  {/* SBR Waterproofing Section */}
+                  <div className="mt-16 space-y-4">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      SBR Waterproofing Advantages
+                    </h3>
+                    <p className="text-lg md:text-xl">
+                      Being an SBR-based polymer, Dr. Fixit 302 Super Latex
+                      forms a flexible, seamless, and durable waterproof
+                      barrier. It protects concrete from cracks, seepage, and
+                      deterioration caused by water ingress.
+                    </p>
+                    <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
+                      <li>Provides long-lasting waterproof protection</li>
+                      <li>Enhances structural bonding and strength</li>
+                      <li>Ideal for repairing damaged concrete surfaces</li>
+                      <li>Minimizes future maintenance and leakage issues</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            )}
 
+            {p.id === 5 && (
+              <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
+                {/* Header */}
+                <div className="mb-12">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                    Dr. Fixit LW+ 101 (18 Litre)
+                  </h1>
+                  <p className="text-lg md:text-xl">
+                    High-performance integral liquid waterproofing compound for
+                    concrete and plaster that enhances strength, durability, and
+                    long-term protection against water seepage.
+                  </p>
+                </div>
 
-         {p.id === 5 && (
-  <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
-    {/* Header */}
-    <div className="mb-12">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4">
-        Dr. Fixit LW+ 101 (18 Litre)
-      </h1>
-      <p className="text-lg md:text-xl">
-        High-performance integral liquid waterproofing compound for concrete and plaster that enhances strength, durability, and long-term protection against water seepage.
-      </p>
-    </div>
+                {/* Content Sections */}
+                <div className="space-y-10">
+                  {/* Application Steps */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Application Method
+                    </h2>
+                    <p className="text-lg md:text-xl mb-4">
+                      Dr. Fixit LW+ 101 should be mixed properly with cement,
+                      sand, and aggregates for best performance. Follow these
+                      steps during concrete or plaster preparation:
+                    </p>
+                    <ol className="list-decimal list-inside space-y-3 text-lg md:text-xl">
+                      <li>
+                        Mix cement, sand, and aggregates in proper proportion
+                        with <span className="font-semibold">2/3rd</span> of the
+                        total mixing water.
+                      </li>
+                      <li>
+                        Mix Dr. Fixit LW+ with the remaining{" "}
+                        <span className="font-semibold">1/3rd portion</span> of
+                        water and add this to the premixed concrete or mortar.
+                      </li>
+                      <li>
+                        Mix thoroughly until a uniform and cohesive consistency
+                        is achieved.
+                      </li>
+                      <li>
+                        Maintain the{" "}
+                        <span className="font-semibold">
+                          water–cement ratio
+                        </span>{" "}
+                        below <span className="font-semibold">0.5</span> to
+                        achieve better durability and strength.
+                      </li>
+                    </ol>
+                  </div>
 
-    {/* Content Sections */}
-    <div className="space-y-10">
-      {/* Application Steps */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Application Method
-        </h2>
-        <p className="text-lg md:text-xl mb-4">
-          Dr. Fixit LW+ 101 should be mixed properly with cement, sand, and aggregates for best performance. Follow these steps during concrete or plaster preparation:
-        </p>
-        <ol className="list-decimal list-inside space-y-3 text-lg md:text-xl">
-          <li>
-            Mix cement, sand, and aggregates in proper proportion with{" "}
-            <span className="font-semibold">2/3rd</span> of the total mixing water.
-          </li>
-          <li>
-            Mix Dr. Fixit LW+ with the remaining{" "}
-            <span className="font-semibold">1/3rd portion</span> of water and add this to the premixed concrete or mortar.
-          </li>
-          <li>Mix thoroughly until a uniform and cohesive consistency is achieved.</li>
-          <li>
-            Maintain the{" "}
-            <span className="font-semibold">water–cement ratio</span> below{" "}
-            <span className="font-semibold">0.5</span> to achieve better durability and strength.
-          </li>
-        </ol>
-      </div>
+                  {/* Recommended Areas */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Recommended Areas of Application
+                    </h2>
+                    <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
+                      <li>Roof slabs and terraces</li>
+                      <li>Columns, beams, and footings</li>
+                      <li>Foundations and basements</li>
+                      <li>RCC water-retaining structures</li>
+                      <li>Internal and external wall plastering</li>
+                    </ul>
+                  </div>
 
-      {/* Recommended Areas */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Recommended Areas of Application
-        </h2>
-        <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
-          <li>Roof slabs and terraces</li>
-          <li>Columns, beams, and footings</li>
-          <li>Foundations and basements</li>
-          <li>RCC water-retaining structures</li>
-          <li>Internal and external wall plastering</li>
-        </ul>
-      </div>
+                  {/* Workability */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Increased Workability
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Enhances the flow and ease of concrete placement without
+                      affecting strength, ensuring smooth, cohesive, and
+                      consistent mixes.
+                    </p>
+                  </div>
 
-      {/* Workability */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Increased Workability
-        </h2>
-        <p className="text-lg md:text-xl">
-          Enhances the flow and ease of concrete placement without affecting strength, ensuring smooth, cohesive, and consistent mixes.
-        </p>
-      </div>
+                  {/* Shrinkage Control */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Reduced Shrinkage and Cracking
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Optimized water content minimizes shrinkage and surface
+                      cracks, reducing maintenance and improving structure
+                      lifespan.
+                    </p>
+                  </div>
 
-      {/* Shrinkage Control */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Reduced Shrinkage and Cracking
-        </h2>
-        <p className="text-lg md:text-xl">
-          Optimized water content minimizes shrinkage and surface cracks, reducing maintenance and improving structure lifespan.
-        </p>
-      </div>
+                  {/* Dosage */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Dosage
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Use <span className="font-semibold">200 ml</span> of Dr.
+                      Fixit LW+ 101 for every{" "}
+                      <span className="font-semibold">50 kg</span> bag of cement
+                      for best waterproofing and strength performance.
+                    </p>
+                  </div>
 
-      {/* Dosage */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Dosage
-        </h2>
-        <p className="text-lg md:text-xl">
-          Use <span className="font-semibold">200 ml</span> of Dr. Fixit LW+ 101 for every{" "}
-          <span className="font-semibold">50 kg</span> bag of cement for best waterproofing and strength performance.
-        </p>
-      </div>
+                  {/* Key Benefits */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Key Benefits
+                    </h2>
+                    <ul className="list-disc list-inside text-lg md:text-xl space-y-3">
+                      <li>Improves cohesion and workability of concrete.</li>
+                      <li>
+                        Provides superior protection to steel reinforcement
+                        against corrosion.
+                      </li>
+                      <li>Effectively prevents dampness and water seepage.</li>
+                      <li>Minimizes plaster shrinkage and cracking.</li>
+                      <li>
+                        Improves overall strength and durability of mortar and
+                        concrete.
+                      </li>
+                    </ul>
+                  </div>
 
-      {/* Key Benefits */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Key Benefits
-        </h2>
-        <ul className="list-disc list-inside text-lg md:text-xl space-y-3">
-          <li>Improves cohesion and workability of concrete.</li>
-          <li>Provides superior protection to steel reinforcement against corrosion.</li>
-          <li>Effectively prevents dampness and water seepage.</li>
-          <li>Minimizes plaster shrinkage and cracking.</li>
-          <li>Improves overall strength and durability of mortar and concrete.</li>
-        </ul>
-      </div>
+                  {/* Mixing Ratio */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Mixing Ratio
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Mix <span className="font-semibold">200 ml</span> of Dr.
+                      Fixit LW+ 101 per{" "}
+                      <span className="font-semibold">50 kg</span> bag of
+                      cement. This ensures improved waterproofing, minimizes
+                      cracks, and enhances durability for long-lasting concrete
+                      applications.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            )}
 
-      {/* Mixing Ratio */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Mixing Ratio
-        </h2>
-        <p className="text-lg md:text-xl">
-          Mix <span className="font-semibold">200 ml</span> of Dr. Fixit LW+ 101 per{" "}
-          <span className="font-semibold">50 kg</span> bag of cement. This ensures improved waterproofing, minimizes cracks, and enhances durability for long-lasting concrete applications.
-        </p>
-      </div>
-    </div>
-  </section>
-)}
+            {p.id === 6 && (
+              <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
+                {/* Heading */}
+                <div className="mb-12">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                    Dr. Fixit 302 Super Latex
+                  </h1>
+                  <p className="text-lg md:text-xl">
+                    Premium SBR (Styrene Butadiene Rubber) Latex for
+                    waterproofing, bonding, and enhancing durability of
+                    cement-based mixes.
+                  </p>
+                </div>
 
-{p.id === 6 && (
-  <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
-    {/* Heading */}
-    <div className="mb-12">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4">
-        Dr. Fixit 302 Super Latex
-      </h1>
-      <p className="text-lg md:text-xl">
-        Premium SBR (Styrene Butadiene Rubber) Latex for waterproofing, bonding,
-        and enhancing durability of cement-based mixes.
-      </p>
-    </div>
+                {/* Content Sections */}
+                <div className="space-y-10">
+                  {/* Application Section */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Application
+                    </h2>
+                    <p className="mb-4">
+                      Dr. Fixit 302 Super Latex is ideal for waterproof
+                      coatings, bonding coats, and repair mortars.
+                    </p>
+                    <ul className="list-disc list-inside space-y-3">
+                      <li>
+                        <strong>Waterproof Coating:</strong> Mix with cement in
+                        a 1:2 ratio to form a brushable slurry for slabs,
+                        terraces, and roofs.
+                      </li>
+                      <li>
+                        <strong>Bond Coat:</strong> Mix in a 1:1 ratio for
+                        excellent adhesion between old and new concrete/plaster
+                        surfaces.
+                      </li>
+                      <li>
+                        <strong>Repair Mortars:</strong> Add to cement-sand
+                        mortar to improve bond strength, flexibility, and water
+                        resistance.
+                      </li>
+                    </ul>
+                  </div>
 
-    {/* Content Sections */}
-    <div className="space-y-10">
-      {/* Application Section */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Application
-        </h2>
-        <p className="mb-4">
-          Dr. Fixit 302 Super Latex is ideal for waterproof coatings, bonding
-          coats, and repair mortars.
-        </p>
-        <ul className="list-disc list-inside space-y-3">
-          <li>
-            <strong>Waterproof Coating:</strong> Mix with cement in a 1:2 ratio
-            to form a brushable slurry for slabs, terraces, and roofs.
-          </li>
-          <li>
-            <strong>Bond Coat:</strong> Mix in a 1:1 ratio for excellent adhesion
-            between old and new concrete/plaster surfaces.
-          </li>
-          <li>
-            <strong>Repair Mortars:</strong> Add to cement-sand mortar to improve
-            bond strength, flexibility, and water resistance.
-          </li>
-        </ul>
-      </div>
+                  {/* Benefits Section */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Benefits
+                    </h2>
+                    <ul className="list-disc list-inside space-y-3">
+                      <li>
+                        Forms strong bonds between old and new concrete or
+                        plaster surfaces.
+                      </li>
+                      <li>Prevents dampness and water penetration.</li>
+                      <li>Multipurpose waterproofing and bonding solution.</li>
+                      <li>
+                        Enhances durability and water resistance of repair
+                        mortars.
+                      </li>
+                      <li>
+                        Reduces shrinkage cracks for long-lasting repairs.
+                      </li>
+                    </ul>
+                  </div>
 
-      {/* Benefits Section */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Benefits
-        </h2>
-        <ul className="list-disc list-inside space-y-3">
-          <li>Forms strong bonds between old and new concrete or plaster surfaces.</li>
-          <li>Prevents dampness and water penetration.</li>
-          <li>Multipurpose waterproofing and bonding solution.</li>
-          <li>Enhances durability and water resistance of repair mortars.</li>
-          <li>Reduces shrinkage cracks for long-lasting repairs.</li>
-        </ul>
-      </div>
+                  {/* Coverage Section */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Coverage
+                    </h2>
+                    <ul className="list-disc list-inside space-y-3">
+                      <li>
+                        <strong>Waterproof Coating:</strong> 2-2.2 m²/kg for 2
+                        coats (cement:latex = 2:1).
+                      </li>
+                      <li>
+                        <strong>Mortar Modifier:</strong> 6-7.5 kg per 50 kg bag
+                        of cement.
+                      </li>
+                      <li>
+                        <strong>Bonding Agent:</strong> 4.2-4.5 m²/kg per coat
+                        depending on surface texture.
+                      </li>
+                    </ul>
+                  </div>
 
-      {/* Coverage Section */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Coverage
-        </h2>
-        <ul className="list-disc list-inside space-y-3">
-          <li>
-            <strong>Waterproof Coating:</strong> 2-2.2 m²/kg for 2 coats
-            (cement:latex = 2:1).
-          </li>
-          <li>
-            <strong>Mortar Modifier:</strong> 6-7.5 kg per 50 kg bag of cement.
-          </li>
-          <li>
-            <strong>Bonding Agent:</strong> 4.2-4.5 m²/kg per coat depending on
-            surface texture.
-          </li>
-        </ul>
-      </div>
+                  {/* Uses Section */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Uses
+                    </h2>
+                    <ul className="list-disc list-inside space-y-3">
+                      <li>
+                        Waterproof coatings for roofs, terraces, and concrete
+                        surfaces.
+                      </li>
+                      <li>
+                        Bonding old and new concrete/plaster to prevent
+                        delamination.
+                      </li>
+                      <li>
+                        Repair mix modifier for durability, strength, and crack
+                        resistance.
+                      </li>
+                      <li>
+                        Floors, slabs, columns, beams, balconies, toilets, and
+                        bathrooms.
+                      </li>
+                    </ul>
+                  </div>
 
-      {/* Uses Section */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Uses
-        </h2>
-        <ul className="list-disc list-inside space-y-3">
-          <li>
-            Waterproof coatings for roofs, terraces, and concrete surfaces.
-          </li>
-          <li>
-            Bonding old and new concrete/plaster to prevent delamination.
-          </li>
-          <li>
-            Repair mix modifier for durability, strength, and crack resistance.
-          </li>
-          <li>
-            Floors, slabs, columns, beams, balconies, toilets, and bathrooms.
-          </li>
-        </ul>
-      </div>
-
-      {/* SBR Waterproofing Section */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          SBR Waterproofing
-        </h2>
-        <p className="mb-3">
-          Dr. Fixit 302 Super Latex is a Styrene Butadiene Rubber (SBR) latex
-          that provides long-lasting waterproofing, bonding, and durability.
-        </p>
-        <ul className="list-disc list-inside space-y-3">
-          <li>
-            <strong>Waterproof Coating:</strong> Forms seamless waterproof
-            barriers on roofs, slabs, and terraces.
-          </li>
-          <li>
-            <strong>Bonding Agent:</strong> Ensures strong adhesion between old
-            and new concrete/plaster.
-          </li>
-          <li>
-            <strong>Repair & Strengthening:</strong> Improves strength,
-            flexibility, and crack resistance of mortars and concrete.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-)}
-
+                  {/* SBR Waterproofing Section */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      SBR Waterproofing
+                    </h2>
+                    <p className="mb-3">
+                      Dr. Fixit 302 Super Latex is a Styrene Butadiene Rubber
+                      (SBR) latex that provides long-lasting waterproofing,
+                      bonding, and durability.
+                    </p>
+                    <ul className="list-disc list-inside space-y-3">
+                      <li>
+                        <strong>Waterproof Coating:</strong> Forms seamless
+                        waterproof barriers on roofs, slabs, and terraces.
+                      </li>
+                      <li>
+                        <strong>Bonding Agent:</strong> Ensures strong adhesion
+                        between old and new concrete/plaster.
+                      </li>
+                      <li>
+                        <strong>Repair & Strengthening:</strong> Improves
+                        strength, flexibility, and crack resistance of mortars
+                        and concrete.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            )}
 
             {p.id === 7 && (
               <section className=" py-20 px-8 md:px-13 mx-auto text-gray-800">
@@ -2263,7 +2353,7 @@ const JaguarDetails = ({}) => {
           </div>
         </div>
       </section>
-<section
+      <section
         className="relative mb-[50px] bg-black bg-cover bg-center py-20 px-6 md:px-10 text-white"
         style={{ backgroundImage: `url(${Phuter})` }}
       >
@@ -2287,8 +2377,7 @@ const JaguarDetails = ({}) => {
               Fill out the form below to become an <br />
               <span className="font-bold text-white">
                 Authorized Dealer
-              </span>{" "}
-              of{" "}
+              </span> of{" "}
               <span className="font-bold text-yellow-400">
                 Jaguar Lubricants
               </span>
@@ -2309,51 +2398,52 @@ const JaguarDetails = ({}) => {
             </p>
 
             {/* Contact Info */}
-          <div className="flex flex-col md:flex-row items-center py-4 rounded-md mt-40  text-white space-y-3 md:space-y-0 md:space-x-8">
-  {/* Left – Emergency */}
-  <div className="text-center md:text-left space-y-1">
-    <h3 className="text-base font-semibold text-yellow-400">
-      Emergency
-    </h3>
-    <p className="text-sm font-medium text-gray-300">
-      +8801788360303
-    </p>
-  </div>
+            <div className="flex flex-col md:flex-row items-center py-4 rounded-md mt-40  text-white space-y-3 md:space-y-0 md:space-x-8">
+              {/* Left – Emergency */}
+              <div className="text-center md:text-left space-y-1">
+                <h3 className="text-base font-semibold text-yellow-400">
+                  Emergency
+                </h3>
+                <p className="text-sm font-medium text-gray-300">
+                  +8801788360303
+                </p>
+              </div>
 
-  {/* Center – Call Icon */}
-  <div className="relative flex items-center justify-center">
-    <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
-    <a
-      href="https://wa.me/8801788360303"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative z-10 flex items-center justify-center bg-white rounded-full w-[45px] h-[45px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
-    >
-      <img
-        src={callIcon}
-        alt="WhatsApp Call Icon"
-        className="w-[22px] h-[22px]"
-      />
-    </a>
-  </div>
+              {/* Center – Call Icon */}
+              <div className="relative flex items-center justify-center">
+                <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
+                <a
+                  href="https://wa.me/8801788360303"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[45px] h-[45px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
+                >
+                  <img
+                    src={callIcon}
+                    alt="WhatsApp Call Icon"
+                    className="w-[22px] h-[22px]"
+                  />
+                </a>
+              </div>
 
-  {/* Right – Email */}
-  <div className="text-center md:text-right space-y-1">
-    <h3 className="text-base font-semibold text-yellow-400">
-      Email Address
-    </h3>
-    <p className="text-sm font-medium text-gray-300">
-      support@fixitgroupbd.com
-    </p>
-  </div>
-</div>
-
+              {/* Right – Email */}
+              <div className="text-center md:text-right space-y-1">
+                <h3 className="text-base font-semibold text-yellow-400">
+                  Email Address
+                </h3>
+                <p className="text-sm font-medium text-gray-300">
+                  support@fixitgroupbd.com
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Right Side Form */}
-          <div className="bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 
+          <div
+            className="bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 
   rounded-xl p-8 md:w-[420px] shadow-[0_4px_30px_rgba(0,0,0,0.5)] 
-  mx-auto mt-10  ">
+  mx-auto mt-10  "
+          >
             <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
               Request a Quote
             </h3>
