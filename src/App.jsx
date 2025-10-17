@@ -12,8 +12,10 @@ import Footer from "./Components/Footer/Footer";
 import Drfixit from "./Components/Drfixit/Drfixit";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import Jaguar from "./Components/Jaguar/Jaguar";
+import JaguarDetails from "./Components/JaguarDetails/JaguarDetails";
 
-// ✅ ScrollToTop Component import করো
+
+
 import ScrollToTop from "./Components/ScrollToTop";
 
 function Home() {
@@ -43,6 +45,7 @@ function App() {
         <Route path="/importing" element={<Importing />} />
         <Route path="/employees" element={<Employees />} />
         <Route path="/jaguar" element={<Jaguar />} />
+        <Route path="/jaguardetails/:id" element={<JaguarDetails />} />
       </Routes>
 
       <Footer />

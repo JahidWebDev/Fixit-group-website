@@ -13,10 +13,6 @@ import bgImage1 from "../../assets/ales-krivec-4miBe6zg5r0-unsplash.jpg";
 import bgImage2 from "../../assets/claudio-testa--SO3JtE3gZo-unsplash.jpg";
 import Phuter from "../../assets/Phuter.png";
 
-
-
-
-
 import product1 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SM.png";
 import product2 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SN.png";
 import product8 from "../../assets/JAGUAR-Diesel-Extra-Mileage-Engine-Oil.png";
@@ -228,8 +224,6 @@ const Jaguar = () => {
           alert("❌ Failed to send email.");
         }
       );
- 
-      
   };
 
   return (
@@ -475,27 +469,27 @@ const Jaguar = () => {
         )}
       </header>
       <section className="relative z-[-9999] border-b border-gray-200 bg-white py-10 px-10 md:px-48 flex flex-col md:flex-row items-center justify-between">
-      {/* Left text */}
-      <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4">
-        <p className="text-lg md:text-xl text-black">
-          Business / <span className="font-bold">Jaguar Lubricants</span>
-        </p>
-        <span className="hidden md:block w-[2px] h-9 bg-black"></span>
-        <p className="text-gray-800 text-base md:text-lg leading-tight">
-          High-Performance Engine Oil in Bangladesh
-          <br className="hidden md:block" /> Imported from UAE
-        </p>
-      </div>
+        {/* Left text */}
+        <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4">
+          <p className="text-lg md:text-xl text-black">
+            Business / <span className="font-bold">Jaguar Lubricants</span>
+          </p>
+          <span className="hidden md:block w-[2px] h-9 bg-black"></span>
+          <p className="text-gray-800 text-base md:text-lg leading-tight">
+            High-Performance Engine Oil in Bangladesh
+            <br className="hidden md:block" /> Imported from UAE
+          </p>
+        </div>
 
-      {/* Right logo */}
-      <div className="mt-4 md:mt-0">
-        <img
-          src={jaguarLogo}
-          alt="Jaguar Logo"
-          className="w-[160px] md:w-[200px] object-contain"
-        />
-      </div>
-    </section>
+        {/* Right logo */}
+        <div className="mt-4 md:mt-0">
+          <img
+            src={jaguarLogo}
+            alt="Jaguar Logo"
+            className="w-[160px] md:w-[200px] object-contain"
+          />
+        </div>
+      </section>
       <section
         className="
     relative 
@@ -562,39 +556,55 @@ const Jaguar = () => {
         </div>
       </section>
 
-   <section className="bg-[#F0F2F1] py-24 px-8 md:px-24">
-  <div className="max-w-[1500px] mx-auto">
-    {/* === Heading === */}
-    <h2 className="text-5xl md:text-6xl font-semibold mb-10 text-[#111]">
-      About <span className="font-bold">JAGUAR Lubricants</span>
-    </h2>
+      <section className="bg-[#F0F2F1] py-24 px-8 md:px-24">
+        <div className="max-w-[1500px] mx-auto">
+          {/* === Heading === */}
+          <h2 className="text-5xl md:text-6xl font-semibold mb-10 text-[#111]">
+            About <span className="font-bold">JAGUAR Lubricants</span>
+          </h2>
 
-    {/* === Paragraphs === */}
-    <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] mb-8 text-justify">
-      <span className="font-bold">JAGUAR Lubricants</span>, established in 2021 under the National Groups,
-      is a trusted name in premium engine oils and industrial lubricants in Bangladesh.
-      We <span className="font-bold">import our high-quality products directly from the United Arab Emirates (UAE)</span>
-      to ensure world-class performance and reliability.
-    </p>
+          {/* === Paragraphs === */}
+          <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] mb-8 text-justify">
+            <span className="font-bold">JAGUAR Lubricants</span>, established in
+            2021 under the National Groups, is a trusted name in premium engine
+            oils and industrial lubricants in Bangladesh. We{" "}
+            <span className="font-bold">
+              import our high-quality products directly from the United Arab
+              Emirates (UAE)
+            </span>
+            to ensure world-class performance and reliability.
+          </p>
 
-    <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] mb-8 text-justify">
-      Our mission is to meet <span className="font-bold">Bangladesh’s automotive and industrial lubrication needs</span>
-      by providing <span className="font-bold">international-standard lubricants</span> that deliver maximum efficiency
-      and engine protection. We aim to become <span className="font-bold">the leading lubricant brand in Bangladesh</span>,
-      expand to <span className="font-bold">global markets</span>, and set new benchmarks through
-      <span className="font-bold"> advanced technology and innovation</span>.
-    </p>
+          <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] mb-8 text-justify">
+            Our mission is to meet{" "}
+            <span className="font-bold">
+              Bangladesh’s automotive and industrial lubrication needs
+            </span>
+            by providing{" "}
+            <span className="font-bold">international-standard lubricants</span>{" "}
+            that deliver maximum efficiency and engine protection. We aim to
+            become{" "}
+            <span className="font-bold">
+              the leading lubricant brand in Bangladesh
+            </span>
+            , expand to <span className="font-bold">global markets</span>, and
+            set new benchmarks through
+            <span className="font-bold">
+              {" "}
+              advanced technology and innovation
+            </span>
+            .
+          </p>
 
-    <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] text-justify">
-      Currently, <span className="font-bold">JAGUAR Lubricants</span> operates through an extensive dealer and service
-      network across Bangladesh, with <span className="font-bold">depots in every division</span> to ensure fast and
-      dependable supply to our valued customers.
-    </p>
-  </div>
-</section>
-
-
-
+          <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] text-justify">
+            Currently, <span className="font-bold">JAGUAR Lubricants</span>{" "}
+            operates through an extensive dealer and service network across
+            Bangladesh, with{" "}
+            <span className="font-bold">depots in every division</span> to
+            ensure fast and dependable supply to our valued customers.
+          </p>
+        </div>
+      </section>
 
       {/* ================= PRODUCTS GRID ================= */}
       <section className="bg-white py-10 px-6 md:px-12 lg:px-40">
@@ -650,66 +660,74 @@ const Jaguar = () => {
           {/* 🔹 Product Grid */}
           <div className="max-w-[1400px] mx-auto">
             {/* ✅ Responsive Grid: 1 card on mobile, 2 on small, 3 on md, 4 on lg */}
-           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-  {filteredProducts.map((p, index) => (
-    <React.Fragment key={index}>
-      {/* Product Card */}
-      <div
-        className="border-[2px] border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between hover:scale-[1.02] bg-white"
-      >
-        {/* Product Image */}
-        <div className="flex justify-center items-center w-full h-[260px] border-b-[2px] border-gray-200 rounded-t-2xl mt-5">
-  <img
-    src={p.img}
-    alt={p.name}
-    className="object-contain w-auto h-[220px] transition-transform duration-300 hover:scale-105"
-  />
-</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {filteredProducts.map((p, index) => (
+                <React.Fragment key={index}>
+                  {/* Product Card */}
+                  <div className="border-[2px] border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between hover:scale-[1.02] bg-white">
+                    {/* Product Image */}
+                    <div className="flex justify-center items-center w-full h-[260px] border-b-[2px] border-gray-200 rounded-t-2xl mt-5">
+                      <img
+                        src={p.img}
+                        alt={p.name}
+                        className="object-contain w-auto h-[220px] transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
 
+                    {/* Product Info */}
+                    <div className="p-5 flex flex-col flex-grow justify-between text-center gap-2">
+                      <h3 className="text-[17px] font-bold text-[#222] leading-[1.1]">
+                        {p.name}
+                      </h3>
+                      <p className="text-[14px] text-gray-600 leading-[1.4]">
+                        {p.desc}
+                      </p>
+                      <p className="text-[14px] text-gray-600 leading-[1.4]">
+                        {p.descone}
+                      </p>
+                      <p className="text-[14px] text-gray-600 leading-[1.4]">
+                        {p.desctwo}
+                      </p>
+                      <p className="text-[14px] text-gray-600 leading-[1.4]">
+                        {p.descthree}
+                      </p>
+                    </div>
 
-        {/* Product Info */}
-        <div className="p-5 flex flex-col flex-grow justify-between text-center gap-2">
-          <h3 className="text-[17px] font-bold text-[#222] leading-[1.1]">
-            {p.name}
-          </h3>
-          <p className="text-[14px] text-gray-600 leading-[1.4]">{p.desc}</p>
-          <p className="text-[14px] text-gray-600 leading-[1.4]">{p.descone}</p>
-          <p className="text-[14px] text-gray-600 leading-[1.4]">{p.desctwo}</p>
-          <p className="text-[14px] text-gray-600 leading-[1.4]">{p.descthree}</p>
-        </div>
+                    {/* Buttons */}
+                    <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
+                   <Link
+                     to={`/jaguardetails/${p.id}`}
+                    //  state={{ showBanner: true }} 
+                     className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 px-4 rounded-md 
+                                hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center inline-block"
+                   >
+                     Product Details
+                   </Link>
+                   
 
-        {/* Buttons */}
-        <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
-          <Link
-            className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 rounded-md hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center"
-          >
-            Product Details
-          </Link>
+                      <Link
+                        to="/find-dealer"
+                        className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300 text-center"
+                      >
+                        Find a Dealer
+                      </Link>
+                    </div>
+                  </div>
 
-          <Link
-            to="/find-dealer"
-            className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300 text-center"
-          >
-            Find a Dealer
-          </Link>
-        </div>
-      </div>
-
-      {/* 🎨 Background Image after every 4 products */}
-{(index + 1) % 4 === 0 && (index + 1) / 4 <= 2 && (
-  <div
-    className="block col-span-full w-full h-[250px] bg-cover bg-center rounded-2xl shadow-inner"
-    style={{
-      backgroundImage: `url(${
-        ((index + 1) / 4) % 2 === 1 ? bgImage1 : bgImage2
-      })`,
-    }}
-  ></div>
-)}
-    </React.Fragment>
-  ))}
-</div>
-
+                  {/* 🎨 Background Image after every 4 products */}
+                  {(index + 1) % 4 === 0 && (index + 1) / 4 <= 2 && (
+                    <div
+                      className="block col-span-full w-full h-[250px] bg-cover bg-center rounded-2xl shadow-inner"
+                      style={{
+                        backgroundImage: `url(${
+                          ((index + 1) / 4) % 2 === 1 ? bgImage1 : bgImage2
+                        })`,
+                      }}
+                    ></div>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
 
             {/* Empty State */}
             {filteredProducts.length === 0 && (
@@ -722,173 +740,181 @@ const Jaguar = () => {
       </section>
 
       {/* ================= from================= */}
-     <section
-  className="relative mb-[50px] bg-black bg-cover bg-center py-20 px-6 md:px-10 text-white"
-  style={{ backgroundImage: `url(${Phuter})` }}
->
-  {/* Overlay for better readability */}
-  <div className="absolute inset-0 bg-black/70"></div>
+      <section
+        className="relative mb-[50px] bg-black bg-cover bg-center py-20 px-6 md:px-10 text-white"
+        style={{ backgroundImage: `url(${Phuter})` }}
+      >
+        {/* Overlay for better readability */}
+        <div className="absolute inset-0 bg-black/70"></div>
 
-  <div className="relative max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
-    {/* Left Side */}
-    <div className="flex-1">
-      <div className="flex items-center space-x-3 mb-6">
-        <div className="text-yellow-400 text-6xl">
-          <img
-            src={LocationIcon}
-            className="w-[70px]"
-            alt="Location Icon"
-          />
+        <div className="relative max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
+          {/* Left Side */}
+          <div className="flex-1">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="text-yellow-400 text-6xl">
+                <img
+                  src={LocationIcon}
+                  className="w-[70px]"
+                  alt="Location Icon"
+                />
+              </div>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-normal leading-snug">
+              Fill out the form below to become an <br />
+              <span className="font-bold text-yellow-400">
+                Authorized Dealer
+              </span>{" "}
+              of{" "}
+              <span className="font-bold text-yellow-400">
+                Jaguar Lubricants
+              </span>
+            </h2>
+
+            <p className="mt-6 text-gray-300 leading-relaxed">
+              <span className="font-bold text-white">Jaguar Lubricants</span> is
+              committed to building strong, trustworthy, and sustainable
+              business relationships with each of its dealers.
+            </p>
+
+            <p className="mt-4 text-gray-300 leading-relaxed">
+              Our goal is to establish a new benchmark of{" "}
+              <span className="font-semibold text-yellow-400">
+                quality, durability, and reliability
+              </span>{" "}
+              in Bangladesh’s lubricant industry.
+            </p>
+
+            {/* Contact Info */}
+            <div className="flex flex-col md:flex-row items-center py-3 rounded-md mt-50 text-white ">
+              {/* Left – Emergency */}
+              <div className="text-center md:text-left mb-2 md:mb-0 space-y-0.5">
+                <h3 className="text-sm font-semibold text-yellow-400">
+                  Emergency
+                </h3>
+                <p className="text-xs font-medium text-gray-300">
+                  +8801788360303
+                </p>
+              </div>
+
+              {/* Center – Call Icon */}
+              <div className="relative flex items-center justify-center mx-6 my-2 md:my-0">
+                <div className="absolute w-[45px] h-[45px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
+                <a
+                  href="https://wa.me/8801788360303"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[40px] h-[40px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
+                >
+                  <img
+                    src={callIcon}
+                    alt="WhatsApp Call Icon"
+                    className="w-[22px] h-[22px]"
+                  />
+                </a>
+              </div>
+
+              {/* Right – Email */}
+              <div className="text-center md:text-right mt-2 md:mt-0 space-y-0.5">
+                <h3 className="text-sm font-semibold text-yellow-400">
+                  Email Address
+                </h3>
+                <p className="text-xs font-medium text-gray-300">
+                  support@fixitgroupbd.com
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side Form */}
+          <div className="bg-[#1A1A1A] rounded-md p-8 md:w-[420px] shadow-lg mx-auto mt-10">
+            <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
+              Request a Quote
+            </h3>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                required
+              />
+
+              <input
+                type="text"
+                name="company"
+                placeholder="Your Phone Number"
+                value={formData.company}
+                onChange={handleChange}
+                className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                required
+              />
+
+              <div className="flex space-x-3">
+                <select
+                  name="dealer"
+                  value={formData.dealer}
+                  onChange={handleChange}
+                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                  required
+                >
+                  <option value="" disabled>
+                    Dealer/Depo
+                  </option>
+                  <option value="Dealer">Dealer</option>
+                  <option value="Depo">Depo</option>
+                </select>
+
+                <select
+                  name="district"
+                  value={formData.district}
+                  onChange={handleChange}
+                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                  required
+                >
+                  <option value="" disabled>
+                    District
+                  </option>
+                  <option value="Dhaka">Dhaka</option>
+                  <option value="Chittagong">Chittagong</option>
+                  <option value="Khulna">Khulna</option>
+                </select>
+              </div>
+
+              <div className="flex items-start space-x-2 text-sm mt-2">
+                <input
+                  type="checkbox"
+                  name="consent"
+                  checked={formData.consent}
+                  onChange={handleChange}
+                  className="mt-1"
+                />
+                <p>
+                  I consent to receiving calls based on the information provided
+                  above.
+                </p>
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-yellow-400 text-black font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-yellow-300 transition disabled:opacity-60"
+              >
+                {loading ? "Sending..." : "Submit"}
+              </button>
+            </form>
+
+            {sent && (
+              <p className="text-green-400 text-center mt-3">
+                ✅ Mail sent successfully!
+              </p>
+            )}
+          </div>
         </div>
-      </div>
-
-      <h2 className="text-3xl md:text-4xl font-normal leading-snug">
-        Fill out the form below to become an <br />
-        <span className="font-bold text-yellow-400">
-          Authorized Dealer
-        </span>{" "}
-        of{" "}
-        <span className="font-bold text-yellow-400">
-          Jaguar Lubricants
-        </span>
-      </h2>
-
-      <p className="mt-6 text-gray-300 leading-relaxed">
-        <span className="font-bold text-white">Jaguar Lubricants</span> is
-        committed to building strong, trustworthy, and sustainable business
-        relationships with each of its dealers.
-      </p>
-
-      <p className="mt-4 text-gray-300 leading-relaxed">
-        Our goal is to establish a new benchmark of{" "}
-        <span className="font-semibold text-yellow-400">
-          quality, durability, and reliability
-        </span>{" "}
-        in Bangladesh’s lubricant industry.
-      </p>
-
-      {/* Contact Info */}
-   <div className="flex flex-col md:flex-row items-center py-3 rounded-md mt-50 text-white ">
-
-      {/* Left – Emergency */}
-      <div className="text-center md:text-left mb-2 md:mb-0 space-y-0.5">
-        <h3 className="text-sm font-semibold text-yellow-400">Emergency</h3>
-        <p className="text-xs font-medium text-gray-300">+8801788360303</p>
-      </div>
-
-      {/* Center – Call Icon */}
-      <div className="relative flex items-center justify-center mx-6 my-2 md:my-0">
-        <div className="absolute w-[45px] h-[45px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
-        <a
-          href="https://wa.me/8801788360303"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative z-10 flex items-center justify-center bg-white rounded-full w-[40px] h-[40px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
-        >
-          <img
-            src={callIcon}
-            alt="WhatsApp Call Icon"
-            className="w-[22px] h-[22px]"
-          />
-        </a>
-      </div>
-
-      {/* Right – Email */}
-      <div className="text-center md:text-right mt-2 md:mt-0 space-y-0.5">
-        <h3 className="text-sm font-semibold text-yellow-400">Email Address</h3>
-        <p className="text-xs font-medium text-gray-300">support@fixitgroupbd.com</p>
-      </div>
-    </div>
-
-    </div>
-
-    {/* Right Side Form */}
-    <div className="bg-[#1A1A1A] rounded-md p-8 md:w-[420px] shadow-lg mx-auto mt-10">
-      <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
-        Request a Quote
-      </h3>
-
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-          required
-        />
-
-        <input
-          type="text"
-          name="company"
-          placeholder="Your Phone Number"
-          value={formData.company}
-          onChange={handleChange}
-          className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-          required
-        />
-
-        <div className="flex space-x-3">
-          <select
-            name="dealer"
-            value={formData.dealer}
-            onChange={handleChange}
-            className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-            required
-          >
-            <option value="" disabled>
-              Dealer/Depo
-            </option>
-            <option value="Dealer">Dealer</option>
-            <option value="Depo">Depo</option>
-          </select>
-
-          <select
-            name="district"
-            value={formData.district}
-            onChange={handleChange}
-            className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-            required
-          >
-            <option value="" disabled>
-              District
-            </option>
-            <option value="Dhaka">Dhaka</option>
-            <option value="Chittagong">Chittagong</option>
-            <option value="Khulna">Khulna</option>
-          </select>
-        </div>
-
-        <div className="flex items-start space-x-2 text-sm mt-2">
-          <input
-            type="checkbox"
-            name="consent"
-            checked={formData.consent}
-            onChange={handleChange}
-            className="mt-1"
-          />
-          <p>I consent to receiving calls based on the information provided above.</p>
-        </div>
-
-        <button
-          type="submit"
-          disabled={loading}
-          className="w-full bg-yellow-400 text-black font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-yellow-300 transition disabled:opacity-60"
-        >
-          {loading ? "Sending..." : "Submit"}
-        </button>
-      </form>
-
-      {sent && (
-        <p className="text-green-400 text-center mt-3">
-          ✅ Mail sent successfully!
-        </p>
-      )}
-    </div>
-  </div>
-</section>
-
+      </section>
     </section>
   );
 };
