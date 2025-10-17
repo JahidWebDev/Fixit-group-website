@@ -15,17 +15,17 @@ import Phuter from "../../assets/Phuter.png";
 
 import product1 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SM.png";
 import product2 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SN.png";
+import product3 from "../../assets/JAGUAR-High-Performance-Gasoline-CNG-Engine-Oil-01.png";
+import product4 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil.png";
+import product5 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil-CH-4.png";
+import product6 from "../../assets/JAGUAR-Diesel-Heavy-Duty-Engine-Oil.png";
+import product7 from "../../assets/JAGUAR-Diesel-HD-50-Engine-Oil.png";
 import product8 from "../../assets/JAGUAR-Diesel-Extra-Mileage-Engine-Oil.png";
 import product9 from "../../assets/JAGUAR-Diesel-Extream-Power-Engine-Oil.png";
-import product7 from "../../assets/JAGUAR-Diesel-HD-50-Engine-Oil.png";
-import product6 from "../../assets/JAGUAR-Diesel-Heavy-Duty-Engine-Oil.png";
-import product12 from "../../assets/JAGUAR-Gear-Oil-GL-4.png";
-import product3 from "../../assets/JAGUAR-High-Performance-Gasoline-CNG-Engine-Oil-01.png";
-import product11 from "../../assets/JAGUAR-Hydralic-Oil-AW-Engine-Oil.png";
 import product10 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
+import product11 from "../../assets/JAGUAR-Hydralic-Oil-AW-Engine-Oil.png";
+import product12 from "../../assets/JAGUAR-Gear-Oil-GL-4.png";
 import product13 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
-import product5 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil-CH-4.png";
-import product4 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil.png";
 
 const Jaguar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -745,7 +745,7 @@ const Jaguar = () => {
         style={{ backgroundImage: `url(${Phuter})` }}
       >
         {/* Overlay for better readability */}
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/5"></div>
 
         <div className="relative max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
           {/* Left Side */}
@@ -762,7 +762,7 @@ const Jaguar = () => {
 
             <h2 className="text-3xl md:text-4xl font-normal leading-snug">
               Fill out the form below to become an <br />
-              <span className="font-bold text-yellow-400">
+              <span className="font-bold text-white">
                 Authorized Dealer
               </span>{" "}
               of{" "}
@@ -786,48 +786,51 @@ const Jaguar = () => {
             </p>
 
             {/* Contact Info */}
-            <div className="flex flex-col md:flex-row items-center py-3 rounded-md mt-50 text-white ">
-              {/* Left – Emergency */}
-              <div className="text-center md:text-left mb-2 md:mb-0 space-y-0.5">
-                <h3 className="text-sm font-semibold text-yellow-400">
-                  Emergency
-                </h3>
-                <p className="text-xs font-medium text-gray-300">
-                  +8801788360303
-                </p>
-              </div>
+          <div className="flex flex-col md:flex-row items-center py-4 rounded-md mt-40  text-white space-y-3 md:space-y-0 md:space-x-8">
+  {/* Left – Emergency */}
+  <div className="text-center md:text-left space-y-1">
+    <h3 className="text-base font-semibold text-yellow-400">
+      Emergency
+    </h3>
+    <p className="text-sm font-medium text-gray-300">
+      +8801788360303
+    </p>
+  </div>
 
-              {/* Center – Call Icon */}
-              <div className="relative flex items-center justify-center mx-6 my-2 md:my-0">
-                <div className="absolute w-[45px] h-[45px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
-                <a
-                  href="https://wa.me/8801788360303"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[40px] h-[40px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
-                >
-                  <img
-                    src={callIcon}
-                    alt="WhatsApp Call Icon"
-                    className="w-[22px] h-[22px]"
-                  />
-                </a>
-              </div>
+  {/* Center – Call Icon */}
+  <div className="relative flex items-center justify-center">
+    <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
+    <a
+      href="https://wa.me/8801788360303"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative z-10 flex items-center justify-center bg-white rounded-full w-[45px] h-[45px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
+    >
+      <img
+        src={callIcon}
+        alt="WhatsApp Call Icon"
+        className="w-[22px] h-[22px]"
+      />
+    </a>
+  </div>
 
-              {/* Right – Email */}
-              <div className="text-center md:text-right mt-2 md:mt-0 space-y-0.5">
-                <h3 className="text-sm font-semibold text-yellow-400">
-                  Email Address
-                </h3>
-                <p className="text-xs font-medium text-gray-300">
-                  support@fixitgroupbd.com
-                </p>
-              </div>
-            </div>
+  {/* Right – Email */}
+  <div className="text-center md:text-right space-y-1">
+    <h3 className="text-base font-semibold text-yellow-400">
+      Email Address
+    </h3>
+    <p className="text-sm font-medium text-gray-300">
+      support@fixitgroupbd.com
+    </p>
+  </div>
+</div>
+
           </div>
 
           {/* Right Side Form */}
-          <div className="bg-[#1A1A1A] rounded-md p-8 md:w-[420px] shadow-lg mx-auto mt-10">
+          <div className="bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 
+  rounded-xl p-8 md:w-[420px] shadow-[0_4px_30px_rgba(0,0,0,0.5)] 
+  mx-auto mt-10  ">
             <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
               Request a Quote
             </h3>

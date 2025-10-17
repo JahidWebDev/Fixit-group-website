@@ -6,7 +6,7 @@ import emailjs from "emailjs-com";
 import callIcon from "../../assets/Call-Icon-Green.png"; // WhatsApp icon
 import LocationIcon from "../../assets/Location-Man-Icon.png";
 import jaguarLogo from "../../assets/Jaguar-logo.png";
-
+import Phuter from "../../assets/Phuter.png";
 
 
 import product1 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SM.png";
@@ -2263,74 +2263,100 @@ const JaguarDetails = ({}) => {
           </div>
         </div>
       </section>
-      <section className="bg-[#f8f8f8] py-20 px-6 md:px-10">
-        <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
+<section
+        className="relative mb-[50px] bg-black bg-cover bg-center py-20 px-6 md:px-10 text-white"
+        style={{ backgroundImage: `url(${Phuter})` }}
+      >
+        {/* Overlay for better readability */}
+        <div className="absolute inset-0 bg-black/5"></div>
+
+        <div className="relative max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
           {/* Left Side */}
           <div className="flex-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="text-blue-500 text-6xl">
+              <div className="text-yellow-400 text-6xl">
                 <img
                   src={LocationIcon}
                   className="w-[70px]"
-                  alt="LocationIcon"
+                  alt="Location Icon"
                 />
               </div>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-normal leading-snug text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-normal leading-snug">
               Fill out the form below to become an <br />
-              <span className="font-bold">Authorized Dealer</span> of{" "}
-              <span className="font-bold">Dr. Fixit Limited.</span>
+              <span className="font-bold text-white">
+                Authorized Dealer
+              </span>{" "}
+              of{" "}
+              <span className="font-bold text-yellow-400">
+                Jaguar Lubricants
+              </span>
             </h2>
 
-            <p className="text-gray-700 mt-6 leading-relaxed">
-              <span className="font-bold">Dr. Fixit Limited</span> is committed
-              to building strong, trustworthy, and sustainable business
-              relationships with each of its dealers.
+            <p className="mt-6 text-gray-300 leading-relaxed">
+              <span className="font-bold text-white">Jaguar Lubricants</span> is
+              committed to building strong, trustworthy, and sustainable
+              business relationships with each of its dealers.
             </p>
 
-            <p className="text-gray-700 mt-4 leading-relaxed">
-              Our sole objective is to work together to establish a new standard
-              of quality, durability, and reliability in Bangladesh’s
-              construction industry.
+            <p className="mt-4 text-gray-300 leading-relaxed">
+              Our goal is to establish a new benchmark of{" "}
+              <span className="font-semibold text-yellow-400">
+                quality, durability, and reliability
+              </span>{" "}
+              in Bangladesh’s lubricant industry.
             </p>
 
             {/* Contact Info */}
-            <div className="bg-black text-white mt-8 flex flex-col md:flex-row items-center justify-between p-6 rounded-md relative overflow-hidden">
-              {/* Left Side - Emergency Contact */}
-              <div className="text-center md:text-left mb-6 md:mb-0">
-                <h3 className="text-lg font-semibold">Emergency</h3>
-                <p className="text-white font-medium">+8801788360303</p>
-              </div>
+          <div className="flex flex-col md:flex-row items-center py-4 rounded-md mt-40  text-white space-y-3 md:space-y-0 md:space-x-8">
+  {/* Left – Emergency */}
+  <div className="text-center md:text-left space-y-1">
+    <h3 className="text-base font-semibold text-yellow-400">
+      Emergency
+    </h3>
+    <p className="text-sm font-medium text-gray-300">
+      +8801788360303
+    </p>
+  </div>
 
-              {/* Middle - Call Icon with WhatsApp Link + Red Pulse */}
-              <div className="relative flex items-center justify-center">
-                <div className="absolute w-[70px] h-[70px] bg-white rounded-full animate-redPulse"></div>
-                <a
-                  href="https://wa.me/8801788360303"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[60px] h-[60px] shadow-lg hover:scale-110 transition-transform duration-300"
-                >
-                  <img
-                    src={callIcon}
-                    alt="WhatsApp Call Icon"
-                    className="w-[35px] h-[35px]"
-                  />
-                </a>
-              </div>
+  {/* Center – Call Icon */}
+  <div className="relative flex items-center justify-center">
+    <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
+    <a
+      href="https://wa.me/8801788360303"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative z-10 flex items-center justify-center bg-white rounded-full w-[45px] h-[45px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
+    >
+      <img
+        src={callIcon}
+        alt="WhatsApp Call Icon"
+        className="w-[22px] h-[22px]"
+      />
+    </a>
+  </div>
 
-              {/* Right Side - Email Info */}
-              <div className="text-center md:text-right mt-6 md:mt-0">
-                <h3 className="text-lg font-semibold">Email Address</h3>
-                <p className="font-medium">support@fixitgroupbd.com</p>
-              </div>
-            </div>
+  {/* Right – Email */}
+  <div className="text-center md:text-right space-y-1">
+    <h3 className="text-base font-semibold text-yellow-400">
+      Email Address
+    </h3>
+    <p className="text-sm font-medium text-gray-300">
+      support@fixitgroupbd.com
+    </p>
+  </div>
+</div>
+
           </div>
 
-          {/* Right Side */}
-          <div className="bg-[#0B63FF] rounded-md p-8 md:w-[420px] text-white shadow-lg mx-auto mt-10">
-            <h3 className="text-2xl font-semibold mb-6">Request a Quote</h3>
+          {/* Right Side Form */}
+          <div className="bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 
+  rounded-xl p-8 md:w-[420px] shadow-[0_4px_30px_rgba(0,0,0,0.5)] 
+  mx-auto mt-10  ">
+            <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
+              Request a Quote
+            </h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
@@ -2346,7 +2372,7 @@ const JaguarDetails = ({}) => {
               <input
                 type="text"
                 name="company"
-                placeholder="Your phone Number"
+                placeholder="Your Phone Number"
                 value={formData.company}
                 onChange={handleChange}
                 className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
@@ -2354,7 +2380,6 @@ const JaguarDetails = ({}) => {
               />
 
               <div className="flex space-x-3">
-                {/* Dealer/Depo Dropdown */}
                 <select
                   name="dealer"
                   value={formData.dealer}
@@ -2362,14 +2387,13 @@ const JaguarDetails = ({}) => {
                   className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
                   required
                 >
-                  <option value="" disabled selected>
+                  <option value="" disabled>
                     Dealer/Depo
                   </option>
                   <option value="Dealer">Dealer</option>
                   <option value="Depo">Depo</option>
                 </select>
 
-                {/* District Dropdown */}
                 <select
                   name="district"
                   value={formData.district}
@@ -2377,7 +2401,7 @@ const JaguarDetails = ({}) => {
                   className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
                   required
                 >
-                  <option value="" disabled selected>
+                  <option value="" disabled>
                     District
                   </option>
                   <option value="Dhaka">Dhaka</option>
@@ -2403,14 +2427,14 @@ const JaguarDetails = ({}) => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gray-200 text-gray-600 font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-white transition disabled:opacity-60"
+                className="w-full bg-yellow-400 text-black font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-yellow-300 transition disabled:opacity-60"
               >
                 {loading ? "Sending..." : "Submit"}
               </button>
             </form>
 
             {sent && (
-              <p className="text-green-300 text-center mt-3">
+              <p className="text-green-400 text-center mt-3">
                 ✅ Mail sent successfully!
               </p>
             )}
