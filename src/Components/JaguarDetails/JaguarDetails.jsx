@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
 import drfixitLogo from "../../assets/Dr-Fixit-Logo.png";
 import emailjs from "emailjs-com";
-import callIcon from "../../assets/Call-Icon-Green.png"; // WhatsApp icon
+import callIcon from "../../assets/Call-Icon-Green.png";
 import LocationIcon from "../../assets/Location-Man-Icon.png";
 import jaguarLogo from "../../assets/Jaguar-logo.png";
 import Phuter from "../../assets/Phuter.png";
@@ -23,145 +23,167 @@ import product12 from "../../assets/JAGUAR-Gear-Oil-GL-4.png";
 import product13 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
 
 const products = [
-  {
-    id: 1,
-    title:
-      "1kg Water Proofing & Water-Reducing Admixture, LW+ 101 Dr Fixit Brand",
+{
+  id: 1,
+  title: "JAGUAR 20W-40 4T / 20W-50 4T",
+  brand: "Jaguar",
+  category: "Motor Cycle Engine Oil (Motor Engine Oil)",
+  capacity: "1 Liter",
+  saeGrade: "20W-40",
+  apiSpecification: "SM JASO MA2",
+  madeIn: "UEA",
+  subtitle: "Jaguar 20W-40 - Premium Four-Stroke Motorcycle Engine Oil",
+  description1:
+    "Jaguar 20W-40 is a high-performance motorcycle engine oil specially formulated for modern four-stroke engines. Developed with advanced additive technology and highly refined mineral base oils, it ensures superior engine protection, smooth clutch performance, and extended engine life.",
+  description2:
+    "While optimized for the latest engine technology, Jaguar 20W-40 also provides excellent protection for older motorcycle engines, perfectly matching evolving engine technology trends from leading OEMs. Its heat-activated anti-wear molecules™ protect the engine instantly from start-up to high-temperature, long-distance rides.",
+  availablePackaging: "1 Liter",
+  image: product1, 
+},
 
-    brand: "Dr. Fixit Limited",
-    category: "Admixture",
-    quantity: "1 Litre",
-    subtitle: "Dr. Fixit Drproof LW+",
-    subtitletwo:
-      "Integral Liquid Waterproofing Compound for Concrete & Plaster",
-    description:
-      "Dr. Fixit Dr.proof LW+ is a specially formulated integral liquid  waterproofing compound made from high-quality plasticising agents, polymers, and active additives. It is used as a waterproof additive for cement concrete, mortar, and plaster. The compound  enhances the cohesiveness of concrete, reduces segregation minimizes shrinkage cracks, and provides superior waterproofing  and durability to structures.",
 
-    availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
-    image: product1,
-  },
-  {
-    id: 2,
-    title:
-      "1kg Dr. Fixit 302 Super Latex-Premium | SBR Waterproofing & Bonding Agent for Concrete Repair",
-    brand: "Dr. Fixit Limited",
-    category: "Admixture",
-    quantity: "1 Litre",
-    subtitle: "Dr. Fixit 302 Super Latex",
+ {
+  id: 2,
+  title: "JAGUAR 20W-40 4T / 20W-50 4T",
+  brand: "JAGUAR",
+  category: "Motorcycle Engine Oil",
+  
+  subtitle: "Jaguar 20W-40 SN Semi Synthetic – Premium Four-Stroke Motorcycle Engine Oil",
+  description1:
+    "Jaguar 20W-40 is a high-performance motorcycle engine oil specially formulated for modern four-stroke engines. Developed with advanced additive technology and highly refined mineral base oils, it ensures superior engine protection, smooth clutch performance, and extended engine life.",
+  description2:
+    "While optimized for the latest engine technology, Jaguar 20W-40 also provides excellent protection for older motorcycle engines, perfectly matching evolving engine technology trends from leading OEMs. Its heat-activated anti-wear molecules™ protect the engine instantly—from start-up to high-temperature, long-distance rides.",
+  availablePackaging: "1 Liter",
+  image: product2,
+  Availability: "In Stock"
+},
 
-    subtitletwo: "SBR Latex for repairs & waterproofing",
-    description:
-      "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applications. This URP-based formulation enhances the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
-    image: product2, // make sure this matches your actual image import for this product
-  },
 
   {
     id: 3,
     title:
-      "5kg Water Proofing & Water-Reducing Admixture, LW+ 101 Dr Fixit Brand",
-    brand: "Dr. Fixit Limited",
-    category: "Admixture",
-    quantity: "5 Litre",
-    subtitle: "Dr. Fixit Drproof LW+",
-    description:
-      "Integral Liquid Waterproofing Compound for Concrete & Plaster. Dr. Fixit Drproof LW+ is a specially formulated integral liquid waterproofing compound made from high-quality plasticising agents, polymers, and active additives. It is used as a waterproof additive for cement concrete, mortar, and plaster. The compound enhances the cohesiveness of concrete, reduces segregation, minimizes shrinkage cracks, and provides superior waterproofing and durability to structures.",
-    availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
+      "Jaguar Perfect CNG 20W-50 - Premium Synthetic-Technology Engine Oil",
+    brand: "Jaguar",
+    category: "CNG Engine Oil, (Gasoline Engine Oil)",
+     capacity: "2 Liter",
+  saeGrade: "20W-40",
+  apiSpecification: "SL",
+  madeIn: "UEA",
+    subtitle: "Jaguar, CNG Oil 2L, 20W-50Engine Oil API-SL/CF-2L, Semi Synthetic",
+    description1:
+      "Jaguar Perfect CNG 20W-50 is a premium synthetic-technology engine oil designed for CNG, LPG, petrol, and diesel engines. Formulated with advanced Friction-Shield TechnologyTM, it pro-vides superior engine wear protection, reduces friction, and en-sures long-lasting engine life.",
+    description2: "This high-performance oil delivers excellent cleanliness, oxida-tion stability, and high-temperature protection, making it ideal for vehicles that operate in hot or severe driving conditions. Wheth-er you drive a CNG car, van, or light truck, Jaguar Perfect CNG 20W-50 keeps your engine running smoother and cleaner every day.",
+      availablePackaging: "2 litre",
     image: product3,
   },
 
-  {
-    id: 4,
-    title:
-      "5kg Dr. Fixit 302 Super Latex-Premium | SBR Waterproofing & Bonding Agent for Concrete Repair",
-    brand: "Dr. Fixit Limited",
-    category: "Admixture",
-    quantity: "5 Litre",
-    subtitle: "Dr. Fixit 302 Super Latex",
-    subtitletwo: "SBR Latex for repairs & waterproofing",
-    description:
-      "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applications. This URP-based formulation enhances the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
-    image: product4, // replace with your correct 5kg Dr. Fixit 302 Super Latex image import
-  },
+{
+  id: 4,
+  title: "Jaguar Premium Multi-Grade Engine Oil",
+  brand: "Jaguar",
+  category: "Fully Synthetic Engine Oil for Cars & Motorcycles",
+  capacity: "4 Liters",
+  saeGrade: "20W-50",
+  apiSpecification: " SM",
+  madeIn: "UAE",
+  
+  description1:
+    "Jaguar Premium Multi-Grade Engine Oil SAE 20W-50 is a fully synthetic, high-performance engine oil engineered to deliver superior wear protection, cleaner performance, and longer engine life. Designed for modern petrol and diesel engines, this advanced formula ensures excellent lubrication even under extreme heat and heavy-load driving conditions.",
+  description2:
+    "The fully synthetic base oils combined with anti-wear and detergent additives provide exceptional film strength, reduce friction, and keep engine components clean for smoother performance and extended oil drain intervals.",
+  description3:
+    "Whether you drive a car, SUV, or motorcycle, Jaguar 20W-50 API SM offers reliable, long-lasting protection and consistent power delivery for your engine.",
 
-  {
-    id: 5,
-    title:
-      "18kg Water Proofing & Water-Reducing Admixture, LW+ 101 Dr Fixit Brand",
+  image: product4,
+},
 
-    brand: "Fixit Limited",
-    category: "Admixture",
-    quantity: "18 Liter",
-    subtitle: "Dr. Fixit Drproof LW+",
-    subtitletwo:
-      "Integral Liquid Waterproofing Compound for Concrete & Plaster",
-    description:
-      "Dr. Fixit Dr.proof LW+ is a specially formulated integral liquid waterproofing compound made from high-quality plasticising agents, polymers, and active additives. It is used as a waterproof additive for cement concrete, mortar, and plaster. The compound enhances the cohesiveness of concrete, reduces segregation minimizes shrinkage cracks, and provides superior waterproofing and durability to structures.",
-    availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
-    image: product5, // update this with the correct 30kg LW+ 101 image import
-  },
 
-  {
-    id: 6,
-    title:
-      "30kg Dr. Fixit 302 Super Latex-Premium SBR Waterproofing & Bonding Agent for Concrete Repair",
+{
+  id: 5,
+  title: "Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W-50",
+  brand: "Jaguar",
+  category: "High-Performance Synthetic Technology Diesel Engine Oil",
+  capacity: "5 Liters",
+  saeGrade: "20W-50",
+  apiSpecification: "CH-4",
+  madeIn: "UAE",
+ 
+ description1:
+  "",
 
-    brand: "Dr. Fixit Limited",
-    category: "Admixture",
-    quantity: "30kg",
-    subtitle: "Dr. Fixit 302 Super Latex",
-    subtitletwo: "SBR Latex for repairs & waterproofing",
-    description:
-      "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applications. This URP-based formulation is known for enhancing the tstrength, flexibility, and water resistance of cementitious mixes making it an ideal solution for long-lasting repairs and surface promaking it an ideal solution for long-lasting repairs and surface protection.",
+  image: product5,
+},
 
-    image: product6,
-  },
+
+{
+  id: 6,
+  title: "Jaguar Heavy Duty 15W-40 API CI-4/SM Engine Oil",
+  brand: "Jaguar",
+  category: "Premium High-Performance Diesel Engine Oil for Commercial Use",
+  capacity: "10 Liters",
+  saeGrade: "15W-40",
+  apiSpecification: "CI-4/SM",
+  madeIn: "UAE",
+  description1:
+    "Jaguar Heavy Duty 15W-40 API CI-4/SM is a high-performance, heavy-duty diesel engine oil developed using advanced technology base oils and a balanced additive system. It is specially engineered to deliver maximum protection and performance for turbo-charged and intercooled diesel engines operating under severe on-road and off-road conditions.",
+  description2:
+    "Formulated with superior thermal and oxidation stability, Jaguar Heavy Duty ensures longer engine life, enhanced cleanliness, and extended drain intervals making it the ideal choice for commercial vehicles, trucks, buses, and heavy equipment.",
+  image: product6,
+},
+
 
   {
     id: 7,
     title:
-      "30kg Water Proofing & Water-Reducing Admixture, LW+ 101 Dr Fixit Brand",
+      "vehicles, trucks, buses, and heavy equipment.",
 
-    brand: "FDr. Fixit Limitedixit",
+    brand: "Jaguar",
     category: "Admixture",
-    quantity: "30 Litre",
-    subtitle: "Fixit Drproof LW+",
-    subtitletwo:
-      "Integral Liquid Waterproofing Compound for Concrete & Plaster",
-    description:
-      "Dr. Fixit Dr.proof LW+ is a specially formulated integral liquid waterproofing compound made from high-quality plasticising agents, polymers, and active additives. It is used as a waterproof additive for cement concrete, mortar, and plaster. The compound enhances the cohesiveness of concrete, reduces segregation minimizes shrinkage cracks, and provides superior waterproofing and durability to structures.",
-    availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
+   category: "Premium High-Performance Diesel Engine Oil for Commercial Use",
+  capacity: "10 Liters",
+  saeGrade: "HD-50",
+  apiSpecification: "SF/CD",
+  madeIn: "UAE",
+  description1:
+    "Jaguar HD-50 API SF/CD is a high-quality multigrade motor oil spe-cially formulated for passenger vehicles, light trucks, and heavy-duty engines that operate under demanding conditions. De-signed with premium Group I base oils and advanced additive technology, Jaguar HD-50 ensures superior engine cleanliness, re-duced wear, and long-lasting protection against oxidation and cor-rosion.",
+  description2:
+    "This oil is suitable for naturally aspirated, turbocharged, and su-percharged engines used in both on-road and off-road applica-tions-making it an ideal choice for fleets, commercial vehicles, and older model cars that require SF/CD specification oils.",
     image: product7,
   },
   {
     id: 8,
     title:
-      "30kg Dr. Fixit 302 Super Latex-Premium SBR Waterproofing & Bonding Agent for Concrete Repair",
+      "Jaguar Extreme Power 20W50 - Super Premium Diesel Engine Oil (API-CF/SF)",
+  brand: "Jaguar",
+  category: "Diesel Engine Oil (API-CF/SF)",
+  saeGrade: "20W50",
+  apiSpecification: "CF/SF",
+  madeIn: "UAE",
+  
+  description1:
+    "Jaguar Extreme Power 20W50 (API-CF/SF) is a super premium heavy-duty diesel engine oil developed using advanced additive technology and 100% virgin base oils. ",
+  description2:
+    "Formulated for maximum engine protection, excellent cleanliness, and long-lasting performance, this oil ensures smooth operation even under the most demanding conditions.",
+  description3:
+    "Perfectly suited for turbocharged and naturally aspirated diesel engines, Jaguar Extreme Power offers strong film strength, ther-mal stability, and outstanding wear control, making it ideal for both on-road and off-road heavy-duty applications.",
 
-    brand: "Dr. Fixit Limited",
-    category: "Admixture",
-    quantity: "30 Litre",
-    subtitle: "Dr. Fixit 302 Super Latex",
-    subtitletwo: "SBR Latex for repairs & waterproofing",
-
-    description:
-      "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applications. This URP-based formulation is known for enhancing the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
     image: product8,
   },
   {
     id: 9,
     title:
-      "18kg Dr. Fixit 5400 Interior Wall Sealer High-Performance Water-Based Wall Primer for Interior Walls",
+      "Jaguar Gear Oil GL-4 SAE-90",
 
-    brand: "Fixit Limited",
-    category: "Paints",
-    quantity: "18 Litre",
-    subtitle: "Dr. Fixit 5400 Interior Wall Sealer.",
-    subtitletwo: "Excelient Finish Leveling",
-    description:
-      "Dr. Fixit 5400 Interior Wall Sealer is a high-quality, water-based primer and sealer designed for interior walls. It effectively seals porous surfaces, provides a uniform base for paint, and improves paint adhesion and durability. It is ideal for use on plaster, cement, and masonry surfaces before applying emulsion or acrylic paints.",
+  brand: "Jaguar",
+  category: "High-Performance Gearbox Lubricant for Passenger CarsTrucks & Heavy Vehicles",
+  saeGrade: "20W50",
+  apiSpecification: "CF/SF",
+    capacity: "20 Liters",
+  madeIn: "UAE",
+    description1:
+      "Jaguar Gear Oil GL-4 SAE-90 is a premium multi-vehicle gear lubri-cant designed for manual transmissions and transaxles in passen-ger cars, trucks, and other commercial vehicles. Specially formulat-ed with advanced anti-wear and oxidation-resistant additives, it ensures long-lasting protection, smooth gear shifting, and maxi-mum gearbox performance in all driving conditions.",
 
     image: product9,
-    availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
   },
   {
     id: 10,
@@ -193,14 +215,19 @@ const products = [
   },
   {
     id: 12,
-    title: "1kg Dr. Fixit Multi Purpose Rust Remover",
-    brand: "Dr. Fixit Limited",
-    category: "Rust Remover",
-    quantity: "1 Kg",
-    subtitle: "Dr. Fixit Rust Remover — Multi-Purpose",
-    description:
-      "Dr. Fixit Rust Remover is a highly effective chemical solution designed to remove rust, corrosion, and stubborn iron oxide deposits from metal surfaces, tools, and construction equipment. It restores metal surfaces to their original clean condition without causing damage to the base metal.",
-    availablePackaging: "5ml, 1 litre, and 5 litre",
+   title:
+      "Jaguar Gear Oil GL-4 SAE-90",
+
+  brand: "Jaguar",
+  category: "High-Performance Gearbox Lubricant for Passenger CarsTrucks & Heavy Vehicles",
+  saeGrade: "20W50",
+  apiSpecification: "CF/SF",
+    capacity: "20 Liters",
+  madeIn: "UAE",
+    description1:
+      "Jaguar Gear Oil GL-4 SAE-90 is a premium multi-vehicle gear lubri-cant designed for manual transmissions and transaxles in passen-ger cars, trucks, and other commercial vehicles. Specially formulat-ed with advanced anti-wear and oxidation-resistant additives, it ensures long-lasting protection, smooth gear shifting, and maxi-mum gearbox performance in all driving conditions.",
+   
+  
     image: product12, // ensure this is your correct rust remover image import
   },
 
@@ -563,7 +590,7 @@ const JaguarDetails = ({}) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Left: Image */}
             <div className="flex flex-col items-center">
-<div className="h-[600px] w-[500px] rounded-2xl shadow-sm p-4 flex items-center justify-center overflow-hidden border border-black/20">
+<div className="h-[580px] w-[500px] rounded-2xl shadow-sm p-4 flex items-center justify-center overflow-hidden ">
   <img src={p.image} alt={p.title} className="max-w-full max-h-full object-contain" />
 </div>
 
@@ -580,56 +607,70 @@ const JaguarDetails = ({}) => {
             </div>
 
             {/* Right: Info */}
-            <div className="lg:pt-[10px]">
-              <div className="space-y-2 text-gray-800 md:pl-10 lg:pl-0">
-                {/* Title */}
-                <h2 className="text-2xl md:text-3xl lg:text-2xl font-bold text-gray-900">
-                  {p.title}
-                </h2>
+<div className="lg:pt-[10px]">
+  <div className="space-y-2 text-gray-800 md:pl-10 lg:pl-0">
+    {/* Title */}
+    <h2 className="text-2xl md:text-3xl lg:text-2xl font-bold text-gray-900">
+      {p.title}
+    </h2>
 
-                {/* Product Info */}
-                <div className="lg:pt-[10px]">
-                  <p className="text-base md:text-lg">
-                    <span className="font-semibold">Brand:</span> {p.brand}
-                  </p>
-                  <p className="text-base md:text-lg">
-                    <span className="font-semibold">Category:</span>{" "}
-                    {p.category}
-                  </p>
-                  <p className="text-base md:text-lg">
+    {/* Product Info */}
+    <div className="lg:pt-[10px] space-y-1">
+      <p className="text-base md:text-lg">
+        <span className="font-bold text-gray-900">Brand:</span> {p.brand}
+      </p>
+      <p className="text-base md:text-lg">
+        <span className="font-bold text-gray-900">Category:</span> {p.category}
+      </p>
+      <p className="text-base md:text-lg">
+        <span className="font-bold text-gray-900">Capacity:</span> {p.capacity}
+      </p>
+      <p className="text-base md:text-lg">
+        <span className="font-bold text-gray-900">SAE Grade:</span> {p.saeGrade}
+      </p>
+      <p className="text-base md:text-lg">
+        <span className="font-bold text-gray-900">API Specification:</span>{" "}
+        {p.apiSpecification}
+      </p>
+      <p className="text-base md:text-lg">
+        <span className="font-bold text-gray-900">Made In:</span> {p.madeIn}
+      </p>
+      <p className="text-base md:text-lg">
                     <span className="font-semibold">Quantity:</span>{" "}
                     {p.quantity}
                   </p>
-                </div>
-
-                {/* Availability */}
-                <p className="text-base md:text-lg">
+                    <p className="text-base md:text-lg">
                   <span className="font-semibold">Availability:</span>{" "}
                   <span className="text-green-600 font-medium">In Stock</span>
                 </p>
+    </div>
 
-                {/* Description */}
-                <div className="pt-4">
-                  <h3 className="text-xl md:text-2xl font-semibold mb-2">
-                    {p.subtitle}
-                  </h3>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed lg:mb-2.5">
-                    {p.subtitletwo}
-                  </p>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    {p.description}
-                  </p>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed pt-2">
-                    <span className="font-semibold">Available Packaging:</span>{" "}
-                    {p.availablePackaging}
-                  </p>
-                </div>
-              </div>
-            </div>
+    {/* Description */}
+    <div className="pt-4">
+      <h3 className="text-xl md:text-[22px] font-bold mb-5">{p.subtitle}</h3>
+      <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-2">
+        {p.description1}
+      </p>
+      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+        {p.description2}
+      </p>
+      <p className="text-base md:text-lg mt-2 text-gray-700 leading-relaxed">
+        {p.description3}
+      </p>
+      <p className="text-base md:text-lg text-gray-700 leading-relaxed pt-2">
+        <span className="font-bold text-gray-900">Available Packaging:</span>{" "}
+        {p.availablePackaging}
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
           </div>
 
           {/* 🔹 Thumbnails */}
-     <div className="flex justify-center gap-4 mt-12 flex-wrap">
+     <div className="flex justify-center gap-4 mt-20 flex-wrap">
   {products.map((prod, i) => (
     <button
       key={prod.id}
