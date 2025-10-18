@@ -230,7 +230,7 @@ description2: "Whether used in trucks, buses, construction machinery, or agricul
       "Jaguar Gear Oil GL-4 SAE-90 is a premium multi-vehicle gear lubri-cant designed for manual transmissions and transaxles in passen-ger cars, trucks, and other commercial vehicles. Specially formulat-ed with advanced anti-wear and oxidation-resistant additives, it ensures long-lasting protection, smooth gear shifting, and maxi-mum gearbox performance in all driving conditions.",
    
   
-    image: product12, // ensure this is your correct rust remover image import
+    image: product12, 
   },
 
   {
@@ -318,6 +318,10 @@ const JaguarDetails = ({}) => {
           alert("❌ Failed to send email.");
         }
       );
+
+
+
+      
   };
 
   return (
@@ -698,1702 +702,1348 @@ const JaguarDetails = ({}) => {
           {/* 🔹 Dynamic Text Content */}
           <div className="mt-20 ">
             {p.id === 1 && (
-              <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
-                {/* Header */}
-                <div className="mb-12">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    Dr. Fixit LW+ 101 (1 Litre)
-                  </h1>
-                  <p className="text-lg md:text-xl">
-                    Integral liquid waterproofing compound designed to enhance
-                    concrete strength, reduce permeability, and ensure long-term
-                    durability in all types of structures.
-                  </p>
-                </div>
+                <section className="max-w-[1700px] mx-auto border-t border-b border-gray-300 py-6 px-4 text-gray-800 text-[15px] leading-relaxed">
+      {/* Application */}
+      <div className="mb-5">
+        <h3 className="font-semibold text-gray-900 mb-1">Application:</h3>
+        <ul className="list-none pl-0 space-y-1">
+          <li className="flex">
+            <span className="text-red-600 mr-2">▪</span>
+            Recommended for modern four-stroke motorcycle engines requiring JASO
+            MA or JASO MA2 specifications.
+          </li>
+          <li className="flex">
+            <span className="text-red-600 mr-2">▪</span>
+            Provides strong protection for older motorcycle engines built before
+            the introduction of JASO MA/MA2.
+          </li>
+        </ul>
+      </div>
 
-                {/* Content Sections */}
-                <div className="space-y-10">
-                  {/* Key Benefits */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Key Benefits
-                    </h2>
-                    <ul className="list-disc list-inside text-lg md:text-xl space-y-3">
-                      <li>
-                        <span className="font-semibold">
-                          Improved Concrete Strength:
-                        </span>{" "}
-                        Water reduction improves compressive strength and
-                        long-term durability.
-                      </li>
-                      <li>
-                        <span className="font-semibold">
-                          Enhanced Waterproofing:
-                        </span>{" "}
-                        Reduces concrete porosity to prevent leaks and dampness.
-                      </li>
-                      <li>
-                        <span className="font-semibold">
-                          Increased Workability:
-                        </span>{" "}
-                        Improves ease of placement without compromising
-                        strength.
-                      </li>
-                      <li>
-                        <span className="font-semibold">
-                          Reduced Shrinkage:
-                        </span>{" "}
-                        Minimizes cracking and surface shrinkage for better
-                        finish.
-                      </li>
-                      <li>
-                        <span className="font-semibold">
-                          Better Durability:
-                        </span>{" "}
-                        Resists damage from environmental exposure and chemical
-                        attacks.
-                      </li>
-                      <li>
-                        <span className="font-semibold">Cost Efficiency:</span>{" "}
-                        Reduces maintenance cost with improved life of concrete.
-                      </li>
-                    </ul>
-                  </div>
+      {/* Specifications and Approvals */}
+      <div className="mb-5">
+        <h3 className="font-semibold text-gray-900 mb-1">
+          Specifications and Approvals:
+        </h3>
+        <p className="mb-2">
+          This product meets or exceeds the requirements of the following
+          industry standards:
+        </p>
+        <ul className="list-none pl-0 space-y-1">
+          <li className="flex">
+            <span className="text-red-600 mr-2">▪</span>JASO MA / JASO MA2
+          </li>
+          <li className="flex">
+            <span className="text-red-600 mr-2">▪</span>API SL
+          </li>
+        </ul>
+      </div>
 
-                  {/* Dosage */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Dosage
-                    </h2>
-                    <p className="text-lg md:text-xl">
-                      Use <span className="font-semibold">200 ml</span> of Dr.
-                      Fixit LW+ 101 for every{" "}
-                      <span className="font-semibold">50 kg</span> bag of
-                      cement. Mix properly for best waterproofing and strength
-                      results.
-                    </p>
-                  </div>
+      {/* Key Features & Benefits */}
+      <div>
+        <h3 className="font-semibold text-gray-900 mb-2">
+          Key Features & Benefits
+        </h3>
 
-                  {/* Shelf Life */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Shelf Life
-                    </h2>
-                    <p className="text-lg md:text-xl">
-                      Best before <span className="font-semibold">2 years</span>{" "}
-                      from date of manufacture when stored in sealed packaging.
-                    </p>
-                  </div>
+        <div className="mb-4">
+          <p className="font-semibold text-gray-900">Advanced Engine Protection:</p>
+          <p>
+            Instant protection from{" "}
+            <span className="font-semibold">heat-activated anti-wear molecules™</span>{" "}
+            ensures smooth performance and reduced metal wear even at high
+            temperatures.
+          </p>
+        </div>
 
-                  {/* Storage */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Storage
-                    </h2>
-                    <p className="text-lg md:text-xl">
-                      Store in a cool, dry place away from direct sunlight and
-                      heat.
-                    </p>
-                  </div>
+        <div className="mb-4">
+          <p className="font-semibold text-gray-900">Enhanced Wear Resistance:</p>
+          <p>
+            Provides <span className="font-semibold">up to 57%</span> more wear
+            protection than the industry standard (based on API SL Sequence IVA
+            test).
+          </p>
+        </div>
 
-                  {/* Applications */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Applications
-                    </h2>
-                    <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
-                      <li>Foundations and basements</li>
-                      <li>RCC roofs, slabs, and terraces</li>
-                      <li>Columns and beams</li>
-                      <li>Tunnels and bridges</li>
-                      <li>Water-retaining structures</li>
-                      <li>Plastering for internal & external walls</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+        <div>
+          <p className="font-semibold text-gray-900">Smooth Clutch Operation:</p>
+          <p>
+            High-traction formulation helps prevent clutch slippage and allows
+            smoother gear shifting.
+          </p>
+        </div>
+      </div>
+    </section>
             )}
 
             {p.id === 2 && (
-              <section className=" py-20 px-6">
-                <div className="max-w-[1700px] mx-auto text-gray-800 leading-relaxed">
-                  {/* Header */}
-                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-start">
-                    Dr Fixit Brand 302 Super Latex
-                  </h2>
+             <div className="max-w-[1700px] mx-auto font-sans text-gray-800 border-t border-b border-gray-300 py-8 text-[15px] leading-relaxed">
+      {/* === Application === */}
+      <section className="mb-6">
+        <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
+        <ul className="space-y-1 ml-4">
+          <li>
+            <span className="text-red-600 mr-2">▪</span>Recommended for modern
+            four-stroke motorcycle engines requiring JASO MA or JASO MA2
+            specifications.
+          </li>
+          <li>
+            <span className="text-red-600 mr-2">▪</span>Provides strong
+            protection for older motorcycle engines built before the introduction
+            of JASO MA/MA2.
+          </li>
+        </ul>
+      </section>
 
-                  {/* Description */}
-                  <p className="text-lg md:text-xl mb-8">
-                    <span className="font-semibold">
-                      Dr. Fixit 302 Super Latex
-                    </span>{" "}
-                    is a high-performance polymer-based waterproofing and
-                    bonding agent specially designed to improve adhesion,
-                    flexibility, and durability of cement-based mixes. It is
-                    ideal for use in waterproof coatings, bonding coats, and
-                    repair mortars.
-                  </p>
+      {/* === Specifications and Approvals === */}
+      <section className="mb-6">
+        <h2 className="font-semibold text-[17px] mb-2">
+          Specifications and Approvals:
+        </h2>
+        <p className="mb-1">
+          This product meets or exceeds the requirements of the following
+          industry standards:
+        </p>
+        <ul className="space-y-1 ml-4">
+          <li>
+            <span className="text-red-600 mr-2">▪</span>JASO MA / JASO MA2
+          </li>
+          <li>
+            <span className="text-red-600 mr-2">▪</span>API SL
+          </li>
+        </ul>
+      </section>
 
-                  {/* Applications */}
-                  <div className="space-y-8">
-                    <h3 className="text-3xl font-semibold text-gray-900 mb-4">
-                      Applications
-                    </h3>
-                    <p className="text-lg md:text-xl">
-                      It can be used effectively in the following applications:
-                    </p>
+      {/* === Key Features === */}
+      <section className="mb-6">
+        <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
 
-                    <div className="space-y-6 pl-4 border-l-4 border-yellow-400">
-                      <div>
-                        <h4 className="text-2xl font-semibold text-gray-900">
-                          • Waterproof Coating:
-                        </h4>
-                        <p className="text-lg">
-                          Mix Dr. Fixit 302 Super Latex with cement in a 1:2
-                          ratio (Latex : Cement) to form a brushable slurry.
-                          Apply this coating over concrete slabs, terraces, and
-                          roofs to provide a durable waterproof barrier.
-                        </p>
-                      </div>
+        <p className="font-semibold">Advanced Engine Protection:</p>
+        <p className="mb-3">
+          Instant protection from{" "}
+          <span className="italic">heat-activated anti-wear molecules</span>™
+          ensures smooth performance and reduced metal wear even at high
+          temperatures.
+        </p>
 
-                      <div>
-                        <h4 className="text-2xl font-semibold text-gray-900">
-                          • Bond Coat for Old and New Concrete:
-                        </h4>
-                        <p className="text-lg">
-                          Prepare a bonding coat by mixing Dr. Fixit 302 Super
-                          Latex with cement in a 1:1 ratio. Apply it between old
-                          and new concrete or plaster surfaces to ensure
-                          excellent adhesion and strength.
-                        </p>
-                      </div>
+        <p className="font-semibold">Enhanced Wear Resistance:</p>
+        <p className="mb-3">
+          Provides up to 57% more wear protection than the industry standard
+          (based on API SL Sequence IVA test).
+        </p>
 
-                      <div>
-                        <h4 className="text-2xl font-semibold text-gray-900">
-                          • Repair Mortars:
-                        </h4>
-                        <p className="text-lg">
-                          Add Dr. Fixit 302 Super Latex to cement–sand mortar to
-                          improve bond strength, flexibility, and water
-                          resistance — ideal for patch repairs, resurfacing, and
-                          spalled concrete restoration.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+        <p className="font-semibold">Smooth Clutch Operation:</p>
+        <p className="mb-3">
+          High-traction formulation helps prevent clutch slippage and allows
+          smoother gear shifting.
+        </p>
 
-                  {/* Benefits */}
-                  <div className="mt-16 space-y-6">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Benefits of Dr. Fixit 302 Super Latex
-                    </h3>
-                    <p className="text-lg">
-                      Dr. Fixit 302 Super Latex is a high-quality co-polymer
-                      latex liquid that provides excellent bonding,
-                      waterproofing, and durability to cement-based mixes. Its
-                      versatile formulation makes it ideal for multiple
-                      construction and repair applications.
-                    </p>
+        <p className="font-semibold">Engine & Gearbox Protection:</p>
+        <p className="mb-3">
+          Designed to protect both <strong>engine</strong> and{" "}
+          <strong>gearbox</strong> in one circulation system, minimizing friction
+          and corrosion.
+        </p>
 
-                    <ul className="list-disc pl-8 text-lg">
-                      <li>Floors and slabs</li>
-                      <li>Columns and beams</li>
-                      <li>Chhajjas and balconies</li>
-                      <li>Waterproofing of toilets and bathrooms</li>
-                      <li>Small terraces and concrete surfaces</li>
-                    </ul>
-                  </div>
+        <p className="font-semibold">Cleaner Engine Performance:</p>
+        <p>
+          Prevents deposit formation and helps keep the{" "}
+          <strong>engine clean</strong>, ensuring longer life and consistent
+          efficiency.
+        </p>
+      </section>
 
-                  {/* Coverage */}
-                  <div className="mt-16 space-y-6">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Coverage
-                    </h3>
-                    <p className="text-lg">
-                      The recommended coverage of Dr. Fixit 302 Super Latex
-                      varies depending on its application type:
-                    </p>
+      {/* === Technical Properties === */}
+      <section className="mb-6">
+        <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+        <table className="w-full text-left border-collapse text-[15px]">
+          <thead>
+            <tr className="border-b border-gray-300">
+              <th className="py-1">Property</th>
+              <th className="py-1">Test Method</th>
+              <th className="py-1">Typical Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["Grade", "SAE 20W–40", "—"],
+              ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "122"],
+              ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "15"],
+              ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.88"],
+              ["Pour Point (°C)", "ASTM D97", "-30"],
+              ["Flash Point (°C)", "ASTM D92", "230"],
+              ["Sulfated Ash (mass %)", "ASTM D874", "0.8"],
+              ["Total Base Number (mg KOH/g)", "ASTM D2896", "5.9"],
+              ["Mini-Rotary Viscometer @ -20°C (mPa.s)", "ASTM D4684", "12,500"],
+              ["Hi-Temp Hi-Shear Viscosity @ 150°C (mPa.s)", "ASTM D4683", "4.1"],
+            ].map(([prop, method, value], i) => (
+              <tr key={i} className="border-b border-gray-200">
+                <td className="py-1">{prop}</td>
+                <td className="py-1">{method}</td>
+                <td className="py-1">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
 
-                    <ul className="list-disc pl-8 text-lg space-y-2">
-                      <li>
-                        <span className="font-semibold">
-                          Waterproof Coating:
-                        </span>{" "}
-                        Approximately 2–2.2 m²/kg for 2 coats when mixed in 1:2
-                        ratio.
-                      </li>
-                      <li>
-                        <span className="font-semibold">Mortar Modifier:</span>{" "}
-                        Use 6–7.5 kg per 50 kg bag of cement to enhance bond
-                        strength and flexibility.
-                      </li>
-                      <li>
-                        <span className="font-semibold">Bonding Agent:</span>{" "}
-                        Coverage is about 4.2-4.5 m²/kg per coat depending on
-                        surface condition.
-                      </li>
-                    </ul>
-                    <p className="text-gray-700 text-base italic">
-                      *Actual coverage may vary slightly based on surface
-                      texture, application method, and site environment.*
-                    </p>
-                  </div>
-
-                  {/* Key Benefits */}
-                  <div className="mt-16 space-y-6">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Key Benefits
-                    </h3>
-                    <ol className="list-decimal pl-8 text-lg space-y-2">
-                      <li>
-                        Forms a strong bond between old and new concrete or
-                        plaster surfaces.
-                      </li>
-                      <li>
-                        Prevents dampness and water penetration through treated
-                        surfaces.
-                      </li>
-                      <li>
-                        Serves as a multipurpose waterproofing and bonding
-                        solution.
-                      </li>
-                      <li>
-                        Enhances the water resistance and durability of repair
-                        mortars.
-                      </li>
-                      <li>
-                        Reduces shrinkage cracks, ensuring longer-lasting
-                        repairs and coatings.
-                      </li>
-                    </ol>
-                  </div>
-
-                  {/* Uses */}
-                  <div className="mt-16 space-y-8">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Uses of Dr. Fixit 302 Super Latex
-                    </h3>
-                    <ul className="list-disc pl-8 text-lg space-y-2">
-                      <li>
-                        <span className="font-semibold">
-                          Waterproof Coating:
-                        </span>{" "}
-                        Improves water resistance when mixed with cement and
-                        applied as a coating on concrete surfaces, roofs, and
-                        terraces.
-                      </li>
-                      <li>
-                        <span className="font-semibold">Bonding Agent:</span>{" "}
-                        Ensures strong adhesion between old and new concrete or
-                        plaster surfaces.
-                      </li>
-                      <li>
-                        <span className="font-semibold">
-                          Repair Mix Modifier:
-                        </span>{" "}
-                        Enhances durability, strength, and flexibility of repair
-                        mortar or concrete, while minimizing cracks and
-                        improving surface finish.
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* SBR Waterproofing */}
-                  <div className="mt-16 space-y-8">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      SBR Waterproofing with Dr. Fixit 302 Super Latex
-                    </h3>
-                    <p className="text-lg">
-                      Dr. Fixit 302 Super Latex is a premium Styrene Butadiene
-                      Rubber (SBR) latex that provides long-lasting
-                      waterproofing, bonding, and durability. When added to
-                      cement, it enhances water resistance, flexibility, and
-                      strength of concrete, mortar, and plaster.
-                    </p>
-
-                    <h4 className="text-2xl font-semibold text-gray-900">
-                      Uses and Benefits:
-                    </h4>
-                    <ul className="list-disc pl-8 text-lg space-y-2">
-                      <li>
-                        <span className="font-semibold">
-                          Waterproof Coating:
-                        </span>{" "}
-                        Forms a seamless waterproof barrier protecting roofs,
-                        terraces, and slabs from seepage.
-                      </li>
-                      <li>
-                        <span className="font-semibold">Bonding Agent:</span>{" "}
-                        Acts as a strong adhesive bridge between old and new
-                        concrete or plaster.
-                      </li>
-                      <li>
-                        <span className="font-semibold">
-                          Repair & Strengthening:
-                        </span>{" "}
-                        Enhances strength, flexibility, and crack resistance of
-                        repair mortars and concrete.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+      {/* === Health and Safety === */}
+      <section>
+        <h2 className="font-semibold text-[17px] mb-2">Health and Safety</h2>
+        <p className="mb-3">
+          For safe handling and use, please refer to the Material Safety Data
+          Sheet (MSDS) available at:
+        </p>
+        <p className="text-blue-700 underline">
+          www.jaguarlubricants.com
+        </p>
+        <p className="mt-3">
+          Jaguar Super Moto 20W-40 - Premium protection, smooth performance, and
+          longer engine life for your motorcycle.
+        </p>
+      </section>
+    </div>
             )}
 
             {p.id === 3 && (
-              <section className="py-20 px-6">
-                <div className="max-w-[1700px] mx-auto text-gray-800 leading-relaxed">
-                  {/* Header */}
-                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-start">
-                    Dr Fixit Brand LW 101
-                  </h2>
+ <div className="text-doc max-w-[1700px]mx-auto p-6 border-t  border-gray-300">
+      {/* Application Section */}
+      <h2 className="text-lg font-semibold mb-2">Application:</h2>
+      <ul className="list-none space-y-1 mb-4">
+        <li><span className="text-red-600 mr-2">▪</span> Ideal for CNG, LPG, petrol, and diesel engines</li>
+        <li><span className="text-red-600 mr-2">▪</span> Suitable for passenger cars, vans, and light trucks</li>
+        <li><span className="text-red-600 mr-2">▪</span> Recommended for turbocharged and high-performance engines</li>
+        <li><span className="text-red-600 mr-2">▪</span> Works effectively in normal to severe driving conditions</li>
+      </ul>
 
-                  {/* Introduction */}
-                  <p className="text-lg md:text-xl mb-8">
-                    <span className="font-semibold">
-                      Dr. Fixit Dr.proof LW+
-                    </span>{" "}
-                    is a high-performance integral liquid waterproofing compound
-                    that improves the strength, durability, and waterproofing
-                    efficiency of concrete and plaster. Follow these steps to
-                    ensure the best results during construction:
-                  </p>
+      {/* Specifications and Approvals */}
+      <h2 className="text-lg font-semibold mb-2">Specifications and Approvals:</h2>
+      <p className="mb-2">Meets or exceeds the following international standards:</p>
+      <ul className="list-none space-y-1 mb-4">
+        <li><span className="text-red-600 mr-2">▪</span> API CF</li>
+        <li><span className="text-red-600 mr-2">▪</span> FORD WSS-M2C929-A</li>
+        <li><span className="text-red-600 mr-2">▪</span> GM 6094M</li>
+      </ul>
 
-                  {/* Application Steps */}
-                  <div className="space-y-6 pl-4 border-l-4 border-yellow-400">
-                    <h3 className="text-3xl font-semibold text-gray-900 mb-4">
-                      Application Steps:
-                    </h3>
+      {/* Key Features & Benefits */}
+      <h2 className="text-lg font-semibold mb-2">Key Features & Benefits</h2>
+      <p className="mb-4"><strong>Best for CNG & Petrol Engines:</strong> Specially formulated to handle higher combustion temperatures of CNG vehicles.</p>
+      <p className="mb-4"><strong>Advanced Friction Protection:</strong> Friction-Shield Technology™ minimizes metal contact and reduces engine wear by up to 65%.</p>
+      <p className="mb-4"><strong>Longer Engine Life:</strong> Protects critical parts from heat and wear under both city and highway driving.</p>
+      <p className="mb-4"><strong>Cleaner Performance:</strong> Keeps the engine clean from sludge, deposits, and carbon buildup.</p>
+      <p className="mb-6"><strong>High-Temperature Stability:</strong> Maintains viscosity and performance even under extreme heat and heavy loads.</p>
 
-                    <ol className="list-decimal pl-8 text-lg space-y-2">
-                      <li>
-                        Mix cement, sand, and aggregates in proper proportion
-                        with 2/3rd of the total mixing water.
-                      </li>
-                      <li>
-                        Mix Dr. Fixit Dr.proof LW+ with the remaining 1/3rd
-                        portion of mixing water, and then add this mixture to
-                        the premixed concrete or mortar.
-                      </li>
-                      <li>
-                        Mix thoroughly until a uniform and cohesive consistency
-                        is achieved.
-                      </li>
-                      <li>
-                        Maintain the Water–Cement Ratio below 0.5 to achieve
-                        higher durability and strength in concrete or mortar.
-                      </li>
-                    </ol>
+      {/* Technical Properties */}
+<section className="mb-8">
+  <h2 className="text-[17px] font-semibold mb-3 text-gray-800">
+    Technical Properties
+  </h2>
+  <div className="overflow-x-auto">
+    <table className="w-full border-collapse text-[15px] text-gray-800">
+      <thead>
+        <tr className="border-b border-gray-300">
+          <th className="text-left py-2 font-medium">Property</th>
+          <th className="text-left py-2 font-medium">Test Method</th>
+          <th className="text-left py-2 font-medium">Typical Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["Grade", "SAE 20W-50", "—"],
+          ["Viscosity Index", "ASTM D2270", "151"],
+          ["Total Base Number (mg KOH/g)", "ASTM D2896", "7.5"],
+          ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.859"],
+          ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "10.3"],
+          ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "63"],
+          ["High-Temp High-Shear Viscosity @ 150°C (mPa.s)", "ASTM D4683", "3.0"],
+          ["Pour Point (°C)", "ASTM D97", "−39"],
+          ["Flash Point (°C)", "ASTM D92", "228"],
+        ].map(([property, method, value], i) => (
+          <tr
+            key={i}
+            className="border-b border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            <td className="py-2">{property}</td>
+            <td className="py-2">{method}</td>
+            <td className="py-2">{value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
 
-                    <p className="text-lg mt-4">
-                      For the best performance, always use Dr. Fixit Dr.proof
-                      LW+ in plastering, RCC works, and other concrete
-                      applications to achieve long-lasting waterproofing and
-                      crack resistance.
-                    </p>
-                  </div>
 
-                  {/* Recommended Areas */}
-                  <div className="mt-16 space-y-6">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Recommended Areas of Application:
-                    </h3>
-                    <p className="text-lg">
-                      Dr. Fixit Dr.proof LW+ is suitable for use in:
-                    </p>
-
-                    <ul className="list-disc pl-8 text-lg space-y-2">
-                      <li>Roof slabs</li>
-                      <li>Columns and beams</li>
-                      <li>Footings and foundations</li>
-                      <li>RCC water-retaining structures</li>
-                      <li>Internal and external wall plastering</li>
-                    </ul>
-                  </div>
-
-                  {/* Benefits */}
-                  <div className="mt-16 space-y-6">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Key Benefits of Using Dr. Fixit Dr.proof LW+
-                    </h3>
-
-                    <ol className="list-decimal pl-8 text-lg space-y-2">
-                      <li>
-                        Enhances the cohesiveness of concrete for improved
-                        durability.
-                      </li>
-                      <li>
-                        Provides superior protection to steel reinforcement
-                        against corrosion.
-                      </li>
-                      <li>Effectively prevents dampness and water seepage.</li>
-                      <li>Minimizes plaster shrinkage, reducing cracks.</li>
-                      <li>
-                        Improves the overall strength and workability of mortar.
-                      </li>
-                    </ol>
-
-                    <p className="text-gray-700 italic text-base">
-                      *For more information on the features and benefits, refer
-                      to the official technical data sheet.*
-                    </p>
-                  </div>
-
-                  {/* Performance Details */}
-                  <div className="mt-16 space-y-6">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Performance Enhancements
-                    </h3>
-
-                    <div className="space-y-4 pl-4 border-l-4 border-yellow-400">
-                      <div>
-                        <h4 className="text-2xl font-semibold text-gray-900">
-                          Increased Workability:
-                        </h4>
-                        <p className="text-lg">
-                          Dr. Fixit Dr.proof LW+ enhances the flow and ease of
-                          concrete placement without affecting its strength,
-                          ensuring efficient and consistent construction
-                          results.
-                        </p>
-                      </div>
-
-                      <div>
-                        <h4 className="text-2xl font-semibold text-gray-900">
-                          Reduced Shrinkage and Cracking:
-                        </h4>
-                        <p className="text-lg">
-                          The optimized water content helps minimize shrinkage
-                          and surface cracks, reducing long-term maintenance and
-                          repair costs.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Dosage */}
-                  <div className="mt-16 space-y-6">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Dosage
-                    </h3>
-                    <p className="text-lg">
-                      Use <span className="font-semibold">200 ml</span> of Dr.
-                      Fixit Dr.proof LW+ for every 50 kg bag of cement.
-                    </p>
-                  </div>
-
-                  {/* Mixing Ratio */}
-                  <div className="mt-16 space-y-6">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Mixing Ratio
-                    </h3>
-                    <p className="text-lg">
-                      For optimal waterproofing results, mix Dr. Fixit Dr.proof
-                      LW+ at{" "}
-                      <span className="font-semibold">
-                        200 ml per 50 kg bag of cement.
-                      </span>{" "}
-                      This integral waterproofing admixture improves concrete
-                      durability, minimizes cracks, and protects against
-                      moisture - making it the ideal choice for long-lasting
-                      waterproof concrete applications.
-                    </p>
-                  </div>
-                </div>
-              </section>
+    </div>
             )}
             {p.id === 4 && (
-              <section className="py-20 px-6">
-                <div className="max-w-[1700px] mx-auto text-gray-800 leading-relaxed">
-                  {/* Header */}
-                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-start">
-                    Dr Fixit 302 Super Latex (30kg)
-                  </h2>
+       <div className="max-w-[1700px] mx-auto px-6 py-0 text-gray-800">
+      <div className="border-t  border-gray-300 py-6">
+        <h2 className="text-xl font-semibold mb-4">Application:</h2>
+        <ul className="space-y-2 pl-4">
+          {[
+            "Suitable for petrol and diesel engines in cars, SUVs, and motorcycles",
+            "Recommended for high-performance and turbocharged engines",
+            "Works effectively in hot climates, long-distance driving, and heavy traffic conditions",
+            "Provides reliable protection in normal to severe driving environments",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2">
+              <span className="text-red-600 text-lg leading-tight">▪</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-                  {/* Introduction */}
-                  <div className="space-y-8 pl-4 border-l-4 border-yellow-400">
-                    <p className="text-lg md:text-xl">
-                      <span className="font-semibold">
-                        Dr. Fixit 302 Super Latex
-                      </span>{" "}
-                      is a Styrene Butadiene Rubber (SBR) based waterproofing
-                      and bonding agent designed for use with cement for
-                      concrete and mortar repair. It enhances adhesion,
-                      flexibility, and water resistance, ensuring long-lasting
-                      durability in construction and repair applications.
-                    </p>
+      <div className="py-6">
+        <h2 className="text-xl font-semibold mb-4">Specifications and Approvals:</h2>
+        <ul className="space-y-2 pl-4">
+          <li className="flex items-start gap-2">
+            <span className="text-red-600 text-lg leading-tight">▪</span>
+            <span>API SM (meets or exceeds latest international standards)</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-red-600 text-lg leading-tight">▪</span>
+            <span>SAE 20W-50 viscosity grade for enhanced film strength and engine durability</span>
+          </li>
+        </ul>
+      </div>
 
-                    <p className="text-lg md:text-xl">
-                      This polymer latex is ideal for applications such as
-                      waterproof coatings, bonding old and new concrete, patch
-                      repairs, and protective coatings for slabs, terraces, and
-                      bathrooms.
-                    </p>
-                  </div>
-
-                  {/* Recommended Areas of Application */}
-                  <div className="mt-16 space-y-6">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Recommended Areas of Application
-                    </h3>
-                    <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
-                      <li>Waterproofing of bathrooms, terraces, and roofs</li>
-                      <li>Bonding coat for old and new concrete or plaster</li>
-                      <li>Repair mortar and concrete modification</li>
-                      <li>Chhajjas, balconies, and slabs</li>
-                      <li>Protective coating for RCC structures</li>
-                    </ul>
-                  </div>
-
-                  {/* Application Method */}
-                  <div className="mt-16 space-y-8">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Application Method
-                    </h3>
-                    <ol className="list-decimal pl-8 text-lg md:text-xl space-y-3">
-                      <li>
-                        Clean the surface to remove dust, oil, grease, or loose
-                        particles.
-                      </li>
-                      <li>
-                        Mix{" "}
-                        <span className="font-semibold">
-                          Dr. Fixit 302 Super Latex
-                        </span>{" "}
-                        with cement in the ratio of{" "}
-                        <span className="font-semibold">
-                          1:2 (Latex : Cement)
-                        </span>{" "}
-                        to form a smooth, brushable slurry.
-                      </li>
-                      <li>
-                        Apply two coats of the slurry with a brush, keeping an
-                        interval of{" "}
-                        <span className="font-semibold">4-6 hours</span> between
-                        coats.
-                      </li>
-                      <li>
-                        For bonding coats, mix in{" "}
-                        <span className="font-semibold">
-                          1:1 (Latex : Cement)
-                        </span>{" "}
-                        ratio and apply before new concrete placement.
-                      </li>
-                      <li>
-                        For repair mortars, add{" "}
-                        <span className="font-semibold">10–15% Latex</span> by
-                        weight of cement for enhanced adhesion and strength.
-                      </li>
-                    </ol>
-                  </div>
-
-                  {/* Coverage */}
-                  <div className="mt-16 space-y-4">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Coverage
-                    </h3>
-                    <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
-                      <li>
-                        <span className="font-semibold">
-                          Waterproof coating:
-                        </span>{" "}
-                        2-2.2 m²/kg for 2 coats (1:2 ratio)
-                      </li>
-                      <li>
-                        <span className="font-semibold">Bonding coat:</span>{" "}
-                        4-4.5 m²/kg per coat (1:1 ratio)
-                      </li>
-                      <li>
-                        <span className="font-semibold">
-                          Repair mortar modifier:
-                        </span>{" "}
-                        6-7.5 kg per 50 kg of cement
-                      </li>
-                    </ul>
-                    <p className="text-gray-700 text-base italic">
-                      *Coverage may vary depending on surface texture and site
-                      conditions.*
-                    </p>
-                  </div>
-
-                  {/* Key Benefits */}
-                  <div className="mt-16 space-y-4">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Key Benefits
-                    </h3>
-                    <ol className="list-decimal pl-8 text-lg md:text-xl space-y-3">
-                      <li>
-                        Provides excellent bonding between old and new concrete
-                        or plaster.
-                      </li>
-                      <li>
-                        Prevents water seepage and dampness through treated
-                        surfaces.
-                      </li>
-                      <li>
-                        Enhances flexibility and tensile strength of cement
-                        mortar.
-                      </li>
-                      <li>
-                        Reduces shrinkage cracks and increases durability.
-                      </li>
-                      <li>
-                        Improves resistance to chemicals and corrosion in RCC
-                        structures.
-                      </li>
-                    </ol>
-                  </div>
-
-                  {/* Dosage */}
-                  <div className="mt-16 space-y-4">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      Dosage
-                    </h3>
-                    <p className="text-lg md:text-xl">
-                      Use <span className="font-semibold">6–7.5 kg</span> of Dr.
-                      Fixit 302 Super Latex per{" "}
-                      <span className="font-semibold">50 kg</span> of cement
-                      when used as a modifier. Adjust ratios according to use
-                      type as recommended above.
-                    </p>
-                  </div>
-
-                  {/* SBR Waterproofing Section */}
-                  <div className="mt-16 space-y-4">
-                    <h3 className="text-3xl font-semibold text-gray-900">
-                      SBR Waterproofing Advantages
-                    </h3>
-                    <p className="text-lg md:text-xl">
-                      Being an SBR-based polymer, Dr. Fixit 302 Super Latex
-                      forms a flexible, seamless, and durable waterproof
-                      barrier. It protects concrete from cracks, seepage, and
-                      deterioration caused by water ingress.
-                    </p>
-                    <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
-                      <li>Provides long-lasting waterproof protection</li>
-                      <li>Enhances structural bonding and strength</li>
-                      <li>Ideal for repairing damaged concrete surfaces</li>
-                      <li>Minimizes future maintenance and leakage issues</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+      <div className="py-6">
+        <h2 className="text-xl font-semibold mb-4">Key Features & Benefits</h2>
+        <ul className="space-y-2 pl-4">
+          {[
+            "Ensures excellent high-temperature stability and oxidation resistance.",
+            "Superior Wear Protection: Protects vital engine parts and extends engine life.",
+            "Smooth Clutch Operation: High-traction formulation helps prevent clutch slippage and allows smoother gear shifting.",
+            "Excellent Engine Cleanliness: Keeps pistons and valves free from sludge and carbon deposits.",
+            "High Viscosity Strength: Provides a strong oil film for consistent performance under all conditions.",
+            "Enhanced Fuel Efficiency: Reduces internal friction for smoother operation and better mileage.",
+            "Ideal for Older Engines: Perfect for vehicles that need extra protection in hot or heavy-load conditions.",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2">
+              <span className="text-red-600 text-lg leading-tight">▪</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
             )}
 
             {p.id === 5 && (
-              <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
-                {/* Header */}
-                <div className="mb-12">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    Dr. Fixit LW+ 101 (18 Litre)
-                  </h1>
-                  <p className="text-lg md:text-xl">
-                    High-performance integral liquid waterproofing compound for
-                    concrete and plaster that enhances strength, durability, and
-                    long-term protection against water seepage.
-                  </p>
-                </div>
+                <div className="max-w-[1700px] mx-auto font-sans text-gray-800 border-t  border-gray-300 py-8 text-[15px] leading-relaxed">
+      {/* === Application === */}
+      <section className="mb-6">
+        <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
+        <p className="mb-2">
+          Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W50 is recommended for:
+        </p>
+        <ul className="space-y-1 ml-4">
+          <li>
+            <span className="text-red-600 mr-2">▪</span>
+            Naturally aspirated and turbocharged diesel engines from leading Japanese, European, and American manufacturers.
+          </li>
+          <li>
+            <span className="text-red-600 mr-2">▪</span>
+            Heavy-duty trucks, buses, and light commercial vehicles operating in both highway and off-highway conditions.
+          </li>
+          <li>
+            <span className="text-red-600 mr-2">▪</span>
+            Off-road machinery in industries such as construction, mining, quarrying, and agriculture.
+          </li>
+          <li>
+            <span className="text-red-600 mr-2">▪</span>
+            Mixed fleet applications, including diesel and gasoline engines where CH-4 performance level is specified.
+          </li>
+        </ul>
+      </section>
 
-                {/* Content Sections */}
-                <div className="space-y-10">
-                  {/* Application Steps */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Application Method
-                    </h2>
-                    <p className="text-lg md:text-xl mb-4">
-                      Dr. Fixit LW+ 101 should be mixed properly with cement,
-                      sand, and aggregates for best performance. Follow these
-                      steps during concrete or plaster preparation:
-                    </p>
-                    <ol className="list-decimal list-inside space-y-3 text-lg md:text-xl">
-                      <li>
-                        Mix cement, sand, and aggregates in proper proportion
-                        with <span className="font-semibold">2/3rd</span> of the
-                        total mixing water.
-                      </li>
-                      <li>
-                        Mix Dr. Fixit LW+ with the remaining{" "}
-                        <span className="font-semibold">1/3rd portion</span> of
-                        water and add this to the premixed concrete or mortar.
-                      </li>
-                      <li>
-                        Mix thoroughly until a uniform and cohesive consistency
-                        is achieved.
-                      </li>
-                      <li>
-                        Maintain the{" "}
-                        <span className="font-semibold">
-                          water–cement ratio
-                        </span>{" "}
-                        below <span className="font-semibold">0.5</span> to
-                        achieve better durability and strength.
-                      </li>
-                    </ol>
-                  </div>
+      {/* === Performance Standards === */}
+      <section className="mb-6">
+        <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
+        <ul className="space-y-1 ml-4">
+          <li><span className="text-red-600 mr-2">▪</span>API: CH-4</li>
+          <li><span className="text-red-600 mr-2">▪</span>MB Approval: 228.3</li>
+          <li><span className="text-red-600 mr-2">▪</span>Mack: EO-M Plus / EO-N</li>
+          <li><span className="text-red-600 mr-2">▪</span>MTU: Oil Category 2</li>
+          <li><span className="text-red-600 mr-2">▪</span>Renault Trucks: RLD-2</li>
+          <li><span className="text-red-600 mr-2">▪</span>Volvo: VDS-3</li>
+        </ul>
+      </section>
 
-                  {/* Recommended Areas */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Recommended Areas of Application
-                    </h2>
-                    <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
-                      <li>Roof slabs and terraces</li>
-                      <li>Columns, beams, and footings</li>
-                      <li>Foundations and basements</li>
-                      <li>RCC water-retaining structures</li>
-                      <li>Internal and external wall plastering</li>
-                    </ul>
-                  </div>
+      {/* === Key Features === */}
+      <section className="mb-6">
+        <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
 
-                  {/* Workability */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Increased Workability
-                    </h2>
-                    <p className="text-lg md:text-xl">
-                      Enhances the flow and ease of concrete placement without
-                      affecting strength, ensuring smooth, cohesive, and
-                      consistent mixes.
-                    </p>
-                  </div>
+        <p className="font-semibold">High thermal and oxidation stability:</p>
+        <p className="mb-3">Minimizes sludge formation, deposits, and viscosity thickening under high temperatures.</p>
 
-                  {/* Shrinkage Control */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Reduced Shrinkage and Cracking
-                    </h2>
-                    <p className="text-lg md:text-xl">
-                      Optimized water content minimizes shrinkage and surface
-                      cracks, reducing maintenance and improving structure
-                      lifespan.
-                    </p>
-                  </div>
+        <p className="font-semibold">Excellent TBN reserves:</p>
+        <p className="mb-3">Provides effective acid neutralization and improved deposit control for longer oil life.</p>
 
-                  {/* Dosage */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Dosage
-                    </h2>
-                    <p className="text-lg md:text-xl">
-                      Use <span className="font-semibold">200 ml</span> of Dr.
-                      Fixit LW+ 101 for every{" "}
-                      <span className="font-semibold">50 kg</span> bag of cement
-                      for best waterproofing and strength performance.
-                    </p>
-                  </div>
+        <p className="font-semibold">Shear stability (Stay-in-grade performance):</p>
+        <p className="mb-3">Maintains consistent viscosity and wear protection even under extreme operating conditions.</p>
 
-                  {/* Key Benefits */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Key Benefits
-                    </h2>
-                    <ul className="list-disc list-inside text-lg md:text-xl space-y-3">
-                      <li>Improves cohesion and workability of concrete.</li>
-                      <li>
-                        Provides superior protection to steel reinforcement
-                        against corrosion.
-                      </li>
-                      <li>Effectively prevents dampness and water seepage.</li>
-                      <li>Minimizes plaster shrinkage and cracking.</li>
-                      <li>
-                        Improves overall strength and durability of mortar and
-                        concrete.
-                      </li>
-                    </ul>
-                  </div>
+        <p className="font-semibold">Advanced detergency and dispersancy:</p>
+        <p className="mb-3">Keeps the engine cleaner, extending component life and ensuring smoother performance.</p>
 
-                  {/* Mixing Ratio */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Mixing Ratio
-                    </h2>
-                    <p className="text-lg md:text-xl">
-                      Mix <span className="font-semibold">200 ml</span> of Dr.
-                      Fixit LW+ 101 per{" "}
-                      <span className="font-semibold">50 kg</span> bag of
-                      cement. This ensures improved waterproofing, minimizes
-                      cracks, and enhances durability for long-lasting concrete
-                      applications.
-                    </p>
-                  </div>
-                </div>
-              </section>
+        <p className="font-semibold">Superior soot and deposit control:</p>
+        <p className="mb-3">Prevents oil thickening and ensures efficient oil circulation.</p>
+
+        <p className="font-semibold">Excellent low-temperature properties:</p>
+        <p className="mb-3">Protects the engine from cold-start wear and ensures smooth startup in winter.</p>
+
+        <p className="font-semibold">Seal and gasket compatibility:</p>
+        <p className="mb-3">Extends the life of gaskets and seals, minimizing oil leakage.</p>
+
+        <p className="font-semibold">Meets OEM specifications:</p>
+        <p>Suitable for mixed fleet operations — one oil for multiple applications.</p>
+      </section>
+
+      {/* === Technical Properties === */}
+      <section className="mb-6">
+        <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+        <table className="w-full text-left border-collapse text-[15px]">
+          <thead>
+            <tr className="border-b border-gray-300">
+              <th className="py-1">Property</th>
+              <th className="py-1">Test Method</th>
+              <th className="py-1">Typical Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["SAE Grade", "—", "20W50"],
+              ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
+              ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
+              ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
+              ["Viscosity Index", "ASTM D2270", "140"],
+              ["Pour Point (°C)", "ASTM D97", "-33"],
+              ["Flash Point (°C)", "ASTM D92", "228"],
+              ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
+              ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
+            ].map(([prop, method, value], i) => (
+              <tr key={i} className="border-b border-gray-200">
+                <td className="py-1">{prop}</td>
+                <td className="py-1">{method}</td>
+                <td className="py-1">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+
+      {/* === Available Packs === */}
+      <section>
+        <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
+        <p>1L | 3.5L | 5L | 7.5L | 10L | 20L | 50L | 210L Barrel</p>
+      </section>
+    </div>
             )}
 
             {p.id === 6 && (
-              <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
-                {/* Heading */}
-                <div className="mb-12">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    Dr. Fixit 302 Super Latex
-                  </h1>
-                  <p className="text-lg md:text-xl">
-                    Premium SBR (Styrene Butadiene Rubber) Latex for
-                    waterproofing, bonding, and enhancing durability of
-                    cement-based mixes.
-                  </p>
-                </div>
+          <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+      {/* Application */}
+      <div className="border-t  border-gray-300 py-6">
+        <h2 className="font-semibold text-lg mb-4">Application:</h2>
+        <p className="mb-4">
+          Jaguar Heavy Duty 15W-40 API CI-4/SM is recommended for:
+        </p>
+        <ul className="space-y-2 pl-6">
+          <li className="flex items-start">
+            <span className="text-red-600 mr-2">▪</span>
+            Turbocharged and naturally aspirated diesel engines.
+          </li>
+          <li className="flex items-start">
+            <span className="text-red-600 mr-2">▪</span>
+            Heavy-duty trucks and buses operating under continuous load conditions.
+          </li>
+          <li className="flex items-start">
+            <span className="text-red-600 mr-2">▪</span>
+            Construction, mining, and agricultural machinery used in off-highway environments.
+          </li>
+          <li className="flex items-start">
+            <span className="text-red-600 mr-2">▪</span>
+            Mixed fleet operations, including light and heavy commercial vehicles.
+          </li>
+        </ul>
+      </div>
 
-                {/* Content Sections */}
-                <div className="space-y-10">
-                  {/* Application Section */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Application
-                    </h2>
-                    <p className="mb-4">
-                      Dr. Fixit 302 Super Latex is ideal for waterproof
-                      coatings, bonding coats, and repair mortars.
-                    </p>
-                    <ul className="list-disc list-inside space-y-3">
-                      <li>
-                        <strong>Waterproof Coating:</strong> Mix with cement in
-                        a 1:2 ratio to form a brushable slurry for slabs,
-                        terraces, and roofs.
-                      </li>
-                      <li>
-                        <strong>Bond Coat:</strong> Mix in a 1:1 ratio for
-                        excellent adhesion between old and new concrete/plaster
-                        surfaces.
-                      </li>
-                      <li>
-                        <strong>Repair Mortars:</strong> Add to cement-sand
-                        mortar to improve bond strength, flexibility, and water
-                        resistance.
-                      </li>
-                    </ul>
-                  </div>
+      {/* Performance Standards */}
+      <div className=" py-6">
+        <h2 className="font-semibold text-lg mb-4">Performance Standards</h2>
+        <ul className="space-y-2 pl-6">
+          <li className="flex items-start">
+            <span className="text-red-600 mr-2">▪</span>API: CI-4 / SM
+          </li>
+          <li className="flex items-start">
+            <span className="text-red-600 mr-2">▪</span>Daimler Chrysler: MB 227.0
+          </li>
+          <li className="flex items-start">
+            <span className="text-red-600 mr-2">▪</span>
+            Meets or exceeds requirements of major global OEMs for heavy-duty diesel engines.
+          </li>
+        </ul>
+      </div>
 
-                  {/* Benefits Section */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Benefits
-                    </h2>
-                    <ul className="list-disc list-inside space-y-3">
-                      <li>
-                        Forms strong bonds between old and new concrete or
-                        plaster surfaces.
-                      </li>
-                      <li>Prevents dampness and water penetration.</li>
-                      <li>Multipurpose waterproofing and bonding solution.</li>
-                      <li>
-                        Enhances durability and water resistance of repair
-                        mortars.
-                      </li>
-                      <li>
-                        Reduces shrinkage cracks for long-lasting repairs.
-                      </li>
-                    </ul>
-                  </div>
+      {/* Key Features & Benefits */}
+      <div className=" py-6">
+        <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
-                  {/* Coverage Section */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Coverage
-                    </h2>
-                    <ul className="list-disc list-inside space-y-3">
-                      <li>
-                        <strong>Waterproof Coating:</strong> 2-2.2 m²/kg for 2
-                        coats (cement:latex = 2:1).
-                      </li>
-                      <li>
-                        <strong>Mortar Modifier:</strong> 6-7.5 kg per 50 kg bag
-                        of cement.
-                      </li>
-                      <li>
-                        <strong>Bonding Agent:</strong> 4.2-4.5 m²/kg per coat
-                        depending on surface texture.
-                      </li>
-                    </ul>
-                  </div>
+        <div className="space-y-4">
+          <div>
+            <p className="font-semibold">
+              Excellent oxidation & thermal stability:
+            </p>
+            <p>
+              Prevents oil thickening, reduces sludge and high-temperature deposits for prolonged engine life.
+            </p>
+          </div>
 
-                  {/* Uses Section */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Uses
-                    </h2>
-                    <ul className="list-disc list-inside space-y-3">
-                      <li>
-                        Waterproof coatings for roofs, terraces, and concrete
-                        surfaces.
-                      </li>
-                      <li>
-                        Bonding old and new concrete/plaster to prevent
-                        delamination.
-                      </li>
-                      <li>
-                        Repair mix modifier for durability, strength, and crack
-                        resistance.
-                      </li>
-                      <li>
-                        Floors, slabs, columns, beams, balconies, toilets, and
-                        bathrooms.
-                      </li>
-                    </ul>
-                  </div>
+          <div>
+            <p className="font-semibold">Outstanding anti-wear protection:</p>
+            <p>
+              Minimizes wear and ring sticking, ensuring smoother performance and longer engine durability.
+            </p>
+          </div>
 
-                  {/* SBR Waterproofing Section */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      SBR Waterproofing
-                    </h2>
-                    <p className="mb-3">
-                      Dr. Fixit 302 Super Latex is a Styrene Butadiene Rubber
-                      (SBR) latex that provides long-lasting waterproofing,
-                      bonding, and durability.
-                    </p>
-                    <ul className="list-disc list-inside space-y-3">
-                      <li>
-                        <strong>Waterproof Coating:</strong> Forms seamless
-                        waterproof barriers on roofs, slabs, and terraces.
-                      </li>
-                      <li>
-                        <strong>Bonding Agent:</strong> Ensures strong adhesion
-                        between old and new concrete/plaster.
-                      </li>
-                      <li>
-                        <strong>Repair & Strengthening:</strong> Improves
-                        strength, flexibility, and crack resistance of mortars
-                        and concrete.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+          <div>
+            <p className="font-semibold">Extended TBN reserve:</p>
+            <p>
+              Provides long-term protection against corrosion and acid build-up for extended oil life.
+            </p>
+          </div>
+
+          <div>
+            <p className="font-semibold">
+              Enhanced detergent & dispersant properties:
+            </p>
+            <p>
+              Keeps engine components cleaner and reduces deposit formation.
+            </p>
+          </div>
+
+          <div>
+            <p className="font-semibold">Superior soot and sludge control:</p>
+            <p>
+              Ensures cleaner combustion and better efficiency under heavy load.
+            </p>
+          </div>
+
+          <div>
+            <p className="font-semibold">Excellent cold start properties:</p>
+            <p>
+              Reduces start-up wear and ensures smooth engine operation in low temperatures.
+            </p>
+          </div>
+
+          <div>
+            <p className="font-semibold">Compatible with seals and gaskets:</p>
+            <p>Helps reduce oil leaks and extend component life.</p>
+          </div>
+
+          <div>
+            <p className="font-semibold">Multi-fleet usability:</p>
+            <p>
+              Suitable for both diesel and gasoline engines, simplifying mixed fleet operations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Technical Properties */}
+      <section className="mb-6">
+  <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+  <table className="w-full text-left border-collapse text-[15px]">
+    <thead>
+      <tr className="border-b border-gray-300">
+        <th className="py-1">Property</th>
+        <th className="py-1">Test Method</th>
+        <th className="py-1">Typical Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      {[
+        ["SAE Grade", "—", "15W-40"],
+        ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
+        ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.6"],
+        ["Viscosity Index", "ASTM D2270", "99"],
+        ["Sulfated Ash (% wt)", "ASTM D874", "1.1"],
+        ["Total Base Number (mgKOH/g)", "ASTM D2896", "10.1"],
+        ["Pour Point (°C)", "ASTM D97", "-21"],
+        ["Flash Point (°C)", "ASTM D92", "256"],
+        ["Density @ 15°C (kg/l)", "ASTM D4052", "0.89"],
+      ].map(([prop, method, value], i) => (
+        <tr key={i} className="border-b border-gray-200">
+          <td className="py-1">{prop}</td>
+          <td className="py-1">{method}</td>
+          <td className="py-1">{value}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</section>
+
+
+      {/* Available Packs */}
+      <div className="py-6">
+        <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
+        <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
+      </div>
+    </section>
             )}
 
             {p.id === 7 && (
-              <section className=" py-20 px-8 md:px-13 mx-auto text-gray-800">
-                {/* Heading */}
-                <div className="mb-12">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    Dr Fixit Brand LW 101
-                  </h1>
-                  <p className="text-lg md:text-xl">
-                    High-performance polymer-based waterproofing and bonding
-                    agent for cement-based mixes.
-                  </p>
-                </div>
+             <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+  {/* Application */}
+  <div className="border-t border-gray-300 py-6">
+    <h2 className="font-semibold text-lg mb-4">Application:</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Suitable for light to medium-duty diesel engines that require CD and CC oil categories.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Compatible with economical gasoline engines requiring SF and SE grade motor oils.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Recommended for engines operating in high-temperature environments or severe driving conditions.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Ideal for fleet operators, construction vehicles, agricultural equipment, and older passenger cars.
+      </li>
+    </ul>
+  </div>
 
-                {/* Application Section */}
-                <div className="space-y-8">
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Application
-                    </h2>
-                    <p className="mb-4">
-                      Dr. Fixit 302 Super Latex is ideal for waterproof
-                      coatings, bonding coats, and repair mortars.
-                    </p>
-                    <ul className="list-disc list-inside space-y-3">
-                      <li>
-                        <strong>Waterproof Coating:</strong> Mix with cement in
-                        1:2 ratio to form a brushable slurry for slabs,
-                        terraces, and roofs.
-                      </li>
-                      <li>
-                        <strong>Bond Coat:</strong> Mix in 1:1 ratio for
-                        excellent adhesion between old and new concrete/plaster
-                        surfaces.
-                      </li>
-                      <li>
-                        <strong>Repair Mortars:</strong> Add to cement-sand
-                        mortar to improve bond strength, flexibility, and water
-                        resistance.
-                      </li>
-                    </ul>
-                  </div>
+  {/* Performance Standards */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Performance Standards</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>API: CI-4 / SM
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>Daimler Chrysler: MB 227.0
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Meets or exceeds requirements of major global OEMs for heavy-duty diesel engines.
+      </li>
+    </ul>
+  </div>
 
-                  {/* Benefits Section */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Benefits
-                    </h2>
-                    <ul className="list-disc list-inside space-y-3">
-                      <li>
-                        Forms strong bonds between old and new concrete or
-                        plaster surfaces.
-                      </li>
-                      <li>Prevents dampness and water penetration.</li>
-                      <li>Multipurpose waterproofing and bonding solution.</li>
-                      <li>
-                        Enhances durability and water resistance of repair
-                        mortars.
-                      </li>
-                      <li>
-                        Reduces shrinkage cracks for longer-lasting repairs.
-                      </li>
-                    </ul>
-                  </div>
+  {/* Key Features & Benefits */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
-                  {/* Coverage Section */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Coverage
-                    </h2>
-                    <ul className="list-disc list-inside space-y-3">
-                      <li>
-                        <strong>Waterproof Coating:</strong> 2-2.2 m²/kg for 2
-                        coats (cement:latex = 2:1).
-                      </li>
-                      <li>
-                        <strong>Mortar Modifier:</strong> 6-7.5 kg per 50 kg bag
-                        of cement.
-                      </li>
-                      <li>
-                        <strong>Bonding Agent:</strong> 4.2-4.5 m²/kg per coat
-                        depending on surface texture.
-                      </li>
-                    </ul>
-                  </div>
+    <div className="space-y-4">
+      <div>
+        <p className="font-semibold">Excellent Engine Protection:</p>
+        <p>Minimizes wear and tear on engine parts, extending engine life.</p>
+      </div>
 
-                  {/* Uses Section */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Uses
-                    </h2>
-                    <ul className="list-disc list-inside space-y-3">
-                      <li>
-                        Waterproof coatings for roofs, terraces, and concrete
-                        surfaces.
-                      </li>
-                      <li>
-                        Bonding old and new concrete/plaster to prevent
-                        delamination.
-                      </li>
-                      <li>
-                        Repair mix modifier for durability, strength, and crack
-                        resistance.
-                      </li>
-                      <li>
-                        Floors, slabs, columns, beams, balconies, toilets, and
-                        bathrooms.
-                      </li>
-                    </ul>
-                  </div>
+      <div>
+        <p className="font-semibold">High Oxidation & Corrosion Resistance:</p>
+        <p>Keeps engines cleaner and prevents sludge formation.</p>
+      </div>
 
-                  {/* SBR Waterproofing Section */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      SBR Waterproofing
-                    </h2>
-                    <p className="mb-3">
-                      Dr. Fixit 302 Super Latex is a Styrene Butadiene Rubber
-                      (SBR) latex that provides long-lasting waterproofing,
-                      bonding, and durability.
-                    </p>
-                    <ul className="list-disc list-inside space-y-3">
-                      <li>
-                        <strong>Waterproof Coating:</strong> Forms seamless
-                        waterproof barriers on roofs, slabs, and terraces.
-                      </li>
-                      <li>
-                        <strong>Bonding Agent:</strong> Ensures strong adhesion
-                        between old and new concrete/plaster.
-                      </li>
-                      <li>
-                        <strong>Repair & Strengthening:</strong> Improves
-                        strength, flexibility, and crack resistance of mortars
-                        and concrete.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+      <div>
+        <p className="font-semibold">Effective Acid Neutralization:</p>
+        <p>Protects vital components from harmful combustion acids.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Smooth Engine Performance:</p>
+        <p>Enhances engine efficiency under both high-temperature and cold-start conditions.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Versatile Application:</p>
+        <p>
+          Perfect for vehicles requiring API SF/CD or CC oils for diesel and SF/SE oils for gasoline engines.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Technical Properties */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+    <table className="w-full text-left border-collapse text-[15px]">
+      <thead>
+        <tr className="border-b border-gray-300">
+          <th className="py-1">Property</th>
+          <th className="py-1">Test Method</th>
+          <th className="py-1">Typical Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["Appearance (Visual)", "-", "-"],
+          ["Color (ASTM D-1500)", "L", "3.0"],
+          ["Kinematic Viscosity @ 40°C", "ASTM D-7042", "cSt"],
+          ["Kinematic Viscosity @ 100°C", "ASTM D-7042", "cSt"],
+          ["Viscosity Index (min)", "ASTM D-2270", "-"],
+          ["Specific Gravity @ 15°C", "ASTM D-4052", "g/cm³"],
+          ["Flash Point (min)", "ASTM D-92", "°C"],
+          ["Pour Point (max)", "ASTM D-97", "°C"],
+          ["Total Base Number (TBN)", "ASTM D-2896", "6 mg KOH/g"],
+        ].map(([prop, method, value], i) => (
+          <tr key={i} className="border-b border-gray-200">
+            <td className="py-1">{prop}</td>
+            <td className="py-1">{method}</td>
+            <td className="py-1">{value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  {/* Available Packs */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
+    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
+  </div>
+</section>
+
             )}
             {p.id === 8 && (
-              <section className="py-16 px-6 md:px-16 max-w-[1700px] mx-auto text-gray-800">
-                {/* Heading */}
-                <div className="mb-12">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    Dr. Fixit Dr.proof LW+ 101
-                  </h1>
-                  <p className="text-lg md:text-xl">
-                    High-performance integral liquid waterproofing and
-                    water-reducing admixture for concrete and plaster.
-                  </p>
-                </div>
+    <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+  {/* Application */}
+  <div className="border-t border-gray-300 py-6">
+    <h2 className="font-semibold text-lg mb-4">Application:</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Suitable for turbocharged and naturally aspirated diesel engines.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Ideal for light and heavy-duty commercial vehicles, buses, and trucks.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Perfect for off-highway applications such as mining, construction, and agriculture.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Meets the requirements of vehicles and equipment recommending API CH-4 specification oils.
+      </li>
+    </ul>
+  </div>
 
-                {/* Application Section */}
-                <div className="space-y-8">
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Application
-                    </h2>
-                    <p className="mb-4">
-                      Dr. Fixit Dr.proof LW+ improves the strength, durability,
-                      and waterproofing efficiency of concrete and plaster.
-                      Follow these steps for best results:
-                    </p>
-                    <ol className="list-decimal list-inside space-y-2">
-                      <li>
-                        Mix cement, sand, and aggregates in proper proportion
-                        with 2/3 of the total mixing water.
-                      </li>
-                      <li>
-                        Mix Dr. Fixit Dr.proof LW+ with the remaining 1/3 of the
-                        mixing water and add to premixed concrete or mortar.
-                      </li>
-                      <li>
-                        Mix thoroughly until a uniform and cohesive consistency
-                        is achieved.
-                      </li>
-                      <li>
-                        Maintain water–cement ratio below 0.5 for higher
-                        durability and strength.
-                      </li>
-                    </ol>
-                    <p className="mt-2">
-                      Use in plastering, RCC works, and other concrete
-                      applications for long-lasting waterproofing and crack
-                      resistance.
-                    </p>
-                  </div>
+  {/* Specification */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Specification</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>API-CH-4
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>SAE Grade-20W-50
+      </li>
+    </ul>
+  </div>
 
-                  {/* Recommended Areas */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Recommended Areas of Application
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>Roof slabs</li>
-                      <li>Columns and beams</li>
-                      <li>Footings and foundations</li>
-                      <li>RCC water-retaining structures</li>
-                      <li>Internal and external wall plastering</li>
-                    </ul>
-                  </div>
+  {/* Key Features & Benefits */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
-                  {/* Key Benefits */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Key Benefits
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        Enhances cohesiveness of concrete for improved
-                        durability.
-                      </li>
-                      <li>Protects steel reinforcement against corrosion.</li>
-                      <li>Prevents dampness and water seepage effectively.</li>
-                      <li>Minimizes plaster shrinkage and reduces cracks.</li>
-                      <li>
-                        Improves overall strength and workability of mortar.
-                      </li>
-                    </ul>
-                  </div>
+    <div className="space-y-4">
+      <div>
+        <p className="font-semibold">Prolonged Engine Life:</p>
+        <p>Provides superior wear protection for piston rings, cylinder liners, and valve trains.</p>
+      </div>
 
-                  {/* Dosage & Mixing Ratio */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Dosage & Mixing Ratio
-                    </h2>
-                    <p className="mb-2">
-                      Use 200 ml of Dr. Fixit Dr.proof LW+ per 50 kg bag of
-                      cement.
-                    </p>
-                    <p>
-                      For optimal waterproofing results, mix as recommended to
-                      improve concrete durability, minimize cracks, and protect
-                      against moisture.
-                    </p>
-                  </div>
+      <div>
+        <p className="font-semibold">Clean Engine Performance:</p>
+        <p>Helps prevent harmful deposit build-up and keeps the engine running efficiently.</p>
+      </div>
 
-                  {/* Workability & Crack Reduction */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Additional Benefits
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        Enhances workability and flow of concrete without
-                        affecting strength.
-                      </li>
-                      <li>
-                        Reduces shrinkage and surface cracks for long-term
-                        durability.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+      <div>
+        <p className="font-semibold">Improved Oxidation Stability:</p>
+        <p>Reduces oil degradation and thickening under extreme temperatures.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Enhanced Lubrication Film:</p>
+        <p>Maintains consistent oil pressure for smooth operation and fuel efficiency.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Reliable Performance:</p>
+        <p>Designed to perform in both on-road and off-road diesel engines, even under heavy load.</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Why Choose Jaguar Extra Mileage */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Why Choose Jaguar Extra Mileage?</h2>
+    <p>
+      With its advanced formula and long-drain performance, Jaguar Extra Mileage 15W-40 delivers excellent
+      engine cleanliness, minimal wear, and maximum durability—helping you get the most mileage and
+      reliability from every drop.
+    </p>
+  </div>
+
+  {/* Available Packs */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
+    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
+  </div>
+</section>
+
+
             )}
             {p.id === 9 && (
-              <section className="py-16 px-6 md:px-16 max-w-[1700px] mx-auto text-gray-800">
-                {/* Heading */}
-                <div className="mb-12">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    Dr. Fixit 5400 Interior Wall Sealer
-                  </h1>
-                  <p className="text-lg md:text-xl">
-                    High-performance water-based wall primer for interior walls.
-                  </p>
-                </div>
+                    <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+  {/* Application */}
+  <div className="border-t border-gray-300 py-6">
+    <h2 className="font-semibold text-lg mb-4">Application:</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Suitable for diesel and gasoline engines (turbocharged or naturally aspirated).
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Recommended for trucks, buses, construction equipment, mining machinery, and agricultural vehicles.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Can also be used in gearboxes, torque converters, and hydraulic systems where the manufacturer specifies engine oil of this grade.
+      </li>
+    </ul>
+  </div>
 
-                {/* Application Method */}
-                <div className="space-y-8">
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Application Method
-                    </h2>
-                    <p>
-                      Can be applied using a brush or roller for uniform
-                      coverage.
-                    </p>
-                  </div>
+  {/* Specification */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Specification</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>API CF / SF / CD
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>ACEA E2
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>MB 228.0
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>MTU TYPE-1
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>Caterpillar TO-2
+      </li>
+    </ul>
+  </div>
 
-                  {/* Thinning */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Thinning
-                    </h2>
-                    <p>
-                      If required, dilute with up to 5% water. Do not exceed
-                      recommended dilution.
-                    </p>
-                  </div>
+  {/* Key Features & Benefits */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
-                  {/* Drying Time */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Drying Time
-                    </h2>
-                    <ul className="list-disc list-inside space-y-1">
-                      <li>Touch Dry: Approximately 15 minutes</li>
-                      <li>Hard Dry: Approximately 1 hour</li>
-                    </ul>
-                  </div>
+    <div className="space-y-4">
+      <div>
+        <p className="font-semibold">Outstanding Engine Protection:</p>
+        <p>Prevents wear, deposits, and sludge for longer engine life.</p>
+      </div>
 
-                  {/* Recoating Interval */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Recoating Interval
-                    </h2>
-                    <p>Minimum 2 hours between coats.</p>
-                  </div>
+      <div>
+        <p className="font-semibold">High Temperature Stability:</p>
+        <p>Resists oxidation and maintains viscosity under extreme heat.</p>
+      </div>
 
-                  {/* Number of Coats */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Number of Coats
-                    </h2>
-                    <p>1 coat is sufficient for effective sealing.</p>
-                  </div>
+      <div>
+        <p className="font-semibold">Enhanced Fuel Economy:</p>
+        <p>Friction-reducing additives help improve fuel efficiency.</p>
+      </div>
 
-                  {/* Theoretical Coverage */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Theoretical Coverage
-                    </h2>
-                    <p>
-                      Approximately 10-12 m² per liter per coat, depending on
-                      surface porosity and texture.
-                    </p>
-                  </div>
+      <div>
+        <p className="font-semibold">Cold Start Performance:</p>
+        <p>Rapid oil circulation minimizes engine wear during cold starts.</p>
+      </div>
 
-                  {/* Key Benefits */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Key Benefits
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        Seals porous and uneven surfaces to prevent paint
-                        absorption.
-                      </li>
-                      <li>
-                        Ensures better paint adhesion and long-lasting finish.
-                      </li>
-                      <li>
-                        Reduces paint consumption due to uniform coverage.
-                      </li>
-                      <li>
-                        Quick-drying formula allows for faster application and
-                        recoating.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+      <div>
+        <p className="font-semibold">Excellent Detergency:</p>
+        <p>Keeps engine parts clean and free from harmful deposits.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">All-Weather Reliability:</p>
+        <p>Designed to perform in both hot and cold climates.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Extended Drain Interval:</p>
+        <p>Formulated for durability, reducing oil change frequency.</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Technical Properties */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+    <table className="w-full text-left border-collapse text-[15px]">
+      <thead>
+        <tr className="border-b border-gray-300">
+          <th className="py-1">Property</th>
+          <th className="py-1">Test Method</th>
+          <th className="py-1">Typical Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["Appearance", "Visual", "Clear & Bright"],
+          ["Water", "Hot Plate", "Nil"],
+          ["Color", "ASTM D-1500", "L3.5"],
+          ["Density @29.5°C (g/cm³)", "ASTM D-4052", "0.882"],
+          ["Viscosity @100°C (cSt)", "ASTM D-445", "18.9"],
+          ["Viscosity @40°C (cSt)", "ASTM D-445", "165.2"],
+          ["Viscosity Index", "ASTM D-2270", "125"],
+          ["Pour Point (°C)", "ASTM D-97", "-15"],
+          ["Flash Point (°C)", "ASTM D-92", "250"],
+          ["TBN (mgKOH/g)", "ASTM D-2896", "8"],
+          ["Foam Characteristics", "ASTM D-892", "0/0"],
+        ].map(([prop, method, value], i) => (
+          <tr key={i} className="border-b border-gray-200">
+            <td className="py-1">{prop}</td>
+            <td className="py-1">{method}</td>
+            <td className="py-1">{value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  {/* Available Packs */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
+    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
+  </div>
+</section>
+
             )}
             {p.id === 10 && (
-              <section className=" py-16 px-6 md:px-16 max-w-[1700px] mx-auto text-gray-800">
-                {/* Heading */}
-                <div className="mb-12">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    Dr Fixit Brand Plaster Master
-                  </h1>
-                  <p className="text-lg md:text-xl">
-                    High-performance polymer-based waterproofing and bonding
-                    agent for concrete repair.
-                  </p>
-                </div>
+        <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
 
-                <div className="space-y-8">
-                  {/* Application */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Application
-                    </h2>
-                    <p className="mb-4">
-                      Dr. Fixit 302 Super Latex improves adhesion, flexibility,
-                      and durability of cement-based mixes. Ideal for waterproof
-                      coatings, bonding coats, and repair mortars.
-                    </p>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        <strong>Waterproof Coating:</strong> Mix with cement 1:2
-                        (Latex:Cement) and apply on slabs, terraces, or roofs.
-                      </li>
-                      <li>
-                        <strong>Bond Coat:</strong> Mix 1:1 with cement for
-                        bonding old and new concrete/plaster surfaces.
-                      </li>
-                      <li>
-                        <strong>Repair Mortars:</strong> Add to cement-sand
-                        mortar to improve bond strength, flexibility, and water
-                        resistance.
-                      </li>
-                    </ul>
-                  </div>
+  {/* Application */}
+  <div className="border-t border-gray-300 py-6">
+    <h2 className="font-semibold text-lg mb-4">Application:</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Jaguar Hydraulic Oil HV ISO 68 is recommended for hydraulic systems operating under high-pressure or heavy-load conditions.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Ideal for industrial machinery, construction equipment, plastic molding machines, and mobile hydraulics.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Suitable for systems requiring a premium anti-wear hydraulic fluid meeting international OEM specifications.
+      </li>
+    </ul>
+  </div>
 
-                  {/* Benefits */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Benefits
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        Forms strong bonds between old and new concrete or
-                        plaster.
-                      </li>
-                      <li>Prevents dampness and water penetration.</li>
-                      <li>
-                        Serves as a multipurpose waterproofing and bonding
-                        solution.
-                      </li>
-                      <li>
-                        Enhances water resistance and durability of repair
-                        mortars.
-                      </li>
-                      <li>
-                        Reduces shrinkage cracks for long-lasting repairs and
-                        coatings.
-                      </li>
-                    </ul>
-                  </div>
+  {/* Specifications & Approvals */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Specifications & Approvals</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>ASTM D6158, Eaton E-FDGN-TB002-E, Bosch Rexroth, DIN 51524 Parts 1, 2, 3
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>Parker Denison HF-0 / HF-1 / HF-2, Cincinnati/MAG IAS P-69, US Steel 127, 136
+      </li>
+    </ul>
+  </div>
 
-                  {/* Coverage */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Coverage
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        <strong>Waterproof Coating:</strong> 2-2.2 m²/kg for 2
-                        coats (cement:latex = 2:1)
-                      </li>
-                      <li>
-                        <strong>Mortar Modifier:</strong> 6-7.5 kg per 50 kg bag
-                        of cement
-                      </li>
-                      <li>
-                        <strong>Bonding Agent:</strong> 4.2-4.5 m²/kg per coat
-                        depending on surface porosity
-                      </li>
-                    </ul>
-                  </div>
+  {/* Key Features & Benefits */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
-                  {/* Uses */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Uses
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        Waterproof coatings for roofs, terraces, and concrete
-                        surfaces
-                      </li>
-                      <li>
-                        Bonding agent for old and new concrete or plaster
-                        surfaces
-                      </li>
-                      <li>
-                        Repair mix modifier to enhance durability, strength, and
-                        flexibility
-                      </li>
-                      <li>
-                        Floors, slabs, columns, beams, balconies, toilets, and
-                        bathrooms
-                      </li>
-                    </ul>
-                  </div>
+    <div className="space-y-4">
+      <div>
+        <p className="font-semibold">Exceptional Anti-Wear Protection:</p>
+        <p>Advanced additive system reduces metal-to-metal contact, minimizing wear in pumps, valves, and hydraulic motors.</p>
+      </div>
 
-                  {/* SBR Waterproofing */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      SBR Waterproofing
-                    </h2>
-                    <p className="mb-2">
-                      Dr. Fixit 302 Super Latex is a premium Styrene Butadiene
-                      Rubber (SBR) latex that provides long-lasting
-                      waterproofing, bonding, and durability. It improves water
-                      resistance, flexibility, and strength of concrete, mortar,
-                      and plaster.
-                    </p>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        <strong>Waterproof Coating:</strong> Forms seamless
-                        barriers on roofs, terraces, and slabs
-                      </li>
-                      <li>
-                        <strong>Bonding Agent:</strong> Strong adhesive bridge
-                        between old and new surfaces
-                      </li>
-                      <li>
-                        <strong>Repair & Strengthening:</strong> Enhances
-                        strength, flexibility, and crack resistance of mortars
-                        and concrete
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+      <div>
+        <p className="font-semibold">Superior Oxidation Stability:</p>
+        <p>Provides up to 5,000 hours of oxidation resistance, ensuring longer oil life and reduced maintenance costs.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Enhanced System Cleanliness:</p>
+        <p>Effectively controls sludge, varnish, and deposits for improved hydraulic efficiency.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Wide Temperature Range Performance:</p>
+        <p>Maintains excellent viscosity and flow in both hot and cold operating conditions.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Corrosion & Rust Protection:</p>
+        <p>Guards against rust formation and component corrosion, extending system life.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Fast Air & Water Separation:</p>
+        <p>Improves filtration and prevents foaming in high-pressure environments.</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Technical Properties */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+    <table className="w-full text-left border-collapse text-[15px]">
+      <thead>
+        <tr className="border-b border-gray-300">
+          <th className="py-1">Property</th>
+          <th className="py-1">Test Method</th>
+          <th className="py-1">Typical Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["Viscosity @ 40°C", "ASTM D445", "69.25 cSt"],
+          ["Viscosity @ 100°C", "ASTM D445", "8.95 cSt"],
+          ["Viscosity Index", "ASTM D2270", "103"],
+          ["Flash Point", "ASTM D92", "228°C"],
+          ["Pour Point", "ASTM D5950", "-30°C"],
+          ["Oxidation Stability", "ASTM D943", "5000 hours"],
+          ["Zinc, wt.%", "ASTM D5185", "0.041"],
+        ].map(([prop, method, value], i) => (
+          <tr key={i} className="border-b border-gray-200">
+            <td className="py-1">{prop}</td>
+            <td className="py-1">{method}</td>
+            <td className="py-1">{value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  {/* Available Packs */}
+  <div className="py-6 ">
+    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
+    <p>5L | 20L | 60L | 208L Drums</p>
+  </div>
+</section>
+
             )}
             {p.id === 11 && (
-              <section className=" py-16 px-6 md:px-16 max-w-[1700px] mx-auto text-gray-800">
-                {/* Heading */}
-                <div className="mb-12">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    Dr. Fixit 5100 Exterior Sealer
-                  </h1>
-                  <p className="text-lg md:text-xl">
-                    High-performance exterior sealer for porous and uneven
-                    surfaces.
-                  </p>
-                </div>
+              <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
 
-                <div className="space-y-8">
-                  {/* Application Method */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Application Method
-                    </h2>
-                    <p>
-                      Can be applied using a brush or roller for uniform
-                      coverage.
-                    </p>
-                  </div>
+  {/* Application */}
+  <div className="border-t border-gray-300 py-6">
+    <h2 className="font-semibold text-lg mb-4">Application:</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Jaguar Hydraulic Oil AW ISO 100 is recommended for hydraulic systems operating under high-pressure or heavy-load conditions.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Ideal for industrial machinery, construction equipment, plastic molding machines, and mobile hydraulics.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Suitable for systems requiring a premium anti-wear hydraulic fluid meeting international OEM specifications.
+      </li>
+    </ul>
+  </div>
 
-                  {/* Thinning */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Thinning
-                    </h2>
-                    <p>
-                      If required, dilute with up to 5% water. Do not exceed
-                      recommended dilution.
-                    </p>
-                  </div>
+  {/* Specifications & Approvals */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Specifications & Approvals</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>ASTM D6158, Eaton E-FDGN-TB002-E, Bosch Rexroth, DIN 51524 Parts 1, 2, 3
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>Parker Denison HF-0 / HF-1 / HF-2, Cincinnati/MAG IAS P-69, US Steel 127, 136
+      </li>
+    </ul>
+  </div>
 
-                  {/* Drying Time */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Drying Time
-                    </h2>
-                    <ul className="list-disc list-inside space-y-1">
-                      <li>Touch Dry: Approximately 15 minutes</li>
-                      <li>Hard Dry: Approximately 1 hour</li>
-                    </ul>
-                  </div>
+  {/* Key Features & Benefits */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
-                  {/* Recoating Interval */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Recoating Interval
-                    </h2>
-                    <p>Minimum 2 hours between coats.</p>
-                  </div>
+    <div className="space-y-4">
+      <div>
+        <p className="font-semibold">Exceptional Anti-Wear Protection:</p>
+        <p>Advanced additive system reduces metal-to-metal contact, minimizing wear in pumps, valves, and hydraulic motors.</p>
+      </div>
 
-                  {/* Number of Coats */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Number of Coats
-                    </h2>
-                    <p>1 coat is sufficient for effective sealing.</p>
-                  </div>
+      <div>
+        <p className="font-semibold">Superior Oxidation Stability:</p>
+        <p>Provides up to 5,000 hours of oxidation resistance, ensuring longer oil life and reduced maintenance costs.</p>
+      </div>
 
-                  {/* Theoretical Coverage */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Theoretical Coverage
-                    </h2>
-                    <p>
-                      Approximately 10-12 m² per liter per coat, depending on
-                      surface porosity and texture.
-                    </p>
-                  </div>
+      <div>
+        <p className="font-semibold">Enhanced System Cleanliness:</p>
+        <p>Effectively controls sludge, varnish, and deposits for improved hydraulic efficiency.</p>
+      </div>
 
-                  {/* Key Benefits */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Key Benefits
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        Seals porous and uneven surfaces to prevent paint
-                        absorption.
-                      </li>
-                      <li>
-                        Ensures better paint adhesion and long-lasting finish.
-                      </li>
-                      <li>
-                        Reduces paint consumption due to uniform coverage.
-                      </li>
-                      <li>
-                        Quick-drying formula allows for faster application and
-                        recoating.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+      <div>
+        <p className="font-semibold">Wide Temperature Range Performance:</p>
+        <p>Maintains excellent viscosity and flow in both hot and cold operating conditions.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Corrosion & Rust Protection:</p>
+        <p>Guards against rust formation and component corrosion, extending system life.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Fast Air & Water Separation:</p>
+        <p>Improves filtration and prevents foaming in high-pressure environments.</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Technical Properties */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+    <table className="w-full text-left border-collapse text-[15px]">
+      <thead>
+        <tr className="border-b border-gray-300">
+          <th className="py-1">Property</th>
+          <th className="py-1">Test Method</th>
+          <th className="py-1">Typical Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["Viscosity @ 40°C", "ASTM D445", "100 cSt"],
+          ["Viscosity @ 100°C", "ASTM D445", "11.5 cSt"],
+          ["Viscosity Index", "ASTM D2270", "98"],
+          ["Flash Point", "ASTM D92", "230°C"],
+          ["Pour Point", "ASTM D5950", "-27°C"],
+          ["Oxidation Stability", "ASTM D943", "5000 hours"],
+          ["Zinc, wt.%", "ASTM D5185", "0.042"],
+        ].map(([prop, method, value], i) => (
+          <tr key={i} className="border-b border-gray-200">
+            <td className="py-1">{prop}</td>
+            <td className="py-1">{method}</td>
+            <td className="py-1">{value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  {/* Available Packs */}
+  <div className="py-6 ">
+    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
+    <p>5L | 20L | 60L | 208L Drums</p>
+  </div>
+</section>
+
             )}
             {p.id === 12 && (
-              <section className="py-16 px-6 md:px-16 max-w-[1700px] mx-auto text-gray-800">
-                {/* Heading */}
-                <div className="mb-12">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    Dr. Fixit Rust Remover
-                  </h1>
-                  <p className="text-lg md:text-xl">
-                    Fast and efficient solution for removing rust and corrosion
-                    from metal surfaces.
-                  </p>
-                </div>
+           <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
 
-                <div className="space-y-8">
-                  {/* Key Features & Benefits */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Key Features & Benefits
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        <strong>Fast and Efficient:</strong> Quickly dissolves
-                        rust and corrosion.
-                      </li>
-                      <li>
-                        <strong>Protects Metal Surfaces:</strong> Cleans without
-                        harming the underlying metal.
-                      </li>
-                      <li>
-                        <strong>Easy to Use:</strong> Apply directly, scrub or
-                        wipe, and rinse.
-                      </li>
-                      <li>
-                        <strong>Versatile Application:</strong> Suitable for
-                        tools, machinery, steel structures, and other metal
-                        surfaces.
-                      </li>
-                      <li>
-                        <strong>Improves Lifespan:</strong> Regular use prevents
-                        further rusting and prolongs the life of metal assets.
-                      </li>
-                    </ul>
-                  </div>
+  {/* Application */}
+  <div className="border-t border-gray-300 py-6">
+    <h2 className="font-semibold text-lg mb-4">Application:</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Jaguar Gear Oil GL-4 SAE-90 is suitable for manual transmissions and transaxles in passenger cars, buses, trucks, and vans.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Ideal for industrial and agricultural gear systems requiring GL-4 performance.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Suitable for vehicles where the manufacturer recommends API GL-4 gear oil.
+      </li>
+    </ul>
+  </div>
 
-                  {/* Usage */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Usage
-                    </h2>
-                    <ol className="list-decimal list-inside space-y-2">
-                      <li>
-                        Apply Dr. Fixit Rust Remover on the affected surface.
-                      </li>
-                      <li>Allow it to act for the recommended time.</li>
-                      <li>
-                        Scrub or wipe off rust and rinse thoroughly with water.
-                      </li>
-                    </ol>
-                    <p className="mt-2">
-                      For detailed instructions, safety precautions, and
-                      recommended application methods, refer to the Technical
-                      Data Sheet (TDS).
-                    </p>
-                  </div>
-                </div>
-              </section>
+  {/* Performance Standards */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Performance Standards</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>API GL-4
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>MIL-L-2105
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>ZF TE-ML 02A / 17A / 19A
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>MAN 341 Type Z2
+      </li>
+    </ul>
+  </div>
+
+  {/* Key Features & Benefits */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
+
+    <div className="space-y-4">
+      <div>
+        <p className="font-semibold">Outstanding Gear Protection:</p>
+        <p>High-quality base oils and modern additives protect gears against wear, scuffing, and pitting, even under heavy load.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Smooth Shifting Performance:</p>
+        <p>Maintains consistent lubrication for smooth and quiet gear engagement in all temperatures.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Excellent Thermal Stability:</p>
+        <p>Resists oxidation and oil thickening at high temperatures for longer oil life.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Corrosion & Foam Resistance:</p>
+        <p>Protects against rust, oxidation, foaming, and deposit build-up that can reduce gearbox efficiency.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Extended Gear Life:</p>
+        <p>Reduces metal-to-metal contact, extending the service life of gear components.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">All-Season Performance:</p>
+        <p>Performs reliably across a wide range of operating temperatures, ensuring protection in both hot and cold climates.</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Available Packs */}
+  <div className="py-6 ">
+    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
+    <p>5L | 20L | 60L | 208L Drums</p>
+  </div>
+</section>
+
             )}
             {p.id === 13 && (
-              <section className=" py-16 px-6 md:px-16 max-w-[1700px] mx-auto text-gray-800">
-                {/* Heading */}
-                <div className="mb-12">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    Water-Based Adhesive
-                  </h1>
-                  <p className="text-lg md:text-xl">
-                    Safe, non-toxic adhesive suitable for a variety of
-                    household, school, and office applications.
-                  </p>
-                </div>
+                          <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
 
-                <div className="space-y-8">
-                  {/* Application Method */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Application Method
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>Woodworking and carpentry projects</li>
-                      <li>Paper, cardboard, and craft activities</li>
-                      <li>School and office usage</li>
-                    </ul>
-                  </div>
+  {/* Application */}
+  <div className="border-t border-gray-300 py-6">
+    <h2 className="font-semibold text-lg mb-4">Application:</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Jaguar Hydraulic Oil AW ISO 100 is recommended for hydraulic systems operating under high-pressure or heavy-load conditions.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Ideal for industrial machinery, construction equipment, plastic molding machines, and mobile hydraulics.
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>
+        Suitable for systems requiring a premium anti-wear hydraulic fluid meeting international OEM specifications.
+      </li>
+    </ul>
+  </div>
 
-                  {/* Key Features & Benefits */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Key Features & Benefits
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        <strong>Water-Based Adhesive:</strong> Easy to apply,
-                        dries clear, and works on multiple surfaces.
-                      </li>
-                      <li>
-                        <strong>Child-Safe & Non-Toxic:</strong> Safe for
-                        children and everyday environments.
-                      </li>
-                      <li>
-                        <strong>Hygienic:</strong> Suitable for home, school,
-                        and office applications.
-                      </li>
-                      <li>
-                        <strong>High-Quality Standard:</strong> Meets European
-                        standard quality for consistent performance and
-                        durability.
-                      </li>
-                    </ul>
-                  </div>
+  {/* Specifications & Approvals */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Specifications & Approvals</h2>
+    <ul className="space-y-2 pl-6">
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>ASTM D6158, Eaton E-FDGN-TB002-E, Bosch Rexroth, DIN 51524 Parts 1, 2, 3
+      </li>
+      <li className="flex items-start">
+        <span className="text-red-600 mr-2">▪</span>Parker Denison HF-0 / HF-1 / HF-2, Cincinnati/MAG IAS P-69, US Steel 127, 136
+      </li>
+    </ul>
+  </div>
 
-                  {/* Usage Instructions */}
-                  <div>
-                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-                      Usage Instructions
-                    </h2>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>Apply on clean surfaces for best results.</li>
-                      <li>
-                        Allow sufficient drying time to achieve a strong and
-                        durable bond.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+  {/* Key Features & Benefits */}
+  <div className="py-6">
+    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
+
+    <div className="space-y-4">
+      <div>
+        <p className="font-semibold">Exceptional Anti-Wear Protection:</p>
+        <p>Advanced additive system reduces metal-to-metal contact, minimizing wear in pumps, valves, and hydraulic motors.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Superior Oxidation Stability:</p>
+        <p>Provides up to 5,000 hours of oxidation resistance, ensuring longer oil life and reduced maintenance costs.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Enhanced System Cleanliness:</p>
+        <p>Effectively controls sludge, varnish, and deposits for improved hydraulic efficiency.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Wide Temperature Range Performance:</p>
+        <p>Maintains excellent viscosity and flow in both hot and cold operating conditions.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Corrosion & Rust Protection:</p>
+        <p>Guards against rust formation and component corrosion, extending system life.</p>
+      </div>
+
+      <div>
+        <p className="font-semibold">Fast Air & Water Separation:</p>
+        <p>Improves filtration and prevents foaming in high-pressure environments.</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Technical Properties */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+    <table className="w-full text-left border-collapse text-[15px]">
+      <thead>
+        <tr className="border-b border-gray-300">
+          <th className="py-1">Property</th>
+          <th className="py-1">Test Method</th>
+          <th className="py-1">Typical Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["Viscosity @ 40°C", "ASTM D445", "100 cSt"],
+          ["Viscosity @ 100°C", "ASTM D445", "11.5 cSt"],
+          ["Viscosity Index", "ASTM D2270", "98"],
+          ["Flash Point", "ASTM D92", "230°C"],
+          ["Pour Point", "ASTM D5950", "-27°C"],
+          ["Oxidation Stability", "ASTM D943", "5000 hours"],
+          ["Zinc, wt.%", "ASTM D5185", "0.042"],
+        ].map(([prop, method, value], i) => (
+          <tr key={i} className="border-b border-gray-200">
+            <td className="py-1">{prop}</td>
+            <td className="py-1">{method}</td>
+            <td className="py-1">{value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  {/* Available Packs */}
+  <div className="py-6  border-gray-300">
+    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
+    <p>5L | 20L | 60L | 208L Drums</p>
+  </div>
+</section>
             )}
           </div>
         </div>
