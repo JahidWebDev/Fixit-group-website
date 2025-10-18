@@ -109,7 +109,7 @@ const products = [
   madeIn: "UAE",
  
  description1:
-  "",
+  "Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W50 is an ul-tra-high-performance diesel engine oil formulated with ad-vanced synthetic technology and premium base stocks. It pro-vides excellent lubrication, enhanced engine protection, and longer engine life for both modern and older generation diesel en-gines operating in the most demanding conditions.",
 
   image: product5,
 },
@@ -172,45 +172,47 @@ const products = [
   {
     id: 9,
     title:
-      "Jaguar Gear Oil GL-4 SAE-90",
+      "Jaguar Extra Mileage 15W-40 API-CH4",
 
   brand: "Jaguar",
-  category: "High-Performance Gearbox Lubricant for Passenger CarsTrucks & Heavy Vehicles",
+  category: "High-Performance Motor Oil for Gasoline & Diesel Engines",
   saeGrade: "20W50",
-  apiSpecification: "CF/SF",
+  apiSpecification: "CH4",
     capacity: "20 Liters",
   madeIn: "UAE",
     description1:
-      "Jaguar Gear Oil GL-4 SAE-90 is a premium multi-vehicle gear lubri-cant designed for manual transmissions and transaxles in passen-ger cars, trucks, and other commercial vehicles. Specially formulat-ed with advanced anti-wear and oxidation-resistant additives, it ensures long-lasting protection, smooth gear shifting, and maxi-mum gearbox performance in all driving conditions.",
-
+      "Jaguar Extra Mileage 20W-50 API-CH4 is a premium multigrade diesel engine oil specially engineered to provide outstanding pro-tection and performance for modern and older diesel engines. De-veloped using advanced additive technology and high-quality base oils, it helps to reduce engine wear, prevent sludge formation, and maintain engine cleanliness for longer service life.",
+description2: "Whether used in trucks, buses, construction machinery, or agricul-tural equipment, Jaguar Extra Mileage ensures maximum engine protection under severe operating conditions and high-tempera-ture environments.",
     image: product9,
   },
   {
     id: 10,
     title:
-      "18kg Dr. Fixit 302 Super Latex-Premium SBR Waterproofing & Bonding Agent for Concrete Repair",
-    brand: "Dr. Fixit Limited",
-    category: "Admixture",
-    quantity: "1 Litre",
-    subtitle: "Dr. Fixit 302 Super Latex",
-    description:
-      "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applica-tions. This URP-based formulation is known for enhancing the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
-    subtitletwo: "SBR Latex for repairs & waterproofing",
+      "Jaguar Hydraulic Oil HV ISO 68",
+    brand: "Jaguar",
+    category: "Premium Anti-Wear Hydraulic Oil - Engineered for Industrial and Heavy-Duty Performance",
+      saeGrade: "HV ISO 68",
+  apiSpecification: "HV",
+    capacity: "20 Liters",
+  madeIn: "UAE",
+    description1:
+      "Jaguar Hydraulic Oil HV ISO 68 is a high-performance, anti-wear hy-draulic fluid specially formulated to deliver maximum protection, extended equipment life, and superior performance in both indus-trial and mobile hydraulic systems. Built with advanced Friction GuardTM technology, it ensures smooth operation and energy-effi-cient performance even under extreme conditions.",
     image: product10,
-    availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
+   
   },
   {
     id: 11,
     title:
-      "18kg Dr. Fixit 5100 Exterior Wall Sealer High-Performance Water-Based Wall Primer for Interior Walls",
-    brand: "Dr. Fixit Limited",
-    category: "Paints",
-    quantity: "18 Litre",
-    subtitle: "Dr. Fixit 5100 Exterior Wall Sealer.",
-    subtitletwo: "Excelient Finish Leveling",
+      "Jaguar Hydraulic Oil AW ISO 100",
+    brand: "Jaguar",
+    category: "Premium Anti-Wear Hydraulic Oil - Engineered for Industrial and Heavy-Duty Performance",
+       saeGrade: "AW ISO 100",
+  apiSpecification: "AW",
+    capacity: "20 Liters",
+  madeIn: "UAE",
     description:
-      "Dr. Fixit 5100 Wall Sealer is a high-performance, water-based sealer specially formulated for exterior walls, whether new or repainted. It enhances the durability and performance of the finishing coat while providing effective protection against moisture and alkalinity. Ideal when used with Weatherbond, it ensures long-lasting exterior wall protection and a superior finish.",
-    availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
+      "Jaguar Hydraulic Oil AW ISO 100 is a high-performance, anti-wear hydraulic fluid specially formulated to deliver maximum protec-tion, extended equipment life, and superior performance in both industrial and mobile hydraulic systems. Built with advanced Fric-tion GuardTM technology, it ensures smooth operation and ener-gy-efficient performance even under extreme conditions.",
+    
     image: product11,
   },
   {
@@ -233,14 +235,16 @@ const products = [
 
   {
     id: 13,
-    title: "Fevilock – Premium Synthetic Resin Adhesive (Glue) – 250 gm",
-    brand: "Dr. Fixit Limited",
-    category: "Glue",
-    quantity: "250 gm",
-    subtitle: "Fevilock (Glue) — Premium Synthetic Resin Adhesive",
-    description:
-      "Fevilock is a high-quality, water-based synthetic resin adhesive designed for strong and reliable bonding on wood, paper, cardboard, and other surfaces. Perfect for household, school, and office use, it combines safety, hygiene, and excellent performance.",
-    availablePackaging: "20gm, 50gm, 100gm, 200gm, and 250gm",
+    title:
+      "Jaguar Hydraulic Oil HV ISO 68",
+    brand: "Jaguar",
+    category: "Premium Anti-Wear Hydraulic Oil - Engineered for Industrial and Heavy-Duty Performance",
+      saeGrade: "HV ISO 68",
+  apiSpecification: "HV",
+    capacity: "20 Liters",
+  madeIn: "UAE",
+    description1:
+      "Jaguar Hydraulic Oil HV ISO 68 is a high-performance, anti-wear hy-draulic fluid specially formulated to deliver maximum protection, extended equipment life, and superior performance in both indus-trial and mobile hydraulic systems. Built with advanced Friction GuardTM technology, it ensures smooth operation and energy-effi-cient performance even under extreme conditions.",
     image: product13, // update with your actual Fevilock image import
   },
 ];
