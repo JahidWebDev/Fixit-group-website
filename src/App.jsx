@@ -17,6 +17,7 @@ import Careers from "./Components/Careers/Careers";
 
 
 import ScrollToTop from "./Components/ScrollToTop";
+import Contactus from "./Components/Contactus/Contactus";
 
 
 function Home() {
@@ -48,6 +49,7 @@ function App() {
         <Route path="/jaguar" element={<Jaguar />} />
         <Route path="/jaguardetails/:id" element={<JaguarDetails />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/contact" element={<Contactus />} />
       </Routes>
 
       <Footer />

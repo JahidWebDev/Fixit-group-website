@@ -697,7 +697,7 @@ const Jaguar = () => {
                     <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
                    <Link
                      to={`/jaguardetails/${p.id}`}
-                    //  state={{ showBanner: true }} 
+                     state={{ showBanner: true }} 
                      className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 px-4 rounded-md 
                                 hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center inline-block"
                    >
