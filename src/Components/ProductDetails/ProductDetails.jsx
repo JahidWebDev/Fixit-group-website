@@ -622,13 +622,13 @@ const ProductDetails = ({}) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Left: Image */}
             <div className="flex flex-col items-center">
-              <div className="border h-[560px] w-[450px] border-gray-200 rounded-2xl shadow-sm p-4 flex items-center justify-center">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="max-w-[160%] max-h-[100%] mt-[60px] object-contain"
-                />
-              </div>
+           <div className="border h-[560px] w-[450px] border-gray-200 rounded-2xl shadow-sm p-4 flex items-center justify-center overflow-hidden">
+  <img
+    src={p.image}
+    alt={p.title}
+    className="max-w-[160%] max-h-[100%] mt-[60px] object-contain transform transition-transform duration-500 ease-in-out hover:scale-110"
+  />
+</div>
 
               <div className="mt-8">
                 <Link

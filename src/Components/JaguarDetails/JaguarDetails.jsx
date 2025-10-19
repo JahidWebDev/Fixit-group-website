@@ -574,7 +574,7 @@ const JaguarDetails = ({}) => {
             Business / <span className="font-bold">Jaguar Lubricants</span>
           </p>
           <span className="hidden md:block w-[2px] h-9 bg-black"></span>
-          <p className="text-gray-800 text-base md:text-lg leading-tight">
+          <p className="text-black text-base md:text-lg leading-tight">
             High-Performance Engine Oil in Bangladesh
             <br className="hidden md:block" /> Imported from UAE
           </p>
@@ -598,50 +598,53 @@ const JaguarDetails = ({}) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Left: Image */}
             <div className="flex flex-col items-center">
-<div className="h-[580px] w-[500px] rounded-2xl shadow-sm p-4 flex items-center justify-center overflow-hidden ">
-  <img src={p.image} alt={p.title} className="max-w-full max-h-full object-contain" />
+  <div className="h-[580px] w-[500px] rounded-2xl shadow-md p-4 flex items-center justify-center group">
+    <img
+      src={p.image}
+      alt={p.title}
+      className="max-w-full max-h-[500px] object-contain transform transition-transform duration-500 ease-in-out group-hover:scale-110"
+    />
+  </div>
+
+  <div className="mt-8">
+    <Link
+      to="/find-dealer"
+      className="bg-[#f6b400] hover:bg-[#e0a200] text-black font-semibold px-8 py-3 rounded-md shadow-md transition"
+    >
+      Find a Dealer
+    </Link>
+  </div>
 </div>
 
 
-
-              <div className="mt-8">
-                <Link
-                  to="/find-dealer"
-                  className="bg-[#f6b400] hover:bg-[#e0a200] text-black font-semibold px-8 py-3 rounded-md shadow-md transition"
-                >
-                  Find a Dealer
-                </Link>
-              </div>
-            </div>
-
             {/* Right: Info */}
 <div className="lg:pt-[10px]">
-  <div className="space-y-2 text-gray-800 md:pl-10 lg:pl-0">
+  <div className="space-y-2 text-black md:pl-10 lg:pl-0">
     {/* Title */}
-    <h2 className="text-2xl md:text-3xl lg:text-2xl font-bold text-gray-900">
+    <h2 className="text-2xl md:text-3xl lg:text-2xl font-bold text-black">
       {p.title}
     </h2>
 
     {/* Product Info */}
     <div className="lg:pt-[10px] space-y-1">
       <p className="text-base md:text-lg">
-        <span className="font-bold text-gray-900">Brand:</span> {p.brand}
+        <span className="font-bold text-black">Brand:</span> {p.brand}
       </p>
       <p className="text-base md:text-lg">
-        <span className="font-bold text-gray-900">Category:</span> {p.category}
+        <span className="font-bold text-black">Category:</span> {p.category}
       </p>
       <p className="text-base md:text-lg">
-        <span className="font-bold text-gray-900">Capacity:</span> {p.capacity}
+        <span className="font-bold text-black">Capacity:</span> {p.capacity}
       </p>
       <p className="text-base md:text-lg">
-        <span className="font-bold text-gray-900">SAE Grade:</span> {p.saeGrade}
+        <span className="font-bold text-black">SAE Grade:</span> {p.saeGrade}
       </p>
       <p className="text-base md:text-lg">
-        <span className="font-bold text-gray-900">API Specification:</span>{" "}
+        <span className="font-bold text-black">API Specification:</span>{" "}
         {p.apiSpecification}
       </p>
       <p className="text-base md:text-lg">
-        <span className="font-bold text-gray-900">Made In:</span> {p.madeIn}
+        <span className="font-bold text-black">Made In:</span> {p.madeIn}
       </p>
       <p className="text-base md:text-lg">
                     <span className="font-semibold">Quantity:</span>{" "}
@@ -656,17 +659,17 @@ const JaguarDetails = ({}) => {
     {/* Description */}
     <div className="pt-4">
       <h3 className="text-xl md:text-[22px] font-bold mb-5">{p.subtitle}</h3>
-      <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-2">
+      <p className="text-base md:text-lg text-black leading-relaxed mb-2">
         {p.description1}
       </p>
-      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+      <p className="text-base md:text-lg text-black leading-relaxed">
         {p.description2}
       </p>
-      <p className="text-base md:text-lg mt-2 text-gray-700 leading-relaxed">
+      <p className="text-base md:text-lg mt-2 text-black leading-relaxed">
         {p.description3}
       </p>
-      <p className="text-base md:text-lg text-gray-700 leading-relaxed pt-2">
-        <span className="font-bold text-gray-900">Available Packaging:</span>{" "}
+      <p className="text-base md:text-lg text-black leading-relaxed pt-2">
+        <span className="font-bold text-black">Available Packaging:</span>{" "}
         {p.availablePackaging}
       </p>
     </div>
@@ -702,10 +705,10 @@ const JaguarDetails = ({}) => {
           {/* 🔹 Dynamic Text Content */}
           <div className="mt-20 ">
             {p.id === 1 && (
-                <section className="max-w-[1700px] mx-auto border-t border-b border-gray-300 py-6 px-4 text-gray-800 text-[15px] leading-relaxed">
+                <section className="max-w-[1700px] mx-auto border-t border-b border-gray-300 py-6 px-4 text-black text-[15px] leading-relaxed">
       {/* Application */}
       <div className="mb-5">
-        <h3 className="font-semibold text-gray-900 mb-1">Application:</h3>
+        <h3 className="font-semibold text-[17px] text-black mb-1">Application:</h3>
         <ul className="list-none pl-0 space-y-1">
           <li className="flex">
             <span className="text-red-600 mr-2">▪</span>
@@ -722,7 +725,7 @@ const JaguarDetails = ({}) => {
 
       {/* Specifications and Approvals */}
       <div className="mb-5">
-        <h3 className="font-semibold text-gray-900 mb-1">
+        <h3 className="font-semibold text-[17px] text-black mb-1">
           Specifications and Approvals:
         </h3>
         <p className="mb-2">
@@ -741,12 +744,12 @@ const JaguarDetails = ({}) => {
 
       {/* Key Features & Benefits */}
       <div>
-        <h3 className="font-semibold text-gray-900 mb-2">
+        <h3 className="font-semibold text-[17px] text-black mb-2">
           Key Features & Benefits
         </h3>
 
         <div className="mb-4">
-          <p className="font-semibold text-gray-900">Advanced Engine Protection:</p>
+          <p className="font-semibold text-[17px] text-black">Advanced Engine Protection:</p>
           <p>
             Instant protection from{" "}
             <span className="font-semibold">heat-activated anti-wear molecules™</span>{" "}
@@ -756,7 +759,7 @@ const JaguarDetails = ({}) => {
         </div>
 
         <div className="mb-4">
-          <p className="font-semibold text-gray-900">Enhanced Wear Resistance:</p>
+          <p className="font-semibold text-[17px] text-black">Enhanced Wear Resistance:</p>
           <p>
             Provides <span className="font-semibold">up to 57%</span> more wear
             protection than the industry standard (based on API SL Sequence IVA
@@ -765,7 +768,7 @@ const JaguarDetails = ({}) => {
         </div>
 
         <div>
-          <p className="font-semibold text-gray-900">Smooth Clutch Operation:</p>
+          <p className="font-semibold text-[17px] text-black">Smooth Clutch Operation:</p>
           <p>
             High-traction formulation helps prevent clutch slippage and allows
             smoother gear shifting.
@@ -776,7 +779,7 @@ const JaguarDetails = ({}) => {
             )}
 
             {p.id === 2 && (
-             <div className="max-w-[1700px] mx-auto font-sans text-gray-800 border-t border-b border-gray-300 py-8 text-[15px] leading-relaxed">
+             <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-b border-gray-300 py-8 text-[15px] leading-relaxed">
       {/* === Application === */}
       <section className="mb-6">
         <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
@@ -934,11 +937,11 @@ const JaguarDetails = ({}) => {
 
       {/* Technical Properties */}
 <section className="mb-8">
-  <h2 className="text-[17px] font-semibold mb-3 text-gray-800">
+  <h2 className="text-[17px] font-semibold mb-3 text-black">
     Technical Properties
   </h2>
   <div className="overflow-x-auto">
-    <table className="w-full border-collapse text-[15px] text-gray-800">
+    <table className="w-full border-collapse text-[17px] text-black">
       <thead>
         <tr className="border-b border-gray-300">
           <th className="text-left py-2 font-medium">Property</th>
@@ -976,7 +979,7 @@ const JaguarDetails = ({}) => {
     </div>
             )}
             {p.id === 4 && (
-       <div className="max-w-[1700px] mx-auto px-6 py-0 text-gray-800">
+       <div className="max-w-[1700px] mx-auto px-6 py-0 text-black">
       <div className="border-t  border-gray-300 py-6">
         <h2 className="text-xl font-semibold mb-4">Application:</h2>
         <ul className="space-y-2 pl-4">
@@ -1031,7 +1034,7 @@ const JaguarDetails = ({}) => {
             )}
 
             {p.id === 5 && (
-                <div className="max-w-[1700px] mx-auto font-sans text-gray-800 border-t  border-gray-300 py-8 text-[15px] leading-relaxed">
+                <div className="max-w-[1700px] mx-auto font-sans text-black border-t  border-gray-300 py-8 text-[15px] leading-relaxed">
       {/* === Application === */}
       <section className="mb-6">
         <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
@@ -1142,7 +1145,7 @@ const JaguarDetails = ({}) => {
             )}
 
             {p.id === 6 && (
-          <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+          <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
       {/* Application */}
       <div className="border-t  border-gray-300 py-6">
         <h2 className="font-semibold text-lg mb-4">Application:</h2>
@@ -1294,7 +1297,7 @@ const JaguarDetails = ({}) => {
             )}
 
             {p.id === 7 && (
-             <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+             <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
   {/* Application */}
   <div className="border-t border-gray-300 py-6">
     <h2 className="font-semibold text-lg mb-4">Application:</h2>
@@ -1411,7 +1414,7 @@ const JaguarDetails = ({}) => {
 
             )}
             {p.id === 8 && (
-    <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+    <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
   {/* Application */}
   <div className="border-t border-gray-300 py-6">
     <h2 className="font-semibold text-lg mb-4">Application:</h2>
@@ -1500,7 +1503,7 @@ const JaguarDetails = ({}) => {
 
             )}
             {p.id === 9 && (
-                    <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+                    <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
   {/* Application */}
   <div className="border-t border-gray-300 py-6">
     <h2 className="font-semibold text-lg mb-4">Application:</h2>
@@ -1628,7 +1631,7 @@ const JaguarDetails = ({}) => {
 
             )}
             {p.id === 10 && (
-        <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+        <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
 
   {/* Application */}
   <div className="border-t border-gray-300 py-6">
@@ -1739,7 +1742,7 @@ const JaguarDetails = ({}) => {
 
             )}
             {p.id === 11 && (
-              <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+              <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
 
   {/* Application */}
   <div className="border-t border-gray-300 py-6">
@@ -1850,7 +1853,7 @@ const JaguarDetails = ({}) => {
 
             )}
             {p.id === 12 && (
-           <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+           <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
 
   {/* Application */}
   <div className="border-t border-gray-300 py-6">
@@ -1936,7 +1939,7 @@ const JaguarDetails = ({}) => {
 
             )}
             {p.id === 13 && (
-                          <section className="max-w-[1700px] mx-auto bg-white text-gray-800 p-6 md:p-10 leading-relaxed">
+                          <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
 
   {/* Application */}
   <div className="border-t border-gray-300 py-6">
@@ -2150,7 +2153,7 @@ const JaguarDetails = ({}) => {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                className="w-full p-3 rounded-md bg-gray-100 text-black focus:outline-none"
                 required
               />
 
@@ -2160,7 +2163,7 @@ const JaguarDetails = ({}) => {
                 placeholder="Your Phone Number"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                className="w-full p-3 rounded-md bg-gray-100 text-black focus:outline-none"
                 required
               />
 
@@ -2169,7 +2172,7 @@ const JaguarDetails = ({}) => {
                   name="dealer"
                   value={formData.dealer}
                   onChange={handleChange}
-                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                  className="w-1/2 p-3 rounded-md bg-gray-100 text-black focus:outline-none"
                   required
                 >
                   <option value="" disabled>
@@ -2183,7 +2186,7 @@ const JaguarDetails = ({}) => {
                   name="district"
                   value={formData.district}
                   onChange={handleChange}
-                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                  className="w-1/2 p-3 rounded-md bg-gray-100 text-black focus:outline-none"
                   required
                 >
                   <option value="" disabled>

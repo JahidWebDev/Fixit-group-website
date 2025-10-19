@@ -423,7 +423,7 @@ const Drfixit = () => {
           </>
         )}
       </header>
-      <section className="relative z-[-9999]  border-[#b71c1c] bg-white py-10 px-10 md:px-44 flex flex-col md:flex-row items-center justify-between">
+      <section className="relative z-[-9999]  border-[#b71c1c] bg-white py-10 px-10 md:px-48 flex flex-col md:flex-row items-center justify-between">
         {/* Left text */}
         <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4">
           <p className="text-lg md:text-xl text-black">
@@ -440,7 +440,7 @@ const Drfixit = () => {
           <img
             src={drfixitLogo}
             alt="Dr. Fixit Logo"
-            className="w-[180px] md:w-[220px] object-contain"
+            className="w-[160px] md:w-[200px] object-contain"
           />
         </div>
       </section>
@@ -649,15 +649,14 @@ const Drfixit = () => {
 
                   {/* 🔘 Buttons */}
                   <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
-                    
-<Link
-  to={`/productdetails/${p.id}`}
-  state={{ showBanner: true }} 
-  className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 px-4 rounded-md 
-             hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center inline-block"
->
-  Product Details
-</Link>
+                    <Link
+                      to={`/productdetails/${p.id}`}
+                      state={{ showBanner: true }}
+                      className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 px-4 rounded-md 
+                              hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center inline-block"
+                    >
+                      Product Details
+                    </Link>
 
                     <Link
                       to="/find-dealer"
