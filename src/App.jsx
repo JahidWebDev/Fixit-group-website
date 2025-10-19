@@ -18,6 +18,7 @@ import Careers from "./Components/Careers/Careers";
 
 import ScrollToTop from "./Components/ScrollToTop";
 import Contactus from "./Components/Contactus/Contactus";
+import Motul from "./Components/Motul/Motul";
 
 
 function Home() {
@@ -50,6 +51,7 @@ function App() {
         <Route path="/jaguardetails/:id" element={<JaguarDetails />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contactus />} />
+        <Route path="/motul" element={<Motul/>} />
       </Routes>
 
       <Footer />
