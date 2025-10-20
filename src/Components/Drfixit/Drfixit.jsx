@@ -179,42 +179,7 @@ const Drfixit = () => {
           alert("❌ Failed to send email.");
         }
       );
-      
   };
-
-    const [isDragging, setIsDragging] = useState(false);
-  const [position, setPosition] = useState({ bottom: 20, right: 10 });
-  const [startY, setStartY] = useState(0);
-  const [startBottom, setStartBottom] = useState(0);
-
-  // Enable dragging only on mobile
-  const isMobile = window.innerWidth < 768;
-
-  const handleTouchStart = (e) => {
-    if (!isMobile) return;
-    setIsDragging(true);
-    setStartY(e.touches[0].clientY);
-    setStartBottom(position.bottom);
-  };
-
-  const handleTouchMove = (e) => {
-    if (!isDragging || !isMobile) return;
-    const deltaY = e.touches[0].clientY - startY;
-    const newBottom = Math.max(10, startBottom - deltaY);
-    setPosition((prev) => ({ ...prev, bottom: newBottom }));
-  };
-
-  const handleTouchEnd = () => setIsDragging(false);
-
-  useEffect(() => {
-    if (!isMobile) return;
-    window.addEventListener("touchmove", handleTouchMove);
-    window.addEventListener("touchend", handleTouchEnd);
-    return () => {
-      window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, [handleTouchMove]);
 
   return (
     <section className="w-full  z-50">
@@ -501,34 +466,49 @@ const Drfixit = () => {
 
 
 
-
-
-
         {/* ✅ Fixed Green Rounded Shape with WhatsApp Icon */}
-    <div
-      className="fixed z-50 shadow-xl flex items-center justify-center rounded-l-[150px] bg-[#25D366]"
-      style={{
-        bottom: `${position.bottom}px`,
-        right: `${position.right}px`,
-        width: window.innerWidth < 768 ? "110px" : "145px",
-        height: window.innerWidth < 768 ? "55px" : "70px",
-      }}
-      onTouchStart={handleTouchStart}
-    >
-      <a
-        href="https://wa.me/8801712345678"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="relative flex items-center justify-center bg-white p-2 sm:p-3 md:p-4 rounded-full shadow-md hover:scale-110 transition-transform duration-300 overflow-visible mr-[50px] sm:mr-[55px] md:mr-[70px]"
-      >
-        <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
-        <img
-          src={callIcon}
-          alt="Call Icon"
-          className="relative w-[30px] sm:w-[35px] md:w-[20px] z-10"
-        />
-      </a>
-    </div>
+     <div
+  className="fixed 
+    bottom-5 
+    right-2 sm:right-3 md:right-0 
+    w-[120px] h-[60px] 
+    md:w-[145px] md:h-[70px] 
+    bg-[#25D366] 
+    rounded-l-[150px] 
+    flex items-center justify-center 
+    shadow-xl 
+    z-50
+  "
+>
+  <a
+    href="https://wa.me/8801712345678"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      relative 
+      flex items-center justify-center 
+      bg-white 
+      p-2 sm:p-3 md:p-4         
+      rounded-full 
+      shadow-md 
+      hover:scale-110 
+      transition-transform 
+      duration-300 
+      overflow-visible 
+      mr-[50px] sm:mr-[55px] md:mr-[70px] 
+    "
+  >
+    {/* Glowing Pulse Effect */}
+    <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
+
+    {/* WhatsApp Call Icon */}
+    <img
+      src={callIcon}
+      alt="Call Icon"
+      className="relative w-[30px] sm:w-[35px] md:w-[20px] z-10"
+    />
+  </a>
+</div>
 
       </section>
 
