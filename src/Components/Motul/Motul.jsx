@@ -291,108 +291,98 @@ const Motul = () => {
             </div>
     
             {/* Mobile Menu */}
-            {menuOpen && (
-              <>
-                {/* Overlay */}
-                <div
-                  className="fixed inset-0 bg-black/40 z-40"
-                  onClick={() => setMenuOpen(false)}
-                />
-    
-                {/* Floating Dropdown Menu */}
-                <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
-                  <ul className="flex flex-col text-base font-medium py-4">
-                    <li>
-                      <button
-                        onClick={() => setSubmenuOpen(!submenuOpen)}
-                        className="w-full flex justify-between items-center px-5 py-3 hover:bg-gray-100"
-                      >
-                        PRODUCTS
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className={`w-4 h-4 transition-transform ${
-                            submenuOpen ? "rotate-180" : ""
-                          }`}
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </button>
-    
-                      {submenuOpen && (
-                        <ul className="pl-6 bg-gray-50">
+              {menuOpen && (
+                    <>
+                      <div
+                        className="fixed inset-0 bg-black/40 z-40"
+                        onClick={() => setMenuOpen(false)}
+                      />
+                      <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+                        <ul className="flex flex-col text-base font-medium py-4">
                           <li>
-                            <Link
-                              to="/new-construction"
-                              className="block px-4 py-2 hover:bg-gray-100"
-                            >
-                              New Construction
+                            <Link to="/" className="block px-5 py-3 hover:bg-gray-100">
+                              HOME
                             </Link>
                           </li>
                           <li>
                             <Link
-                              to="/repair-construction"
-                              className="block px-4 py-2 hover:bg-gray-100"
+                              to="/ourbusiness"
+                              className="block px-5 py-3 hover:bg-gray-100"
                             >
-                              Repair Construction
+                              ABOUT US
+                            </Link>
+                          </li>
+                          <li>
+                            <button
+                              onClick={() => setSubmenuOpen(!submenuOpen)}
+                              className="w-full flex justify-between items-center px-5 py-3 hover:bg-gray-100"
+                            >
+                              OUR BUSINESS
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className={`w-4 h-4 transition-transform ${
+                                  submenuOpen ? "rotate-180" : ""
+                                }`}
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                            </button>
+                            {submenuOpen && (
+                            <ul className="pl-6 bg-gray-50">
+            {[
+              { name: "Dr. Fixit Ltd.", link: "/drfixit" },
+              { name: "Jaguar Lubricants", link: "/jaguar" },
+              { name: "Motul", link: "/motul" },
+              { name: "Robinson Can Industries", link: "/robinson" },
+            ].map((item, i) => (
+              <li key={i}>
+                <Link
+                  to={item.link}
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+                            )}
+                          </li>
+                          <li>
+                            <Link
+                              to="/careers"
+                              className="block px-5 py-3 hover:bg-gray-100"
+                            >
+                              CAREERS
                             </Link>
                           </li>
                           <li>
                             <Link
-                              to="/remover"
-                              className="block px-4 py-2 hover:bg-gray-100"
+                              to="https://wa.me/yourwhatsapp"
+                              className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
                             >
-                              Remover
+                              Let’s Talk
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to="/dealer"
+                              className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
+                            >
+                              Find Link Dealer
                             </Link>
                           </li>
                         </ul>
-                      )}
-                    </li>
-    
-                    <li>
-                      <Link
-                        to="/resource"
-                        className="block px-5 py-3 hover:bg-gray-100"
-                      >
-                        RESOURCE
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/certificate"
-                        className="block px-5 py-3 hover:bg-gray-100"
-                      >
-                        CERTIFICATE
-                      </Link>
-                    </li>
-    
-                    <li>
-                      <Link
-                        to="https://wa.me/yourwhatsapp"
-                        className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
-                      >
-                        <span>Let’s Talk</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/dealer"
-                        className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
-                      >
-                        <span>Find Link Dealer</span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </>
-            )}
+                      </div>
+                    </>
+                  )}
           </header>
           <section className="relative z-[-9999] border-b border-gray-200 bg-white py-10 px-10 md:px-48 flex flex-col md:flex-row items-center justify-between">
             {/* Left text */}
@@ -482,34 +472,34 @@ const Motul = () => {
             </div>
           </section>
     
-<section className="py-40 px-50 bg-white">
-  <div className="max-w-full mx-auto">
+<section className="py-20 md:py-40 px-6 md:px-20 lg:px-40 bg-white">
+  <div className="max-w-[1500px] mx-auto">
     <div className="md:flex md:items-start md:gap-16">
       <div className="md:flex-1">
-        <h2 className="text-5xl md:text-6xl font-normal text-gray-900 mb-10">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 mb-10">
           <span className="mr-2">About</span>
           <span className="font-extrabold">Motul Bangladesh</span>
         </h2>
 
-        <p className="text-gray-700 text-xl md:text-2xl leading-relaxed mb-10">
+        <p className="text-gray-700 text-lg md:text-xl lg:text-2xl leading-relaxed mb-10">
           World-renowned Motul Lubricants and Motul Engine Oils are now more
           accessible than ever in Bangladesh - brought to you directly by the
           only official importer of Motul Bangladesh.
         </p>
 
-        <p className="text-gray-700 text-xl md:text-2xl leading-relaxed mb-10">
+        <p className="text-gray-700 text-lg md:text-xl lg:text-2xl leading-relaxed mb-10">
           Motul is one of the leading global brands, trusted for its engine
           oils, gear oils, motorcycle oils, car care products, and other
           high-performance automotive solutions. Now, you can experience
           Motul’s world-class performance, superior protection, and
-          long-lasting engine support  right here in Bangladesh.
+          long-lasting engine support right here in Bangladesh.
         </p>
 
-        <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-8">
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 mb-8">
           Why Choose Fixit Group for Motul?
         </h3>
 
-        <ul className="space-y-4 ml-16 text-gray-800">
+        <ul className="space-y-4 ml-4 md:ml-10 lg:ml-16 text-gray-800">
           {[
             "100% Genuine Motul Lubricants-sourced directly from the official importer",
             "Maximum Engine Performance and Protection",
@@ -517,8 +507,8 @@ const Motul = () => {
             "Trusted Worldwide by Professional Racers and Engineers",
             "We Are the Only Official Motul Importer in Bangladesh!",
           ].map((item) => (
-            <li key={item} className="flex items-start gap-6">
-              <span className="mt-4 flex-shrink-0">
+            <li key={item} className="flex items-start gap-4 md:gap-6">
+              <span className="mt-2 md:mt-4 flex-shrink-0">
                 <svg
                   width="12"
                   height="12"
@@ -531,24 +521,25 @@ const Motul = () => {
                 </svg>
               </span>
 
-              <span className="text-xl md:text-2xl leading-relaxed">
+              <span className="text-lg md:text-xl lg:text-2xl leading-relaxed">
                 {item}
               </span>
             </li>
           ))}
         </ul>
 
-        <p className="text-gray-700 text-xl md:text-2xl leading-relaxed mt-10">
-          So rest assured - when you buy from us, you're getting authentic,
+        <p className="text-gray-700 text-lg md:text-xl lg:text-2xl leading-relaxed mt-10">
+          So rest assured — when you buy from us, you're getting authentic,
           high-quality Motul products with full confidence and guarantee.
         </p>
       </div>
 
-      {/* Optional right column for an image or extra spacing */}
+      {/* Optional right column for an image or spacing */}
       <div className="hidden md:block md:w-1/3"></div>
     </div>
   </div>
 </section>
+
 
     
           {/* ================= PRODUCTS GRID ================= */}

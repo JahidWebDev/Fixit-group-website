@@ -463,108 +463,98 @@ const JaguarDetails = ({}) => {
         </div>
 
         {/* Mobile Menu */}
-        {menuOpen && (
-          <>
-            {/* Overlay */}
-            <div
-              className="fixed inset-0 bg-black/40 z-40"
-              onClick={() => setMenuOpen(false)}
-            />
-
-            {/* Floating Dropdown Menu */}
-            <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
-              <ul className="flex flex-col text-base font-medium py-4">
-                <li>
-                  <button
-                    onClick={() => setSubmenuOpen(!submenuOpen)}
-                    className="w-full flex justify-between items-center px-5 py-3 hover:bg-gray-100"
-                  >
-                    PRODUCTS
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className={`w-4 h-4 transition-transform ${
-                        submenuOpen ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
-
-                  {submenuOpen && (
-                    <ul className="pl-6 bg-gray-50">
-                      <li>
-                        <Link
-                          to="/new-construction"
-                          className="block px-4 py-2 hover:bg-gray-100"
-                        >
-                          New Construction
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/repair-construction"
-                          className="block px-4 py-2 hover:bg-gray-100"
-                        >
-                          Repair Construction
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/remover"
-                          className="block px-4 py-2 hover:bg-gray-100"
-                        >
-                          Remover
-                        </Link>
-                      </li>
-                    </ul>
-                  )}
-                </li>
-
-                <li>
-                  <Link
-                    to="/resource"
-                    className="block px-5 py-3 hover:bg-gray-100"
-                  >
-                    RESOURCE
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/certificate"
-                    className="block px-5 py-3 hover:bg-gray-100"
-                  >
-                    CERTIFICATE
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    to="https://wa.me/yourwhatsapp"
-                    className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
-                  >
-                    <span>Let’s Talk</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/dealer"
-                    className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
-                  >
-                    <span>Find Link Dealer</span>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </>
-        )}
+            {menuOpen && (
+                  <>
+                    <div
+                      className="fixed inset-0 bg-black/40 z-40"
+                      onClick={() => setMenuOpen(false)}
+                    />
+                    <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+                      <ul className="flex flex-col text-base font-medium py-4">
+                        <li>
+                          <Link to="/" className="block px-5 py-3 hover:bg-gray-100">
+                            HOME
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/ourbusiness"
+                            className="block px-5 py-3 hover:bg-gray-100"
+                          >
+                            ABOUT US
+                          </Link>
+                        </li>
+                        <li>
+                          <button
+                            onClick={() => setSubmenuOpen(!submenuOpen)}
+                            className="w-full flex justify-between items-center px-5 py-3 hover:bg-gray-100"
+                          >
+                            OUR BUSINESS
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className={`w-4 h-4 transition-transform ${
+                                submenuOpen ? "rotate-180" : ""
+                              }`}
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </button>
+                          {submenuOpen && (
+                          <ul className="pl-6 bg-gray-50">
+          {[
+            { name: "Dr. Fixit Ltd.", link: "/drfixit" },
+            { name: "Jaguar Lubricants", link: "/jaguar" },
+            { name: "Motul", link: "/motul" },
+            { name: "Robinson Can Industries", link: "/robinson" },
+          ].map((item, i) => (
+            <li key={i}>
+              <Link
+                to={item.link}
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+                          )}
+                        </li>
+                        <li>
+                          <Link
+                            to="/careers"
+                            className="block px-5 py-3 hover:bg-gray-100"
+                          >
+                            CAREERS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="https://wa.me/yourwhatsapp"
+                            className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
+                          >
+                            Let’s Talk
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/dealer"
+                            className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
+                          >
+                            Find Link Dealer
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </>
+                )}
       </header>
       {/* =========================== */}
       <section className="relative z-[-9999] border-b border-gray-200 bg-white py-10 px-10 md:px-48 flex flex-col md:flex-row items-center justify-between">
