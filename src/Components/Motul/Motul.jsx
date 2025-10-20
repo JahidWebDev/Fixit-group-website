@@ -529,7 +529,7 @@ const Motul = () => {
         </ul>
 
         <p className="text-gray-700 text-lg md:text-xl lg:text-2xl leading-relaxed mt-10">
-          So rest assured — when you buy from us, you're getting authentic,
+          So rest assured - when you buy from us, you're getting authentic,
           high-quality Motul products with full confidence and guarantee.
         </p>
       </div>
