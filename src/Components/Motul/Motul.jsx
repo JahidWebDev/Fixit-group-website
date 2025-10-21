@@ -14,13 +14,13 @@ import bgImage2 from "../../assets/Motol-&-Car.png";
 import Phuter from "../../assets/Phuter.png";
 
 import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
-import product2 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
-import product3 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
+import product2 from "../../assets/MOTUL_ENGINE_OIL_4T_7100_10W-40.png";
+import product3 from "../../assets/MOTUL-7100-4T-20W-50 FULL-SYNTHETIC-1L-FRANCE.png";
 import product4 from "../../assets/MOTUL-5100-20W-50-4T.png";
 import product5 from "../../assets/MOTUL-GEAR_300-LS-75W-90.png";
 import product6 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
 import product7 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
-import product8 from "../../assets/MOTUL-GEAR_300-LS-75W-90.png";
+import product8 from "../../assets/MOTUL-7100-4T-10W-40-ESTER.png";
 
 
 const Motul = () => {
@@ -612,19 +612,19 @@ const Motul = () => {
     
                         {/* Product Info */}
                         <div className="p-5 flex flex-col flex-grow justify-between text-center gap-2">
-                          <h3 className="text-[17px] font-bold text-[#222] leading-[1.1]">
+                          <h3 className="text-[17px] font-bold text-black leading-[1.4]">
                             {p.name}
                           </h3>
-                          <p className="text-[14px] text-gray-600 leading-[1.4]">
+                          <p className="text-[14px] text-gray-600 leading-[1.0]">
                             {p.desc}
                           </p>
-                          <p className="text-[14px] text-gray-600 leading-[1.4]">
+                          <p className="text-[14px] text-gray-600 leading-[1.0]">
                             {p.descone}
                           </p>
-                          <p className="text-[14px] text-gray-600 leading-[1.4]">
+                          <p className="text-[14px] text-gray-600 leading-[1.0]">
                             {p.desctwo}
                           </p>
-                          <p className="text-[14px] text-gray-600 leading-[1.4]">
+                          <p className="text-[14px] text-gray-600 leading-[1.0]">
                             {p.descthree}
                           </p>
                         </div>

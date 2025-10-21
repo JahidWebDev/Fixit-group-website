@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
-import drfixitLogo from "../../assets/Dr-Fixit-Logo.png";
+
 import emailjs from "emailjs-com";
 import callIcon from "../../assets/Call-Icon-Green.png";
 import LocationIcon from "../../assets/Location-Man-Icon.png";
@@ -20,7 +20,7 @@ import product9 from "../../assets/JAGUAR-Diesel-Extream-Power-Engine-Oil.png";
 import product10 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
 import product11 from "../../assets/JAGUAR-Hydralic-Oil-AW-Engine-Oil.png";
 import product12 from "../../assets/JAGUAR-Gear-Oil-GL-4.png";
-import product13 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
+
 
 const products = [
 {
@@ -233,20 +233,8 @@ description2: "Whether used in trucks, buses, construction machinery, or agricul
     image: product12, 
   },
 
-  {
-    id: 13,
-    title:
-      "Jaguar Hydraulic Oil HV ISO 68",
-    brand: "Jaguar",
-    category: "Premium Anti-Wear Hydraulic Oil - Engineered for Industrial and Heavy-Duty Performance",
-      saeGrade: "HV ISO 68",
-  apiSpecification: "HV",
-    capacity: "20 Liters",
-  madeIn: "UAE",
-    description1:
-      "Jaguar Hydraulic Oil HV ISO 68 is a high-performance, anti-wear hy-draulic fluid specially formulated to deliver maximum protection, extended equipment life, and superior performance in both indus-trial and mobile hydraulic systems. Built with advanced Friction GuardTM technology, it ensures smooth operation and energy-effi-cient performance even under extreme conditions.",
-    image: product13, // update with your actual Fevilock image import
-  },
+
+
 ];
 
 const JaguarDetails = ({}) => {
@@ -1956,116 +1944,7 @@ const JaguarDetails = ({}) => {
 </section>
 
             )}
-            {p.id === 13 && (
-                          <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
-
-  {/* Application */}
-  <div className="border-t border-gray-300 py-6">
-    <h2 className="font-semibold text-lg mb-4">Application:</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Jaguar Hydraulic Oil AW ISO 100 is recommended for hydraulic systems operating under high-pressure or heavy-load conditions.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Ideal for industrial machinery, construction equipment, plastic molding machines, and mobile hydraulics.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Suitable for systems requiring a premium anti-wear hydraulic fluid meeting international OEM specifications.
-      </li>
-    </ul>
-  </div>
-
-  {/* Specifications & Approvals */}
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Specifications & Approvals</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>ASTM D6158, Eaton E-FDGN-TB002-E, Bosch Rexroth, DIN 51524 Parts 1, 2, 3
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>Parker Denison HF-0 / HF-1 / HF-2, Cincinnati/MAG IAS P-69, US Steel 127, 136
-      </li>
-    </ul>
-  </div>
-
-  {/* Key Features & Benefits */}
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
-
-    <div className="space-y-4">
-      <div>
-        <p className="font-semibold">Exceptional Anti-Wear Protection:</p>
-        <p>Advanced additive system reduces metal-to-metal contact, minimizing wear in pumps, valves, and hydraulic motors.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Superior Oxidation Stability:</p>
-        <p>Provides up to 5,000 hours of oxidation resistance, ensuring longer oil life and reduced maintenance costs.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Enhanced System Cleanliness:</p>
-        <p>Effectively controls sludge, varnish, and deposits for improved hydraulic efficiency.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Wide Temperature Range Performance:</p>
-        <p>Maintains excellent viscosity and flow in both hot and cold operating conditions.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Corrosion & Rust Protection:</p>
-        <p>Guards against rust formation and component corrosion, extending system life.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Fast Air & Water Separation:</p>
-        <p>Improves filtration and prevents foaming in high-pressure environments.</p>
-      </div>
-    </div>
-  </div>
-
-  {/* Technical Properties */}
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["Viscosity @ 40°C", "ASTM D445", "100 cSt"],
-          ["Viscosity @ 100°C", "ASTM D445", "11.5 cSt"],
-          ["Viscosity Index", "ASTM D2270", "98"],
-          ["Flash Point", "ASTM D92", "230°C"],
-          ["Pour Point", "ASTM D5950", "-27°C"],
-          ["Oxidation Stability", "ASTM D943", "5000 hours"],
-          ["Zinc, wt.%", "ASTM D5185", "0.042"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
-
-  {/* Available Packs */}
-  <div className="py-6  border-gray-300">
-    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>5L | 20L | 60L | 208L Drums</p>
-  </div>
-</section>
-            )}
+         
           </div>
         </div>
       </section>

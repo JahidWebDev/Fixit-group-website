@@ -8,9 +8,9 @@ import jaguarLogo from "../../assets/Jaguar-logo.png";
 import callIcon from "../../assets/Call-Icon-Green.png";
 import LocationIcon from "../../assets/Location-Man-Icon.png";
 
-import bgImage from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-Ads-Baneer.png";
-import bgImage1 from "../../assets/ales-krivec-4miBe6zg5r0-unsplash.jpg";
-import bgImage2 from "../../assets/claudio-testa--SO3JtE3gZo-unsplash.jpg";
+import bgImage from "../../assets/Jaguar-lubricants-Web-Banner.png";
+import bgImage1 from "../../assets/Bike-20W40.png";
+import bgImage2 from "../../assets/Bike-20W40.png";
 import Phuter from "../../assets/Phuter.png";
 
 import product1 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SM.png";
@@ -25,7 +25,7 @@ import product9 from "../../assets/JAGUAR-Diesel-Extream-Power-Engine-Oil.png";
 import product10 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
 import product11 from "../../assets/JAGUAR-Hydralic-Oil-AW-Engine-Oil.png";
 import product12 from "../../assets/JAGUAR-Gear-Oil-GL-4.png";
-import product13 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
+
 
 const Jaguar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -155,16 +155,7 @@ const Jaguar = () => {
       category: "Febilock Glue",
       img: product12,
     },
-    {
-      id: 13,
-      name: "JAGUAR Industrial & Marine Oil",
-      desc: "20 Litre SAE-90",
-      descone: "API-GL-4",
-      desctwo: "Formulated by U.A.S",
-      descthree: "",
-      category: "Febilock Glue",
-      img: product13,
-    },
+   
   ];
 
   // ✅ Filter logic
@@ -666,19 +657,19 @@ const Jaguar = () => {
 
                     {/* Product Info */}
                     <div className="p-5 flex flex-col flex-grow justify-between text-center gap-2">
-                      <h3 className="text-[17px] font-bold text-[#222] leading-[1.1]">
+                      <h3 className="text-[17px] font-bold text-black leading-[1.4]">
                         {p.name}
                       </h3>
-                      <p className="text-[14px] text-gray-600 leading-[1.4]">
+                      <p className="text-[14px] text-gray-600 leading-[1.0]">
                         {p.desc}
                       </p>
-                      <p className="text-[14px] text-gray-600 leading-[1.4]">
+                      <p className="text-[14px] text-gray-600 leading-[1.0]">
                         {p.descone}
                       </p>
-                      <p className="text-[14px] text-gray-600 leading-[1.4]">
+                      <p className="text-[14px] text-gray-600 leading-[1.0]">
                         {p.desctwo}
                       </p>
-                      <p className="text-[14px] text-gray-600 leading-[1.4]">
+                      <p className="text-[14px] text-gray-600 leading-[1.0]">
                         {p.descthree}
                       </p>
                     </div>
