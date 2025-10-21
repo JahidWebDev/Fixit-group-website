@@ -12,15 +12,10 @@ import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
 import product2 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SN.png";
 import product3 from "../../assets/JAGUAR-High-Performance-Gasoline-CNG-Engine-Oil-01.png";
 import product4 from "../../assets/MOTUL-5100-20W-50-4T.png";
-import product5 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil-CH-4.png";
-import product6 from "../../assets/JAGUAR-Diesel-Heavy-Duty-Engine-Oil.png";
+import product5 from "../../assets/MOTUL-GEAR_300-LS-75W-90.png";
+import product6 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
 import product7 from "../../assets/JAGUAR-Diesel-HD-50-Engine-Oil.png";
 import product8 from "../../assets/JAGUAR-Diesel-Extra-Mileage-Engine-Oil.png";
-import product9 from "../../assets/JAGUAR-Diesel-Extream-Power-Engine-Oil.png";
-import product10 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
-import product11 from "../../assets/JAGUAR-Hydralic-Oil-AW-Engine-Oil.png";
-import product12 from "../../assets/JAGUAR-Gear-Oil-GL-4.png";
-import product13 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
 
 const products = [
 {
@@ -116,17 +111,17 @@ image: product3
 
 {
   id: 6,
-  title: "Jaguar Heavy Duty 15W-40 API CI-4/SM Engine Oil",
-  brand: "Jaguar",
-  category: "Premium High-Performance Diesel Engine Oil for Commercial Use",
-  capacity: "10 Liters",
-  saeGrade: "15W-40",
-  apiSpecification: "CI-4/SM",
-  madeIn: "UAE",
+  title: "MOTUL 300V 4T 10W-40 FULL SYNTHETIC 1L (INDONESIA)",
+  brand: "Motul",
+  category: "100% Synthetic (Ester Core®)",
+  capacity: "1 Litre (Made in Indonesia)",
+  saeGrade: "SAE 10W-40",
+  apiSpecification: "FULL SYNTHETIC",
+  madeIn: "INDONESIA",
   description1:
-    "Jaguar Heavy Duty 15W-40 API CI-4/SM is a high-performance, heavy-duty diesel engine oil developed using advanced technology base oils and a balanced additive system. It is specially engineered to deliver maximum protection and performance for turbo-charged and intercooled diesel engines operating under severe on-road and off-road conditions.",
+    "JMotul 300V 4T 10W-40 is a premium fully synthetic motorcycle engine oil formulated with Ester Core® Technology, developed for maximum power output and ultimate protection under extreme racing or sport-riding conditions.",
   description2:
-    "Formulated with superior thermal and oxidation stability, Jaguar Heavy Duty ensures longer engine life, enhanced cleanliness, and extended drain intervals making it the ideal choice for commercial vehicles, trucks, buses, and heavy equipment.",
+    "Originally designed for factory racing teams, the 300V series deliv-ers superior engine response, increased clutch grip, and reduced internal friction — ensuring the best performance for both on-road and off-road high-performance motorcycles.",
   image: product6,
 },
 
@@ -168,84 +163,8 @@ image: product3
 
     image: product8,
   },
-  {
-    id: 9,
-    title:
-      "Jaguar Extra Mileage 15W-40 API-CH4",
-
-  brand: "Jaguar",
-  category: "High-Performance Motor Oil for Gasoline & Diesel Engines",
-  saeGrade: "20W50",
-  apiSpecification: "CH4",
-    capacity: "20 Liters",
-  madeIn: "UAE",
-    description1:
-      "Jaguar Extra Mileage 20W-50 API-CH4 is a premium multigrade diesel engine oil specially engineered to provide outstanding pro-tection and performance for modern and older diesel engines. De-veloped using advanced additive technology and high-quality base oils, it helps to reduce engine wear, prevent sludge formation, and maintain engine cleanliness for longer service life.",
-description2: "Whether used in trucks, buses, construction machinery, or agricul-tural equipment, Jaguar Extra Mileage ensures maximum engine protection under severe operating conditions and high-tempera-ture environments.",
-    image: product9,
-  },
-  {
-    id: 10,
-    title:
-      "Jaguar Hydraulic Oil HV ISO 68",
-    brand: "Jaguar",
-    category: "Premium Anti-Wear Hydraulic Oil - Engineered for Industrial and Heavy-Duty Performance",
-      saeGrade: "HV ISO 68",
-  apiSpecification: "HV",
-    capacity: "20 Liters",
-  madeIn: "UAE",
-    description1:
-      "Jaguar Hydraulic Oil HV ISO 68 is a high-performance, anti-wear hy-draulic fluid specially formulated to deliver maximum protection, extended equipment life, and superior performance in both indus-trial and mobile hydraulic systems. Built with advanced Friction GuardTM technology, it ensures smooth operation and energy-effi-cient performance even under extreme conditions.",
-    image: product10,
-   
-  },
-  {
-    id: 11,
-    title:
-      "Jaguar Hydraulic Oil AW ISO 100",
-    brand: "Jaguar",
-    category: "Premium Anti-Wear Hydraulic Oil - Engineered for Industrial and Heavy-Duty Performance",
-       saeGrade: "AW ISO 100",
-  apiSpecification: "AW",
-    capacity: "20 Liters",
-  madeIn: "UAE",
-    description1:
-      "Jaguar Hydraulic Oil AW ISO 100 is a high-performance, anti-wear hydraulic fluid specially formulated to deliver maximum protec-tion, extended equipment life, and superior performance in both industrial and mobile hydraulic systems. Built with advanced Fric-tion GuardTM technology, it ensures smooth operation and ener-gy-efficient performance even under extreme conditions.",
-    
-    image: product11,
-  },
-  {
-    id: 12,
-   title:
-      "Jaguar Gear Oil GL-4 SAE-90",
-
-  brand: "Jaguar",
-  category: "High-Performance Gearbox Lubricant for Passenger CarsTrucks & Heavy Vehicles",
-  saeGrade: "20W50",
-  apiSpecification: "CF/SF",
-    capacity: "20 Liters",
-  madeIn: "UAE",
-    description1:
-      "Jaguar Gear Oil GL-4 SAE-90 is a premium multi-vehicle gear lubri-cant designed for manual transmissions and transaxles in passen-ger cars, trucks, and other commercial vehicles. Specially formulat-ed with advanced anti-wear and oxidation-resistant additives, it ensures long-lasting protection, smooth gear shifting, and maxi-mum gearbox performance in all driving conditions.",
-   
   
-    image: product12, 
-  },
-
-  {
-    id: 13,
-    title:
-      "Jaguar Hydraulic Oil HV ISO 68",
-    brand: "Jaguar",
-    category: "Premium Anti-Wear Hydraulic Oil - Engineered for Industrial and Heavy-Duty Performance",
-      saeGrade: "HV ISO 68",
-  apiSpecification: "HV",
-    capacity: "20 Liters",
-  madeIn: "UAE",
-    description1:
-      "Jaguar Hydraulic Oil HV ISO 68 is a high-performance, anti-wear hy-draulic fluid specially formulated to deliver maximum protection, extended equipment life, and superior performance in both indus-trial and mobile hydraulic systems. Built with advanced Friction GuardTM technology, it ensures smooth operation and energy-effi-cient performance even under extreme conditions.",
-    image: product13, // update with your actual Fevilock image import
-  },
+   
 ];
 
 const MotulDetails = ({}) => {
@@ -1255,234 +1174,48 @@ const MotulDetails = ({}) => {
             )}
 
             {p.id === 6 && (
-          <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
-      {/* Application */}
-      <div className="border-t  border-gray-300 py-6">
-        <h2 className="font-semibold text-lg mb-4">Application:</h2>
-        <p className="mb-4">
-          Jaguar Heavy Duty 15W-40 API CI-4/SM is recommended for:
-        </p>
-        <ul className="space-y-2 pl-6">
-          <li className="flex items-start">
-            <span className="text-red-600 mr-2">▪</span>
-            Turbocharged and naturally aspirated diesel engines.
-          </li>
-          <li className="flex items-start">
-            <span className="text-red-600 mr-2">▪</span>
-            Heavy-duty trucks and buses operating under continuous load conditions.
-          </li>
-          <li className="flex items-start">
-            <span className="text-red-600 mr-2">▪</span>
-            Construction, mining, and agricultural machinery used in off-highway environments.
-          </li>
-          <li className="flex items-start">
-            <span className="text-red-600 mr-2">▪</span>
-            Mixed fleet operations, including light and heavy commercial vehicles.
-          </li>
-        </ul>
-      </div>
-
-      {/* Performance Standards */}
-      <div className=" py-6">
-        <h2 className="font-semibold text-lg mb-4">Performance Standards</h2>
-        <ul className="space-y-2 pl-6">
-          <li className="flex items-start">
-            <span className="text-red-600 mr-2">▪</span>API: CI-4 / SM
-          </li>
-          <li className="flex items-start">
-            <span className="text-red-600 mr-2">▪</span>Daimler Chrysler: MB 227.0
-          </li>
-          <li className="flex items-start">
-            <span className="text-red-600 mr-2">▪</span>
-            Meets or exceeds requirements of major global OEMs for heavy-duty diesel engines.
-          </li>
-        </ul>
-      </div>
-
-      {/* Key Features & Benefits */}
-      <div className=" py-6">
-        <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
-
-        <div className="space-y-4">
-          <div>
-            <p className="font-semibold">
-              Excellent oxidation & thermal stability:
-            </p>
-            <p>
-              Prevents oil thickening, reduces sludge and high-temperature deposits for prolonged engine life.
-            </p>
-          </div>
-
-          <div>
-            <p className="font-semibold">Outstanding anti-wear protection:</p>
-            <p>
-              Minimizes wear and ring sticking, ensuring smoother performance and longer engine durability.
-            </p>
-          </div>
-
-          <div>
-            <p className="font-semibold">Extended TBN reserve:</p>
-            <p>
-              Provides long-term protection against corrosion and acid build-up for extended oil life.
-            </p>
-          </div>
-
-          <div>
-            <p className="font-semibold">
-              Enhanced detergent & dispersant properties:
-            </p>
-            <p>
-              Keeps engine components cleaner and reduces deposit formation.
-            </p>
-          </div>
-
-          <div>
-            <p className="font-semibold">Superior soot and sludge control:</p>
-            <p>
-              Ensures cleaner combustion and better efficiency under heavy load.
-            </p>
-          </div>
-
-          <div>
-            <p className="font-semibold">Excellent cold start properties:</p>
-            <p>
-              Reduces start-up wear and ensures smooth engine operation in low temperatures.
-            </p>
-          </div>
-
-          <div>
-            <p className="font-semibold">Compatible with seals and gaskets:</p>
-            <p>Helps reduce oil leaks and extend component life.</p>
-          </div>
-
-          <div>
-            <p className="font-semibold">Multi-fleet usability:</p>
-            <p>
-              Suitable for both diesel and gasoline engines, simplifying mixed fleet operations.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Technical Properties */}
-      <section className="mb-6">
-  <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-  <table className="w-full text-left border-collapse text-[15px]">
-    <thead>
-      <tr className="border-b border-gray-300">
-        <th className="py-1">Property</th>
-        <th className="py-1">Test Method</th>
-        <th className="py-1">Typical Value</th>
-      </tr>
-    </thead>
-    <tbody>
-      {[
-        ["SAE Grade", "—", "15W-40"],
-        ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
-        ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.6"],
-        ["Viscosity Index", "ASTM D2270", "99"],
-        ["Sulfated Ash (% wt)", "ASTM D874", "1.1"],
-        ["Total Base Number (mgKOH/g)", "ASTM D2896", "10.1"],
-        ["Pour Point (°C)", "ASTM D97", "-21"],
-        ["Flash Point (°C)", "ASTM D92", "256"],
-        ["Density @ 15°C (kg/l)", "ASTM D4052", "0.89"],
-      ].map(([prop, method, value], i) => (
-        <tr key={i} className="border-b border-gray-200">
-          <td className="py-1">{prop}</td>
-          <td className="py-1">{method}</td>
-          <td className="py-1">{value}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-</section>
-
-
-      {/* Available Packs */}
-      <div className="py-6">
-        <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-        <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
-      </div>
-    </section>
-            )}
-
-            {p.id === 7 && (
-             <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
-  {/* Application */}
-  <div className="border-t border-gray-300 py-6">
-    <h2 className="font-semibold text-lg mb-4">Application:</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Suitable for light to medium-duty diesel engines that require CD and CC oil categories.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Compatible with economical gasoline engines requiring SF and SE grade motor oils.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Recommended for engines operating in high-temperature environments or severe driving conditions.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Ideal for fleet operators, construction vehicles, agricultural equipment, and older passenger cars.
-      </li>
+ <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
+  {/* === Application === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
+    <p className="mb-2 font-semibold text-[17px] text-black">
+      Recommended for:
+    </p>
+    <ul className="space-y-1 ml-4">
+      <li><span className="text-red-600 mr-2">▪</span>High-performance sport bikes and superbikes</li>
+      <li><span className="text-red-600 mr-2">▪</span>Track, racing, and endurance motorcycles</li>
+      <li><span className="text-red-600 mr-2">▪</span>Street and adventure motorcycles with 4-stroke engines</li>
+      <li><span className="text-red-600 mr-2">▪</span>Suitable for bikes with catalytic converters and modern emission systems</li>
     </ul>
-  </div>
+  </section>
 
-  {/* Performance Standards */}
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Performance Standards</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>API: CI-4 / SM
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>Daimler Chrysler: MB 227.0
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Meets or exceeds requirements of major global OEMs for heavy-duty diesel engines.
-      </li>
+  {/* === Performance Standards === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
+    <ul className="space-y-1 ml-4">
+      <li><span className="text-red-600 mr-2">▪</span>Oil Type: 100% Synthetic (Ester Core®)</li>
+      <li><span className="text-red-600 mr-2">▪</span>Viscosity Grade: SAE 10W40</li>
+      <li><span className="text-red-600 mr-2">▪</span>Product Type: 4T Motorcycle Oil</li>
+      <li><span className="text-red-600 mr-2">▪</span>Standards: Exceeds API SP & JASO MA2 requirements</li>
+      <li><span className="text-red-600 mr-2">▪</span>Technology: Double Ester Core® Racing Technology</li>
     </ul>
-  </div>
+  </section>
 
-  {/* Key Features & Benefits */}
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
+  {/* === Key Features & Benefits === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
+    <ul className="space-y-1 ml-4">
+      <li><span className="text-red-600 mr-2">▪</span>Ester Core® Technology ensures exceptional lubrication and film strength</li>
+      <li><span className="text-red-600 mr-2">▪</span>High-temperature and high-RPM stability for ultimate performance</li>
+      <li><span className="text-red-600 mr-2">▪</span>Outstanding anti-wear protection prolongs engine and gearbox life</li>
+      <li><span className="text-red-600 mr-2">▪</span>Maximized engine output and reduced friction losses</li>
+      <li><span className="text-red-600 mr-2">▪</span>Enhanced clutch performance for racing and sporty riding</li>
+      <li><span className="text-red-600 mr-2">▪</span>Stable oil pressure even under severe heat and load</li>
+      <li><span className="text-red-600 mr-2">▪</span>Keeps internal engine components clean for consistent performance</li>
+    </ul>
+  </section>
 
-    <div className="space-y-4">
-      <div>
-        <p className="font-semibold">Excellent Engine Protection:</p>
-        <p>Minimizes wear and tear on engine parts, extending engine life.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">High Oxidation & Corrosion Resistance:</p>
-        <p>Keeps engines cleaner and prevents sludge formation.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Effective Acid Neutralization:</p>
-        <p>Protects vital components from harmful combustion acids.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Smooth Engine Performance:</p>
-        <p>Enhances engine efficiency under both high-temperature and cold-start conditions.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Versatile Application:</p>
-        <p>
-          Perfect for vehicles requiring API SF/CD or CC oils for diesel and SF/SE oils for gasoline engines.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  {/* Technical Properties */}
+  {/* === Technical Properties === */}
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
     <table className="w-full text-left border-collapse text-[15px]">
@@ -1495,15 +1228,15 @@ const MotulDetails = ({}) => {
       </thead>
       <tbody>
         {[
-          ["Appearance (Visual)", "-", "-"],
-          ["Color (ASTM D-1500)", "L", "3.0"],
-          ["Kinematic Viscosity @ 40°C", "ASTM D-7042", "cSt"],
-          ["Kinematic Viscosity @ 100°C", "ASTM D-7042", "cSt"],
-          ["Viscosity Index (min)", "ASTM D-2270", "-"],
-          ["Specific Gravity @ 15°C", "ASTM D-4052", "g/cm³"],
-          ["Flash Point (min)", "ASTM D-92", "°C"],
-          ["Pour Point (max)", "ASTM D-97", "°C"],
-          ["Total Base Number (TBN)", "ASTM D-2896", "6 mg KOH/g"],
+          ["SAE Grade", "—", "10W-40"],
+          ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
+          ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
+          ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
+          ["Viscosity Index", "ASTM D2270", "140"],
+          ["Pour Point (°C)", "ASTM D97", "-33"],
+          ["Flash Point (°C)", "ASTM D92", "228"],
+          ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
+          ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
         ].map(([prop, method, value], i) => (
           <tr key={i} className="border-b border-gray-200">
             <td className="py-1">{prop}</td>
@@ -1515,12 +1248,97 @@ const MotulDetails = ({}) => {
     </table>
   </section>
 
-  {/* Available Packs */}
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
+  {/* === Available Packs === */}
+  <section>
+    <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
     <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
-  </div>
-</section>
+  </section>
+</div>
+
+            )}
+
+            {p.id === 7 && (
+<div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
+  {/* === Application === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
+    <p className="mb-2 font-semibold text-[17px] text-black">
+      Recommended for:
+    </p>
+    <ul className="space-y-1 ml-4">
+      <li><span className="text-red-600 mr-2">▪</span>High-performance sport bikes and superbikes</li>
+      <li><span className="text-red-600 mr-2">▪</span>Track, racing, and endurance motorcycles</li>
+      <li><span className="text-red-600 mr-2">▪</span>Street and adventure motorcycles with 4-stroke engines</li>
+      <li><span className="text-red-600 mr-2">▪</span>Suitable for bikes with catalytic converters and modern emission systems</li>
+    </ul>
+  </section>
+
+  {/* === Performance Standards === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
+    <ul className="space-y-1 ml-4">
+      <li><span className="text-red-600 mr-2">▪</span>Oil Type: 100% Synthetic (Ester Core®)</li>
+      <li><span className="text-red-600 mr-2">▪</span>Viscosity Grade: SAE 10W40</li>
+      <li><span className="text-red-600 mr-2">▪</span>Product Type: 4T Motorcycle Oil</li>
+      <li><span className="text-red-600 mr-2">▪</span>Standards: Exceeds API SP & JASO MA2 requirements</li>
+      <li><span className="text-red-600 mr-2">▪</span>Technology: Double Ester Core® Racing Technology</li>
+    </ul>
+  </section>
+
+  {/* === Key Features & Benefits === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
+    <ul className="space-y-1 ml-4">
+      <li><span className="text-red-600 mr-2">▪</span>Ester Core® Technology ensures exceptional lubrication and film strength</li>
+      <li><span className="text-red-600 mr-2">▪</span>High-temperature and high-RPM stability for ultimate performance</li>
+      <li><span className="text-red-600 mr-2">▪</span>Outstanding anti-wear protection prolongs engine and gearbox life</li>
+      <li><span className="text-red-600 mr-2">▪</span>Maximized engine output and reduced friction losses</li>
+      <li><span className="text-red-600 mr-2">▪</span>Enhanced clutch performance for racing and sporty riding</li>
+      <li><span className="text-red-600 mr-2">▪</span>Stable oil pressure even under severe heat and load</li>
+      <li><span className="text-red-600 mr-2">▪</span>Keeps internal engine components clean for consistent performance</li>
+    </ul>
+  </section>
+
+  {/* === Technical Properties === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+    <table className="w-full text-left border-collapse text-[15px]">
+      <thead>
+        <tr className="border-b border-gray-300">
+          <th className="py-1">Property</th>
+          <th className="py-1">Test Method</th>
+          <th className="py-1">Typical Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["SAE Grade", "—", "10W-40"],
+          ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
+          ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
+          ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
+          ["Viscosity Index", "ASTM D2270", "140"],
+          ["Pour Point (°C)", "ASTM D97", "-33"],
+          ["Flash Point (°C)", "ASTM D92", "228"],
+          ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
+          ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
+        ].map(([prop, method, value], i) => (
+          <tr key={i} className="border-b border-gray-200">
+            <td className="py-1">{prop}</td>
+            <td className="py-1">{method}</td>
+            <td className="py-1">{value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  {/* === Available Packs === */}
+  <section>
+    <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
+    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
+  </section>
+</div>
+
 
             )}
             {p.id === 8 && (
