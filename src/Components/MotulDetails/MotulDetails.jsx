@@ -5,13 +5,13 @@ import drfixitLogo from "../../assets/Dr-Fixit-Logo.png";
 import emailjs from "emailjs-com";
 import callIcon from "../../assets/Call-Icon-Green.png";
 import LocationIcon from "../../assets/Location-Man-Icon.png";
-import jaguarLogo from "../../assets/Jaguar-logo.png";
+import mutolLogo from "../../assets/Motul-Logo.png";
 import Phuter from "../../assets/Phuter.png";
 
-import product1 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SM.png";
+import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
 import product2 from "../../assets/JAGUAR-4T-Motor-Engine-Oil-SN.png";
 import product3 from "../../assets/JAGUAR-High-Performance-Gasoline-CNG-Engine-Oil-01.png";
-import product4 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil.png";
+import product4 from "../../assets/MOTUL-5100-20W-50-4T.png";
 import product5 from "../../assets/JAGUAR-Multi-Grade-Engine-Oil-CH-4.png";
 import product6 from "../../assets/JAGUAR-Diesel-Heavy-Duty-Engine-Oil.png";
 import product7 from "../../assets/JAGUAR-Diesel-HD-50-Engine-Oil.png";
@@ -24,22 +24,23 @@ import product13 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
 
 const products = [
 {
-  id: 1,
-  title: "JAGUAR 20W-40 4T / 20W-50 4T",
-  brand: "Jaguar",
-  category: "Motor Cycle Engine Oil (Motor Engine Oil)",
-  capacity: "1 Liter",
+    id: 1,
+  title: "Motul 20W-40 4-Stroke Motorcycle Oil (1L)",
+  brand: "Motul",
+  category: "Motul 20W-40 4-Stroke Motorcycle Oil",
+  capacity: "1 Litre",
   saeGrade: "20W-40",
-  apiSpecification: "SM JASO MA2",
-  madeIn: "UEA",
-  subtitle: "Jaguar 20W-40 - Premium Four-Stroke Motorcycle Engine Oil",
+  apiSpecification: "SM",
+  jasoSpecification: "MA2 (HC-Tech)",
+  origin: "France & India",
+  import: "India & France",
   description1:
-    "Jaguar 20W-40 is a high-performance motorcycle engine oil specially formulated for modern four-stroke engines. Developed with advanced additive technology and highly refined mineral base oils, it ensures superior engine protection, smooth clutch performance, and extended engine life.",
-  description2:
-    "While optimized for the latest engine technology, Jaguar 20W-40 also provides excellent protection for older motorcycle engines, perfectly matching evolving engine technology trends from leading OEMs. Its heat-activated anti-wear molecules™ protect the engine instantly from start-up to high-temperature, long-distance rides.",
-  availablePackaging: "1 Liter",
-  image: product1, 
+    "Motul 20W-40 4-Stroke Motorcycle Oil is specially formulated for all types of 4-stroke motorcycles up to 150cc. Designed to deliver excellent performance even in high-temperature conditions, this oil ensures smooth engine, gear, and wet clutch operation with outstanding protection and cleanliness.",
+  image: product1,
+
 },
+
+
 
 
  {
@@ -60,42 +61,40 @@ const products = [
 
 
   {
-    id: 3,
-    title:
-      "Jaguar Perfect CNG 20W-50 - Premium Synthetic-Technology Engine Oil",
-    brand: "Jaguar",
-    category: "CNG Engine Oil, (Gasoline Engine Oil)",
-     capacity: "2 Liter",
-  saeGrade: "20W-40",
-  apiSpecification: "SL",
-  madeIn: "UEA",
-    subtitle: "Jaguar, CNG Oil 2L, 20W-50Engine Oil API-SL/CF-2L, Semi Synthetic",
-    description1:
-      "Jaguar Perfect CNG 20W-50 is a premium synthetic-technology engine oil designed for CNG, LPG, petrol, and diesel engines. Formulated with advanced Friction-Shield TechnologyTM, it pro-vides superior engine wear protection, reduces friction, and en-sures long-lasting engine life.",
-    description2: "This high-performance oil delivers excellent cleanliness, oxida-tion stability, and high-temperature protection, making it ideal for vehicles that operate in hot or severe driving conditions. Wheth-er you drive a CNG car, van, or light truck, Jaguar Perfect CNG 20W-50 keeps your engine running smoother and cleaner every day.",
-      availablePackaging: "2 litre",
-    image: product3,
+  id: 3,
+title: "Motul 7100 Fully Synthetic 4-Stroke Motorcycle Oil 1L (FRANCE)",
+brand: "Motul",
+category: "Motul 20W-50 Fully Synthetic (Ester Technology)",
+capacity: "1 Liter",
+saeGrade: "20W-50",
+apiSpecification: "API SP",
+jasoSpecification: "MA2 (JASO T903:2023)",
+description1: "Motul 7100 is a best-in-class fully synthetic motor oil engineered with Ester Core® technology for maximum protection and out-standing performance in both on-road and off-road conditions. It is suitable for all types of high-performance 4-stroke motorcy-cles, whether they have an integrated or non-integrated gear-box, and whether they use a wet or dry clutch system.",
+description2: "TPerfectly designed for motorcycles equipped with catalytic con-verters or secondary air injection systems, Motul 7100 ensures optimal engine cleanliness, reduced friction, and superior pro-tection under extreme riding conditions - from daily commutes to sport and adventure riding.",
+
+image: product3
+
   },
 
 {
   id: 4,
-  title: "Jaguar Premium Multi-Grade Engine Oil",
-  brand: "Jaguar",
-  category: "Fully Synthetic Engine Oil for Cars & Motorcycles",
-  capacity: "4 Liters",
-  saeGrade: "20W-50",
-  apiSpecification: " SM",
-  madeIn: "UAE",
+  title: "MOTUL 5100 20W-50 4T",
+  brand: "Motul",
+  category: "Motul 5100 20W-50 4T is a high-performance semi-synthetic engine oil",
+  engineType: "4T (4-Stroke)",
+  viscosity: "20W-50",
+  apiSpecification: "API SP",
+  jasoSpecification: "MA2 (2023)",
+
   
   description1:
-    "Jaguar Premium Multi-Grade Engine Oil SAE 20W-50 is a fully synthetic, high-performance engine oil engineered to deliver superior wear protection, cleaner performance, and longer engine life. Designed for modern petrol and diesel engines, this advanced formula ensures excellent lubrication even under extreme heat and heavy-load driving conditions.",
+    "Motul 5100 20W-50 4T is a high-performance semi-synthetic engine oil (Technosynthese®) designed for 4-stroke motorcycles that require reliability, smooth performance, and protection in everyday use and light recreational riding.",
   description2:
-    "The fully synthetic base oils combined with anti-wear and detergent additives provide exceptional film strength, reduce friction, and keep engine components clean for smoother performance and extended oil drain intervals.",
-  description3:
-    "Whether you drive a car, SUV, or motorcycle, Jaguar 20W-50 API SM offers reliable, long-lasting protection and consistent power delivery for your engine.",
+    "Formulated with Motul’s exclusive Ester technology, this oil en-sures easy cold starts, smoother gear shifting, and optimized fuel efficiency, while extending engine and gearbox life even under demanding conditions.",
 
   image: product4,
 },
+
 
 
 {
@@ -249,7 +248,7 @@ description2: "Whether used in trucks, buses, construction machinery, or agricul
   },
 ];
 
-const JaguarDetails = ({}) => {
+const MotulDetails = ({}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -558,27 +557,27 @@ const JaguarDetails = ({}) => {
       </header>
       {/* =========================== */}
       <section className="relative z-[-9999] border-b border-gray-200 bg-white py-10 px-10 md:px-48 flex flex-col md:flex-row items-center justify-between">
-        {/* Left text */}
-        <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4">
-          <p className="text-lg md:text-xl text-black">
-            Business / <span className="font-bold">Jaguar Lubricants</span>
-          </p>
-          <span className="hidden md:block w-[2px] h-9 bg-black"></span>
-          <p className="text-black text-base md:text-lg leading-tight">
-            High-Performance Engine Oil in Bangladesh
-            <br className="hidden md:block" /> Imported from UAE
-          </p>
-        </div>
-
-        {/* Right logo */}
-        <div className="mt-4 md:mt-0">
-          <img
-            src={jaguarLogo}
-            alt="Jaguar Logo"
-            className="w-[160px] md:w-[200px] object-contain"
-          />
-        </div>
-      </section>
+            {/* Left text */}
+            <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-2 md:gap-4">
+              <p className="text-lg md:text-xl text-black">
+                Business / <span className="font-bold">Motul Bangladesh</span>
+              </p>
+              <span className="hidden md:block w-[2px] h-9 bg-black"></span>
+              <p className="text-gray-800 text-base md:text-lg leading-tight">
+                100% Genuine Motul Lubricants-sourced directly
+                <br className="hidden md:block" /> from the official importer
+              </p>
+            </div>
+    
+            {/* Right logo */}
+            <div className="mt-4 md:mt-0">
+              <img
+                src={mutolLogo}
+                alt="mutol Logo"
+                className="w-[160px] md:w-[200px] object-contain"
+              />
+            </div>
+          </section>
       {/* ============================ */}
 
       {/* ============================= */}
@@ -610,15 +609,13 @@ const JaguarDetails = ({}) => {
             {/* Right: Info */}
 <div className="lg:pt-[10px]">
   <div className="space-y-2 text-black md:pl-10 lg:pl-0">
-    {/* Title */}
-    {p.title && (
-      <h2 className="text-2xl md:text-3xl lg:text-2xl font-bold text-black">
-        {p.title}
-      </h2>
-    )}
+    {/* === Title === */}
+    <h2 className="text-2xl md:text-3xl lg:text-2xl font-bold text-black">
+      {p.title}
+    </h2>
 
-    {/* Product Info */}
-    <div className="lg:pt-[10px] space-y-1">
+    {/* === Product Info === */}
+    <div className="space-y-1.5 lg:pt-[5px]">
       {p.brand && (
         <p className="text-base md:text-lg">
           <span className="font-bold text-black">Brand:</span> {p.brand}
@@ -645,51 +642,60 @@ const JaguarDetails = ({}) => {
           {p.apiSpecification}
         </p>
       )}
-      {p.madeIn && (
+      {p.jasoSpecification && (
         <p className="text-base md:text-lg">
-          <span className="font-bold text-black">Made In:</span> {p.madeIn}
-        </p>
-      )}
-      {p.quantity && (
-        <p className="text-base md:text-lg">
-          <span className="font-semibold">Quantity:</span> {p.quantity}
+          <span className="font-bold text-black">JASO Specification:</span>{" "}
+          {p.jasoSpecification}
         </p>
       )}
 
-      {/* Availability (always shown) */}
-      <p className="text-base md:text-lg">
-        <span className="font-semibold">Availability:</span>{" "}
-        <span className="text-green-600 font-medium">In Stock</span>
-      </p>
+      {/* === Origin & Import === */}
+      {(p.origin || p.import) && (
+        <>
+          <h3 className="text-base md:text-lg font-bold text-black mt-4">
+            Origin & Import Details
+          </h3>
+          {p.origin && (
+            <p className="text-base md:text-lg">
+              <span className="font-bold text-black">Country of Origin:</span>{" "}
+              {p.origin}
+            </p>
+          )}
+          {p.import && (
+            <p className="text-base md:text-lg">
+              <span className="font-bold text-black">Country of Import:</span>{" "}
+              {p.import}
+            </p>
+          )}
+        </>
+      )}
     </div>
 
-    {/* Description */}
-    <div className="pt-4">
-      {p.subtitle && (
-        <h3 className="text-xl md:text-[22px] font-bold mb-5">{p.subtitle}</h3>
-      )}
-      {p.description1 && (
-        <p className="text-base md:text-lg text-black leading-relaxed mb-2">
-          {p.description1}
-        </p>
-      )}
-      {p.description2 && (
-        <p className="text-base md:text-lg text-black leading-relaxed">
-          {p.description2}
-        </p>
-      )}
-      {p.description3 && (
-        <p className="text-base md:text-lg mt-2 text-black leading-relaxed">
-          {p.description3}
-        </p>
-      )}
-      {p.availablePackaging && (
-        <p className="text-base md:text-lg text-black leading-relaxed pt-2">
-          <span className="font-bold text-black">Available Packaging:</span>{" "}
-          {p.availablePackaging}
-        </p>
-      )}
-    </div>
+    {/* === Description === */}
+    {(p.subtitle || p.description1 || p.description2 || p.description3) && (
+      <div className="pt-4">
+        {p.subtitle && (
+          <h3 className="text-xl md:text-[22px] font-bold mb-5">
+            {p.subtitle}
+          </h3>
+        )}
+        {p.description1 && (
+          <p className="text-base md:text-lg text-black leading-relaxed mb-2">
+            {p.description1}
+          </p>
+        )}
+        {p.description2 && (
+          <p className="text-base md:text-lg text-black leading-relaxed mb-2">
+            {p.description2}
+          </p>
+        )}
+        {p.description3 && (
+          <p className="text-base md:text-lg text-black leading-relaxed">
+            {p.description3}
+          </p>
+        )}
+      </div>
+    )}
   </div>
 </div>
 
@@ -723,77 +729,96 @@ const JaguarDetails = ({}) => {
           {/* 🔹 Dynamic Text Content */}
           <div className="mt-20 ">
             {p.id === 1 && (
-                <section className="max-w-[1700px] mx-auto border-t border-b border-gray-300 py-6 px-4 text-black text-[15px] leading-relaxed">
-      {/* Application */}
-      <div className="mb-5">
-        <h3 className="font-semibold text-[17px] text-black mb-1">Application:</h3>
-        <ul className="list-none pl-0 space-y-1">
-          <li className="flex">
-            <span className="text-red-600 mr-2">▪</span>
-            Recommended for modern four-stroke motorcycle engines requiring JASO
-            MA or JASO MA2 specifications.
-          </li>
-          <li className="flex">
-            <span className="text-red-600 mr-2">▪</span>
-            Provides strong protection for older motorcycle engines built before
-            the introduction of JASO MA/MA2.
-          </li>
-        </ul>
-      </div>
-
-      {/* Specifications and Approvals */}
-      <div className="mb-5">
-        <h3 className="font-semibold text-[17px] text-black mb-1">
-          Specifications and Approvals:
-        </h3>
-        <p className="mb-2">
-          This product meets or exceeds the requirements of the following
-          industry standards:
-        </p>
-        <ul className="list-none pl-0 space-y-1">
-          <li className="flex">
-            <span className="text-red-600 mr-2">▪</span>JASO MA / JASO MA2
-          </li>
-          <li className="flex">
-            <span className="text-red-600 mr-2">▪</span>API SL
-          </li>
-        </ul>
-      </div>
-
-      {/* Key Features & Benefits */}
-      <div>
-        <h3 className="font-semibold text-[17px] text-black mb-2">
-          Key Features & Benefits
-        </h3>
-
-        <div className="mb-4">
-          <p className="font-semibold text-[17px] text-black">Advanced Engine Protection:</p>
-          <p>
-            Instant protection from{" "}
-            <span className="font-semibold">heat-activated anti-wear molecules™</span>{" "}
-            ensures smooth performance and reduced metal wear even at high
-            temperatures.
-          </p>
-        </div>
-
-        <div className="mb-4">
-          <p className="font-semibold text-[17px] text-black">Enhanced Wear Resistance:</p>
-          <p>
-            Provides <span className="font-semibold">up to 57%</span> more wear
-            protection than the industry standard (based on API SL Sequence IVA
-            test).
-          </p>
-        </div>
-
-        <div>
-          <p className="font-semibold text-[17px] text-black">Smooth Clutch Operation:</p>
-          <p>
-            High-traction formulation helps prevent clutch slippage and allows
-            smoother gear shifting.
-          </p>
-        </div>
-      </div>
+     <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
+    {/* === Application === */}
+    <section className="mb-6">
+      <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
+      <p className="mb-2 font-semibold  text-[17px]  text-black">
+        Buy genuine Motul 20W-40 Motorcycle Oil in Bangladesh from the only official Motul importer.
+      </p>
+      <ul className="space-y-1 ml-4">
+        <li>
+          <span className="text-red-600 mr-2">▪</span>
+          High-performance sport bikes and superbikes
+        </li>
+        <li>
+          <span className="text-red-600 mr-2">▪</span>
+          Track, racing, and endurance motorcycles
+        </li>
+        <li>
+          <span className="text-red-600 mr-2">▪</span>
+          Street and adventure motorcycles with 4-stroke engines
+        </li>
+        <li>
+          <span className="text-red-600 mr-2">▪</span>
+          Suitable for bikes with catalytic converters and modern emission systems
+        </li>
+      </ul>
     </section>
+
+    {/* === Performance Standards === */}
+    <section className="mb-6">
+      <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
+      <ul className="space-y-1 ml-4">
+        <li><span className="text-red-600 mr-2">▪</span>Oil Type: 100% Synthetic (Ester Core®)</li>
+        <li><span className="text-red-600 mr-2">▪</span>Viscosity Grade: SAE 10W40</li>
+        <li><span className="text-red-600 mr-2">▪</span>Product Type: 4T Motorcycle Oil</li>
+        <li><span className="text-red-600 mr-2">▪</span>Standards: Exceeds API SP & JASO MA2 requirements</li>
+        <li><span className="text-red-600 mr-2">▪</span>Technology: Double Ester Core® Racing Technology</li>
+      </ul>
+    </section>
+
+    {/* === Key Features === */}
+    <section className="mb-6">
+      <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
+      <ul className="space-y-1 ml-4">
+        <li><span className="text-red-600 mr-2">▪</span>Suitable for all 4-stroke bikes up to 150cc</li>
+        <li><span className="text-red-600 mr-2">▪</span>Performs exceptionally well under high-temperature conditions</li>
+        <li><span className="text-red-600 mr-2">▪</span>High detergent and dispersant properties keep the engine, gear, and clutch clean</li>
+        <li><span className="text-red-600 mr-2">▪</span>Reinforced anti-wear technology extends engine life and maintains performance</li>
+        <li><span className="text-red-600 mr-2">▪</span>Meets international standards for engine protection and reliability</li>
+      </ul>
+    </section>
+
+    {/* === Technical Properties === */}
+    <section className="mb-6">
+      <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+      <table className="w-full text-left border-collapse text-[15px]">
+        <thead>
+          <tr className="border-b border-gray-300">
+            <th className="py-1">Property</th>
+            <th className="py-1">Test Method</th>
+            <th className="py-1">Typical Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ["SAE Grade", "—", "20W50"],
+            ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
+            ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
+            ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
+            ["Viscosity Index", "ASTM D2270", "140"],
+            ["Pour Point (°C)", "ASTM D97", "-33"],
+            ["Flash Point (°C)", "ASTM D92", "228"],
+            ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
+            ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
+          ].map(([prop, method, value], i) => (
+            <tr key={i} className="border-b border-gray-200">
+              <td className="py-1">{prop}</td>
+              <td className="py-1">{method}</td>
+              <td className="py-1">{value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    {/* === Available Packs === */}
+    <section>
+      <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
+      <p>1L | 3.5L | 5L | 7.5L | 10L | 20L | 50L | 210L Barrel</p>
+    </section>
+  </div>
             )}
 
             {p.id === 2 && (
@@ -926,129 +951,196 @@ const JaguarDetails = ({}) => {
             )}
 
             {p.id === 3 && (
- <div className="text-doc max-w-[1700px]mx-auto p-6 border-t  border-gray-300">
-      {/* Application Section */}
-      <h2 className="text-lg font-semibold mb-2">Application:</h2>
-      <ul className="list-none space-y-1 mb-4">
-        <li><span className="text-red-600 mr-2">▪</span> Ideal for CNG, LPG, petrol, and diesel engines</li>
-        <li><span className="text-red-600 mr-2">▪</span> Suitable for passenger cars, vans, and light trucks</li>
-        <li><span className="text-red-600 mr-2">▪</span> Recommended for turbocharged and high-performance engines</li>
-        <li><span className="text-red-600 mr-2">▪</span> Works effectively in normal to severe driving conditions</li>
-      </ul>
+<div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
+  {/* === Application === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
+    <p className="mb-2 font-semibold text-[17px] text-black">
+      Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W50 is recommended for:
+    </p>
+    <ul className="space-y-1 ml-4">
+      <li>
+        <span className="text-red-600 mr-2">▪</span>
+        Naturally aspirated and turbocharged diesel engines from leading Japanese, European, and American manufacturers
+      </li>
+      <li>
+        <span className="text-red-600 mr-2">▪</span>
+        Heavy-duty trucks, buses, and light commercial vehicles operating in both highway and off-highway conditions
+      </li>
+      <li>
+        <span className="text-red-600 mr-2">▪</span>
+        Off-road machinery in construction, mining, quarrying, and agriculture industries
+      </li>
+      <li>
+        <span className="text-red-600 mr-2">▪</span>
+        Mixed fleet applications, including diesel and gasoline engines where CH-4 performance level is specified
+      </li>
+    </ul>
+  </section>
 
-      {/* Specifications and Approvals */}
-      <h2 className="text-lg font-semibold mb-2">Specifications and Approvals:</h2>
-      <p className="mb-2">Meets or exceeds the following international standards:</p>
-      <ul className="list-none space-y-1 mb-4">
-        <li><span className="text-red-600 mr-2">▪</span> API CF</li>
-        <li><span className="text-red-600 mr-2">▪</span> FORD WSS-M2C929-A</li>
-        <li><span className="text-red-600 mr-2">▪</span> GM 6094M</li>
-      </ul>
+  {/* === Why Choose Motul 7100 === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Why Choose Motul 7100?</h2>
+    <ul className="space-y-1 ml-4">
+      <li><span className="text-red-600 mr-2">▪</span>Delivers sharp engine response and ultimate clutch performance</li>
+      <li><span className="text-red-600 mr-2">▪</span>Provides maximum protection in extreme temperatures and heavy loads</li>
+      <li><span className="text-red-600 mr-2">▪</span>Ensures longer engine life and stable oil performance</li>
+      <li><span className="text-red-600 mr-2">▪</span>Trusted worldwide by riders, racers, and manufacturers</li>
+    </ul>
+    <p className="mt-2 font-semibold text-black">
+      Buy Genuine Motul 7100 in Bangladesh from the only official Motul importer. Experience true Motul performance — Power. Protection. Performance.
+    </p>
+  </section>
 
-      {/* Key Features & Benefits */}
-      <h2 className="text-lg font-semibold mb-2">Key Features & Benefits</h2>
-      <p className="mb-4"><strong>Best for CNG & Petrol Engines:</strong> Specially formulated to handle higher combustion temperatures of CNG vehicles.</p>
-      <p className="mb-4"><strong>Advanced Friction Protection:</strong> Friction-Shield Technology™ minimizes metal contact and reduces engine wear by up to 65%.</p>
-      <p className="mb-4"><strong>Longer Engine Life:</strong> Protects critical parts from heat and wear under both city and highway driving.</p>
-      <p className="mb-4"><strong>Cleaner Performance:</strong> Keeps the engine clean from sludge, deposits, and carbon buildup.</p>
-      <p className="mb-6"><strong>High-Temperature Stability:</strong> Maintains viscosity and performance even under extreme heat and heavy loads.</p>
+  {/* === Key Features & Benefits === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
+    <ul className="space-y-1 ml-4">
+      <li><span className="text-red-600 mr-2">▪</span>Ester-based synthetic oil reduces internal friction and enhances engine efficiency</li>
+      <li><span className="text-red-600 mr-2">▪</span>High-temperature and high-speed resistance ensures durable protection</li>
+      <li><span className="text-red-600 mr-2">▪</span>Superior anti-wear additives extend engine and gearbox life</li>
+      <li><span className="text-red-600 mr-2">▪</span>Keeps clutch, gearbox, and engine clean throughout the oil drain interval</li>
+      <li><span className="text-red-600 mr-2">▪</span>Optimized phosphorus and sulfur content for better catalytic converter performance</li>
+      <li><span className="text-red-600 mr-2">▪</span>Enhanced clutch grip and smoother shifting for sport and adventure riders</li>
+      <li><span className="text-red-600 mr-2">▪</span>Compatible with modern emission systems and exhaust after-treatment technologies</li>
+    </ul>
+  </section>
 
-      {/* Technical Properties */}
-<section className="mb-8">
-  <h2 className="text-[17px] font-semibold mb-3 text-black">
-    Technical Properties
-  </h2>
-  <div className="overflow-x-auto">
-    <table className="w-full border-collapse text-[17px] text-black">
+  {/* === Technical Properties === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+    <table className="w-full text-left border-collapse text-[15px]">
       <thead>
         <tr className="border-b border-gray-300">
-          <th className="text-left py-2 font-medium">Property</th>
-          <th className="text-left py-2 font-medium">Test Method</th>
-          <th className="text-left py-2 font-medium">Typical Value</th>
+          <th className="py-1">Property</th>
+          <th className="py-1">Test Method</th>
+          <th className="py-1">Typical Value</th>
         </tr>
       </thead>
       <tbody>
         {[
-          ["Grade", "SAE 20W-50", "—"],
-          ["Viscosity Index", "ASTM D2270", "151"],
-          ["Total Base Number (mg KOH/g)", "ASTM D2896", "7.5"],
-          ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.859"],
-          ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "10.3"],
-          ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "63"],
-          ["High-Temp High-Shear Viscosity @ 150°C (mPa.s)", "ASTM D4683", "3.0"],
-          ["Pour Point (°C)", "ASTM D97", "−39"],
+          ["SAE Grade", "—", "20W50"],
+          ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
+          ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
+          ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
+          ["Viscosity Index", "ASTM D2270", "140"],
+          ["Pour Point (°C)", "ASTM D97", "-33"],
           ["Flash Point (°C)", "ASTM D92", "228"],
-        ].map(([property, method, value], i) => (
-          <tr
-            key={i}
-            className="border-b border-gray-200 hover:bg-gray-50 transition-colors"
-          >
-            <td className="py-2">{property}</td>
-            <td className="py-2">{method}</td>
-            <td className="py-2">{value}</td>
+          ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
+          ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
+        ].map(([prop, method, value], i) => (
+          <tr key={i} className="border-b border-gray-200">
+            <td className="py-1">{prop}</td>
+            <td className="py-1">{method}</td>
+            <td className="py-1">{value}</td>
           </tr>
         ))}
       </tbody>
     </table>
-  </div>
-</section>
+  </section>
 
+  {/* === Available Packs === */}
+  <section>
+    <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
+    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
+  </section>
+</div>
 
-    </div>
             )}
             {p.id === 4 && (
-       <div className="max-w-[1700px] mx-auto px-6 py-0 text-black">
-      <div className="border-t  border-gray-300 py-6">
-        <h2 className="text-xl font-semibold mb-4">Application:</h2>
-        <ul className="space-y-2 pl-4">
-          {[
-            "Suitable for petrol and diesel engines in cars, SUVs, and motorcycles",
-            "Recommended for high-performance and turbocharged engines",
-            "Works effectively in hot climates, long-distance driving, and heavy traffic conditions",
-            "Provides reliable protection in normal to severe driving environments",
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-2">
-              <span className="text-red-600 text-lg leading-tight">▪</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+   <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
+  {/* === Application === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
+    <p className="mb-2 font-semibold text-[17px] text-black">
+      Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W50 is recommended for:
+    </p>
+    <ul className="space-y-1 ml-4">
+      <li>
+        <span className="text-red-600 mr-2">▪</span>
+        Naturally aspirated and turbocharged diesel engines from leading Japanese, European, and American manufacturers
+      </li>
+      <li>
+        <span className="text-red-600 mr-2">▪</span>
+        Heavy-duty trucks, buses, and light commercial vehicles operating in highway and off-highway conditions
+      </li>
+      <li>
+        <span className="text-red-600 mr-2">▪</span>
+        Off-road machinery in construction, mining, quarrying, and agriculture industries
+      </li>
+      <li>
+        <span className="text-red-600 mr-2">▪</span>
+        Mixed fleet applications including diesel and gasoline engines where CH-4 performance is specified
+      </li>
+    </ul>
+  </section>
 
-      <div className="py-6">
-        <h2 className="text-xl font-semibold mb-4">Specifications and Approvals:</h2>
-        <ul className="space-y-2 pl-4">
-          <li className="flex items-start gap-2">
-            <span className="text-red-600 text-lg leading-tight">▪</span>
-            <span>API SM (meets or exceeds latest international standards)</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-red-600 text-lg leading-tight">▪</span>
-            <span>SAE 20W-50 viscosity grade for enhanced film strength and engine durability</span>
-          </li>
-        </ul>
-      </div>
+  {/* === Performance Standards === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
+    <ul className="space-y-1 ml-4">
+      <li><span className="text-red-600 mr-2">▪</span>Street and commuter trucks/buses</li>
+      <li><span className="text-red-600 mr-2">▪</span>Dual-sport and mixed fleet vehicles</li>
+      <li><span className="text-red-600 mr-2">▪</span>Light off-road and industrial machinery</li>
+      <li><span className="text-red-600 mr-2">▪</span>Provides long-lasting protection and superior performance for engines expecting CH-4 standards</li>
+      <li><span className="text-red-600 mr-2">▪</span>Reliable performance in both on-road and off-road conditions</li>
+    </ul>
+  </section>
 
-      <div className="py-6">
-        <h2 className="text-xl font-semibold mb-4">Key Features & Benefits</h2>
-        <ul className="space-y-2 pl-4">
-          {[
-            "Ensures excellent high-temperature stability and oxidation resistance.",
-            "Superior Wear Protection: Protects vital engine parts and extends engine life.",
-            "Smooth Clutch Operation: High-traction formulation helps prevent clutch slippage and allows smoother gear shifting.",
-            "Excellent Engine Cleanliness: Keeps pistons and valves free from sludge and carbon deposits.",
-            "High Viscosity Strength: Provides a strong oil film for consistent performance under all conditions.",
-            "Enhanced Fuel Efficiency: Reduces internal friction for smoother operation and better mileage.",
-            "Ideal for Older Engines: Perfect for vehicles that need extra protection in hot or heavy-load conditions.",
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-2">
-              <span className="text-red-600 text-lg leading-tight">▪</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+  {/* === Key Features & Benefits === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
+    <ul className="space-y-1 ml-4">
+      <li><span className="text-red-600 mr-2">▪</span>Technosynthese® formula reinforced with Motul Esters for maximum reliability</li>
+      <li><span className="text-red-600 mr-2">▪</span>Smooth engine response and gear shifting for a refined driving experience</li>
+      <li><span className="text-red-600 mr-2">▪</span>Optimized fuel economy and reduced internal friction</li>
+      <li><span className="text-red-600 mr-2">▪</span>Extended engine life — protection up to 16,000 km depending on OEM</li>
+      <li><span className="text-red-600 mr-2">▪</span>Excellent high-temperature stability for both on-road and off-road use</li>
+      <li><span className="text-red-600 mr-2">▪</span>Keeps engine and clutch clean for consistent performance</li>
+      <li><span className="text-red-600 mr-2">▪</span>Compatible with catalytic converters and modern emission systems</li>
+    </ul>
+  </section>
+
+  {/* === Technical Properties === */}
+  <section className="mb-6">
+    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
+    <table className="w-full text-left border-collapse text-[15px]">
+      <thead>
+        <tr className="border-b border-gray-300">
+          <th className="py-1">Property</th>
+          <th className="py-1">Test Method</th>
+          <th className="py-1">Typical Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["SAE Grade", "—", "20W50"],
+          ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
+          ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
+          ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
+          ["Viscosity Index", "ASTM D2270", "140"],
+          ["Pour Point (°C)", "ASTM D97", "-33"],
+          ["Flash Point (°C)", "ASTM D92", "228"],
+          ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
+          ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
+        ].map(([prop, method, value], i) => (
+          <tr key={i} className="border-b border-gray-200">
+            <td className="py-1">{prop}</td>
+            <td className="py-1">{method}</td>
+            <td className="py-1">{value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  {/* === Available Packs === */}
+  <section>
+    <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
+    <p>1L | 3.5L | 5L | 7.5L | 10L | 20L | 50L | 210L Barrel</p>
+  </section>
+</div>
+
             )}
 
             {p.id === 5 && (
@@ -2251,4 +2343,4 @@ const JaguarDetails = ({}) => {
   );
 };
 
-export default JaguarDetails;
+export default MotulDetails;

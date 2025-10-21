@@ -16,10 +16,10 @@ import Phuter from "../../assets/Phuter.png";
 import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
 import product2 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
 import product3 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
-import product4 from "../../assets/MOTUL-7100-4T-20W-50-FULL-SYNTHETIC-1L-FRANCE.png";
-import product5 from "../../assets/MOTUL-5100-20W-50-4T.png";
-import product6 from "../../assets/MOTUL-GEAR_300-LS-75W-90.png";
-import product7 from "../../assets/MOTUL-7100-4T-20W-50-FULL-SYNTHETIC-1L-FRANCE.png";
+import product4 from "../../assets/MOTUL-5100-20W-50-4T.png";
+import product5 from "../../assets/MOTUL-GEAR_300-LS-75W-90.png";
+import product6 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
+import product7 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
 import product8 from "../../assets/MOTUL-GEAR_300-LS-75W-90.png";
 
 
@@ -632,7 +632,7 @@ const Motul = () => {
                         {/* Buttons */}
                         <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
                        <Link
-                         to={`/jaguardetails/${p.id}`}
+                         to={`/motuldetails/${p.id}`}
                          state={{ showBanner: true }} 
                          className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 px-4 rounded-md 
                                     hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center inline-block"

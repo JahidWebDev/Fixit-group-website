@@ -631,52 +631,67 @@ const ProductDetails = ({}) => {
             </div>
 
             {/* Right: Info */}
-            <div className="lg:pt-[10px]">
-              <div className="space-y-2 text-gray-800 md:pl-10 lg:pl-0">
-                {/* Title */}
-                <h2 className="text-2xl md:text-3xl lg:text-2xl font-bold text-gray-900">
-                  {p.title}
-                </h2>
+         <div className="lg:pt-[10px]">
+  <div className="space-y-2 text-gray-800 md:pl-10 lg:pl-0">
+    {/* Title */}
+    {p.title && (
+      <h2 className="text-2xl md:text-3xl lg:text-2xl font-bold text-gray-900">
+        {p.title}
+      </h2>
+    )}
 
-                {/* Product Info */}
-                <div className="lg:pt-[10px]">
-                  <p className="text-base md:text-lg">
-                    <span className="font-semibold">Brand:</span> {p.brand}
-                  </p>
-                  <p className="text-base md:text-lg">
-                    <span className="font-semibold">Category:</span>{" "}
-                    {p.category}
-                  </p>
-                  <p className="text-base md:text-lg">
-                    <span className="font-semibold">Quantity:</span>{" "}
-                    {p.quantity}
-                  </p>
-                </div>
+    {/* Product Info */}
+    <div className="lg:pt-[10px]">
+      {p.brand && (
+        <p className="text-base md:text-lg">
+          <span className="font-semibold">Brand:</span> {p.brand}
+        </p>
+      )}
+      {p.category && (
+        <p className="text-base md:text-lg">
+          <span className="font-semibold">Category:</span> {p.category}
+        </p>
+      )}
+      {p.quantity && (
+        <p className="text-base md:text-lg">
+          <span className="font-semibold">Quantity:</span> {p.quantity}
+        </p>
+      )}
+    </div>
 
-                {/* Availability */}
-                <p className="text-base md:text-lg">
-                  <span className="font-semibold">Availability:</span>{" "}
-                  <span className="text-green-600 font-medium">In Stock</span>
-                </p>
+    {/* Availability */}
+    <p className="text-base md:text-lg">
+      <span className="font-semibold">Availability:</span>{" "}
+      <span className="text-green-600 font-medium">In Stock</span>
+    </p>
 
-                {/* Description */}
-                <div className="pt-4">
-                  <h3 className="text-xl md:text-2xl font-semibold mb-2">
-                    {p.subtitle}
-                  </h3>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed lg:mb-2.5">
-                    {p.subtitletwo}
-                  </p>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    {p.description}
-                  </p>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed pt-2">
-                    <span className="font-semibold">Available Packaging:</span>{" "}
-                    {p.availablePackaging}
-                  </p>
-                </div>
-              </div>
-            </div>
+    {/* Description */}
+    <div className="pt-4">
+      {p.subtitle && (
+        <h3 className="text-xl md:text-2xl font-semibold mb-2">
+          {p.subtitle}
+        </h3>
+      )}
+      {p.subtitletwo && (
+        <p className="text-base md:text-lg text-gray-700 leading-relaxed lg:mb-2.5">
+          {p.subtitletwo}
+        </p>
+      )}
+      {p.description && (
+        <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+          {p.description}
+        </p>
+      )}
+      {p.availablePackaging && (
+        <p className="text-base md:text-lg text-gray-700 leading-relaxed pt-2">
+          <span className="font-semibold">Available Packaging:</span>{" "}
+          {p.availablePackaging}
+        </p>
+      )}
+    </div>
+  </div>
+</div>
+
           </div>
 
           {/* 🔹 Thumbnails */}
