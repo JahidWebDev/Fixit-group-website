@@ -14,8 +14,8 @@ import product3 from "../../assets/JAGUAR-High-Performance-Gasoline-CNG-Engine-O
 import product4 from "../../assets/MOTUL-5100-20W-50-4T.png";
 import product5 from "../../assets/MOTUL-GEAR_300-LS-75W-90.png";
 import product6 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
-import product7 from "../../assets/JAGUAR-Diesel-HD-50-Engine-Oil.png";
-import product8 from "../../assets/JAGUAR-Diesel-Extra-Mileage-Engine-Oil.png";
+import product7 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
+import product8 from "../../assets/MOTUL-GEAR_300-LS-75W-90.png";
 
 const products = [
 {
