@@ -76,7 +76,7 @@ const Motul = () => {
       id: 6,
       name: "MOTUL 300V 4T 10W-40",
       desc: "01 Litre",
-      descone: " Full Synthetic",
+      
      
       img: product6,
     },
