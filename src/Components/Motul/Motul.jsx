@@ -495,7 +495,7 @@ const images = [bannerImage1, bannerImage2];
   className={`fixed w-[120px] h-[60px] md:w-[145px] md:h-[70px] 
               bg-[#25D366]/70 backdrop-blur-md 
               rounded-l-[150px] flex items-center justify-center 
-              shadow-xl z-50`}
+              shadow-xl z-50 transition-[top] duration-200 ease-out`}
   style={{
     top: isMobile ? `${yPos}px` : '50%',
     right: rightOffset,
