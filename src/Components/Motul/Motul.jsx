@@ -51,7 +51,7 @@ const Motul = () => {
     },
     {
       id: 3,
-      name: " MOTUL 7100 4T 20W-50 FULL SYNTHETIC 1L (FRANCE) 1 Litre API-SL 20W-50",
+      name: "MOTUL 7100 4T 20W-50 FULL SYNTHETIC 1L (Vietnam)",
       desc: "2 Litre API-SL 20W-50",
       descone: " Full Synthetic",
       img: product3,
@@ -76,8 +76,6 @@ const Motul = () => {
       id: 6,
       name: "MOTUL 300V 4T 10W-40",
       desc: "01 Litre",
-      
-     
       img: product6,
     },
     {
