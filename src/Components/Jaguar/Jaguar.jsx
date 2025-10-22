@@ -25,7 +25,7 @@ import product9 from "../../assets/JAGUAR-Diesel-Extream-Power-Engine-Oil.png";
 import product10 from "../../assets/JAGUAR-Hydralic-Oil-HV-Engine-Oil.png";
 import product11 from "../../assets/JAGUAR-Hydralic-Oil-AW-Engine-Oil.png";
 import product12 from "../../assets/JAGUAR-Gear-Oil-GL-4.png";
-
+import product13 from "../../assets/Jaguar-Industrial-&-Marine-Oil.png";
 
 const Jaguar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,30 +37,30 @@ const Jaguar = () => {
   const products = [
     {
       id: 1,
-      name: "JAGUAR 4T Motor Engine Oil",
+      name: "JAGUAR 4T Motorcyle Engine Oil",
       desc: "1 Litre API SM JASO MA2",
-      descone: "20W50, 20W40, 10W30, 10W40",
+      descone: "20W50, 20W40",
       desctwo: "Semi Synthetic",
-      descthree: "Formulated by U.A.S",
+      descthree: "Formulated by U.A.E",
       category: "Admixture",
       img: product1,
     },
     {
       id: 2,
-      name: "JAGUAR 4T Motor Engine Oil",
-      desc: "1 Litre API SM JASO MA2",
-      descone: "20W50, 20W40, 10W30, 10W40",
-      desctwo: "Semi Synthetic",
-      descthree: "Formulated by U.A.S",
+      name: "JAGUAR 4T Motorcyle Engine Oil",
+      desc: "1 Litre API SN JASO MA2",
+      descone: "10W30, 10W40",
+      desctwo: "Full Synthetic",
+      descthree: "Formulated by U.A.E",
       category: "Admixture",
       img: product2,
     },
     {
       id: 3,
-      name: " JAGUAR High Performance Gasoline (CNG) Engine Oil",
+      name: "JAGUAR High Performance Gasoline (CNG) Engine Oil",
       desc: "2 Litre API-SL 20W-50",
       descone: "Semi Synthetic",
-      desctwo: "Formulated by U.A.S",
+      desctwo: "Formulated by U.A.E",
       descthree: "",
       category: "Febilock Glue",
       img: product3,
@@ -69,8 +69,8 @@ const Jaguar = () => {
       id: 4,
       name: "JAGUAR Multi-Grade Engine Oil",
       desc: "04 Litre SAE 20W50, API: SM",
-      descone: "Fully Synthetic",
-      desctwo: "Formulated by U.A.S",
+      descone: "Semi Synthetic",
+      desctwo: "Formulated by U.A.E",
       descthree: "",
       category: "Febilock Glue",
       img: product4,
@@ -79,8 +79,8 @@ const Jaguar = () => {
       id: 5,
       name: "JAGUAR Multi-Grade Engine Oil",
       desc: "05 Litre SAE 20W50, API: CH-4",
-      descone: "Fully Synthetic",
-      desctwo: "Formulated by U.A.S",
+      descone: "Semi Synthetic",
+      desctwo: "Formulated by U.A.E",
       descthree: "",
       category: "Febilock Glue",
       img: product5,
@@ -88,9 +88,9 @@ const Jaguar = () => {
     {
       id: 6,
       name: "JAGUAR Diesel (Heavy Duty) Engine Oil",
-      desc: "10 Litre SAE 15W40, API-CI4/SM",
+      desc: "10,11,15,16,18, 20 Litre SAE 15W40, API-CI4/SM",
       descone: "Semi Synthetic",
-      desctwo: "Formulated by U.A.S ",
+      desctwo: "Formulated by U.A.E ",
       descthree: "",
       category: "Febilock Glue",
       img: product6,
@@ -99,7 +99,7 @@ const Jaguar = () => {
       id: 7,
       name: "JAGUAR Diesel (HD-50) Engine Oil",
       desc: "10 Litre API-SF/CD",
-      descone: " Formulated by U.A.S",
+      descone: " Formulated by U.A.E",
       desctwo: "",
       descthree: "",
       category: "Febilock Glue",
@@ -108,9 +108,9 @@ const Jaguar = () => {
     {
       id: 8,
       name: "JAGUAR Diesel (Extra Mileage) Engine Oil",
-      desc: "18 Liter Waterproofing Expert",
-      descone: "10 Litre API-CH4",
-      desctwo: "Formulated by U.A.S",
+
+      descone: "10,11,15,16,18, 20 Litre SAE 20W50 API-CH4",
+      desctwo: "Formulated by U.A.E",
       descthree: "",
       category: "Febilock Glue",
       img: product8,
@@ -118,8 +118,8 @@ const Jaguar = () => {
     {
       id: 9,
       name: "JAGUAR Diesel (Extream Power) Engine Oil",
-      desc: "11 Litre API-CF/SF",
-      descone: "Formulated by U.A.S",
+      desc: "10,11,15,16,18, 20 Litre SAE 20W50 API-CF/SF",
+      descone: "Formulated by U.A.E",
       desctwo: "",
       descthree: "",
       category: "Febilock Glue",
@@ -130,7 +130,7 @@ const Jaguar = () => {
       name: "JAGUAR Hydralic Oil HV  Engine Oil",
       desc: "1 Liter Muilti-Purpase Rust Remover",
       descone: "20 Litre AW ISO C8",
-      desctwo: "Formulated by U.A.S",
+      desctwo: "Formulated by U.A.E",
       descthree: "",
       category: "Febilock Glue",
       img: product10,
@@ -139,7 +139,7 @@ const Jaguar = () => {
       id: 11,
       name: "JAGUAR Hydralic Oil AW Engine Oil",
       desc: "20 Litre AW ISO 100",
-      descone: "Formulated by U.A.S ",
+      descone: "Formulated by U.A.E ",
       desctwo: "",
       descthree: "",
       category: "Febilock Glue",
@@ -150,12 +150,18 @@ const Jaguar = () => {
       name: "AGUAR Gear Oil GL-4",
       desc: "20 Litre SAE-90",
       descone: "API-GL-4",
-      desctwo: "Formulated by U.A.S ",
+      desctwo: "Formulated by U.A.E ",
       descthree: "",
       category: "Febilock Glue",
       img: product12,
     },
-   
+    {
+      id: 13,
+      name: "JAGUAR Industrial & Marine Oil",
+      desc: "205 Litre",
+      desctwo: "Formulated by U.A.E ",
+      img: product13,
+    },
   ];
 
   // ✅ Filter logic
@@ -356,98 +362,98 @@ const Jaguar = () => {
         </div>
 
         {/* Mobile Menu */}
-            {menuOpen && (
-                  <>
-                    <div
-                      className="fixed inset-0 bg-black/40 z-40"
-                      onClick={() => setMenuOpen(false)}
-                    />
-                    <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
-                      <ul className="flex flex-col text-base font-medium py-4">
-                        <li>
-                          <Link to="/" className="block px-5 py-3 hover:bg-gray-100">
-                            HOME
-                          </Link>
-                        </li>
-                        <li>
+        {menuOpen && (
+          <>
+            <div
+              className="fixed inset-0 bg-black/40 z-40"
+              onClick={() => setMenuOpen(false)}
+            />
+            <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+              <ul className="flex flex-col text-base font-medium py-4">
+                <li>
+                  <Link to="/" className="block px-5 py-3 hover:bg-gray-100">
+                    HOME
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/ourbusiness"
+                    className="block px-5 py-3 hover:bg-gray-100"
+                  >
+                    ABOUT US
+                  </Link>
+                </li>
+                <li>
+                  <button
+                    onClick={() => setSubmenuOpen(!submenuOpen)}
+                    className="w-full flex justify-between items-center px-5 py-3 hover:bg-gray-100"
+                  >
+                    OUR BUSINESS
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`w-4 h-4 transition-transform ${
+                        submenuOpen ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {submenuOpen && (
+                    <ul className="pl-6 bg-gray-50">
+                      {[
+                        { name: "Dr. Fixit Ltd.", link: "/drfixit" },
+                        { name: "Jaguar Lubricants", link: "/jaguar" },
+                        { name: "Motul", link: "/motul" },
+                        { name: "Robinson Can Industries", link: "/robinson" },
+                      ].map((item, i) => (
+                        <li key={i}>
                           <Link
-                            to="/ourbusiness"
-                            className="block px-5 py-3 hover:bg-gray-100"
+                            to={item.link}
+                            className="block px-4 py-2 hover:bg-gray-100"
                           >
-                            ABOUT US
+                            {item.name}
                           </Link>
                         </li>
-                        <li>
-                          <button
-                            onClick={() => setSubmenuOpen(!submenuOpen)}
-                            className="w-full flex justify-between items-center px-5 py-3 hover:bg-gray-100"
-                          >
-                            OUR BUSINESS
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className={`w-4 h-4 transition-transform ${
-                                submenuOpen ? "rotate-180" : ""
-                              }`}
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
-                              />
-                            </svg>
-                          </button>
-                          {submenuOpen && (
-                          <ul className="pl-6 bg-gray-50">
-          {[
-            { name: "Dr. Fixit Ltd.", link: "/drfixit" },
-            { name: "Jaguar Lubricants", link: "/jaguar" },
-            { name: "Motul", link: "/motul" },
-            { name: "Robinson Can Industries", link: "/robinson" },
-          ].map((item, i) => (
-            <li key={i}>
-              <Link
-                to={item.link}
-                className="block px-4 py-2 hover:bg-gray-100"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-                          )}
-                        </li>
-                        <li>
-                          <Link
-                            to="/careers"
-                            className="block px-5 py-3 hover:bg-gray-100"
-                          >
-                            CAREERS
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to="https://wa.me/yourwhatsapp"
-                            className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
-                          >
-                            Let’s Talk
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to="/dealer"
-                            className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
-                          >
-                            Find Link Dealer
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </>
-                )}
+                      ))}
+                    </ul>
+                  )}
+                </li>
+                <li>
+                  <Link
+                    to="/careers"
+                    className="block px-5 py-3 hover:bg-gray-100"
+                  >
+                    CAREERS
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://wa.me/yourwhatsapp"
+                    className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
+                  >
+                    Let’s Talk
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/dealer"
+                    className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
+                  >
+                    Find Link Dealer
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </>
+        )}
       </header>
       <section className="relative z-[-9999] border-b border-gray-200 bg-white py-10 px-10 md:px-48 flex flex-col md:flex-row items-center justify-between">
         {/* Left text */}
@@ -474,7 +480,7 @@ const Jaguar = () => {
       <section
         className="
     relative 
-    h-[100px]            /* Default for mobile */
+    h-[150px]            /* Default for mobile */
     sm:h-[600px]         /* Slightly taller on small tablets */
     md:h-[700px]         /* Original height on desktop */
     w-full 
@@ -537,30 +543,30 @@ const Jaguar = () => {
         </div>
       </section>
 
-      <section className="bg-[#F0F2F1] py-24 px-8 md:px-24">
+      <section className="bg-[#F0F2F1] py-16 sm:py-20 md:py-24 px-4 sm:px-8 md:px-16 lg:px-24">
         <div className="max-w-[1500px] mx-auto">
           {/* === Heading === */}
-          <h2 className="text-5xl md:text-6xl font-semibold mb-10 text-[#111]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 sm:mb-8 md:mb-10 text-[#111] text-center md:text-left">
             About <span className="font-bold">JAGUAR Lubricants</span>
           </h2>
 
           {/* === Paragraphs === */}
-          <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] mb-8 text-justify">
+          <p className="text-[16px] sm:text-[18px] md:text-[22px] lg:text-[26px] text-[#222] leading-relaxed md:leading-[1.9] mb-6 sm:mb-8 text-justify">
             <span className="font-bold">JAGUAR Lubricants</span>, established in
             2021 under the National Groups, is a trusted name in premium engine
             oils and industrial lubricants in Bangladesh. We{" "}
             <span className="font-bold">
               import our high-quality products directly from the United Arab
               Emirates (UAE)
-            </span>
+            </span>{" "}
             to ensure world-class performance and reliability.
           </p>
 
-          <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] mb-8 text-justify">
+          <p className="text-[16px] sm:text-[18px] md:text-[22px] lg:text-[26px] text-[#222] leading-relaxed md:leading-[1.9] mb-6 sm:mb-8 text-justify">
             Our mission is to meet{" "}
             <span className="font-bold">
               Bangladesh’s automotive and industrial lubrication needs
-            </span>
+            </span>{" "}
             by providing{" "}
             <span className="font-bold">international-standard lubricants</span>{" "}
             that deliver maximum efficiency and engine protection. We aim to
@@ -569,15 +575,14 @@ const Jaguar = () => {
               the leading lubricant brand in Bangladesh
             </span>
             , expand to <span className="font-bold">global markets</span>, and
-            set new benchmarks through
+            set new benchmarks through{" "}
             <span className="font-bold">
-              {" "}
               advanced technology and innovation
             </span>
             .
           </p>
 
-          <p className="text-[20px] md:text-[26px] text-[#222] leading-[1.9] text-justify">
+          <p className="text-[16px] sm:text-[18px] md:text-[22px] lg:text-[26px] text-[#222] leading-relaxed md:leading-[1.9] text-justify">
             Currently, <span className="font-bold">JAGUAR Lubricants</span>{" "}
             operates through an extensive dealer and service network across
             Bangladesh, with{" "}
@@ -606,11 +611,11 @@ const Jaguar = () => {
                 )}
               </button>
 
-              <div className="flex flex-wrap items-center gap-9">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-5 mt-2 sm:mt-0">
                 {[
                   "Bike",
                   "CNG",
-                  " Car",
+                  "Car",
                   "Bus",
                   "Truc",
                   "Industrial & Marine",
@@ -618,7 +623,7 @@ const Jaguar = () => {
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat)}
-                    className={`relative text-[18px] font-semibold transition-all duration-300 ${
+                    className={`relative text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-semibold transition-all duration-300 ${
                       selectedCategory === cat
                         ? "text-black"
                         : "text-gray-700 hover:text-[#fbbf24]"
@@ -631,7 +636,7 @@ const Jaguar = () => {
                   </button>
                 ))}
 
-                <button className="bg-[#fbbf24] text-black font-semibold px-6 py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
+                <button className="bg-[#fbbf24] text-black font-semibold text-[15px] sm:text-[16px] px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
                   FIND A DEALER
                 </button>
               </div>
@@ -676,15 +681,14 @@ const Jaguar = () => {
 
                     {/* Buttons */}
                     <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
-                   <Link
-                     to={`/jaguardetails/${p.id}`}
-                     state={{ showBanner: true }} 
-                     className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 px-4 rounded-md 
+                      <Link
+                        to={`/jaguardetails/${p.id}`}
+                        state={{ showBanner: true }}
+                        className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 px-4 rounded-md 
                                 hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center inline-block"
-                   >
-                     Product Details
-                   </Link>
-                   
+                      >
+                        Product Details
+                      </Link>
 
                       <Link
                         to="/find-dealer"
@@ -698,11 +702,23 @@ const Jaguar = () => {
                   {/* 🎨 Background Image after every 4 products */}
                   {(index + 1) % 4 === 0 && (index + 1) / 4 <= 2 && (
                     <div
-                      className="block col-span-full w-full h-[250px] bg-cover bg-center rounded-2xl shadow-inner"
+                      className="
+                                   block 
+    col-span-full 
+    w-full 
+    h-[80px] sm:h-[250px] 
+    bg-center 
+    rounded-2xl 
+    lg:shadow-inner 
+    overflow-hidden
+  "
                       style={{
                         backgroundImage: `url(${
                           ((index + 1) / 4) % 2 === 1 ? bgImage1 : bgImage2
                         })`,
+                        backgroundSize: "contain", // ✅ fills height properly (no top/bottom gap)
+                        backgroundRepeat: "no-repeat",
+                        backgrounWidth: "300px",
                       }}
                     ></div>
                   )}
@@ -722,43 +738,41 @@ const Jaguar = () => {
 
       {/* ================= from================= */}
       <section
-        className="relative mb-[50px] bg-black bg-cover bg-center py-20 px-6 md:px-10 text-white"
+        className="relative mb-[50px] bg-black bg-cover bg-center bg-no-repeat py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 text-white overflow-hidden"
         style={{ backgroundImage: `url(${Phuter})` }}
       >
-        {/* Overlay for better readability */}
-        <div className="absolute inset-0 bg-black/5"></div>
+        {/* Responsive Overlay */}
+        <div className="absolute inset-0 bg-black md:bg-black/20"></div>
 
-        <div className="relative max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
+        <div className="relative max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10 md:gap-12">
           {/* Left Side */}
           <div className="flex-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="text-yellow-400 text-6xl">
-                <img
-                  src={LocationIcon}
-                  className="w-[70px]"
-                  alt="Location Icon"
-                />
-              </div>
+              <img
+                src={LocationIcon}
+                className="w-[55px] sm:w-[65px] md:w-[70px]"
+                alt="Location Icon"
+              />
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-normal leading-snug">
-              Fill out the form below to become an <br />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal leading-snug text-center md:text-left">
+              Fill out the form below to become an{" "}
+              <br className="hidden md:block" />
               <span className="font-bold text-white">
                 Authorized Dealer
-              </span>{" "}
-              of{" "}
+              </span> of{" "}
               <span className="font-bold text-yellow-400">
                 Jaguar Lubricants
               </span>
             </h2>
 
-            <p className="mt-6 text-gray-300 leading-relaxed">
+            <p className="mt-6 text-gray-300 text-[15px] sm:text-[16px] md:text-[18px] leading-relaxed text-justify md:text-left">
               <span className="font-bold text-white">Jaguar Lubricants</span> is
               committed to building strong, trustworthy, and sustainable
               business relationships with each of its dealers.
             </p>
 
-            <p className="mt-4 text-gray-300 leading-relaxed">
+            <p className="mt-4 text-gray-300 text-[15px] sm:text-[16px] md:text-[18px] leading-relaxed text-justify md:text-left">
               Our goal is to establish a new benchmark of{" "}
               <span className="font-semibold text-yellow-400">
                 quality, durability, and reliability
@@ -767,52 +781,49 @@ const Jaguar = () => {
             </p>
 
             {/* Contact Info */}
-          <div className="flex flex-col md:flex-row items-center py-4 rounded-md mt-40  text-white space-y-3 md:space-y-0 md:space-x-8">
-  {/* Left – Emergency */}
-  <div className="text-center md:text-left space-y-1">
-    <h3 className="text-base font-semibold text-yellow-400">
-      Emergency
-    </h3>
-    <p className="text-sm font-medium text-gray-300">
-      +8801788360303
-    </p>
-  </div>
+            <div className="flex flex-col md:flex-row items-center md:items-end py-4 md:py-6 mt-12 md:mt-20 space-y-4 md:space-y-0 md:space-x-8 text-white">
+              {/* Emergency */}
+              <div className="text-center md:text-left space-y-1">
+                <h3 className="text-base font-semibold text-yellow-400">
+                  Emergency
+                </h3>
+                <p className="text-sm font-medium text-gray-300">
+                  +8801788360303
+                </p>
+              </div>
 
-  {/* Center – Call Icon */}
-  <div className="relative flex items-center justify-center">
-    <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
-    <a
-      href="https://wa.me/8801788360303"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative z-10 flex items-center justify-center bg-white rounded-full w-[45px] h-[45px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
-    >
-      <img
-        src={callIcon}
-        alt="WhatsApp Call Icon"
-        className="w-[22px] h-[22px]"
-      />
-    </a>
-  </div>
+              {/* Call Icon */}
+              <div className="relative flex items-center justify-center">
+                <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
+                <a
+                  href="https://wa.me/8801788360303"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[45px] h-[45px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
+                >
+                  <img
+                    src={callIcon}
+                    alt="WhatsApp Call Icon"
+                    className="w-[22px] h-[22px]"
+                  />
+                </a>
+              </div>
 
-  {/* Right – Email */}
-  <div className="text-center md:text-right space-y-1">
-    <h3 className="text-base font-semibold text-yellow-400">
-      Email Address
-    </h3>
-    <p className="text-sm font-medium text-gray-300">
-      support@fixitgroupbd.com
-    </p>
-  </div>
-</div>
-
+              {/* Email */}
+              <div className="text-center md:text-right space-y-1">
+                <h3 className="text-base font-semibold text-yellow-400">
+                  Email Address
+                </h3>
+                <p className="text-sm font-medium text-gray-300">
+                  support@fixitgroupbd.com
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Right Side Form */}
-          <div className="bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 
-  rounded-xl p-8 md:w-[420px] shadow-[0_4px_30px_rgba(0,0,0,0.5)] 
-  mx-auto mt-10  ">
-            <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
+          <div className="bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 rounded-xl p-6 sm:p-8 md:w-[420px] w-full sm:max-w-[500px] mx-auto md:mx-0 mt-10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-yellow-400 text-center md:text-left">
               Request a Quote
             </h3>
 
@@ -837,12 +848,12 @@ const Jaguar = () => {
                 required
               />
 
-              <div className="flex space-x-3">
+              <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0">
                 <select
                   name="dealer"
                   value={formData.dealer}
                   onChange={handleChange}
-                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                  className="w-full sm:w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
                   required
                 >
                   <option value="" disabled>
@@ -856,7 +867,7 @@ const Jaguar = () => {
                   name="district"
                   value={formData.district}
                   onChange={handleChange}
-                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                  className="w-full sm:w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
                   required
                 >
                   <option value="" disabled>

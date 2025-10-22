@@ -17,10 +17,12 @@ import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
 import product2 from "../../assets/MOTUL_ENGINE_OIL_4T_7100_10W-40.png";
 import product3 from "../../assets/MOTUL-7100-4T-20W-50 FULL-SYNTHETIC-1L-FRANCE.png";
 import product4 from "../../assets/MOTUL-5100-20W-50-4T.png";
-import product5 from "../../assets/MOTUL-GEAR_300-LS-75W-90.png";
+import product5 from "../../assets/MOTUL-7100-4T-10W-30-FULL-SYNTHETIC-1L-Vietnam.png";
 import product6 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
 import product7 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
 import product8 from "../../assets/MOTUL-7100-4T-10W-40-ESTER.png";
+import product9 from "../../assets/Motul-4T-Plus-3000-10W-30-HC-Tech.png";
+import product10 from "../../assets/Motul4T-Plus-3000-10W-40-HC-Tech.png";
 
 
 const Motul = () => {
@@ -33,65 +35,79 @@ const Motul = () => {
   const products = [
     {
       id: 1,
-      name: "Motul 4T 3000 20W-40 HC-Tech",
-      desc: "1 Litre API SM JASO MA2",
-      descone: "20W50, 20W40, 10W30, 10W40",
-      desctwo: "Semi Synthetic",
+      name: "Motul 4T Plus 3000 20W-40 HC-Tech",
+      desc: "1 Litre API SN JASO MA2",
+      descone: "20W40",
+      desctwo: " Mineral",
       img: product1,
     },
     {
       id: 2,
       name: "MOTUL ENGINE OIL 4T 7100 10W-40",
-      desc: "1 Litre API SM JASO MA2",
-      descone: "20W50, 20W40, 10W30, 10W40",
-      desctwo: "Semi Synthetic",
+      desc: "1 Litre API SP JASO MA2",
+      descone: "10W40",
+      desctwo: " Full Synthetic",
       img: product2,
     },
     {
       id: 3,
       name: " MOTUL 7100 4T 20W-50 FULL SYNTHETIC 1L (FRANCE) 1 Litre API-SL 20W-50",
       desc: "2 Litre API-SL 20W-50",
-      descone: "Semi Synthetic",
+      descone: " Full Synthetic",
       img: product3,
     },
     {
       id: 4,
-      name: "MOTUL 5100 20W-50 4T",
-      desc: "1 Litre SAE 20W50, API: SM",
+      name: "MOTUL 5100 10W-40 4T",
+      desc: "1 Litre SAE 10W40, API: SP JASO MA2",
       descone: "Fully Synthetic",
       img: product4,
     },
     {
       id: 5,
-      name: "MOTUL GEAR 300 LS 75W-90",
-      desc: "01 Litre SAE 20W50, API: CH-4",
-      descone: "100% Synthetic",
-      desctwo: "Formulated by U.A.S",
+      name: "MOTUL 7100 4T 10W-30 FULL SYNTHETIC 1L (Vietnam)",
+      desc: "1 Litre API-SP 10W-30",
+      
       descthree: "",
       category: "Febilock Glue",
       img: product5,
     },
     {
       id: 6,
-      name: "Motul 300V Ester Core 10W-30",
-      desc: "01 Litre SAE 15W40, API-CI4/SM",
-      descone: "Semi Synthetic",
+      name: "MOTUL 300V 4T 10W-40",
+      desc: "01 Litre",
+      descone: " Full Synthetic",
      
       img: product6,
     },
     {
       id: 7,
-      name: "Motul 300V Ester Core 10W-40",
-      desc: "01 Litre API-SF/CD",
+      name: "MOTUL 300V 4T 10W-30",
+      desc: "01 Litre",
        img: product7,
     },
     {
       id: 8,
-      name: "Motul 7100 Ester Core 10W-40",
-      desc: "01 Litre API-CH4",
-      descone: "Formulated by U.A.S",
+      name: "MOTUL 7100 4T 10W-40 FULL SYNTHETIC 1L (Vietnam)",
+      desc: "1 Litre API-SP 10W-40",
+      descone: "Full Synthetic",
       img: product8,
     },
+    {
+      id: 9,
+      name: "Motul 4T Plus 3000 10W-30 HC-Tech",
+      desc: "1 Litre API SN JASO MA2 10W30",
+      descone: "Mineral",
+      img: product9,
+    },
+    {
+      id: 10,
+      name: "Motul 4T Plus 3000 10W-40 HC-Tech",
+      desc: "1 Litre API SN JASO MA2 10W40",
+      descone: "Mineral",
+      img: product10,
+    },
+  
    
   ];
   // ✅ Filter logic
@@ -409,7 +425,7 @@ const Motul = () => {
           <section
             className="
         relative 
-        h-[100px]            /* Default for mobile */
+        h-[150px]            /* Default for mobile */
         sm:h-[600px]         /* Slightly taller on small tablets */
         md:h-[700px]         /* Original height on desktop */
         w-full 
@@ -545,53 +561,52 @@ const Motul = () => {
           {/* ================= PRODUCTS GRID ================= */}
           <section className="bg-white py-10 px-6 md:px-12 lg:px-40">
             <div className="py-15">
-              <div className="max-w-[1500px] mx-auto">
-                <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
-                  <button
-                    onClick={() => setSelectedCategory("All Products")}
-                    className={`relative text-[18px] font-semibold transition-all duration-300 ${
-                      selectedCategory === "All Products"
-                        ? "text-black"
-                        : "text-gray-700 hover:text-[#fbbf24]"
-                    }`}
-                  >
-                    ALL PRODUCTS
-                    {selectedCategory === "All Products" && (
-                      <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
-                    )}
-                  </button>
-    
-                  <div className="flex flex-wrap items-center gap-9">
-                    {[
-                      "Bike",
-                      "CNG",
-                      " Car",
-                      "Bus",
-                      "Truc",
-                      "Industrial & Marine",
-                    ].map((cat) => (
-                      <button
-                        key={cat}
-                        onClick={() => setSelectedCategory(cat)}
-                        className={`relative text-[18px] font-semibold transition-all duration-300 ${
-                          selectedCategory === cat
-                            ? "text-black"
-                            : "text-gray-700 hover:text-[#fbbf24]"
-                        }`}
-                      >
-                        {cat.toUpperCase()}
-                        {selectedCategory === cat && (
-                          <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
-                        )}
-                      </button>
-                    ))}
-    
-                    <button className="bg-[#fbbf24] text-black font-semibold px-6 py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
-                      FIND A DEALER
-                    </button>
-                  </div>
-                </div>
-              </div>
+               <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
+              <button
+                onClick={() => setSelectedCategory("All Products")}
+                className={`relative text-[18px] font-semibold transition-all duration-300 ${
+                  selectedCategory === "All Products"
+                    ? "text-black"
+                    : "text-gray-700 hover:text-[#fbbf24]"
+                }`}
+              >
+                ALL PRODUCTS
+                {selectedCategory === "All Products" && (
+                  <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
+                )}
+              </button>
+
+             <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-5 mt-2 sm:mt-0">
+  {[
+    "Bike",
+    "CNG",
+    "Car",
+    "Bus",
+    "Truc",
+    "Industrial & Marine",
+  ].map((cat) => (
+    <button
+      key={cat}
+      onClick={() => setSelectedCategory(cat)}
+      className={`relative text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-semibold transition-all duration-300 ${
+        selectedCategory === cat
+          ? "text-black"
+          : "text-gray-700 hover:text-[#fbbf24]"
+      }`}
+    >
+      {cat.toUpperCase()}
+      {selectedCategory === cat && (
+        <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
+      )}
+    </button>
+  ))}
+
+  <button className="bg-[#fbbf24] text-black font-semibold text-[15px] sm:text-[16px] px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
+    FIND A DEALER
+  </button>
+</div>
+
+            </div>
     
               {/* 🔹 Product Grid */}
               <div className="max-w-[1400px] mx-auto">

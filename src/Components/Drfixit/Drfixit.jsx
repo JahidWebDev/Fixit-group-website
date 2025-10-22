@@ -437,7 +437,7 @@ const Drfixit = () => {
       <section
         className="
     relative 
-    h-[100px]            /* Default for mobile */
+    h-[150px]            /* Default for mobile */
     sm:h-[600px]         /* Slightly taller on small tablets */
     md:h-[700px]         /* Original height on desktop */
     w-full 
@@ -505,7 +505,7 @@ const Drfixit = () => {
     <img
       src={callIcon}
       alt="Call Icon"
-      className="relative w-[30px] sm:w-[35px] md:w-[20px] z-10"
+      className="relative   md:ml-[5px] w-[30px] sm:w-[35px] md:w-[20px] z-10"
     />
   </a>
 </div>
@@ -567,44 +567,47 @@ const Drfixit = () => {
       <section className="bg-white py-10 px-6 md:px-12 lg:px-40">
         <div className="py-15">
           <div className="max-w-[1500px] mx-auto">
-            <div className="border-4 border-gray-300 rounded-xl px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
-              <button
-                onClick={() => setSelectedCategory("All Products")}
-                className={`relative text-[18px] font-semibold transition-all duration-300 ${
-                  selectedCategory === "All Products"
-                    ? "text-black"
-                    : "text-gray-700 hover:text-[#fbbf24]"
-                }`}
-              >
-                ALL PRODUCTS
-                {selectedCategory === "All Products" && (
-                  <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
-                )}
-              </button>
+            <div className="border-4 border-gray-300 rounded-xl px-4 sm:px-6 py-4 mb-14 flex flex-wrap gap-4 items-center justify-between">
+  {/* All Products Button */}
+  <button
+    onClick={() => setSelectedCategory("All Products")}
+    className={`relative text-[18px] sm:text-[16px] md:text-[18px] font-semibold transition-all duration-300 ${
+      selectedCategory === "All Products"
+        ? "text-black"
+        : "text-gray-700 hover:text-[#fbbf24]"
+    }`}
+  >
+    ALL PRODUCTS
+    {selectedCategory === "All Products" && (
+      <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
+    )}
+  </button>
 
-              <div className="flex flex-wrap items-center gap-5">
-                {["Admixture", "Sealer", "Febilock Glue"].map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`relative text-[18px] font-semibold transition-all duration-300 ${
-                      selectedCategory === cat
-                        ? "text-black"
-                        : "text-gray-700 hover:text-[#fbbf24]"
-                    }`}
-                  >
-                    {cat.toUpperCase()}
-                    {selectedCategory === cat && (
-                      <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
-                    )}
-                  </button>
-                ))}
+  {/* Category Buttons + Dealer */}
+  <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-5 mt-2 sm:mt-0">
+    {["Admixture", "Sealer", "Febilock Glue"].map((cat) => (
+      <button
+        key={cat}
+        onClick={() => setSelectedCategory(cat)}
+        className={`relative text-[14px] sm:text-[14px] md:text-[16px] lg:text-[18px] font-semibold transition-all duration-300 ${
+          selectedCategory === cat
+            ? "text-black"
+            : "text-gray-700 hover:text-[#fbbf24]"
+        }`}
+      >
+        {cat.toUpperCase()}
+        {selectedCategory === cat && (
+          <span className="absolute left-0 bottom-0 h-[3px] w-full bg-[#fbbf24] rounded-full animate-slideIn"></span>
+        )}
+      </button>
+    ))}
 
-                <button className="bg-[#fbbf24] text-black font-semibold px-6 py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
-                  FIND A DEALER
-                </button>
-              </div>
-            </div>
+    <button className="bg-[#fbbf24] text-black font-semibold text-[12px] sm:text-[14px] md:text-[15px] px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition mt-2 sm:mt-0">
+      FIND A DEALER
+    </button>
+  </div>
+</div>
+
           </div>
 
           {/* 🔹 Product Grid */}
