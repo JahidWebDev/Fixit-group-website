@@ -511,7 +511,7 @@ const images = [bannerImage1, bannerImage2];
     rel="noopener noreferrer"
     className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
   >
-    <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-ping"></span>
+    <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
     <img src={callIcon} alt="Call Icon" className="relative w-6 h-6 lg:w-7 lg:h-7 z-10" />
   </a>
 </div>
