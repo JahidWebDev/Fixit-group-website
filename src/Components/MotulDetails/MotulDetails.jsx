@@ -11,9 +11,10 @@ import Phuter from "../../assets/Phuter.png";
 
 import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
 import product2 from "../../assets/MOTUL_ENGINE_OIL_4T_7100_10W-40.png";
-import product3 from "../../assets/MOTUL-7100-4T-20W-50 FULL-SYNTHETIC-1L-FRANCE.png";
+import product3 from "../../assets/MOTUL-7100-4T-20W-50-FULL-SYNTHETIC-1L-FRANCE.png";
+
 import product4 from "../../assets/MOTUL-5100-20W-50-4T.png";
-import product5 from "../../assets/MOTUL-GEAR_300-LS-75W-90.png";
+import product5 from "../../assets/MOTUL-7100-4T-10W-30-FULL-SYNTHETIC-1L-Vietnam.png";
 import product6 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
 import product7 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
 import product8 from "../../assets/MOTUL-7100-4T-10W-40-ESTER.png";

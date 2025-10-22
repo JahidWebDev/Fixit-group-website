@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 
@@ -8,14 +8,17 @@ import mutolLogo from "../../assets/Motul-Logo.png";
 import callIcon from "../../assets/Call-Icon-Green.png";
 import LocationIcon from "../../assets/Location-Man-Icon.png";
 
-import bgImage from "../../assets/Banner-Image.png";
-import bgImage1 from "../../assets/Motol-&-Car.png";
-import bgImage2 from "../../assets/Motol-&-Car.png";
+import bannerImage1 from "../../assets/Motul-Orginal-Bangladesh.jpg";
+import bannerImage2 from "../../assets/Motul-300V-10W40.jpg";
+
+import bgImage1 from "../../assets/Bangladesh-Motul.jpg";
+import bgImage2 from "../../assets/Motul-EsterCore-Bangladesh.jpg";
 import Phuter from "../../assets/Phuter.png";
 
 import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
 import product2 from "../../assets/MOTUL_ENGINE_OIL_4T_7100_10W-40.png";
-import product3 from "../../assets/MOTUL-7100-4T-20W-50 FULL-SYNTHETIC-1L-FRANCE.png";
+import product3 from "../../assets/MOTUL-7100-4T-20W-50-FULL-SYNTHETIC-1L-FRANCE.png";
+
 import product4 from "../../assets/MOTUL-5100-20W-50-4T.png";
 import product5 from "../../assets/MOTUL-7100-4T-10W-30-FULL-SYNTHETIC-1L-Vietnam.png";
 import product6 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
@@ -26,9 +29,51 @@ import product10 from "../../assets/Motul4T-Plus-3000-10W-40-HC-Tech.png";
 
 
 const Motul = () => {
+  
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
+const images = [bannerImage1, bannerImage2];
+  const [currentIndex, setCurrentIndex] = useState(0);
+   useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3000); // প্রতি 4 সেকেন্ডে পরিবর্তন হবে
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  const [yPos, setYPos] = useState(window.innerHeight - 80); // mobile initial bottom
+  const [dragging, setDragging] = useState(false);
+  const [offsetY, setOffsetY] = useState(0);
+  const rightOffset = 0; // distance from right edge
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleTouchStart = (e) => {
+    if (!isMobile) return;
+    const touch = e.touches[0];
+    setOffsetY(touch.clientY - yPos);
+    setDragging(true);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!dragging) return;
+    const touch = e.touches[0];
+    let newY = touch.clientY - offsetY;
+    // Prevent going out of screen
+    if (newY < 0) newY = 0;
+    if (newY > window.innerHeight - 60) newY = window.innerHeight - 60;
+    setYPos(newY);
+  };
+
+  const handleTouchEnd = () => setDragging(false);
 
   const [selectedCategory, setSelectedCategory] = useState("All Products");
 
@@ -420,71 +465,61 @@ const Motul = () => {
               />
             </div>
           </section>
-          <section
-            className="
+           <section
+      className="
         relative 
-        h-[150px]            /* Default for mobile */
-        sm:h-[600px]         /* Slightly taller on small tablets */
-        md:h-[700px]         /* Original height on desktop */
+        h-[150px]           
+        sm:h-[600px]         
+        md:h-[700px]         
         w-full 
         bg-cover 
         bg-center 
         bg-no-repeat 
+        transition-all 
+        duration-1000        
+        ease-in-out
+          
       "
-            style={{ backgroundImage: `url(${bgImage})` }}
-          >
-            {/* Optional overlay */}
-            <div className="absolute inset-0 bg-black/10"></div>
-    
-            {/* Banner Content */}
-            <div className="relative z-10 flex items-center justify-center h-full"></div>
-    
-            {/* ✅ Fixed Green Rounded Shape with WhatsApp Icon */}
-            <div
-              className="  fixed 
-        bottom-5 sm:bottom-55
-        right-0 
-        w-[120px] h-[60px] 
-        md:w-[145px] md:h-[70px] 
-        bg-[#25D366] 
-        rounded-l-[150px] 
-        flex items-center justify-center 
-        shadow-xl 
-        z-50 
-    
-       "
-            >
-              <a
-                href="https://wa.me/8801712345678"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-        relative 
-        flex items-center justify-center 
-        bg-white 
-        p-2 sm:p-3 md:p-4         
-        rounded-full 
-        shadow-md 
-        hover:scale-110 
-        transition-transform 
-        duration-300 
-        overflow-visible 
-        mr-[60px] sm:mr-[60px] md:mr-[70px] 
-        
-      "
-              >
-                {/* Glowing Pulse Effect */}
-                <span className="absolute  inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
-    
-                {/* WhatsApp Call Icon */}
-                <img
-                  src={callIcon}
-                  alt="Call Icon"
-                  className="relative w-[30px] sm:w-[40px] md:w-[20px] z-10"
-                />
-              </a>
-            </div>
-          </section>
+      style={{
+        backgroundImage: `url(${images[currentIndex]})`,
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/10"></div>
+
+      {/* Banner Content */}
+      <div className="relative z-10 flex items-center justify-center h-full"></div>
+
+      {/* ✅ Fixed Green Rounded Shape with WhatsApp Icon */}
+<div
+  className={`fixed w-[120px] h-[60px] md:w-[145px] md:h-[70px] 
+              bg-[#25D366]/70 backdrop-blur-md 
+              rounded-l-[150px] flex items-center justify-center 
+              shadow-xl z-50`}
+  style={{
+    top: isMobile ? `${yPos}px` : '50%',
+    right: rightOffset,
+    transform: isMobile ? 'none' : 'translateY(-50%)',
+  }}
+  onTouchStart={isMobile ? handleTouchStart : undefined}
+  onTouchMove={isMobile ? handleTouchMove : undefined}
+  onTouchEnd={isMobile ? handleTouchEnd : undefined}
+>
+  <a
+    href="https://wa.me/8801712345678"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+  >
+    <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-ping"></span>
+    <img src={callIcon} alt="Call Icon" className="relative w-6 h-6 lg:w-7 lg:h-7 z-10" />
+  </a>
+</div>
+
+
+
+
+    </section>
     
 <section className="py-20 md:py-40 px-6 md:px-20 lg:px-40 bg-white">
   <div className="max-w-[1500px] mx-auto">
