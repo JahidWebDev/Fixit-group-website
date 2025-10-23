@@ -77,3 +77,8 @@
   animation: slideIn 0.3s ease-out forwards;
 }
 
+.body-off {
+  filter: brightness(0.3); /* screen dark করে দেবে */
+  pointer-events: none; /* user কিছু click করতে পারবে না */
+  transition: filter 0.3s ease;
+}

@@ -42,13 +42,11 @@ const images = [bannerImage1, bannerImage2];
     }, 3000); // প্রতি 4 সেকেন্ডে পরিবর্তন হবে
     return () => clearInterval(interval);
   }, [images.length]);
-
-  const [yPos, setYPos] = useState(window.innerHeight - 80); // mobile initial bottom
+   const [yPos, setYPos] = useState(window.innerHeight - 80);
   const [dragging, setDragging] = useState(false);
   const [offsetY, setOffsetY] = useState(0);
-  const rightOffset = 0; // distance from right edge
-
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const rightOffset = 0;
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -56,25 +54,43 @@ const images = [bannerImage1, bannerImage2];
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // ✅ যখন dragging হবে, তখন body touch off থাকবে
+  useEffect(() => {
+    if (dragging) {
+      document.body.style.overflow = "hidden";     // scroll বন্ধ
+      document.body.style.touchAction = "none";    // touch বন্ধ
+      document.body.style.pointerEvents = "none";  // click বন্ধ
+    } else {
+      document.body.style.overflow = "auto";       // scroll আবার চালু
+      document.body.style.touchAction = "auto";    // touch চালু
+      document.body.style.pointerEvents = "auto";  // click চালু
+    }
+  }, [dragging]);
+
+  // === Handle Touch Start ===
   const handleTouchStart = (e) => {
     if (!isMobile) return;
     const touch = e.touches[0];
     setOffsetY(touch.clientY - yPos);
-    setDragging(true);
+    setDragging(true); // 👈 Drag শুরু
   };
 
+  // === Handle Touch Move ===
   const handleTouchMove = (e) => {
     if (!dragging) return;
     const touch = e.touches[0];
     let newY = touch.clientY - offsetY;
-    // Prevent going out of screen
+
     if (newY < 0) newY = 0;
     if (newY > window.innerHeight - 60) newY = window.innerHeight - 60;
+
     setYPos(newY);
   };
 
-  const handleTouchEnd = () => setDragging(false);
-
+  // === Handle Touch End ===
+  const handleTouchEnd = () => {
+    setDragging(false); // 👈 Drag শেষ
+  };
   const [selectedCategory, setSelectedCategory] = useState("All Products");
 
   const products = [
@@ -491,30 +507,34 @@ const images = [bannerImage1, bannerImage2];
       <div className="relative z-10 flex items-center justify-center h-full"></div>
 
       {/* ✅ Fixed Green Rounded Shape with WhatsApp Icon */}
-<div
-  className={`fixed w-[120px] h-[60px] md:w-[145px] md:h-[70px] 
-              bg-[#25D366]/70 backdrop-blur-md 
-              rounded-l-[150px] flex items-center justify-center 
-              shadow-xl z-50 transition-[top] duration-200 ease-out`}
-  style={{
-    top: isMobile ? `${yPos}px` : '50%',
-    right: rightOffset,
-    transform: isMobile ? 'none' : 'translateY(-50%)',
-  }}
-  onTouchStart={isMobile ? handleTouchStart : undefined}
-  onTouchMove={isMobile ? handleTouchMove : undefined}
-  onTouchEnd={isMobile ? handleTouchEnd : undefined}
->
-  <a
-    href="https://wa.me/8801712345678"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
-  >
-    <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
-    <img src={callIcon} alt="Call Icon" className="relative w-6 h-6 lg:w-7 lg:h-7 z-10" />
-  </a>
-</div>
+  <div
+      className={`fixed w-[120px] h-[60px] md:w-[145px] md:h-[70px] 
+                  bg-[#25D366]/70 backdrop-blur-md 
+                  rounded-l-[150px] flex items-center justify-center 
+                  shadow-xl z-50 transition-[top] duration-200 ease-out`}
+      style={{
+        top: isMobile ? `${yPos}px` : "50%",
+        right: rightOffset,
+        transform: isMobile ? "none" : "translateY(-50%)",
+      }}
+      onTouchStart={isMobile ? handleTouchStart : undefined}
+      onTouchMove={isMobile ? handleTouchMove : undefined}
+      onTouchEnd={isMobile ? handleTouchEnd : undefined}
+    >
+      <a
+        href="https://wa.me/8801712345678"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+      >
+        <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
+        <img
+          src={callIcon}
+          alt="Call Icon"
+          className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
+        />
+      </a>
+    </div>
 
 
 
