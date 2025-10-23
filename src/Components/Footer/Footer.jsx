@@ -5,41 +5,40 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[#b71c1c] text-white overflow-hidden pt-20 lg:pt-[150px]">
-      {/* Background Image */}
-      <div className=" absolute inset-0">
+    <footer className="relative bg-[#b71c1c] text-white overflow-hidden pt-16 sm:pt-20 lg:pt-[150px]">
+      {/* === Background Image === */}
+      <div className="absolute inset-0">
         <img
           src={footerbg}
           alt="Footer Background"
-          className="w-[1810px] h-full object-contain md:object-cover opacity-90 scale-110 "
+          className="w-full h-full object-cover object-center opacity-80"
         />
       </div>
 
-    
-
-   {/* Main Footer Content */}
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 px-6 sm:px-10">
-        {/* Logo Section */}
+      {/* === Main Footer Content === */}
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-start gap-10 sm:gap-12 px-6 sm:px-10 text-center md:text-left">
+        
+        {/* === Logo Section === */}
         <div className="flex flex-col items-center md:items-start w-full md:w-1/4">
           <img
             src={logo}
             alt="Fixit Logo"
-            className="w-[180px] sm:w-[200px] md:w-[220px] mb-6  object-contain"
+            className="w-[160px] sm:w-[200px] md:w-[220px] mb-6 object-contain"
           />
         </div>
 
-        {/* Office Info */}
-        <div className="text-center md:text-left w-full md:w-1/4 space-y-1">
+        {/* === Office Info === */}
+        <div className="w-full md:w-1/4 space-y-1">
           <h4 className="font-semibold text-lg uppercase mb-2">Office</h4>
           <p>House No. 09, Block-C</p>
           <p>Road No. 02</p>
           <p>Rampura, Banasree</p>
           <p className="mt-2">support@fixitgroupbd.com</p>
-          <p className=" lg:pb-[320px]">+880 1898-795771</p>
+          <p className="pb-6 md:pb-[80px] lg:pb-[280px]">+880 1898-795771</p>
         </div>
 
-        {/* Quick Links */}
-        <div className="text-center md:text-left w-full md:w-1/4">
+        {/* === Quick Links === */}
+        <div className="w-full md:w-1/4">
           <h4 className="font-semibold text-lg uppercase mb-2">Quick Links</h4>
           <ul className="space-y-1">
             <li><Link to="#" className="hover:underline">Home</Link></li>
@@ -49,8 +48,8 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Legal & Press */}
-        <div className="text-center md:text-left w-full md:w-1/4">
+        {/* === Legal & Press (Top aligned) === */} 
+        <div className="w-full md:w-1/4 md:self-start pb-20 md:mt-0">
           <h4 className="font-semibold text-lg uppercase mb-2">Legal & Press</h4>
           <ul className="space-y-1">
             <li><Link to="#" className="hover:underline">Certificate</Link></li>
@@ -59,10 +58,12 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Copyright */}
-      <div className="relative z-10 bg-[#8b1313]/95 py-4 px-6 flex flex-col md:flex-row items-center justify-around text-xs sm:text-sm text-center">
-        <p>© 2025 Fixit Group. All Rights Reserved.</p>
-        <p>Designed by Jahid Hossain</p>
+      {/* === Bottom Copyright === */}
+      <div className="relative z-10 bg-[#8b1313]/60 backdrop-blur-md border-t border-white/10 py-4 px-4 sm:px-6 flex flex-col md:flex-row items-center justify-around text-[13px] sm:text-sm text-center gap-2">
+        <p className="lg:mr-60">© 2025 Fixit Group. All Rights Reserved.</p>
+        <p className="opacity-90">
+          Designed by <span className="font-semibold">Jahid Hossain</span>
+        </p>
       </div>
     </footer>
   );
