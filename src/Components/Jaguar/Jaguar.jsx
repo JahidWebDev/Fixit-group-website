@@ -694,86 +694,87 @@ const Jaguar = () => {
           {/* 🔹 Product Grid */}
           <div className="max-w-[1400px] mx-auto">
             {/* ✅ Responsive Grid: 1 card on mobile, 2 on small, 3 on md, 4 on lg */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {filteredProducts.map((p, index) => (
-                <React.Fragment key={index}>
-                  {/* Product Card */}
-                  <div className="border-[2px] border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between hover:scale-[1.02] bg-white">
-                    {/* Product Image */}
-                    <div className="flex justify-center items-center w-full h-[260px] border-b-[2px] border-gray-200 rounded-t-2xl mt-5">
-                      <img
-                        src={p.img}
-                        alt={p.name}
-                        className="object-contain w-auto h-[220px] transition-transform duration-300 hover:scale-105"
-                      />
-                    </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+  {filteredProducts.map((p, index) => (
+    <React.Fragment key={index}>
+      {/* Product Card */}
+      <div className="border-[2px] border-gray-200 rounded-2xl shadow-sm transition-all duration-300 flex flex-col justify-between bg-white">
+        {/* Product Image */}
+        <div
+          className="flex justify-center items-center w-full h-[260px] border-b-[2px] border-gray-200 rounded-t-2xl mt-5 overflow-hidden transition-transform duration-300"
+        >
+          <img
+            src={p.img}
+            alt={p.name}
+            className="object-contain w-auto h-[220px] transition-transform duration-300 hover:scale-105"
+            onTouchStart={(e) => {
+              e.currentTarget.style.transform = "scale(1.05)";
+            }}
+            onTouchEnd={(e) => {
+              e.currentTarget.style.transform = "";
+            }}
+          />
+        </div>
 
-                    {/* Product Info */}
-                    <div className="p-5 flex flex-col flex-grow justify-between text-center gap-2">
-                      <h3 className="text-[17px] font-bold text-black leading-[1.4]">
-                        {p.name}
-                      </h3>
-                      <p className="text-[14px] text-gray-600 leading-[1.0]">
-                        {p.desc}
-                      </p>
-                      <p className="text-[14px] text-gray-600 leading-[1.0]">
-                        {p.descone}
-                      </p>
-                      <p className="text-[14px] text-gray-600 leading-[1.0]">
-                        {p.desctwo}
-                      </p>
-                      <p className="text-[14px] text-gray-600 leading-[1.0]">
-                        {p.descthree}
-                      </p>
-                    </div>
+        {/* Product Info */}
+        <div className="p-5 flex flex-col flex-grow justify-between text-center gap-2">
+          <h3 className="text-[17px] font-bold text-black leading-[1.4]">
+            {p.name}
+          </h3>
+          <p className="text-[14px] text-gray-600 leading-[1.0]">{p.desc}</p>
+          <p className="text-[14px] text-gray-600 leading-[1.0]">{p.descone}</p>
+          <p className="text-[14px] text-gray-600 leading-[1.0]">{p.desctwo}</p>
+          <p className="text-[14px] text-gray-600 leading-[1.0]">{p.descthree}</p>
+        </div>
 
-                    {/* Buttons */}
-                    <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
-                      <Link
-                        to={`/jaguardetails/${p.id}`}
-                        state={{ showBanner: true }}
-                        className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 px-4 rounded-md 
-                                hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center inline-block"
-                      >
-                        Product Details
-                      </Link>
+        {/* Buttons */}
+        <div className="px-5 pb-5 flex flex-col gap-2 mt-auto">
+          <Link
+            to={`/jaguardetails/${p.id}`}
+            state={{ showBanner: true }}
+            className="border border-[#0072BC] text-[#0072BC] text-[15px] font-medium py-2 px-4 rounded-md 
+                      hover:bg-[#0072BC] hover:text-white transition-all duration-300 text-center inline-block"
+          >
+            Product Details
+          </Link>
 
-                      <Link
-                        to="/find-dealer"
-                        className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300 text-center"
-                      >
-                        Find a Dealer
-                      </Link>
-                    </div>
-                  </div>
+          <Link
+            to="/find-dealer"
+            className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300 text-center"
+          >
+            Find a Dealer
+          </Link>
+        </div>
+      </div>
 
-                  {/* 🎨 Background Image after every 4 products */}
-                  {(index + 1) % 4 === 0 && (index + 1) / 4 <= 2 && (
-                    <div
-                      className="
-                                   block 
-    col-span-full 
-    w-full 
-    h-[60px] sm:h-[250px] 
-    bg-center 
-    lg:rounded-2xl 
-    
-    lg:shadow-inner 
-    overflow-hidden
-  "
-                      style={{
-                        backgroundImage: `url(${
-                          ((index + 1) / 4) % 2 === 1 ? bgImage1 : bgImage2
-                        })`,
-                        backgroundSize: "contain", // ✅ fills height properly (no top/bottom gap)
-                        backgroundRepeat: "no-repeat",
-                        backgrounWidth: "300px",
-                      }}
-                    ></div>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
+      {/* Background Image after every 4 products */}
+      {(index + 1) % 4 === 0 && (index + 1) / 4 <= 2 && (
+        <div
+          className="
+            block 
+            col-span-full 
+            w-full 
+            h-[60px] sm:h-[250px] 
+            bg-center 
+            lg:rounded-2xl 
+            lg:shadow-inner 
+            overflow-hidden
+            transition-transform duration-300"
+          style={{
+            backgroundImage: `url(${
+              ((index + 1) / 4) % 2 === 1 ? bgImage1 : bgImage2
+            })`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        ></div>
+      )}
+    </React.Fragment>
+  ))}
+</div>
+
+
 
             {/* Empty State */}
             {filteredProducts.length === 0 && (

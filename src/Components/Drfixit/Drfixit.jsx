@@ -662,27 +662,39 @@ const Drfixit = () => {
                   className="border-[2px] border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between hover:scale-[1.02] bg-white"
                 >
                   {/* 🖼 Product Image */}
-                  <div className="flex justify-center items-end w-full h-[260px] border-b-[2px] border-gray-200 rounded-t-2xl mt-5">
-                    <img
-                      src={p.img}
-                      alt={p.name}
-                      className="object-contain w-auto transition-transform duration-300 hover:scale-105"
-                      style={{
-                        maxHeight:
-                          index === 8 || index === 10 || index === 9
-                            ? "260px"
-                            : index % 4 === 0 || index % 4 === 1
-                            ? "220px"
-                            : "260px",
-                        transform:
-                          index === 8 || index === 10 || index === 9
-                            ? "scale(0.9)"
-                            : index % 4 === 0 || index % 4 === 1
-                            ? "scale(0.9)"
-                            : "scale(1.1)",
-                      }}
-                    />
-                  </div>
+                 <div
+  className="flex justify-center items-end w-full h-[260px] border-b-[2px] border-gray-200 rounded-t-2xl mt-5 group active:scale-[0.99] transition-all duration-300"
+>
+  <img
+    src={p.img}
+    alt={p.name}
+    className="object-contain w-auto transition-transform duration-300 group-hover:scale-105 group-active:scale-110"
+    style={{
+      maxHeight:
+        index === 8 || index === 10 || index === 9
+          ? "260px"
+          : index % 4 === 0 || index % 4 === 1
+          ? "220px"
+          : "260px",
+      transform:
+        index === 8 || index === 10 || index === 9
+          ? "scale(0.9)"
+          : index % 4 === 0 || index % 4 === 1
+          ? "scale(0.9)"
+          : "scale(1.1)",
+    }}
+    onTouchStart={(e) => {
+      e.currentTarget.style.transform += " scale(1.1)";
+    }}
+    onTouchEnd={(e) => {
+      e.currentTarget.style.transform = e.currentTarget.style.transform.replace(
+        " scale(1.1)",
+        ""
+      );
+    }}
+  />
+</div>
+
 
                   {/* 🧾 Product Info */}
                   <div className="p-5 flex flex-col flex-grow justify-between text-center">
