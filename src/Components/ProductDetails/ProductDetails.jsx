@@ -428,7 +428,7 @@ const ProductDetails = ({}) => {
                         className="fixed inset-0 bg-black/40 z-40"
                         onClick={() => setMenuOpen(false)}
                       />
-                      <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+                      <div className="absolute top-[110px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
                         <ul className="flex flex-col text-base font-medium py-4">
                           <li>
                             <Link to="/" className="block px-5 py-3 hover:bg-gray-100">
@@ -609,81 +609,83 @@ const ProductDetails = ({}) => {
       <section id="banner"  className="bg-white">
         <div className="max-w-full mx-auto py-30 px-6 md:px-70">
           {/* Product Details */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            {/* Left: Image */}
-            <div className="flex flex-col items-center">
-           <div className="border h-[560px] w-[450px] border-gray-200 rounded-2xl shadow-sm p-4 flex items-center justify-center overflow-hidden">
-  <img
-    src={p.image}
-    alt={p.title}
-    className="max-w-[160%] max-h-[100%] mt-[60px] object-contain transform transition-transform duration-500 ease-in-out hover:scale-110"
-  />
-</div>
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start px-4 md:px-0">
+  {/* Left: Image */}
+  <div className="flex flex-col items-center">
+    <div className="border h-[420px] w-full max-w-[450px] md:h-[560px] md:w-[450px] border-gray-200 rounded-2xl shadow-sm p-4 flex items-center justify-center overflow-hidden">
+      <img
+        src={p.image}
+        alt={p.title}
+        className="w-full h-full object-contain transform transition-transform duration-500 ease-in-out hover:scale-110 touch:scale-110"
+        onTouchStart={(e) => e.currentTarget.classList.add('scale-110')}
+        onTouchEnd={(e) => e.currentTarget.classList.remove('scale-110')}
+      />
+    </div>
 
-              <div className="mt-8">
-                <Link
-                  to="/find-dealer"
-                  className="bg-[#f6b400] hover:bg-[#e0a200] text-black font-semibold px-8 py-3 rounded-md shadow-md transition"
-                >
-                  Find a Dealer
-                </Link>
-              </div>
-            </div>
+    <div className="mt-6 md:mt-8 w-full flex justify-center">
+      <Link
+        to="/find-dealer"
+        className="bg-[#f6b400] hover:bg-[#e0a200] text-black font-semibold px-6 md:px-8 py-3 rounded-md shadow-md transition"
+      >
+        Find a Dealer
+      </Link>
+    </div>
+  </div>
 
-            {/* Right: Info */}
-         <div className="lg:pt-[10px]">
-  <div className="space-y-2 text-gray-800 md:pl-10 lg:pl-0">
+  {/* Right: Info */}
+ <div className="mt-6 md:mt-0 lg:pt-[10px]">
+  <div className="space-y-2 text-black md:pl-6 lg:pl-0">
     {/* Title */}
     {p.title && (
-      <h2 className="text-2xl md:text-3xl lg:text-2xl font-bold text-gray-900">
+      <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-black">
         {p.title}
       </h2>
     )}
 
     {/* Product Info */}
-    <div className="lg:pt-[10px]">
+    <div className="space-y-1 pt-2">
       {p.brand && (
-        <p className="text-base md:text-lg">
+        <p className="text-sm sm:text-base">
           <span className="font-semibold">Brand:</span> {p.brand}
         </p>
       )}
       {p.category && (
-        <p className="text-base md:text-lg">
+        <p className="text-sm sm:text-base">
           <span className="font-semibold">Category:</span> {p.category}
         </p>
       )}
       {p.quantity && (
-        <p className="text-base md:text-lg">
+        <p className="text-sm sm:text-base">
           <span className="font-semibold">Quantity:</span> {p.quantity}
         </p>
       )}
     </div>
 
     {/* Availability */}
-    <p className="text-base md:text-lg">
-      <span className="font-semibold">Availability:</span>{" "}
+    <p className="text-sm sm:text-base pt-1">
+      <span className="font-semibold text-black">Availability:</span>{" "}
       <span className="text-green-600 font-medium">In Stock</span>
     </p>
 
     {/* Description */}
-    <div className="pt-4">
+    <div className="pt-4 space-y-2">
       {p.subtitle && (
-        <h3 className="text-xl md:text-2xl font-semibold mb-2">
+        <h3 className="text-lg sm:text-xl font-semibold">
           {p.subtitle}
         </h3>
       )}
       {p.subtitletwo && (
-        <p className="text-base md:text-lg text-gray-700 leading-relaxed lg:mb-2.5">
+        <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
           {p.subtitletwo}
         </p>
       )}
       {p.description && (
-        <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+        <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
           {p.description}
         </p>
       )}
       {p.availablePackaging && (
-        <p className="text-base md:text-lg text-gray-700 leading-relaxed pt-2">
+        <p className="text-sm sm:text-base text-black leading-relaxed">
           <span className="font-semibold">Available Packaging:</span>{" "}
           {p.availablePackaging}
         </p>
@@ -692,7 +694,8 @@ const ProductDetails = ({}) => {
   </div>
 </div>
 
-          </div>
+</div>
+
 
           {/* 🔹 Thumbnails */}
           <div className="flex justify-center gap-4 mt-12 flex-wrap">

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import emailjs from "emailjs-com";
+import emailjs from "emailjs-com";    
 
 // import Container from "../../Container";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
@@ -28,6 +28,62 @@ import product12 from "../../assets/JAGUAR-Gear-Oil-GL-4.png";
 import product13 from "../../assets/Jaguar-Industrial-&-Marine-Oil.png";
 
 const Jaguar = () => {
+
+
+   const [yPos, setYPos] = useState(window.innerHeight - 80);
+  const [dragging, setDragging] = useState(false);
+  const [offsetY, setOffsetY] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const rightOffset = 0;
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // ✅ যখন dragging হবে, তখন body touch off থাকবে
+  useEffect(() => {
+    if (dragging) {
+      document.body.style.overflow = "hidden";     // scroll বন্ধ
+      document.body.style.touchAction = "none";    // touch বন্ধ
+      document.body.style.pointerEvents = "none";  // click বন্ধ
+    } else {
+      document.body.style.overflow = "auto";       // scroll আবার চালু
+      document.body.style.touchAction = "auto";    // touch চালু
+      document.body.style.pointerEvents = "auto";  // click চালু
+    }
+  }, [dragging]);
+
+  // === Handle Touch Start ===
+  const handleTouchStart = (e) => {
+    if (!isMobile) return;
+    const touch = e.touches[0];
+    setOffsetY(touch.clientY - yPos);
+    setDragging(true); // 👈 Drag শুরু
+  };
+
+  // === Handle Touch Move ===
+  const handleTouchMove = (e) => {
+    if (!dragging) return;
+    const touch = e.touches[0];
+    let newY = touch.clientY - offsetY;
+
+    if (newY < 0) newY = 0;
+    if (newY > window.innerHeight - 60) newY = window.innerHeight - 60;
+
+    setYPos(newY);
+  };
+
+  // === Handle Touch End ===
+  const handleTouchEnd = () => {
+    setDragging(false); // 👈 Drag শেষ
+  };
+
+
+
+
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -129,7 +185,7 @@ const Jaguar = () => {
       id: 10,
       name: "JAGUAR Hydralic Oil HV  Engine Oil",
       desc: "1 Liter Muilti-Purpase Rust Remover",
-      descone: "20 Litre AW ISO C8",
+      descone: "20 Litre AW ISO 68",
       desctwo: "Formulated by U.A.E",
       descthree: "",
       category: "Febilock Glue",
@@ -223,6 +279,13 @@ const Jaguar = () => {
       );
   };
 
+
+
+
+
+
+
+  
   return (
     <section className="w-full  z-50">
       <header className="top-0 bg-[#B71C1C] left-0 w-full z-50">
@@ -368,7 +431,7 @@ const Jaguar = () => {
               className="fixed inset-0 bg-black/40 z-40"
               onClick={() => setMenuOpen(false)}
             />
-            <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+            <div className="absolute top-[110px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
               <ul className="flex flex-col text-base font-medium py-4">
                 <li>
                   <Link to="/" className="block px-5 py-3 hover:bg-gray-100">
@@ -497,47 +560,32 @@ const Jaguar = () => {
         <div className="relative z-10 flex items-center justify-center h-full"></div>
 
         {/* ✅ Fixed Green Rounded Shape with WhatsApp Icon */}
-        <div
-          className="  fixed 
-    bottom-5 sm:bottom-55
-    right-0 
-    w-[120px] h-[60px] 
-    md:w-[145px] md:h-[70px] 
-    bg-[#25D366] 
-    rounded-l-[150px] 
-    flex items-center justify-center 
-    shadow-xl 
-    z-50 
-
-   "
+    <div
+          className={`fixed z-50 flex items-center justify-center w-[120px] h-[60px] md:w-[145px] md:h-[70px]
+                 rounded-l-[150px] shadow-[0_4px_20px_rgba(0,0,0,0.2)]
+                 bg-gradient-to-r to-[#25D366]/100 from-[#25D366]/80
+                 backdrop-blur-lg
+                 transition-all duration-300 ease-out `}
+          style={{
+            top: isMobile ? `${yPos}px` : "50%",
+            right: rightOffset,
+            transform: isMobile ? "none" : "translateY(-50%)",
+          }}
+          onTouchStart={isMobile ? handleTouchStart : undefined}
+          onTouchMove={isMobile ? handleTouchMove : undefined}
+          onTouchEnd={isMobile ? handleTouchEnd : undefined}
         >
           <a
             href="https://wa.me/8801712345678"
             target="_blank"
             rel="noopener noreferrer"
-            className="
-    relative 
-    flex items-center justify-center 
-    bg-white 
-    p-2 sm:p-3 md:p-4         
-    rounded-full 
-    shadow-md 
-    hover:scale-110 
-    transition-transform 
-    duration-300 
-    overflow-visible 
-    mr-[60px] sm:mr-[60px] md:mr-[70px] 
-    
-  "
+            className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
           >
-            {/* Glowing Pulse Effect */}
-            <span className="absolute  inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
-
-            {/* WhatsApp Call Icon */}
+            <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
             <img
               src={callIcon}
               alt="Call Icon"
-              className="relative w-[30px] sm:w-[40px] md:w-[20px] z-10"
+              className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
             />
           </a>
         </div>
@@ -706,9 +754,10 @@ const Jaguar = () => {
                                    block 
     col-span-full 
     w-full 
-    h-[80px] sm:h-[250px] 
+    h-[60px] sm:h-[250px] 
     bg-center 
-    rounded-2xl 
+    lg:rounded-2xl 
+    
     lg:shadow-inner 
     overflow-hidden
   "

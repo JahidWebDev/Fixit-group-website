@@ -185,7 +185,7 @@ const Hero = () => {
               className="fixed inset-0 bg-black/40 z-40"
               onClick={() => setMenuOpen(false)}
             />
-            <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+            <div className="absolute top-[110px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
               <ul className="flex flex-col text-base font-medium py-4">
                 <li>
                   <Link to="/" className="block px-5 py-3 hover:bg-gray-100">

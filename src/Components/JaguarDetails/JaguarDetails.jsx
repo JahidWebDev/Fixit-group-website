@@ -457,7 +457,7 @@ const JaguarDetails = ({}) => {
                       className="fixed inset-0 bg-black/40 z-40"
                       onClick={() => setMenuOpen(false)}
                     />
-                    <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+                    <div className="absolute top-[110px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
                       <ul className="flex flex-col text-base font-medium py-4">
                         <li>
                           <Link to="/" className="block px-5 py-3 hover:bg-gray-100">
@@ -576,13 +576,15 @@ const JaguarDetails = ({}) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Left: Image */}
             <div className="flex flex-col items-center">
-  <div className="h-[580px] w-[500px] rounded-2xl shadow-md p-4 flex items-center justify-center group">
-    <img
-      src={p.image}
-      alt={p.title}
-      className="max-w-full max-h-[500px] object-contain transform transition-transform duration-500 ease-in-out group-hover:scale-110"
-    />
-  </div>
+<div className="border h-[420px] w-full max-w-[450px] md:h-[560px] md:w-[450px] border-gray-200 rounded-2xl shadow-sm p-4 flex items-center justify-center overflow-hidden">
+      <img
+        src={p.image}
+        alt={p.title}
+        className="w-full h-full object-contain transform transition-transform duration-500 ease-in-out hover:scale-110 touch:scale-110"
+        onTouchStart={(e) => e.currentTarget.classList.add('scale-110')}
+        onTouchEnd={(e) => e.currentTarget.classList.remove('scale-110')}
+      />
+    </div>
 
   <div className="mt-8">
     <Link
@@ -1948,184 +1950,179 @@ const JaguarDetails = ({}) => {
           </div>
         </div>
       </section>
-      <section
-        className="relative mb-[50px] bg-black bg-cover bg-center py-20 px-6 md:px-10 text-white"
-        style={{ backgroundImage: `url(${Phuter})` }}
-      >
-        {/* Overlay for better readability */}
-        <div className="absolute inset-0 bg-black/5"></div>
-
-        <div className="relative max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
-          {/* Left Side */}
-          <div className="flex-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="text-yellow-400 text-6xl">
-                <img
-                  src={LocationIcon}
-                  className="w-[70px]"
-                  alt="Location Icon"
-                />
+       <section
+              className="relative mb-[50px] bg-black bg-cover bg-center bg-no-repeat py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 text-white overflow-hidden"
+              style={{ backgroundImage: `url(${Phuter})` }}
+            >
+              {/* Responsive Overlay */}
+              <div className="absolute inset-0 bg-black md:bg-black/20"></div>
+      
+              <div className="relative max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10 md:gap-12">
+                {/* Left Side */}
+                <div className="flex-1">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <img
+                      src={LocationIcon}
+                      className="w-[55px] sm:w-[65px] md:w-[70px]"
+                      alt="Location Icon"
+                    />
+                  </div>
+      
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal leading-snug text-center md:text-left">
+                    Fill out the form below to become an{" "}
+                    <br className="hidden md:block" />
+                    <span className="font-bold text-white">
+                      Authorized Dealer
+                    </span> of{" "}
+                    <span className="font-bold text-yellow-400">
+                      Jaguar Lubricants
+                    </span>
+                  </h2>
+      
+                  <p className="mt-6 text-gray-300 text-[15px] sm:text-[16px] md:text-[18px] leading-relaxed text-justify md:text-left">
+                    <span className="font-bold text-white">Jaguar Lubricants</span> is
+                    committed to building strong, trustworthy, and sustainable
+                    business relationships with each of its dealers.
+                  </p>
+      
+                  <p className="mt-4 text-gray-300 text-[15px] sm:text-[16px] md:text-[18px] leading-relaxed text-justify md:text-left">
+                    Our goal is to establish a new benchmark of{" "}
+                    <span className="font-semibold text-yellow-400">
+                      quality, durability, and reliability
+                    </span>{" "}
+                    in Bangladesh’s lubricant industry.
+                  </p>
+      
+                  {/* Contact Info */}
+                  <div className="flex flex-col md:flex-row items-center md:items-end py-4 md:py-6 mt-12 md:mt-20 space-y-4 md:space-y-0 md:space-x-8 text-white">
+                    {/* Emergency */}
+                    <div className="text-center md:text-left space-y-1">
+                      <h3 className="text-base font-semibold text-yellow-400">
+                        Emergency
+                      </h3>
+                      <p className="text-sm font-medium text-gray-300">
+                        +8801788360303
+                      </p>
+                    </div>
+      
+                    {/* Call Icon */}
+                    <div className="relative flex items-center justify-center">
+                      <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
+                      <a
+                        href="https://wa.me/8801788360303"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative z-10 flex items-center justify-center bg-white rounded-full w-[45px] h-[45px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
+                      >
+                        <img
+                          src={callIcon}
+                          alt="WhatsApp Call Icon"
+                          className="w-[22px] h-[22px]"
+                        />
+                      </a>
+                    </div>
+      
+                    {/* Email */}
+                    <div className="text-center md:text-right space-y-1">
+                      <h3 className="text-base font-semibold text-yellow-400">
+                        Email Address
+                      </h3>
+                      <p className="text-sm font-medium text-gray-300">
+                        support@fixitgroupbd.com
+                      </p>
+                    </div>
+                  </div>
+                </div>
+      
+                {/* Right Side Form */}
+                <div className="bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 rounded-xl p-6 sm:p-8 md:w-[420px] w-full sm:max-w-[500px] mx-auto md:mx-0 mt-10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-yellow-400 text-center md:text-left">
+                    Request a Quote
+                  </h3>
+      
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                      required
+                    />
+      
+                    <input
+                      type="text"
+                      name="company"
+                      placeholder="Your Phone Number"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                      required
+                    />
+      
+                    <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0">
+                      <select
+                        name="dealer"
+                        value={formData.dealer}
+                        onChange={handleChange}
+                        className="w-full sm:w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                        required
+                      >
+                        <option value="" disabled>
+                          Dealer/Depo
+                        </option>
+                        <option value="Dealer">Dealer</option>
+                        <option value="Depo">Depo</option>
+                      </select>
+      
+                      <select
+                        name="district"
+                        value={formData.district}
+                        onChange={handleChange}
+                        className="w-full sm:w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                        required
+                      >
+                        <option value="" disabled>
+                          District
+                        </option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Khulna">Khulna</option>
+                      </select>
+                    </div>
+      
+                    <div className="flex items-start space-x-2 text-sm mt-2">
+                      <input
+                        type="checkbox"
+                        name="consent"
+                        checked={formData.consent}
+                        onChange={handleChange}
+                        className="mt-1"
+                      />
+                      <p>
+                        I consent to receiving calls based on the information provided
+                        above.
+                      </p>
+                    </div>
+      
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="w-full bg-yellow-400 text-black font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-yellow-300 transition disabled:opacity-60"
+                    >
+                      {loading ? "Sending..." : "Submit"}
+                    </button>
+                  </form>
+      
+                  {sent && (
+                    <p className="text-green-400 text-center mt-3">
+                      ✅ Mail sent successfully!
+                    </p>
+                  )}
+                </div>
               </div>
-            </div>
-
-            <h2 className="text-3xl md:text-4xl font-normal leading-snug">
-              Fill out the form below to become an <br />
-              <span className="font-bold text-white">
-                Authorized Dealer
-              </span> of{" "}
-              <span className="font-bold text-yellow-400">
-                Jaguar Lubricants
-              </span>
-            </h2>
-
-            <p className="mt-6 text-gray-300 leading-relaxed">
-              <span className="font-bold text-white">Jaguar Lubricants</span> is
-              committed to building strong, trustworthy, and sustainable
-              business relationships with each of its dealers.
-            </p>
-
-            <p className="mt-4 text-gray-300 leading-relaxed">
-              Our goal is to establish a new benchmark of{" "}
-              <span className="font-semibold text-yellow-400">
-                quality, durability, and reliability
-              </span>{" "}
-              in Bangladesh’s lubricant industry.
-            </p>
-
-            {/* Contact Info */}
-            <div className="flex flex-col md:flex-row items-center py-4 rounded-md mt-40  text-white space-y-3 md:space-y-0 md:space-x-8">
-              {/* Left – Emergency */}
-              <div className="text-center md:text-left space-y-1">
-                <h3 className="text-base font-semibold text-yellow-400">
-                  Emergency
-                </h3>
-                <p className="text-sm font-medium text-gray-300">
-                  +8801788360303
-                </p>
-              </div>
-
-              {/* Center – Call Icon */}
-              <div className="relative flex items-center justify-center">
-                <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
-                <a
-                  href="https://wa.me/8801788360303"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[45px] h-[45px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
-                >
-                  <img
-                    src={callIcon}
-                    alt="WhatsApp Call Icon"
-                    className="w-[22px] h-[22px]"
-                  />
-                </a>
-              </div>
-
-              {/* Right – Email */}
-              <div className="text-center md:text-right space-y-1">
-                <h3 className="text-base font-semibold text-yellow-400">
-                  Email Address
-                </h3>
-                <p className="text-sm font-medium text-gray-300">
-                  support@fixitgroupbd.com
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side Form */}
-          <div
-            className="bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 
-  rounded-xl p-8 md:w-[420px] shadow-[0_4px_30px_rgba(0,0,0,0.5)] 
-  mx-auto mt-10  "
-          >
-            <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
-              Request a Quote
-            </h3>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full p-3 rounded-md bg-gray-100 text-black focus:outline-none"
-                required
-              />
-
-              <input
-                type="text"
-                name="company"
-                placeholder="Your Phone Number"
-                value={formData.company}
-                onChange={handleChange}
-                className="w-full p-3 rounded-md bg-gray-100 text-black focus:outline-none"
-                required
-              />
-
-              <div className="flex space-x-3">
-                <select
-                  name="dealer"
-                  value={formData.dealer}
-                  onChange={handleChange}
-                  className="w-1/2 p-3 rounded-md bg-gray-100 text-black focus:outline-none"
-                  required
-                >
-                  <option value="" disabled>
-                    Dealer/Depo
-                  </option>
-                  <option value="Dealer">Dealer</option>
-                  <option value="Depo">Depo</option>
-                </select>
-
-                <select
-                  name="district"
-                  value={formData.district}
-                  onChange={handleChange}
-                  className="w-1/2 p-3 rounded-md bg-gray-100 text-black focus:outline-none"
-                  required
-                >
-                  <option value="" disabled>
-                    District
-                  </option>
-                  <option value="Dhaka">Dhaka</option>
-                  <option value="Chittagong">Chittagong</option>
-                  <option value="Khulna">Khulna</option>
-                </select>
-              </div>
-
-              <div className="flex items-start space-x-2 text-sm mt-2">
-                <input
-                  type="checkbox"
-                  name="consent"
-                  checked={formData.consent}
-                  onChange={handleChange}
-                  className="mt-1"
-                />
-                <p>
-                  I consent to receiving calls based on the information provided
-                  above.
-                </p>
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-yellow-400 text-black font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-yellow-300 transition disabled:opacity-60"
-              >
-                {loading ? "Sending..." : "Submit"}
-              </button>
-            </form>
-
-            {sent && (
-              <p className="text-green-400 text-center mt-3">
-                ✅ Mail sent successfully!
-              </p>
-            )}
-          </div>
-        </div>
-      </section>
+            </section>
     </section>
   );
 };
