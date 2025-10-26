@@ -8,28 +8,30 @@ import Container from "../../Container";
 import { Link } from "react-router-dom";
 
 const Business = () => {
-  const businesses = [
-    {
-      // name: "Dr. Fixit",
-      logo: fixitLogo,
-      // link: "https://www.drfixit.co.in/",
-    },
-    {
-      // name: "Jaguar",
-      logo: jaguarLogo,
-      // link: "https://www.jaguar.com/",
-    },
-    {
-      // name: "Motul",
-      logo: motulLogo,
-      // link: "https://www.motul.com/",
-    },
-    {
-      // name: "Shadow Design & Printing",
-      logo: shadowLogo,
-      // link: "https://shadow-printing.com/",
-    },
-  ];
+
+    const businesses = [
+  {
+
+    logo: fixitLogo,
+    link: "/drfixit",
+  },
+  {
+ 
+    logo: jaguarLogo,
+    link: "/jaguar",
+  },
+  {
+
+    logo: motulLogo,
+    link: "/motul",
+  },
+  {
+  
+    logo: shadowLogo,
+    link: "/robinson",
+  },
+];
+
 
   return (
     <section>

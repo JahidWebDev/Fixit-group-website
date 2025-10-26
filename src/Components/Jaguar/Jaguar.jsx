@@ -797,13 +797,14 @@ const Jaguar = () => {
         <div className="relative max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10 md:gap-12">
           {/* Left Side */}
           <div className="flex-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <img
-                src={LocationIcon}
-                className="w-[55px] sm:w-[65px] md:w-[70px]"
-                alt="Location Icon"
-              />
-            </div>
+     <div className="flex items-center space-x-3 mb-6">
+  <img
+    src={LocationIcon}
+    className="w-[70px] sm:w-[85px] md:w-[100px]"
+    alt="Location Icon"
+  />
+</div>
+
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal leading-snug text-center md:text-left">
               Fill out the form below to become an{" "}
@@ -854,7 +855,7 @@ const Jaguar = () => {
                   <img
                     src={callIcon}
                     alt="WhatsApp Call Icon"
-                    className="w-[22px] h-[22px]"
+                    className="w-[32px] h-[32px]"
                   />
                 </a>
               </div>

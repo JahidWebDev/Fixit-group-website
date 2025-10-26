@@ -113,7 +113,7 @@ const Drfixit = () => {
     },
     {
       id: 3,
-      name: "Dr Fixit Brand LW 101",
+      name: "Dr. Fixit Brand LW+ 101",
       desc: "05 Liter Waterproofing Expert",
       category: "Febilock Glue",
       img: product1,
@@ -128,7 +128,7 @@ const Drfixit = () => {
     {
       id: 5,
       name: "Dr Fixit Brand LW 101",
-      desc: "18 Liter Paint Expert",
+      desc: "18 Liter Waterproofing Expert",
       category: "Febilock Glue",
       img: product3,
     },
@@ -141,8 +141,8 @@ const Drfixit = () => {
     },
     {
       id: 7,
-      name: "Dr Fixit Brand LW 101",
-      desc: "30 Liter Paint Expert",
+      name: "Dr. Fixit Brand LW+ 101",
+      desc: "30 Liter Waterproofing Expert",
       category: "Febilock Glue",
       img: product3,
     },

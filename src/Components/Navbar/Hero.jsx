@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+
 import { Link, useLocation } from "react-router-dom";
-import Container from "../../Container";
+
 import logo from "../../assets/Fixit-Group-Logo.png";
 import img1 from "../../assets/plant-bg.jpg";
 import img2 from "../../assets/plant-bg2.jpg";

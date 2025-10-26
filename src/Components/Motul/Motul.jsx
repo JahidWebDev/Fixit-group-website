@@ -824,7 +824,7 @@ const images = [bannerImage1, bannerImage2];
                           <img
                             src={callIcon}
                             alt="WhatsApp Call Icon"
-                            className="w-[22px] h-[22px]"
+                            className="w-[32px] h-[32px]"
                           />
                         </a>
                       </div>

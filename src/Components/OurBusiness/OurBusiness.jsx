@@ -283,8 +283,7 @@ const OurBusiness = () => {
               Welcome to Fixit Group
             </h1>
             <p className="text-base md:text-xl max-w-2xl mx-auto">
-              Building Link stronger, smarter Bangladesh with innovation, quality,
-              and trust.
+              Building a stronger, smart Bangladesh through innovation, quality, and trust.
             </p>
           </div>
         </div>
