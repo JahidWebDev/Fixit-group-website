@@ -8,13 +8,15 @@ import drfixitLogo from "../../assets/Dr-Fixit-Logo.png";
 import callIcon from "../../assets/Call-Icon-Green.png";
 import LocationIcon from "../../assets/Location-Man-Icon.png";
 
-import bgImage from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-Ads-Baneer.png";
+
 import fixitHelmet from "../../assets/Biulding-&-Cap.png";
+import bannerImage1 from "../../assets/Dr-Fixit-Brand-5400-Interior-Sealer-Ads-Baneer.png";
+import bannerImage2 from "../../assets/Dr-Fixit-Exterior-Wall-Sealer-5100-.jpg";
+
 import product1 from "../../assets/Dr-Fixit-Brand-LW+-101-1-Litre.png";
 import product2 from "../../assets/Dr-Fixit-Brand-Plaster-Master.png";
 import product3 from "../../assets/Dr-Fixit-Brand-LW-101-30-Litre.png";
 import product5 from "../../assets/Dr-Fixit-Brand-5400-Interior-Wall-Selaer.png";
-
 import product8 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-18-Litre 02.png";
 import product9 from "../../assets/Fevilock-500-ml.png";
 import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre.png";
@@ -23,8 +25,19 @@ import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
 
 const Drfixit = () => {
 
+   const images = [bannerImage1, bannerImage2];
+     const [currentIndex, setCurrentIndex] = useState(0);
+      useEffect(() => {
+       const interval = setInterval(() => {
+         setCurrentIndex((prev) => (prev + 1) % images.length);
+       }, 3000); // প্রতি 4 সেকেন্ডে পরিবর্তন হবে
+       return () => clearInterval(interval);
+     }, [images.length]);
 
-   const [yPos, setYPos] = useState(window.innerHeight - 80);
+
+
+
+  const [yPos, setYPos] = useState(window.innerHeight - 80);
   const [dragging, setDragging] = useState(false);
   const [offsetY, setOffsetY] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -489,69 +502,65 @@ const Drfixit = () => {
           />
         </div>
       </section>
-      <section
+            <section
         className="
-    relative 
-    h-[150px]            /* Default for mobile */
-    sm:h-[600px]         /* Slightly taller on small tablets */
-    md:h-[700px]         /* Original height on desktop */
-    w-full 
-    bg-cover 
-    bg-center 
-    bg-no-repeat 
-  "
-        style={{ backgroundImage: `url(${bgImage})` }}
+          relative 
+          h-[150px]           
+          sm:h-[600px]         
+          md:h-[700px]         
+          w-full 
+          bg-cover 
+          bg-center 
+          bg-no-repeat 
+          transition-all 
+          duration-1000        
+          ease-in-out
+            
+        "
+        style={{
+          backgroundImage: `url(${images[currentIndex]})`,
+        }}
       >
-        {/* Optional overlay */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/10"></div>
-
+  
         {/* Banner Content */}
         <div className="relative z-10 flex items-center justify-center h-full"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
         {/* ✅ Fixed Green Rounded Shape with WhatsApp Icon */}
-<div
-      className={`fixed z-50 flex items-center justify-center w-[120px] h-[60px] md:w-[145px] md:h-[70px]
-             rounded-l-[150px] shadow-[0_4px_20px_rgba(0,0,0,0.2)]
-             bg-gradient-to-r to-[#25D366]/100 from-[#25D366]/80
-             backdrop-blur-lg
-             transition-all duration-300 ease-out `}
-      style={{
-        top: isMobile ? `${yPos}px` : "50%",
-        right: rightOffset,
-        transform: isMobile ? "none" : "translateY(-50%)",
-      }}
-      onTouchStart={isMobile ? handleTouchStart : undefined}
-      onTouchMove={isMobile ? handleTouchMove : undefined}
-      onTouchEnd={isMobile ? handleTouchEnd : undefined}
-    >
-      <a
-        href="https://wa.me/8801712345678"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+    <div
+        className={`fixed z-50 flex items-center justify-center w-[120px] h-[60px] md:w-[145px] md:h-[70px]
+               rounded-l-[150px] shadow-[0_4px_20px_rgba(0,0,0,0.2)]
+               bg-gradient-to-r to-[#25D366]/100 from-[#25D366]/80
+               backdrop-blur-lg
+               transition-all duration-300 ease-out `}
+        style={{
+          top: isMobile ? `${yPos}px` : "50%",
+          right: rightOffset,
+          transform: isMobile ? "none" : "translateY(-50%)",
+        }}
+        onTouchStart={isMobile ? handleTouchStart : undefined}
+        onTouchMove={isMobile ? handleTouchMove : undefined}
+        onTouchEnd={isMobile ? handleTouchEnd : undefined}
       >
-        <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
-        <img
-          src={callIcon}
-          alt="Call Icon"
-          className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
-        />
-      </a>
-    </div>
-
+        <a
+          href="https://wa.me/8801712345678"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+        >
+          <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
+          <img
+            src={callIcon}
+            alt="Call Icon"
+            className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
+          />
+        </a>
+      </div>
+  
+  
+  
+  
       </section>
 
       <section className="bg-[#F0F2F1] py-10 px-10 md:px-16">
