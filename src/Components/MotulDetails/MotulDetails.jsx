@@ -8,7 +8,6 @@ import LocationIcon from "../../assets/Location-Man-Icon.png";
 import mutolLogo from "../../assets/Motul-Logo.png";
 import Phuter from "../../assets/Phuter.png";
 
-
 import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
 import product2 from "../../assets/MOTUL_ENGINE_OIL_4T_7100_10W-40.png";
 import product3 from "../../assets/MOTUL-7100-4T-20W-50-FULL-SYNTHETIC-1L-FRANCE.png";
@@ -18,42 +17,53 @@ import product5 from "../../assets/MOTUL-7100-4T-10W-30-FULL-SYNTHETIC-1L-Vietna
 import product6 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
 import product7 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
 import product8 from "../../assets/MOTUL-7100-4T-10W-40-ESTER.png";
+import product9 from "../../assets/Motul-4T-Plus-3000-10W-30-HC-Tech.png";
+import product10 from "../../assets/Motul4T-Plus-3000-10W-40-HC-Tech.png";
 
 const products = [
 {
-    id: 1,
-  title: "Motul 20W-40 4-Stroke Motorcycle Oil (1L)",
-  brand: "Motul",
-  category: "Motul 20W-40 4-Stroke Motorcycle Oil",
-  capacity: "1 Litre",
-  saeGrade: "20W-40",
-  apiSpecification: "SM",
-  jasoSpecification: "MA2 (HC-Tech)",
-  origin: "France & India",
-  import: "India & France",
-  description1:
-    "Motul 20W-40 4-Stroke Motorcycle Oil is specially formulated for all types of 4-stroke motorcycles up to 150cc. Designed to deliver excellent performance even in high-temperature conditions, this oil ensures smooth engine, gear, and wet clutch operation with outstanding protection and cleanliness.",
-  image: product1,
+  id: 1,
+  title1: "Motul 3000 4T Plus 20W-40 HC-Tech",
+  title2: "Product Information",
+  Application: "Engine",
+  EngineType: "4T",
+  ProductType: "3000",
+  Viscosity: "20W-40",
+  Packsize: "1L",
 
+  image: product1,
+  description2:
+    "HC-TECH® lubricant for 4-stroke motorcycle engines. Suitable for street and road bikes, trails, and off-road bikes fitted with 4-stroke engines, integrated or non-integrated gearbox, wet or dry clutch, and engines with or without catalytic converters. Other users: Scooters, ATV, Mopeds.",
+
+  description1:
+    "Description",
 },
 
 
 
 
+
+
  {
-  id: 2,
-  title: "JAGUAR 20W-40 4T / 20W-50 4T",
-  brand: "JAGUAR",
-  category: "Motorcycle Engine Oil",
-  
-  subtitle: "Jaguar 20W-40 SN Semi Synthetic – Premium Four-Stroke Motorcycle Engine Oil",
-  description1:
-    "Jaguar 20W-40 is a high-performance motorcycle engine oil specially formulated for modern four-stroke engines. Developed with advanced additive technology and highly refined mineral base oils, it ensures superior engine protection, smooth clutch performance, and extended engine life.",
-  description2:
-    "While optimized for the latest engine technology, Jaguar 20W-40 also provides excellent protection for older motorcycle engines, perfectly matching evolving engine technology trends from leading OEMs. Its heat-activated anti-wear molecules™ protect the engine instantly—from start-up to high-temperature, long-distance rides.",
-  availablePackaging: "1 Liter",
+   id: 2,
+  title1: "MOTUL 7100 10W-40 4T FULLY SYNTHETIC ENGINE OIL",
+  title2: "Product Information",
+  Application: "Engine",
+  EngineType: "4T",
+  ProductType: "7100",
+  Viscosity: "10W-40",
+  Packsize: "1L",
+
   image: product2,
-  Availability: "In Stock"
+  description2:
+    "4T racing motor oil developed for factory and high-performance stock motorcycles. - Increased power for ultimate engine response and acceleration. - Ester Core® technology for maximum adherence of the oil film enhancing reliability.",
+
+  description1:
+    "Description",
+  description3:
+    "API / JASO: above latest existing standards.",
+  description4:
+    "Applications: Motorcycle, ATV / UTV / SxS, Personal Watercraft",
 },
 
 
@@ -164,6 +174,44 @@ image: product3
     "Perfectly suited for turbocharged and naturally aspirated diesel engines, Jaguar Extreme Power offers strong film strength, ther-mal stability, and outstanding wear control, making it ideal for both on-road and off-road heavy-duty applications.",
 
     image: product8,
+  },
+  {
+    id: 9,
+    title:
+      "Jaguar Extreme Power 20W50 - Super Premium Diesel Engine Oil (API-CF/SF)",
+  brand: "Jaguar",
+  category: "Diesel Engine Oil (API-CF/SF)",
+  saeGrade: "20W50",
+  apiSpecification: "CF/SF",
+  madeIn: "UAE",
+  
+  description1:
+    "Jaguar Extreme Power 20W50 (API-CF/SF) is a super premium heavy-duty diesel engine oil developed using advanced additive technology and 100% virgin base oils. ",
+  description2:
+    "Formulated for maximum engine protection, excellent cleanliness, and long-lasting performance, this oil ensures smooth operation even under the most demanding conditions.",
+  description3:
+    "Perfectly suited for turbocharged and naturally aspirated diesel engines, Jaguar Extreme Power offers strong film strength, ther-mal stability, and outstanding wear control, making it ideal for both on-road and off-road heavy-duty applications.",
+
+    image: product9,
+  },
+  {
+    id: 10,
+    title:
+      "Jaguar Extreme Power 20W50 - Super Premium Diesel Engine Oil (API-CF/SF)",
+  brand: "Jaguar",
+  category: "Diesel Engine Oil (API-CF/SF)",
+  saeGrade: "20W50",
+  apiSpecification: "CF/SF",
+  madeIn: "UAE",
+  
+  description1:
+    "Jaguar Extreme Power 20W50 (API-CF/SF) is a super premium heavy-duty diesel engine oil developed using advanced additive technology and 100% virgin base oils. ",
+  description2:
+    "Formulated for maximum engine protection, excellent cleanliness, and long-lasting performance, this oil ensures smooth operation even under the most demanding conditions.",
+  description3:
+    "Perfectly suited for turbocharged and naturally aspirated diesel engines, Jaguar Extreme Power offers strong film strength, ther-mal stability, and outstanding wear control, making it ideal for both on-road and off-road heavy-duty applications.",
+
+    image: product10,
   },
   
    
@@ -530,97 +578,98 @@ const MotulDetails = ({}) => {
 
 
             {/* Right: Info */}
-<div className="lg:pt-[10px]">
-  <div className="space-y-2 text-black md:pl-10 lg:pl-0">
-    {/* === Title === */}
-    <h2 className="text-2xl md:text-3xl lg:text-2xl font-bold text-black">
-      {p.title}
-    </h2>
-
-    {/* === Product Info === */}
-    <div className="space-y-1.5 lg:pt-[5px]">
-      {p.brand && (
-        <p className="text-base md:text-lg">
-          <span className="font-bold text-black">Brand:</span> {p.brand}
-        </p>
+ <div className="mt-6 md:mt-0 lg:pt-[10px]">
+    <div className="space-y-2 text-black md:pl-6 lg:pl-0">
+      {/* Title */}
+      {p.title1 && (
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black">
+          {p.title1}
+        </h2>
       )}
-      {p.category && (
-        <p className="text-base md:text-lg">
-          <span className="font-bold text-black">Category:</span> {p.category}
-        </p>
-      )}
-      {p.capacity && (
-        <p className="text-base md:text-lg">
-          <span className="font-bold text-black">Capacity:</span> {p.capacity}
-        </p>
-      )}
-      {p.saeGrade && (
-        <p className="text-base md:text-lg">
-          <span className="font-bold text-black">SAE Grade:</span> {p.saeGrade}
-        </p>
-      )}
-      {p.apiSpecification && (
-        <p className="text-base md:text-lg">
-          <span className="font-bold text-black">API Specification:</span>{" "}
-          {p.apiSpecification}
-        </p>
-      )}
-      {p.jasoSpecification && (
-        <p className="text-base md:text-lg">
-          <span className="font-bold text-black">JASO Specification:</span>{" "}
-          {p.jasoSpecification}
-        </p>
+      {p.title2 && (
+        <h2 className="text-xl lg:mt-[60px] sm:text-2xl lg:text-2xl font-bold text-black">
+          {p.title2}
+        </h2>
       )}
 
-      {/* === Origin & Import === */}
-      {(p.origin || p.import) && (
-        <>
-          <h3 className="text-base md:text-lg font-bold text-black mt-4">
-            Origin & Import Details
-          </h3>
-          {p.origin && (
-            <p className="text-base md:text-lg">
-              <span className="font-bold text-black">Country of Origin:</span>{" "}
-              {p.origin}
-            </p>
-          )}
-          {p.import && (
-            <p className="text-base md:text-lg">
-              <span className="font-bold text-black">Country of Import:</span>{" "}
-              {p.import}
-            </p>
-          )}
-        </>
-      )}
-    </div>
-
-    {/* === Description === */}
-    {(p.subtitle || p.description1 || p.description2 || p.description3) && (
-      <div className="pt-4">
-        {p.subtitle && (
-          <h3 className="text-xl md:text-[22px] font-bold mb-5">
-            {p.subtitle}
-          </h3>
-        )}
-        {p.description1 && (
-          <p className="text-base md:text-lg text-black leading-relaxed mb-2">
-            {p.description1}
+      {/* Product Info */}
+      <div className="space-y-1 pt-2">
+        {p.Application && (
+          <p className="text-sm sm:text-base">
+            <span className="font-semibold">Application:</span> {p.Application}
           </p>
         )}
-        {p.description2 && (
-          <p className="text-base md:text-lg text-black leading-relaxed mb-2">
-            {p.description2}
+        {p.EngineType && (
+          <p className="text-sm sm:text-base">
+            <span className="font-semibold">EngineType:</span> {p.EngineType}
           </p>
         )}
-        {p.description3 && (
-          <p className="text-base md:text-lg text-black leading-relaxed">
-            {p.description3}
+        {p.ProductType && (
+          <p className="text-sm sm:text-base">
+            <span className="font-semibold">ProductType:</span> {p.ProductType}
+          </p>
+        )}
+        {p.Viscosity && (
+          <p className="text-sm sm:text-base">
+            <span className="font-semibold">Viscosity:</span> {p.Viscosity}
+          </p>
+        )}
+        {p.Packsize && (
+          <p className="text-sm sm:text-base">
+            <span className="font-semibold">Packsize:</span> {p.Packsize}
           </p>
         )}
       </div>
-    )}
+
+      {/* Availability */}
+      <p className="text-sm sm:text-base pt-1">
+        <span className="font-semibold text-black">Availability:</span>{" "}
+        <span className="text-green-600 font-medium">In Stock</span>
+      </p>
+
+      {/* Description */}
+      <div className="pt-4 space-y-2">
+        {p.subtitle && (
+          <h3 className="text-lg sm:text-xl font-semibold">
+            {p.subtitle}
+          </h3>
+        )}
+        {p.subtitletwo && (
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+            {p.subtitletwo}
+          </p>
+        )}
+        {p.description1&& ( 
+          <p className="text-sm font-semibold sm:text-base text-black leading-relaxed">
+            {p.description1}
+          </p>
+        )}
+        {p.description2&& (
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+            {p.description2}
+          </p>
+        )}
+        {p.description3&& (
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+            {p.description3}
+          </p>
+        )}
+        {p.description4&& (
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+            {p.description4}
+          </p>
+        )}
+        {p.availablePackaging && (
+          <p className="text-sm sm:text-base text-black leading-relaxed">
+            <span className="font-semibold">Available Packaging:</span>{" "}
+            {p.availablePackaging}
+          </p>
+        )}
+      </div>
+    </div>
   </div>
-</div>
+
+
 
 
 

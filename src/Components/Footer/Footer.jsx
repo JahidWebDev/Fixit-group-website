@@ -84,8 +84,8 @@ const Footer = () => {
           <FaInstagram size={20} />
         </a>
         <a
-          href="https://www.linkedin.com/"
-          target="_blank"
+          href=""
+          target=""
           rel="noopener noreferrer"
           className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full text-white hover:text-[#0A66C2] hover:bg-white transition-all duration-300"
         >
