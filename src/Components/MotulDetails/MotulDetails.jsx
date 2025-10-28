@@ -10,8 +10,7 @@ import Phuter from "../../assets/Phuter.png";
 
 import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
 import product2 from "../../assets/MOTUL_ENGINE_OIL_4T_7100_10W-40.png";
-import product3 from "../../assets/MOTUL-7100-4T-20W-50-FULL-SYNTHETIC-1L-FRANCE.png";
-
+import product3 from "../../assets/MOTUL-7100-4T-20W-50FULL-SYNTHETIC-1L-FRANCE.png";
 import product4 from "../../assets/MOTUL-5100-20W-50-4T.png";
 import product5 from "../../assets/MOTUL-7100-4T-10W-30-FULL-SYNTHETIC-1L-Vietnam.png";
 import product6 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
@@ -69,35 +68,47 @@ const products = [
 
   {
   id: 3,
-title: "Motul 7100 Fully Synthetic 4-Stroke Motorcycle Oil 1L (FRANCE)",
-brand: "Motul",
-category: "Motul 20W-50 Fully Synthetic (Ester Technology)",
-capacity: "1 Liter",
-saeGrade: "20W-50",
-apiSpecification: "API SP",
-jasoSpecification: "MA2 (JASO T903:2023)",
-description1: "Motul 7100 is a best-in-class fully synthetic motor oil engineered with Ester Core® technology for maximum protection and out-standing performance in both on-road and off-road conditions. It is suitable for all types of high-performance 4-stroke motorcy-cles, whether they have an integrated or non-integrated gear-box, and whether they use a wet or dry clutch system.",
-description2: "TPerfectly designed for motorcycles equipped with catalytic con-verters or secondary air injection systems, Motul 7100 ensures optimal engine cleanliness, reduced friction, and superior pro-tection under extreme riding conditions - from daily commutes to sport and adventure riding.",
+ title1: "MOTUL 7100 20W-50 4T FULLY SYNTHETIC ENGINE OIL",
+  title2: "Product Information",
+  Application: "Engine",
+  EngineType: "4T",
+  ProductType: "7100",
+  Viscosity: "20W-50",
+  Packsize: "1L",
 
-image: product3
+  image: product3,
+  description2:
+    "MOTUL 7100 is a best-in-class motor oil for maximal protection dedicated to providing the best performances for on-road and off-road riding.",
+
+  description1:
+    "Description",
+  description3:
+    "Suitable for any type of high performance motorcycle with 4-stroke engine, with or without integrated gearbox, wet or dry clutch. Perfect for motorcycles with exhaust after-treatment systems such as catalytic converters or secondary air injection. Designed for severe conditions in sport and adventure riding.",
+  description4:
+    "Other applications: ATVs, UTVs, SxS, personal watercraft (PWC) or snowmobiles depending on manufacturer’s viscosity recommendation.",
 
   },
 
 {
   id: 4,
-  title: "MOTUL 5100 20W-50 4T",
-  brand: "Motul",
-  category: "Motul 5100 20W-50 4T is a high-performance semi-synthetic engine oil",
-  engineType: "4T (4-Stroke)",
-  viscosity: "20W-50",
-  apiSpecification: "API SP",
-  jasoSpecification: "MA2 (2023)",
+    title1: "MOTUL 7100 20W-50 4T FULLY SYNTHETIC ENGINE OIL",
+  title2: "Product Information",
+  Application: "Engine",
+  EngineType: "4T",
+  ProductType: "5100",
+  Viscosity: "20W-50",
+  Packsize: "1L",
 
-  
-  description1:
-    "Motul 5100 20W-50 4T is a high-performance semi-synthetic engine oil (Technosynthese®) designed for 4-stroke motorcycles that require reliability, smooth performance, and protection in everyday use and light recreational riding.",
+  image: product2,
   description2:
-    "Formulated with Motul’s exclusive Ester technology, this oil en-sures easy cold starts, smoother gear shifting, and optimized fuel efficiency, while extending engine and gearbox life even under demanding conditions.",
+    "4T racing motor oil developed for factory and high-performance stock motorcycles. - Increased power for ultimate engine response and acceleration. - Ester Core® technology for maximum adherence of the oil film enhancing reliability.",
+
+  description1:
+    "Description",
+  description3:
+    "API / JASO: above latest existing standards.",
+  description4:
+    "Applications: Motorcycle, ATV / UTV / SxS, Personal Watercraft",
 
   image: product4,
 },
@@ -106,111 +117,134 @@ image: product3
 
 {
   id: 5,
-  title: "Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W-50",
-  brand: "Jaguar",
-  category: "High-Performance Synthetic Technology Diesel Engine Oil",
-  capacity: "5 Liters",
-  saeGrade: "20W-50",
-  apiSpecification: "CH-4",
-  madeIn: "UAE",
- 
- description1:
-  "Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W50 is an ul-tra-high-performance diesel engine oil formulated with ad-vanced synthetic technology and premium base stocks. It pro-vides excellent lubrication, enhanced engine protection, and longer engine life for both modern and older generation diesel en-gines operating in the most demanding conditions.",
+ title1: "MOTUL 7100 10W-30 4T FULLY SYNTHETIC ENGINE OIL",
+  title2: "Product Information",
+  Application: "Engine",
+  EngineType: "4T",
+  ProductType: "7100",
+  Viscosity: "10W-30",
+  Packsize: "1L",
 
   image: product5,
-},
+  description2:
+    "MOTUL 7100 is a best-in-class motor oil for maximal protection dedicated to providing the best performances for on-road and off-road riding.",
+
+  description1:
+    "Description",
+  description3:
+    "Suitable for any type of high performance motorcycle with 4-stroke engine, with or without integrated gearbox, wet or dry clutch. Perfect for motorcycles with exhaust after-treatment systems such as catalytic converters or secondary air injection. Designed for severe conditions in sport and adventure riding.",
+  description4:
+    "Other applications: ATVs, UTVs, SxS, personal watercraft (PWC) or snowmobiles depending on manufacturer’s viscosity recommendation.",
+
+  },
 
 
 {
   id: 6,
-  title: "MOTUL 300V 4T 10W-40 FULL SYNTHETIC 1L (INDONESIA)",
-  brand: "Motul",
-  category: "100% Synthetic (Ester Core®)",
-  capacity: "1 Litre (Made in Indonesia)",
-  saeGrade: "SAE 10W-40",
-  apiSpecification: "FULL SYNTHETIC",
-  madeIn: "INDONESIA",
-  description1:
-    "JMotul 300V 4T 10W-40 is a premium fully synthetic motorcycle engine oil formulated with Ester Core® Technology, developed for maximum power output and ultimate protection under extreme racing or sport-riding conditions.",
-  description2:
-    "Originally designed for factory racing teams, the 300V series deliv-ers superior engine response, increased clutch grip, and reduced internal friction — ensuring the best performance for both on-road and off-road high-performance motorcycles.",
+  title1: "MOTUL 300V 10W-30 4T FULLY SYNTHETIC ENGINE OIL",
+  title2: "Product Information",
+  Application: "Engine",
+  EngineType: "4T",
+  ProductType: "300V",
+  Viscosity: "10W-30",
+  Packsize: "1L",
+
   image: product6,
+  description2:
+    "4T racing motor oil developed for factory and high-performance stock motorcycles. - Increased power for ultimate engine response and acceleration. - Ester Core® technology for maximum adherence of the oil film enhancing reliability.",
+
+  description1:
+    "Description",
+  description3:
+    "API / JASO: above latest existing standards.",
+  description4:
+    "Applications: Motorcycle, ATV / UTV / SxS, Personal Watercraft"
 },
 
 
   {
-    id: 7,
-    title:
-      "vehicles, trucks, buses, and heavy equipment.",
+      id: 7,
+  title1: "MOTUL 300V 10W-40 4T FULLY SYNTHETIC ENGINE OIL",
+  title2: "Product Information",
+  Application: "Engine",
+  EngineType: "4T",
+  ProductType: "300V",
+  Viscosity: "10W-40",
+  Packsize: "1L",
 
-    brand: "Jaguar",
-    category: "Admixture",
-   category: "Premium High-Performance Diesel Engine Oil for Commercial Use",
-  capacity: "10 Liters",
-  saeGrade: "HD-50",
-  apiSpecification: "SF/CD",
-  madeIn: "UAE",
-  description1:
-    "Jaguar HD-50 API SF/CD is a high-quality multigrade motor oil spe-cially formulated for passenger vehicles, light trucks, and heavy-duty engines that operate under demanding conditions. De-signed with premium Group I base oils and advanced additive technology, Jaguar HD-50 ensures superior engine cleanliness, re-duced wear, and long-lasting protection against oxidation and cor-rosion.",
+  image: product7,
   description2:
-    "This oil is suitable for naturally aspirated, turbocharged, and su-percharged engines used in both on-road and off-road applica-tions-making it an ideal choice for fleets, commercial vehicles, and older model cars that require SF/CD specification oils.",
-    image: product7,
-  },
-  {
-    id: 8,
-    title:
-      "Jaguar Extreme Power 20W50 - Super Premium Diesel Engine Oil (API-CF/SF)",
-  brand: "Jaguar",
-  category: "Diesel Engine Oil (API-CF/SF)",
-  saeGrade: "20W50",
-  apiSpecification: "CF/SF",
-  madeIn: "UAE",
-  
+    "4T racing motor oil developed for factory and high-performance stock motorcycles. - Increased power for ultimate engine response and acceleration. - Ester Core® technology for maximum adherence of the oil film enhancing reliability.",
+
   description1:
-    "Jaguar Extreme Power 20W50 (API-CF/SF) is a super premium heavy-duty diesel engine oil developed using advanced additive technology and 100% virgin base oils. ",
-  description2:
-    "Formulated for maximum engine protection, excellent cleanliness, and long-lasting performance, this oil ensures smooth operation even under the most demanding conditions.",
+    "Description",
   description3:
-    "Perfectly suited for turbocharged and naturally aspirated diesel engines, Jaguar Extreme Power offers strong film strength, ther-mal stability, and outstanding wear control, making it ideal for both on-road and off-road heavy-duty applications.",
+    "API / JASO: above latest existing standards.",
+  description4:
+    "Applications: Motorcycle, ATV / UTV / SxS, Personal Watercraft",
+},
+  
+{
+  id: 8,
+ title1: "MOTUL 7100 10W-40 4T FULLY SYNTHETIC ENGINE OIL",
+  title2: "Product Information",
+  Application: "Engine",
+  EngineType: "4T",
+  ProductType: "7100",
+  Viscosity: "10W-40",
+  Packsize: "1L",
 
-    image: product8,
+  image: product8,
+  description2:
+    "MOTUL 7100 is a best-in-class motor oil for maximal protection dedicated to providing the best performances for on-road and off-road riding.",
+
+  description1:
+    "Description",
+  description3:
+    "Suitable for any type of high performance motorcycle with 4-stroke engine, with or without integrated gearbox, wet or dry clutch. Perfect for motorcycles with exhaust after-treatment systems such as catalytic converters or secondary air injection. Designed for severe conditions in sport and adventure riding.",
+  description4:
+    "Other applications: ATVs, UTVs, SxS, personal watercraft (PWC) or snowmobiles depending on manufacturer’s viscosity recommendation.",
+
   },
-  {
+ {
     id: 9,
-    title:
-      "Jaguar Extreme Power 20W50 - Super Premium Diesel Engine Oil (API-CF/SF)",
-  brand: "Jaguar",
-  category: "Diesel Engine Oil (API-CF/SF)",
-  saeGrade: "20W50",
-  apiSpecification: "CF/SF",
-  madeIn: "UAE",
-  
-  description1:
-    "Jaguar Extreme Power 20W50 (API-CF/SF) is a super premium heavy-duty diesel engine oil developed using advanced additive technology and 100% virgin base oils. ",
-  description2:
-    "Formulated for maximum engine protection, excellent cleanliness, and long-lasting performance, this oil ensures smooth operation even under the most demanding conditions.",
-  description3:
-    "Perfectly suited for turbocharged and naturally aspirated diesel engines, Jaguar Extreme Power offers strong film strength, ther-mal stability, and outstanding wear control, making it ideal for both on-road and off-road heavy-duty applications.",
+   title1: "Motul 3000 4T Plus 10W-30 HC-Tech",
+  title2: "Product Information",
+  Application: "Engine",
+  EngineType: "4T",
+  ProductType: "3000",
+  Viscosity: "10W-30",
+  Packsize: "1L",
 
+  image: product2,
+  description2:
+    "HC-TECH® lubricant for 4-stroke motorcycle engine. Street & roa d bikes, trails, off-road bikes fitted with 4- stroke engines, in tegrated or non-integrated gearbox, wet or dry clutch, engines with or without catalytic converters. Other users: Scooters, ATV, Mopeds",
+
+  description1:
+    "Description",
+ 
     image: product9,
   },
+
+
+
   {
     id: 10,
-    title:
-      "Jaguar Extreme Power 20W50 - Super Premium Diesel Engine Oil (API-CF/SF)",
-  brand: "Jaguar",
-  category: "Diesel Engine Oil (API-CF/SF)",
-  saeGrade: "20W50",
-  apiSpecification: "CF/SF",
-  madeIn: "UAE",
-  
-  description1:
-    "Jaguar Extreme Power 20W50 (API-CF/SF) is a super premium heavy-duty diesel engine oil developed using advanced additive technology and 100% virgin base oils. ",
-  description2:
-    "Formulated for maximum engine protection, excellent cleanliness, and long-lasting performance, this oil ensures smooth operation even under the most demanding conditions.",
-  description3:
-    "Perfectly suited for turbocharged and naturally aspirated diesel engines, Jaguar Extreme Power offers strong film strength, ther-mal stability, and outstanding wear control, making it ideal for both on-road and off-road heavy-duty applications.",
+   title1: "Motul 3000 4T Plus 10W-40 HC-Tech",
+  title2: "Product Information",
+  Application: "Engine",
+  EngineType: "4T",
+  ProductType: "3000",
+  Viscosity: "10W-40",
+  Packsize: "1L",
 
+  image: product2,
+  description2:
+    "HC-TECH® lubricant for 4-stroke motorcycle engine. Street & roa d bikes, trails, off-road bikes fitted with 4- stroke engines, in tegrated or non-integrated gearbox, wet or dry clutch, engines with or without catalytic converters. Other users: Scooters, ATV, Mopeds",
+
+  description1:
+    "Description",
+ 
     image: product10,
   },
   
@@ -699,10 +733,10 @@ const MotulDetails = ({}) => {
 
 
           {/* 🔹 Dynamic Text Content */}
-          <div className="mt-20 ">
+          {/* <div className="mt-20 ">
             {p.id === 1 && (
      <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
-    {/* === Application === */}
+ 
     <section className="mb-6">
       <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
       <p className="mb-2 font-semibold  text-[17px]  text-black">
@@ -728,7 +762,7 @@ const MotulDetails = ({}) => {
       </ul>
     </section>
 
-    {/* === Performance Standards === */}
+
     <section className="mb-6">
       <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
       <ul className="space-y-1 ml-4">
@@ -740,7 +774,7 @@ const MotulDetails = ({}) => {
       </ul>
     </section>
 
-    {/* === Key Features === */}
+
     <section className="mb-6">
       <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
       <ul className="space-y-1 ml-4">
@@ -752,7 +786,7 @@ const MotulDetails = ({}) => {
       </ul>
     </section>
 
-    {/* === Technical Properties === */}
+  
     <section className="mb-6">
       <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
       <table className="w-full text-left border-collapse text-[15px]">
@@ -785,7 +819,7 @@ const MotulDetails = ({}) => {
       </table>
     </section>
 
-    {/* === Available Packs === */}
+  
     <section>
       <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
       <p>1L | 3.5L | 5L | 7.5L | 10L | 20L | 50L | 210L Barrel</p>
@@ -795,7 +829,7 @@ const MotulDetails = ({}) => {
 
             {p.id === 2 && (
              <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-b border-gray-300 py-8 text-[15px] leading-relaxed">
-      {/* === Application === */}
+
       <section className="mb-6">
         <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
         <ul className="space-y-1 ml-4">
@@ -812,7 +846,7 @@ const MotulDetails = ({}) => {
         </ul>
       </section>
 
-      {/* === Specifications and Approvals === */}
+
       <section className="mb-6">
         <h2 className="font-semibold text-[17px] mb-2">
           Specifications and Approvals:
@@ -831,7 +865,7 @@ const MotulDetails = ({}) => {
         </ul>
       </section>
 
-      {/* === Key Features === */}
+
       <section className="mb-6">
         <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
 
@@ -870,7 +904,7 @@ const MotulDetails = ({}) => {
         </p>
       </section>
 
-      {/* === Technical Properties === */}
+     
       <section className="mb-6">
         <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
         <table className="w-full text-left border-collapse text-[15px]">
@@ -904,7 +938,7 @@ const MotulDetails = ({}) => {
         </table>
       </section>
 
-      {/* === Health and Safety === */}
+      }
       <section>
         <h2 className="font-semibold text-[17px] mb-2">Health and Safety</h2>
         <p className="mb-3">
@@ -924,7 +958,7 @@ const MotulDetails = ({}) => {
 
             {p.id === 3 && (
 <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
-  {/* === Application === */}
+ 
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
     <p className="mb-2 font-semibold text-[17px] text-black">
@@ -950,7 +984,7 @@ const MotulDetails = ({}) => {
     </ul>
   </section>
 
-  {/* === Why Choose Motul 7100 === */}
+
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Why Choose Motul 7100?</h2>
     <ul className="space-y-1 ml-4">
@@ -964,7 +998,7 @@ const MotulDetails = ({}) => {
     </p>
   </section>
 
-  {/* === Key Features & Benefits === */}
+
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
     <ul className="space-y-1 ml-4">
@@ -978,7 +1012,7 @@ const MotulDetails = ({}) => {
     </ul>
   </section>
 
-  {/* === Technical Properties === */}
+
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
     <table className="w-full text-left border-collapse text-[15px]">
@@ -1011,7 +1045,6 @@ const MotulDetails = ({}) => {
     </table>
   </section>
 
-  {/* === Available Packs === */}
   <section>
     <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
     <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
@@ -1021,7 +1054,7 @@ const MotulDetails = ({}) => {
             )}
             {p.id === 4 && (
    <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
-  {/* === Application === */}
+
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
     <p className="mb-2 font-semibold text-[17px] text-black">
@@ -1047,7 +1080,7 @@ const MotulDetails = ({}) => {
     </ul>
   </section>
 
-  {/* === Performance Standards === */}
+  
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
     <ul className="space-y-1 ml-4">
@@ -1059,7 +1092,7 @@ const MotulDetails = ({}) => {
     </ul>
   </section>
 
-  {/* === Key Features & Benefits === */}
+  
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
     <ul className="space-y-1 ml-4">
@@ -1073,7 +1106,8 @@ const MotulDetails = ({}) => {
     </ul>
   </section>
 
-  {/* === Technical Properties === */}
+  
+  
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
     <table className="w-full text-left border-collapse text-[15px]">
@@ -1106,7 +1140,7 @@ const MotulDetails = ({}) => {
     </table>
   </section>
 
-  {/* === Available Packs === */}
+  
   <section>
     <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
     <p>1L | 3.5L | 5L | 7.5L | 10L | 20L | 50L | 210L Barrel</p>
@@ -1117,7 +1151,7 @@ const MotulDetails = ({}) => {
 
             {p.id === 5 && (
                 <div className="max-w-[1700px] mx-auto font-sans text-black border-t  border-gray-300 py-8 text-[15px] leading-relaxed">
-      {/* === Application === */}
+     
       <section className="mb-6">
         <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
         <p className="mb-2">
@@ -1143,7 +1177,6 @@ const MotulDetails = ({}) => {
         </ul>
       </section>
 
-      {/* === Performance Standards === */}
       <section className="mb-6">
         <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
         <ul className="space-y-1 ml-4">
@@ -1156,7 +1189,7 @@ const MotulDetails = ({}) => {
         </ul>
       </section>
 
-      {/* === Key Features === */}
+      
       <section className="mb-6">
         <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
 
@@ -1185,7 +1218,7 @@ const MotulDetails = ({}) => {
         <p>Suitable for mixed fleet operations — one oil for multiple applications.</p>
       </section>
 
-      {/* === Technical Properties === */}
+    
       <section className="mb-6">
         <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
         <table className="w-full text-left border-collapse text-[15px]">
@@ -1218,7 +1251,6 @@ const MotulDetails = ({}) => {
         </table>
       </section>
 
-      {/* === Available Packs === */}
       <section>
         <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
         <p>1L | 3.5L | 5L | 7.5L | 10L | 20L | 50L | 210L Barrel</p>
@@ -1228,7 +1260,7 @@ const MotulDetails = ({}) => {
 
             {p.id === 6 && (
  <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
-  {/* === Application === */}
+
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
     <p className="mb-2 font-semibold text-[17px] text-black">
@@ -1242,7 +1274,7 @@ const MotulDetails = ({}) => {
     </ul>
   </section>
 
-  {/* === Performance Standards === */}
+
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
     <ul className="space-y-1 ml-4">
@@ -1254,7 +1286,7 @@ const MotulDetails = ({}) => {
     </ul>
   </section>
 
-  {/* === Key Features & Benefits === */}
+
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
     <ul className="space-y-1 ml-4">
@@ -1268,7 +1300,7 @@ const MotulDetails = ({}) => {
     </ul>
   </section>
 
-  {/* === Technical Properties === */}
+  
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
     <table className="w-full text-left border-collapse text-[15px]">
@@ -1301,7 +1333,7 @@ const MotulDetails = ({}) => {
     </table>
   </section>
 
-  {/* === Available Packs === */}
+ 
   <section>
     <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
     <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
@@ -1312,7 +1344,7 @@ const MotulDetails = ({}) => {
 
             {p.id === 7 && (
 <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
-  {/* === Application === */}
+
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
     <p className="mb-2 font-semibold text-[17px] text-black">
@@ -1326,7 +1358,7 @@ const MotulDetails = ({}) => {
     </ul>
   </section>
 
-  {/* === Performance Standards === */}
+ 
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
     <ul className="space-y-1 ml-4">
@@ -1338,7 +1370,7 @@ const MotulDetails = ({}) => {
     </ul>
   </section>
 
-  {/* === Key Features & Benefits === */}
+ 
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
     <ul className="space-y-1 ml-4">
@@ -1352,7 +1384,7 @@ const MotulDetails = ({}) => {
     </ul>
   </section>
 
-  {/* === Technical Properties === */}
+
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
     <table className="w-full text-left border-collapse text-[15px]">
@@ -1385,7 +1417,7 @@ const MotulDetails = ({}) => {
     </table>
   </section>
 
-  {/* === Available Packs === */}
+  
   <section>
     <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
     <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
@@ -1396,7 +1428,7 @@ const MotulDetails = ({}) => {
             )}
             {p.id === 8 && (
     <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
-  {/* Application */}
+
   <div className="border-t border-gray-300 py-6">
     <h2 className="font-semibold text-lg mb-4">Application:</h2>
     <ul className="space-y-2 pl-6">
@@ -1419,7 +1451,7 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Specification */}
+
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Specification</h2>
     <ul className="space-y-2 pl-6">
@@ -1432,7 +1464,7 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Key Features & Benefits */}
+  
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
@@ -1464,7 +1496,7 @@ const MotulDetails = ({}) => {
     </div>
   </div>
 
-  {/* Why Choose Jaguar Extra Mileage */}
+  
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Why Choose Jaguar Extra Mileage?</h2>
     <p>
@@ -1474,7 +1506,7 @@ const MotulDetails = ({}) => {
     </p>
   </div>
 
-  {/* Available Packs */}
+
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
     <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
@@ -1485,7 +1517,7 @@ const MotulDetails = ({}) => {
             )}
             {p.id === 9 && (
                     <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
-  {/* Application */}
+
   <div className="border-t border-gray-300 py-6">
     <h2 className="font-semibold text-lg mb-4">Application:</h2>
     <ul className="space-y-2 pl-6">
@@ -1504,7 +1536,7 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Specification */}
+ 
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Specification</h2>
     <ul className="space-y-2 pl-6">
@@ -1526,7 +1558,7 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Key Features & Benefits */}
+ 
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
@@ -1568,7 +1600,7 @@ const MotulDetails = ({}) => {
     </div>
   </div>
 
-  {/* Technical Properties */}
+  
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
     <table className="w-full text-left border-collapse text-[15px]">
@@ -1603,7 +1635,7 @@ const MotulDetails = ({}) => {
     </table>
   </section>
 
-  {/* Available Packs */}
+  
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
     <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
@@ -1614,7 +1646,7 @@ const MotulDetails = ({}) => {
             {p.id === 10 && (
         <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
 
-  {/* Application */}
+
   <div className="border-t border-gray-300 py-6">
     <h2 className="font-semibold text-lg mb-4">Application:</h2>
     <ul className="space-y-2 pl-6">
@@ -1633,7 +1665,7 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Specifications & Approvals */}
+  
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Specifications & Approvals</h2>
     <ul className="space-y-2 pl-6">
@@ -1646,7 +1678,7 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Key Features & Benefits */}
+
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
@@ -1683,7 +1715,7 @@ const MotulDetails = ({}) => {
     </div>
   </div>
 
-  {/* Technical Properties */}
+  
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
     <table className="w-full text-left border-collapse text-[15px]">
@@ -1714,7 +1746,7 @@ const MotulDetails = ({}) => {
     </table>
   </section>
 
-  {/* Available Packs */}
+
   <div className="py-6 ">
     <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
     <p>5L | 20L | 60L | 208L Drums</p>
@@ -1725,7 +1757,7 @@ const MotulDetails = ({}) => {
             {p.id === 11 && (
               <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
 
-  {/* Application */}
+
   <div className="border-t border-gray-300 py-6">
     <h2 className="font-semibold text-lg mb-4">Application:</h2>
     <ul className="space-y-2 pl-6">
@@ -1744,7 +1776,7 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Specifications & Approvals */}
+
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Specifications & Approvals</h2>
     <ul className="space-y-2 pl-6">
@@ -1757,7 +1789,7 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Key Features & Benefits */}
+
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
@@ -1794,7 +1826,7 @@ const MotulDetails = ({}) => {
     </div>
   </div>
 
-  {/* Technical Properties */}
+ 
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
     <table className="w-full text-left border-collapse text-[15px]">
@@ -1825,7 +1857,7 @@ const MotulDetails = ({}) => {
     </table>
   </section>
 
-  {/* Available Packs */}
+ 
   <div className="py-6 ">
     <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
     <p>5L | 20L | 60L | 208L Drums</p>
@@ -1836,7 +1868,7 @@ const MotulDetails = ({}) => {
             {p.id === 12 && (
            <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
 
-  {/* Application */}
+ 
   <div className="border-t border-gray-300 py-6">
     <h2 className="font-semibold text-lg mb-4">Application:</h2>
     <ul className="space-y-2 pl-6">
@@ -1855,7 +1887,7 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Performance Standards */}
+ 
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Performance Standards</h2>
     <ul className="space-y-2 pl-6">
@@ -1874,7 +1906,7 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Key Features & Benefits */}
+
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
@@ -1911,7 +1943,7 @@ const MotulDetails = ({}) => {
     </div>
   </div>
 
-  {/* Available Packs */}
+  
   <div className="py-6 ">
     <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
     <p>5L | 20L | 60L | 208L Drums</p>
@@ -1922,7 +1954,7 @@ const MotulDetails = ({}) => {
             {p.id === 13 && (
                           <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
 
-  {/* Application */}
+
   <div className="border-t border-gray-300 py-6">
     <h2 className="font-semibold text-lg mb-4">Application:</h2>
     <ul className="space-y-2 pl-6">
@@ -1941,7 +1973,6 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Specifications & Approvals */}
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Specifications & Approvals</h2>
     <ul className="space-y-2 pl-6">
@@ -1954,7 +1985,7 @@ const MotulDetails = ({}) => {
     </ul>
   </div>
 
-  {/* Key Features & Benefits */}
+  
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
 
@@ -1991,7 +2022,7 @@ const MotulDetails = ({}) => {
     </div>
   </div>
 
-  {/* Technical Properties */}
+  
   <section className="mb-6">
     <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
     <table className="w-full text-left border-collapse text-[15px]">
@@ -2022,21 +2053,20 @@ const MotulDetails = ({}) => {
     </table>
   </section>
 
-  {/* Available Packs */}
   <div className="py-6  border-gray-300">
     <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
     <p>5L | 20L | 60L | 208L Drums</p>
   </div>
 </section>
             )}
-          </div>
+          </div> */}
         </div>
       </section>
      <section
             className="relative mb-[50px] bg-black bg-cover bg-center bg-no-repeat py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 text-white overflow-hidden"
             style={{ backgroundImage: `url(${Phuter})` }}
           >
-            {/* Responsive Overlay */}
+           
             <div className="absolute inset-0 bg-black md:bg-black/20"></div>
     
             <div className="relative max-w-[1600px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10 md:gap-12">
@@ -2075,7 +2105,6 @@ const MotulDetails = ({}) => {
                   in Bangladesh’s lubricant industry.
                 </p>
     
-                {/* Contact Info */}
                 <div className="flex flex-col md:flex-row items-center md:items-end py-4 md:py-6 mt-12 md:mt-20 space-y-4 md:space-y-0 md:space-x-8 text-white">
                   {/* Emergency */}
                   <div className="text-center md:text-left space-y-1">
@@ -2087,7 +2116,7 @@ const MotulDetails = ({}) => {
                     </p>
                   </div>
     
-                  {/* Call Icon */}
+            
                   <div className="relative flex items-center justify-center">
                     <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
                     <a
@@ -2104,7 +2133,7 @@ const MotulDetails = ({}) => {
                     </a>
                   </div>
     
-                  {/* Email */}
+                  
                   <div className="text-center md:text-right space-y-1">
                     <h3 className="text-base font-semibold text-yellow-400">
                       Email Address
@@ -2116,7 +2145,7 @@ const MotulDetails = ({}) => {
                 </div>
               </div>
     
-              {/* Right Side Form */}
+              
               <div className="bg-[#1A1A1A]/70 backdrop-blur-md border border-white/10 rounded-xl p-6 sm:p-8 md:w-[420px] w-full sm:max-w-[500px] mx-auto md:mx-0 mt-10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
                 <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-yellow-400 text-center md:text-left">
                   Request a Quote
