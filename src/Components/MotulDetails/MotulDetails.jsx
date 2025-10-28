@@ -9,15 +9,15 @@ import mutolLogo from "../../assets/Motul-Logo.png";
 import Phuter from "../../assets/Phuter.png";
 
 import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
-import product2 from "../../assets/MOTUL_ENGINE_OIL_4T_7100_10W-40.png";
-import product3 from "../../assets/MOTUL-7100-4T-20W-50FULL-SYNTHETIC-1L-FRANCE.png";
-import product4 from "../../assets/MOTUL-5100-20W-50-4T.png";
-import product5 from "../../assets/MOTUL-7100-4T-10W-30-FULL-SYNTHETIC-1L-Vietnam.png";
-import product6 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
-import product7 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
-import product8 from "../../assets/MOTUL-7100-4T-10W-40-ESTER.png";
-import product9 from "../../assets/Motul-4T-Plus-3000-10W-30-HC-Tech.png";
-import product10 from "../../assets/Motul4T-Plus-3000-10W-40-HC-Tech.png";
+
+import product2 from "../../assets/MOTUL-7100-4T-20W-50FULL-SYNTHETIC-1L-FRANCE.png";
+import product3 from "../../assets/Motul-5100-10W40.png";
+import product4 from "../../assets/MOTUL-7100-4T-10W-30-FULL-SYNTHETIC-1L-Vietnam.png";
+import product5 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
+import product6 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
+import product7 from "../../assets/MOTUL-7100-4T-10W-40-ESTER.png";
+import product8 from "../../assets/Motul-4T-Plus-3000-10W-30-HC-Tech.png";
+import product9 from "../../assets/Motul4T-Plus-3000-10W-40-HC-Tech.png";
 
 const products = [
 {
@@ -41,33 +41,10 @@ const products = [
 
 
 
-
-
- {
-   id: 2,
-  title1: "MOTUL 7100 10W-40 4T FULLY SYNTHETIC ENGINE OIL",
-  title2: "Product Information",
-  Application: "Engine",
-  EngineType: "4T",
-  ProductType: "7100",
-  Viscosity: "10W-40",
-  Packsize: "1L",
-
-  image: product2,
-  description2:
-    "4T racing motor oil developed for factory and high-performance stock motorcycles. - Increased power for ultimate engine response and acceleration. - Ester Core® technology for maximum adherence of the oil film enhancing reliability.",
-
-  description1:
-    "Description",
-  description3:
-    "API / JASO: above latest existing standards.",
-  description4:
-    "Applications: Motorcycle, ATV / UTV / SxS, Personal Watercraft",
-},
-
+ 
 
   {
-  id: 3,
+  id: 2,
  title1: "MOTUL 7100 20W-50 4T FULLY SYNTHETIC ENGINE OIL",
   title2: "Product Information",
   Application: "Engine",
@@ -76,7 +53,7 @@ const products = [
   Viscosity: "20W-50",
   Packsize: "1L",
 
-  image: product3,
+  image: product2,
   description2:
     "MOTUL 7100 is a best-in-class motor oil for maximal protection dedicated to providing the best performances for on-road and off-road riding.",
 
@@ -90,16 +67,16 @@ const products = [
   },
 
 {
-  id: 4,
-    title1: "MOTUL 7100 20W-50 4T FULLY SYNTHETIC ENGINE OIL",
+  id: 3,
+    title1: "MOTUL 5100 10W-50 4T FULLY SYNTHETIC ENGINE OIL",
   title2: "Product Information",
   Application: "Engine",
   EngineType: "4T",
   ProductType: "5100",
-  Viscosity: "20W-50",
+  Viscosity: "10W-50",
   Packsize: "1L",
 
-  image: product2,
+  image: product3,
   description2:
     "4T racing motor oil developed for factory and high-performance stock motorcycles. - Increased power for ultimate engine response and acceleration. - Ester Core® technology for maximum adherence of the oil film enhancing reliability.",
 
@@ -110,13 +87,13 @@ const products = [
   description4:
     "Applications: Motorcycle, ATV / UTV / SxS, Personal Watercraft",
 
-  image: product4,
+  image: product3,
 },
 
 
 
 {
-  id: 5,
+  id: 4,
  title1: "MOTUL 7100 10W-30 4T FULLY SYNTHETIC ENGINE OIL",
   title2: "Product Information",
   Application: "Engine",
@@ -125,7 +102,7 @@ const products = [
   Viscosity: "10W-30",
   Packsize: "1L",
 
-  image: product5,
+  image: product4,
   description2:
     "MOTUL 7100 is a best-in-class motor oil for maximal protection dedicated to providing the best performances for on-road and off-road riding.",
 
@@ -140,7 +117,7 @@ const products = [
 
 
 {
-  id: 6,
+  id: 5,
   title1: "MOTUL 300V 10W-30 4T FULLY SYNTHETIC ENGINE OIL",
   title2: "Product Information",
   Application: "Engine",
@@ -149,7 +126,7 @@ const products = [
   Viscosity: "10W-30",
   Packsize: "1L",
 
-  image: product6,
+  image: product5,
   description2:
     "4T racing motor oil developed for factory and high-performance stock motorcycles. - Increased power for ultimate engine response and acceleration. - Ester Core® technology for maximum adherence of the oil film enhancing reliability.",
 
@@ -163,7 +140,7 @@ const products = [
 
 
   {
-      id: 7,
+      id: 6,
   title1: "MOTUL 300V 10W-40 4T FULLY SYNTHETIC ENGINE OIL",
   title2: "Product Information",
   Application: "Engine",
@@ -172,7 +149,7 @@ const products = [
   Viscosity: "10W-40",
   Packsize: "1L",
 
-  image: product7,
+  image: product6,
   description2:
     "4T racing motor oil developed for factory and high-performance stock motorcycles. - Increased power for ultimate engine response and acceleration. - Ester Core® technology for maximum adherence of the oil film enhancing reliability.",
 
@@ -185,7 +162,7 @@ const products = [
 },
   
 {
-  id: 8,
+  id: 7,
  title1: "MOTUL 7100 10W-40 4T FULLY SYNTHETIC ENGINE OIL",
   title2: "Product Information",
   Application: "Engine",
@@ -194,7 +171,7 @@ const products = [
   Viscosity: "10W-40",
   Packsize: "1L",
 
-  image: product8,
+  image: product7,
   description2:
     "MOTUL 7100 is a best-in-class motor oil for maximal protection dedicated to providing the best performances for on-road and off-road riding.",
 
@@ -207,7 +184,7 @@ const products = [
 
   },
  {
-    id: 9,
+    id: 8,
    title1: "Motul 3000 4T Plus 10W-30 HC-Tech",
   title2: "Product Information",
   Application: "Engine",
@@ -223,13 +200,13 @@ const products = [
   description1:
     "Description",
  
-    image: product9,
+    image: product8,
   },
 
 
 
   {
-    id: 10,
+    id: 9,
    title1: "Motul 3000 4T Plus 10W-40 HC-Tech",
   title2: "Product Information",
   Application: "Engine",
@@ -245,7 +222,7 @@ const products = [
   description1:
     "Description",
  
-    image: product10,
+    image: product9,
   },
   
    

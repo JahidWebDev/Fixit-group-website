@@ -16,16 +16,14 @@ import bgImage2 from "../../assets/Motul-EsterCore-Bangladesh.jpg";
 import Phuter from "../../assets/Phuter.png";
 
 import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
-import product2 from "../../assets/MOTUL_ENGINE_OIL_4T_7100_10W-40.png";
-import product3 from "../../assets/MOTUL-7100-4T-20W-50FULL-SYNTHETIC-1L-FRANCE.png";
-
-import product4 from "../../assets/MOTUL-5100-20W-50-4T.png";
-import product5 from "../../assets/MOTUL-7100-4T-10W-30-FULL-SYNTHETIC-1L-Vietnam.png";
-import product6 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
-import product7 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
-import product8 from "../../assets/MOTUL-7100-4T-10W-40-ESTER.png";
-import product9 from "../../assets/Motul-4T-Plus-3000-10W-30-HC-Tech.png";
-import product10 from "../../assets/Motul4T-Plus-3000-10W-40-HC-Tech.png";
+import product2 from "../../assets/MOTUL-7100-4T-20W-50FULL-SYNTHETIC-1L-FRANCE.png";
+import product3 from "../../assets/Motul-5100-10W40.png";
+import product4 from "../../assets/MOTUL-7100-4T-10W-30-FULL-SYNTHETIC-1L-Vietnam.png";
+import product5 from "../../assets/MOTUL-300V-4T-10W-40-FULL-SYNTHETIC-1L.png";
+import product6 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
+import product7 from "../../assets/MOTUL-7100-4T-10W-40-ESTER.png";
+import product8 from "../../assets/Motul-4T-Plus-3000-10W-30-HC-Tech.png";
+import product9 from "../../assets/Motul4T-Plus-3000-10W-40-HC-Tech.png";
 
 
 const Motul = () => {
@@ -106,69 +104,62 @@ const images = [bannerImage1, bannerImage2];
       desctwo: " Mineral",
       img: product1,
     },
+  
     {
       id: 2,
-      name: "MOTUL ENGINE OIL 4T 7100 10W-40",
-      desc: "1 Litre API SP JASO MA2",
-      descone: "10W40",
-      desctwo: " Full Synthetic",
+      name: "MOTUL 7100 4T 20W-50 FULL SYNTHETIC 1L (Vietnam)",
+      desc: "2 Litre API-SL 20W-50",
+      descone: " Full Synthetic",
       img: product2,
     },
     {
       id: 3,
-      name: "MOTUL 7100 4T 20W-50 FULL SYNTHETIC 1L (Vietnam)",
-      desc: "2 Litre API-SL 20W-50",
-      descone: " Full Synthetic",
+      name: "MOTUL 5100 10W-40 4T",
+      desc: "1 Litre SAE 10W40, API: SP JASO MA2",
+      descone: "Fully Synthetic",
       img: product3,
     },
     {
       id: 4,
-      name: "MOTUL 5100 10W-40 4T",
-      desc: "1 Litre SAE 10W40, API: SP JASO MA2",
-      descone: "Fully Synthetic",
-      img: product4,
-    },
-    {
-      id: 5,
       name: "MOTUL 7100 4T 10W-30 FULL SYNTHETIC 1L (Vietnam)",
       desc: "1 Litre API-SP 10W-30",
       
       descthree: "",
       category: "Febilock Glue",
+      img: product4,
+    },
+    {
+      id: 5,
+      name: "MOTUL 300V 4T 10W-40",
+      desc: "01 Litre",
       img: product5,
     },
     {
       id: 6,
-      name: "MOTUL 300V 4T 10W-40",
+      name: "MOTUL 300V 4T 10W-30",
       desc: "01 Litre",
-      img: product6,
+       img: product6,
     },
     {
       id: 7,
-      name: "MOTUL 300V 4T 10W-30",
-      desc: "01 Litre",
-       img: product7,
-    },
-    {
-      id: 8,
       name: "MOTUL 7100 4T 10W-40 FULL SYNTHETIC 1L (Vietnam)",
       desc: "1 Litre API-SP 10W-40",
       descone: "Full Synthetic",
+      img: product7,
+    },
+    {
+      id: 8,
+      name: "Motul 4T Plus 3000 10W-30 HC-Tech",
+      desc: "1 Litre API SN JASO MA2 10W30",
+      descone: "Mineral",
       img: product8,
     },
     {
       id: 9,
-      name: "Motul 4T Plus 3000 10W-30 HC-Tech",
-      desc: "1 Litre API SN JASO MA2 10W30",
-      descone: "Mineral",
-      img: product9,
-    },
-    {
-      id: 10,
       name: "Motul 4T Plus 3000 10W-40 HC-Tech",
       desc: "1 Litre API SN JASO MA2 10W40",
       descone: "Mineral",
-      img: product10,
+      img: product9,
     },
   
    
