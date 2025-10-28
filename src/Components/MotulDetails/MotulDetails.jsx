@@ -612,12 +612,12 @@ const MotulDetails = ({}) => {
         )}
         {p.EngineType && (
           <p className="text-sm sm:text-base">
-            <span className="font-semibold">EngineType:</span> {p.EngineType}
+            <span className="font-semibold">Engine Type:</span> {p.EngineType}
           </p>
         )}
         {p.ProductType && (
           <p className="text-sm sm:text-base">
-            <span className="font-semibold">ProductType:</span> {p.ProductType}
+            <span className="font-semibold">Product Type:</span> {p.ProductType}
           </p>
         )}
         {p.Viscosity && (
