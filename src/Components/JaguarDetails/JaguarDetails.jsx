@@ -29,10 +29,10 @@ const products = [
   brand: "Jaguar",
   category: "Motor Cycle Engine Oil (Motor Engine Oil)",
   capacity: "1 Liter",
-  saeGrade: "20W-40",
+  saeGrade: "20W-40, 20W50 (Semi Synthetic)",
   apiSpecification: "SM JASO MA2",
-  madeIn: "UEA",
-  subtitle: "Jaguar 20W-40 - Premium Four-Stroke Motorcycle Engine Oil",
+  madeIn: "UAE",
+  subtitle: "Jaguar 20W-40-20W50 - Premium Four-Stroke Motorcycle Engine Oil",
   description1:
     "Jaguar 20W-40 is a high-performance motorcycle engine oil specially formulated for modern four-stroke engines. Developed with advanced additive technology and highly refined mineral base oils, it ensures superior engine protection, smooth clutch performance, and extended engine life.",
   description2:
@@ -46,9 +46,12 @@ const products = [
   id: 2,
   title: "JAGUAR 20W-40 4T / 20W-50 4T",
   brand: "JAGUAR",
-  category: "Motorcycle Engine Oil",
+  category: "Motor Cycle Engine Oil",
+  capacity: "1 Liter",
+  saeGrade: "10W-40, 10W30 (Full Synthetic)",
+  apiSpecification: "SN JASO MA2",
   
-  subtitle: "Jaguar 20W-40 SN Semi Synthetic – Premium Four-Stroke Motorcycle Engine Oil",
+  subtitle: "Jaguar 20W-40 SN Semi Synthetic - Premium Four-Stroke Motorcycle Engine Oil",
   description1:
     "Jaguar 20W-40 is a high-performance motorcycle engine oil specially formulated for modern four-stroke engines. Developed with advanced additive technology and highly refined mineral base oils, it ensures superior engine protection, smooth clutch performance, and extended engine life.",
   description2:
@@ -62,13 +65,13 @@ const products = [
   {
     id: 3,
     title:
-      "Jaguar Perfect CNG 20W-50 - Premium Synthetic-Technology Engine Oil",
+      "Jaguar Perfect CNG 20W-50 - Premium Technology Engine Oil",
     brand: "Jaguar",
-    category: "CNG Engine Oil, (Gasoline Engine Oil)",
-     capacity: "2 Liter",
-  saeGrade: "20W-40",
+    category: "Three wheeler (Gasoline Engine Oil)",
+
+  saeGrade: "20W-50",
   apiSpecification: "SL",
-  madeIn: "UEA",
+
     subtitle: "Jaguar, CNG Oil 2L, 20W-50Engine Oil API-SL/CF-2L, Semi Synthetic",
     description1:
       "Jaguar Perfect CNG 20W-50 is a premium synthetic-technology engine oil designed for CNG, LPG, petrol, and diesel engines. Formulated with advanced Friction-Shield TechnologyTM, it pro-vides superior engine wear protection, reduces friction, and en-sures long-lasting engine life.",
@@ -81,8 +84,7 @@ const products = [
   id: 4,
   title: "Jaguar Premium Multi-Grade Engine Oil",
   brand: "Jaguar",
-  category: "Fully Synthetic Engine Oil for Cars & Motorcycles",
-  capacity: "4 Liters",
+  category: "Premium Multi-Grade Engine Oil Specially Designed For Gassoline and Diesel Engine",
   saeGrade: "20W-50",
   apiSpecification: " SM",
   madeIn: "UAE",
@@ -102,14 +104,14 @@ const products = [
   id: 5,
   title: "Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W-50",
   brand: "Jaguar",
-  category: "High-Performance Synthetic Technology Diesel Engine Oil",
+  category: "Premium Multi-Grade Engine Oil",
   capacity: "5 Liters",
   saeGrade: "20W-50",
   apiSpecification: "CH-4",
   madeIn: "UAE",
  
  description1:
-  "Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W50 is an ul-tra-high-performance diesel engine oil formulated with ad-vanced synthetic technology and premium base stocks. It pro-vides excellent lubrication, enhanced engine protection, and longer engine life for both modern and older generation diesel en-gines operating in the most demanding conditions.",
+  "Jaguar Premium Multi-Grade Engine Oil CH-4 20W50 is an ul-tra-high-performance engine oil formulated with ad-vanced synthetic technology and premium base stocks. It pro-vides excellent lubrication, enhanced engine protection, and longer engine life for both modern and older generation diesel en-gines operating in the most demanding conditions.",
 
   image: product5,
 },
@@ -117,12 +119,11 @@ const products = [
 
 {
   id: 6,
-  title: "Jaguar Heavy Duty 15W-40 API CI-4/SM Engine Oil",
+  title: "Jaguar Heavy Duty 15W-40 API CI-4 Engine Oil",
   brand: "Jaguar",
-  category: "Premium High-Performance Diesel Engine Oil for Commercial Use",
-  capacity: "10 Liters",
+  category: "Premium High-Performance Diesel Engine Oil",
   saeGrade: "15W-40",
-  apiSpecification: "CI-4/SM",
+  apiSpecification: "CI-4",
   madeIn: "UAE",
   description1:
     "Jaguar Heavy Duty 15W-40 API CI-4/SM is a high-performance, heavy-duty diesel engine oil developed using advanced technology base oils and a balanced additive system. It is specially engineered to deliver maximum protection and performance for turbo-charged and intercooled diesel engines operating under severe on-road and off-road conditions.",
@@ -135,12 +136,12 @@ const products = [
   {
     id: 7,
     title:
-      "vehicles, trucks, buses, and heavy equipment.",
+      "Jaguar HD-50 API SF/CD Engine Oil",
 
     brand: "Jaguar",
     category: "Admixture",
-   category: "Premium High-Performance Diesel Engine Oil for Commercial Use",
-  capacity: "10 Liters",
+   category: "High-Performance Motor Oil for Diesel Engines",
+
   saeGrade: "HD-50",
   apiSpecification: "SF/CD",
   madeIn: "UAE",
@@ -153,47 +154,47 @@ const products = [
   {
     id: 8,
     title:
-      "Jaguar Extreme Power 20W50 - Super Premium Diesel Engine Oil (API-CF/SF)",
+      "Jaguar Extra Mileage 20W-50 API-CH4",
   brand: "Jaguar",
-  category: "Diesel Engine Oil (API-CF/SF)",
+  category: "High-Performance Motor Oil for Diesel Engines",
   saeGrade: "20W50",
-  apiSpecification: "CF/SF",
+  apiSpecification: "CH4",
   madeIn: "UAE",
-  
+  capacity: "10, 11, 15, 16, 18 & 20 Liters",
   description1:
-    "Jaguar Extreme Power 20W50 (API-CF/SF) is a super premium heavy-duty diesel engine oil developed using advanced additive technology and 100% virgin base oils. ",
+    "Jaguar Extra Mileage 20W-50 API-CH4 is a premium multigrade diesel engine oil specially engineered to provide outstanding protection and performance for modern and older diesel engines. Developed using advanced additive technology and high-quality base oils, it helps to reduce engine wear, prevent sludge formation, and maintain engine cleanliness for longer service life.",
   description2:
-    "Formulated for maximum engine protection, excellent cleanliness, and long-lasting performance, this oil ensures smooth operation even under the most demanding conditions.",
-  description3:
-    "Perfectly suited for turbocharged and naturally aspirated diesel engines, Jaguar Extreme Power offers strong film strength, ther-mal stability, and outstanding wear control, making it ideal for both on-road and off-road heavy-duty applications.",
+    "Whether used in trucks, buses, construction machinery, or agricultural equipment, Jaguar Extra Mileage ensures maximum engine protection under severe operating conditions and high-temperature environments.",
+
 
     image: product8,
   },
   {
     id: 9,
     title:
-      "Jaguar Extra Mileage 15W-40 API-CH4",
+      "Jaguar Extreme Power 20W50 - Super Premium Diesel Engine Oil (API-CF/SF)",
 
   brand: "Jaguar",
-  category: "High-Performance Motor Oil for Gasoline & Diesel Engines",
+  category: "Diesel Engine Oil (API-CF/SF)",
   saeGrade: "20W50",
-  apiSpecification: "CH4",
-    capacity: "20 Liters",
+  apiSpecification: "CF/SF",
+    
   madeIn: "UAE",
     description1:
-      "Jaguar Extra Mileage 20W-50 API-CH4 is a premium multigrade diesel engine oil specially engineered to provide outstanding pro-tection and performance for modern and older diesel engines. De-veloped using advanced additive technology and high-quality base oils, it helps to reduce engine wear, prevent sludge formation, and maintain engine cleanliness for longer service life.",
-description2: "Whether used in trucks, buses, construction machinery, or agricul-tural equipment, Jaguar Extra Mileage ensures maximum engine protection under severe operating conditions and high-tempera-ture environments.",
-    image: product9,
+      "Jaguar Extreme Power 20W50 (API-CF/SF) is a super premium heavy-duty diesel engine oil developed using advanced additive technology and 100% virgin base oils.",
+description2: "WFormulated for maximum engine protection, excellent cleanliness, and long-lasting performance, this oil ensures smooth operation even under the most demanding conditions.",
+    description3: "Perfectly suited for turbocharged and naturally aspirated diesel engines, Jaguar Extreme Power offers strong film strength, ther-mal stability, and outstanding wear control, making it ideal for both on-road and off-road heavy-duty applications.",
+image: product9,
   },
   {
     id: 10,
     title:
       "Jaguar Hydraulic Oil HV ISO 68",
     brand: "Jaguar",
-    category: "Premium Anti-Wear Hydraulic Oil - Engineered for Industrial and Heavy-Duty Performance",
+    category: "Premium Anti-Wear Hydraulic Oil – Engineered for Industrial and Heavy-Duty Performance",
       saeGrade: "HV ISO 68",
   apiSpecification: "HV",
-    capacity: "20 Liters",
+  
   madeIn: "UAE",
     description1:
       "Jaguar Hydraulic Oil HV ISO 68 is a high-performance, anti-wear hy-draulic fluid specially formulated to deliver maximum protection, extended equipment life, and superior performance in both indus-trial and mobile hydraulic systems. Built with advanced Friction GuardTM technology, it ensures smooth operation and energy-effi-cient performance even under extreme conditions.",
@@ -208,8 +209,7 @@ description2: "Whether used in trucks, buses, construction machinery, or agricul
     category: "Premium Anti-Wear Hydraulic Oil - Engineered for Industrial and Heavy-Duty Performance",
        saeGrade: "AW ISO 100",
   apiSpecification: "AW",
-    capacity: "20 Liters",
-  madeIn: "UAE",
+    madeIn: "UAE",
     description1:
       "Jaguar Hydraulic Oil AW ISO 100 is a high-performance, anti-wear hydraulic fluid specially formulated to deliver maximum protec-tion, extended equipment life, and superior performance in both industrial and mobile hydraulic systems. Built with advanced Fric-tion GuardTM technology, it ensures smooth operation and ener-gy-efficient performance even under extreme conditions.",
     
@@ -221,10 +221,11 @@ description2: "Whether used in trucks, buses, construction machinery, or agricul
       "Jaguar Gear Oil GL-4 SAE-90",
 
   brand: "Jaguar",
-  category: "High-Performance Gearbox Lubricant for Passenger CarsTrucks & Heavy Vehicles",
-  saeGrade: "20W50",
-  apiSpecification: "CF/SF",
-    capacity: "20 Liters",
+  category: "High-Performance Gearbox Lubricant for Passenger Cars Trucks & Heavy Vehicles",
+  saeGrade: "90",
+   saeGrade: "AW ISO 100",
+  apiSpecification: "GL-4",
+    
   madeIn: "UAE",
     description1:
       "Jaguar Gear Oil GL-4 SAE-90 is a premium multi-vehicle gear lubri-cant designed for manual transmissions and transaxles in passen-ger cars, trucks, and other commercial vehicles. Specially formulat-ed with advanced anti-wear and oxidation-resistant additives, it ensures long-lasting protection, smooth gear shifting, and maxi-mum gearbox performance in all driving conditions.",
@@ -580,7 +581,7 @@ const JaguarDetails = ({}) => {
       <img
         src={p.image}
         alt={p.title}
-        className="w-full h-full object-contain transform transition-transform duration-500 ease-in-out hover:scale-110 touch:scale-110"
+        className="w-full h-full object-contain transform transition-transform duration-500 ease-in-out hover:scale-120 touch:scale-110"
         onTouchStart={(e) => e.currentTarget.classList.add('scale-110')}
         onTouchEnd={(e) => e.currentTarget.classList.remove('scale-110')}
       />
@@ -742,10 +743,10 @@ const JaguarDetails = ({}) => {
         </p>
         <ul className="list-none pl-0 space-y-1">
           <li className="flex">
-            <span className="text-red-600 mr-2">▪</span>JASO MA / JASO MA2
+            <span className="text-red-600 mr-2">▪</span>JASO MA2
           </li>
           <li className="flex">
-            <span className="text-red-600 mr-2">▪</span>API SL
+            <span className="text-red-600 mr-2">▪</span>API SM
           </li>
         </ul>
       </div>
@@ -811,15 +812,14 @@ const JaguarDetails = ({}) => {
           Specifications and Approvals:
         </h2>
         <p className="mb-1">
-          This product meets or exceeds the requirements of the following
-          industry standards:
+         This product meets or exceeds the requirements of the following industry standards:
         </p>
         <ul className="space-y-1 ml-4">
           <li>
-            <span className="text-red-600 mr-2">▪</span>JASO MA / JASO MA2
+            <span className="text-red-600 mr-2">▪</span>JASO MA2
           </li>
           <li>
-            <span className="text-red-600 mr-2">▪</span>API SL
+            <span className="text-red-600 mr-2">▪</span>API SN
           </li>
         </ul>
       </section>
@@ -850,68 +850,21 @@ const JaguarDetails = ({}) => {
 
         <p className="font-semibold">Engine & Gearbox Protection:</p>
         <p className="mb-3">
-          Designed to protect both <strong>engine</strong> and{" "}
+          Designed to <strong>protect both engine and gearbox</strong> and{" "}
           <strong>gearbox</strong> in one circulation system, minimizing friction
           and corrosion.
         </p>
 
         <p className="font-semibold">Cleaner Engine Performance:</p>
         <p>
-          Prevents deposit formation and helps keep the{" "}
-          <strong>engine clean</strong>, ensuring longer life and consistent
+          Prevents deposit formation and helps {" "}
+          <strong>keep the engine clean</strong>, ensuring longer life and consistent
           efficiency.
         </p>
       </section>
 
-      {/* === Technical Properties === */}
-      <section className="mb-6">
-        <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-        <table className="w-full text-left border-collapse text-[15px]">
-          <thead>
-            <tr className="border-b border-gray-300">
-              <th className="py-1">Property</th>
-              <th className="py-1">Test Method</th>
-              <th className="py-1">Typical Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ["Grade", "SAE 20W–40", "—"],
-              ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "122"],
-              ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "15"],
-              ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.88"],
-              ["Pour Point (°C)", "ASTM D97", "-30"],
-              ["Flash Point (°C)", "ASTM D92", "230"],
-              ["Sulfated Ash (mass %)", "ASTM D874", "0.8"],
-              ["Total Base Number (mg KOH/g)", "ASTM D2896", "5.9"],
-              ["Mini-Rotary Viscometer @ -20°C (mPa.s)", "ASTM D4684", "12,500"],
-              ["Hi-Temp Hi-Shear Viscosity @ 150°C (mPa.s)", "ASTM D4683", "4.1"],
-            ].map(([prop, method, value], i) => (
-              <tr key={i} className="border-b border-gray-200">
-                <td className="py-1">{prop}</td>
-                <td className="py-1">{method}</td>
-                <td className="py-1">{value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
+    
 
-      {/* === Health and Safety === */}
-      <section>
-        <h2 className="font-semibold text-[17px] mb-2">Health and Safety</h2>
-        <p className="mb-3">
-          For safe handling and use, please refer to the Material Safety Data
-          Sheet (MSDS) available at:
-        </p>
-        <p className="text-blue-700 underline">
-          www.jaguarlubricants.com
-        </p>
-        <p className="mt-3">
-          Jaguar Super Moto 20W-40 - Premium protection, smooth performance, and
-          longer engine life for your motorcycle.
-        </p>
-      </section>
     </div>
             )}
 
@@ -930,7 +883,7 @@ const JaguarDetails = ({}) => {
       <h2 className="text-lg font-semibold mb-2">Specifications and Approvals:</h2>
       <p className="mb-2">Meets or exceeds the following international standards:</p>
       <ul className="list-none space-y-1 mb-4">
-        <li><span className="text-red-600 mr-2">▪</span> API CF</li>
+        <li><span className="text-red-600 mr-2">▪</span> API SL</li>
         <li><span className="text-red-600 mr-2">▪</span> FORD WSS-M2C929-A</li>
         <li><span className="text-red-600 mr-2">▪</span> GM 6094M</li>
       </ul>
@@ -944,44 +897,7 @@ const JaguarDetails = ({}) => {
       <p className="mb-6"><strong>High-Temperature Stability:</strong> Maintains viscosity and performance even under extreme heat and heavy loads.</p>
 
       {/* Technical Properties */}
-<section className="mb-8">
-  <h2 className="text-[17px] font-semibold mb-3 text-black">
-    Technical Properties
-  </h2>
-  <div className="overflow-x-auto">
-    <table className="w-full border-collapse text-[17px] text-black">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="text-left py-2 font-medium">Property</th>
-          <th className="text-left py-2 font-medium">Test Method</th>
-          <th className="text-left py-2 font-medium">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["Grade", "SAE 20W-50", "—"],
-          ["Viscosity Index", "ASTM D2270", "151"],
-          ["Total Base Number (mg KOH/g)", "ASTM D2896", "7.5"],
-          ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.859"],
-          ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "10.3"],
-          ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "63"],
-          ["High-Temp High-Shear Viscosity @ 150°C (mPa.s)", "ASTM D4683", "3.0"],
-          ["Pour Point (°C)", "ASTM D97", "−39"],
-          ["Flash Point (°C)", "ASTM D92", "228"],
-        ].map(([property, method, value], i) => (
-          <tr
-            key={i}
-            className="border-b border-gray-200 hover:bg-gray-50 transition-colors"
-          >
-            <td className="py-2">{property}</td>
-            <td className="py-2">{method}</td>
-            <td className="py-2">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-</section>
+
 
 
     </div>
@@ -1018,26 +934,21 @@ const JaguarDetails = ({}) => {
           </li>
         </ul>
       </div>
-
-      <div className="py-6">
-        <h2 className="text-xl font-semibold mb-4">Key Features & Benefits</h2>
-        <ul className="space-y-2 pl-4">
-          {[
-            "Ensures excellent high-temperature stability and oxidation resistance.",
-            "Superior Wear Protection: Protects vital engine parts and extends engine life.",
-            "Smooth Clutch Operation: High-traction formulation helps prevent clutch slippage and allows smoother gear shifting.",
-            "Excellent Engine Cleanliness: Keeps pistons and valves free from sludge and carbon deposits.",
-            "High Viscosity Strength: Provides a strong oil film for consistent performance under all conditions.",
-            "Enhanced Fuel Efficiency: Reduces internal friction for smoother operation and better mileage.",
-            "Ideal for Older Engines: Perfect for vehicles that need extra protection in hot or heavy-load conditions.",
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-2">
-              <span className="text-red-600 text-lg leading-tight">▪</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+  {/* Key Features & Benefits */}
+      <h2 className="  mb-2"><strong>Key Features & Benefits:</strong> Ensures excellent high-temperature stability and oxidation resistance.</h2>
+      <p className="mb-4"><strong>Superior Wear Protection:</strong> Protects vital engine parts and extends engine life.</p>
+      <p className="mb-4"><strong>Advanced Friction Protection:</strong> Friction-Shield Technology™ minimizes metal contact and reduces engine wear by up to 65%.</p>
+      <p className="mb-4"><strong>Smooth Clutch Operation:</strong> High-traction formulation helps prevent clutch slippage and allows smoother gear shifting.</p>
+      <p className="mb-4"><strong>Excellent Engine Cleanliness:</strong> Keeps pistons and valves free from sludge and carbon deposits.</p>
+      <p className="mb-6"><strong>High Viscosity Strength:</strong> Provides a strong oil film for consistent performance under all conditions.</p>
+      <p className="mb-6"><strong>Enhanced Fuel Efficiency:</strong> Reduces internal friction for smoother operation and better mileage.</p>
+      <p className="mb-6"><strong>Ideal for Older Engines:</strong> Perfect for vehicles that need extra protection in hot or heavy-load conditions.</p>
+      
+        <section>
+        <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
+        <p>4 Liter</p>
+      </section>
+   
     </div>
             )}
 
@@ -1147,7 +1058,7 @@ const JaguarDetails = ({}) => {
       {/* === Available Packs === */}
       <section>
         <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
-        <p>1L | 3.5L | 5L | 7.5L | 10L | 20L | 50L | 210L Barrel</p>
+        <p>5 Liter</p>
       </section>
     </div>
             )}
@@ -1185,7 +1096,7 @@ const JaguarDetails = ({}) => {
         <h2 className="font-semibold text-lg mb-4">Performance Standards</h2>
         <ul className="space-y-2 pl-6">
           <li className="flex items-start">
-            <span className="text-red-600 mr-2">▪</span>API: CI-4 / SM
+            <span className="text-red-600 mr-2">▪</span>API: CI-4
           </li>
           <li className="flex items-start">
             <span className="text-red-600 mr-2">▪</span>Daimler Chrysler: MB 227.0
@@ -1264,42 +1175,42 @@ const JaguarDetails = ({}) => {
 
       {/* Technical Properties */}
       <section className="mb-6">
-  <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-  <table className="w-full text-left border-collapse text-[15px]">
-    <thead>
-      <tr className="border-b border-gray-300">
-        <th className="py-1">Property</th>
-        <th className="py-1">Test Method</th>
-        <th className="py-1">Typical Value</th>
+  
+<table className="w-full text-left border-collapse text-[15px]">
+  <thead>
+    <tr className="border-b border-gray-300">
+      <th className="py-1">Test Description</th>
+      <th className="py-1">Test Methods</th>
+      <th className="py-1">Typical Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    {[
+      ["ASTM Color", "ASTM D-1500", "-1.5"],
+      ["Specific Gravity at 15 deg", "ASTM D-1298", "0.87804878"],
+      ["Viscosity at 40°C", "ASTM D-445", "125"],
+      ["Viscosity at 100°C", "ASTM D-445", "15"],
+      ["Viscosity Index", "ASTM D-445", "123"],
+      ["Pour Point ", "ASTM D-97", "-20"],
+      ["Flash Point ", "ASTM D-92", "240"],
+      ["Total Base Number (TBN) ", "ASTM D-2896", "6.5"],
+    ].map(([prop, method, value], i) => (
+      <tr key={i} className="border-b border-gray-200">
+        <td className="py-1">{prop}</td>
+        <td className="py-1">{method}</td>
+        <td className="py-1">{value}</td>
       </tr>
-    </thead>
-    <tbody>
-      {[
-        ["SAE Grade", "—", "15W-40"],
-        ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
-        ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.6"],
-        ["Viscosity Index", "ASTM D2270", "99"],
-        ["Sulfated Ash (% wt)", "ASTM D874", "1.1"],
-        ["Total Base Number (mgKOH/g)", "ASTM D2896", "10.1"],
-        ["Pour Point (°C)", "ASTM D97", "-21"],
-        ["Flash Point (°C)", "ASTM D92", "256"],
-        ["Density @ 15°C (kg/l)", "ASTM D4052", "0.89"],
-      ].map(([prop, method, value], i) => (
-        <tr key={i} className="border-b border-gray-200">
-          <td className="py-1">{prop}</td>
-          <td className="py-1">{method}</td>
-          <td className="py-1">{value}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
+    ))}
+  </tbody>
+</table>
+
 </section>
 
 
       {/* Available Packs */}
       <div className="py-6">
         <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-        <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
+        <p>10 L | 11 L | 15 L | 16 L | 18 L | 20 L Bucket</p>
       </div>
     </section>
             )}
@@ -1334,7 +1245,7 @@ const JaguarDetails = ({}) => {
     <h2 className="font-semibold text-lg mb-4">Performance Standards</h2>
     <ul className="space-y-2 pl-6">
       <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>API: CI-4 / SM
+        <span className="text-red-600 mr-2">▪</span>API: SF / CD
       </li>
       <li className="flex items-start">
         <span className="text-red-600 mr-2">▪</span>Daimler Chrysler: MB 227.0
@@ -1380,44 +1291,7 @@ const JaguarDetails = ({}) => {
     </div>
   </div>
 
-  {/* Technical Properties */}
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["Appearance (Visual)", "-", "-"],
-          ["Color (ASTM D-1500)", "L", "3.0"],
-          ["Kinematic Viscosity @ 40°C", "ASTM D-7042", "cSt"],
-          ["Kinematic Viscosity @ 100°C", "ASTM D-7042", "cSt"],
-          ["Viscosity Index (min)", "ASTM D-2270", "-"],
-          ["Specific Gravity @ 15°C", "ASTM D-4052", "g/cm³"],
-          ["Flash Point (min)", "ASTM D-92", "°C"],
-          ["Pour Point (max)", "ASTM D-97", "°C"],
-          ["Total Base Number (TBN)", "ASTM D-2896", "6 mg KOH/g"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
-
-  {/* Available Packs */}
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
-  </div>
+ 
 </section>
 
             )}
@@ -1504,7 +1378,7 @@ const JaguarDetails = ({}) => {
   {/* Available Packs */}
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
+    <p>10 L | 11 L | 15 L | 16 L | 18 L | 20 L | Bucket</p>
   </div>
 </section>
 
@@ -1536,7 +1410,7 @@ const JaguarDetails = ({}) => {
     <h2 className="font-semibold text-lg mb-4">Specification</h2>
     <ul className="space-y-2 pl-6">
       <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>API CF / SF / CD
+        <span className="text-red-600 mr-2">▪</span>API CF / SF 
       </li>
       <li className="flex items-start">
         <span className="text-red-600 mr-2">▪</span>ACEA E2
@@ -1597,43 +1471,40 @@ const JaguarDetails = ({}) => {
 
   {/* Technical Properties */}
   <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
+  
+  <table className="w-full text-left border-collapse text-[15px]">
+    <thead>
+      <tr className="border-b border-gray-300">
+        <th className="py-1">Test Description</th>
+        <th className="py-1">Test Methods</th>
+        <th className="py-1">Typical Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      {[
+        ["ASTM Color", "ASTM D-1500", "-1.5"],
+        ["Specific Gravity at 15 deg", "ASTM D-1298", "0.879"],
+        ["Viscosity @40°", "ASTM D-445", "164"],
+        ["Viscosity @100°", "ASTM D-445", "20"],
+        ["Viscosity Index", "ASTM D-2270", "120"],
+        ["Pour Point ", "ASTM D-97", "-21"],
+        ["Flash Point ", "ASTM D-92", "238"],
+        ["Total Base Number (TBN)", "ASTM D-2896", "6"],
+      ].map(([prop, method, value], i) => (
+        <tr key={i} className="border-b border-gray-200">
+          <td className="py-1">{prop}</td>
+          <td className="py-1">{method}</td>
+          <td className="py-1">{value}</td>
         </tr>
-      </thead>
-      <tbody>
-        {[
-          ["Appearance", "Visual", "Clear & Bright"],
-          ["Water", "Hot Plate", "Nil"],
-          ["Color", "ASTM D-1500", "L3.5"],
-          ["Density @29.5°C (g/cm³)", "ASTM D-4052", "0.882"],
-          ["Viscosity @100°C (cSt)", "ASTM D-445", "18.9"],
-          ["Viscosity @40°C (cSt)", "ASTM D-445", "165.2"],
-          ["Viscosity Index", "ASTM D-2270", "125"],
-          ["Pour Point (°C)", "ASTM D-97", "-15"],
-          ["Flash Point (°C)", "ASTM D-92", "250"],
-          ["TBN (mgKOH/g)", "ASTM D-2896", "8"],
-          ["Foam Characteristics", "ASTM D-892", "0/0"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
+      ))}
+    </tbody>
+  </table>
+</section>
 
   {/* Available Packs */}
   <div className="py-6">
     <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
+    <p>10 L | 11 L | 15 L | 16 L | 18 L | 20 L | Bucket</p>
   </div>
 </section>
 
@@ -1710,41 +1581,12 @@ const JaguarDetails = ({}) => {
     </div>
   </div>
 
-  {/* Technical Properties */}
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["Viscosity @ 40°C", "ASTM D445", "69.25 cSt"],
-          ["Viscosity @ 100°C", "ASTM D445", "8.95 cSt"],
-          ["Viscosity Index", "ASTM D2270", "103"],
-          ["Flash Point", "ASTM D92", "228°C"],
-          ["Pour Point", "ASTM D5950", "-30°C"],
-          ["Oxidation Stability", "ASTM D943", "5000 hours"],
-          ["Zinc, wt.%", "ASTM D5185", "0.041"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
+
 
   {/* Available Packs */}
   <div className="py-6 ">
     <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>5L | 20L | 60L | 208L Drums</p>
+    <p>20L Bucket</p>
   </div>
 </section>
 
@@ -1821,41 +1663,12 @@ const JaguarDetails = ({}) => {
     </div>
   </div>
 
-  {/* Technical Properties */}
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["Viscosity @ 40°C", "ASTM D445", "100 cSt"],
-          ["Viscosity @ 100°C", "ASTM D445", "11.5 cSt"],
-          ["Viscosity Index", "ASTM D2270", "98"],
-          ["Flash Point", "ASTM D92", "230°C"],
-          ["Pour Point", "ASTM D5950", "-27°C"],
-          ["Oxidation Stability", "ASTM D943", "5000 hours"],
-          ["Zinc, wt.%", "ASTM D5185", "0.042"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
+ 
 
   {/* Available Packs */}
   <div className="py-6 ">
     <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>5L | 20L | 60L | 208L Drums</p>
+    <p>20L Bucket</p>
   </div>
 </section>
 
@@ -1941,7 +1754,7 @@ const JaguarDetails = ({}) => {
   {/* Available Packs */}
   <div className="py-6 ">
     <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>5L | 20L | 60L | 208L Drums</p>
+    <p>20L Bucket</p>
   </div>
 </section>
 
