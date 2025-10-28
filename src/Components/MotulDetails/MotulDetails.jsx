@@ -68,12 +68,12 @@ const products = [
 
 {
   id: 3,
-    title1: "MOTUL 5100 10W-50 4T FULLY SYNTHETIC ENGINE OIL",
+    title1: "MOTUL 5100 10W-40 4T FULLY SYNTHETIC ENGINE OIL",
   title2: "Product Information",
   Application: "Engine",
   EngineType: "4T",
   ProductType: "5100",
-  Viscosity: "10W-50",
+  Viscosity: "10W-40",
   Packsize: "1L",
 
   image: product3,
