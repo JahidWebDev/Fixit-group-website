@@ -44,21 +44,22 @@ const products = [
 
  {
   id: 2,
-  title: "JAGUAR 20W-40 4T / 20W-50 4T",
+  title: "JAGUAR 10W-40 4T / 10W-30 4T",
   brand: "JAGUAR",
   category: "Motor Cycle Engine Oil",
   capacity: "1 Liter",
   saeGrade: "10W-40, 10W30 (Full Synthetic)",
   apiSpecification: "SN JASO MA2",
   
-  subtitle: "Jaguar 20W-40 SN Semi Synthetic - Premium Four-Stroke Motorcycle Engine Oil",
+  subtitle: "Jaguar 10W-40, 10W30 SN Full Synthetic - Premium Four-Stroke Motorcycle Engine Oil",
   description1:
-    "Jaguar 20W-40 is a high-performance motorcycle engine oil specially formulated for modern four-stroke engines. Developed with advanced additive technology and highly refined mineral base oils, it ensures superior engine protection, smooth clutch performance, and extended engine life.",
+    "Jaguar 10W-40, 10W30 is a high-performance motorcycle engine- oil spe cially formulated for modern four-stroke engines. Developed with advanced additive technology and highly refined mineral base oils, it ensures superior engine protection, smooth clutch performance, and extended engine life.",
   description2:
-    "While optimized for the latest engine technology, Jaguar 20W-40 also provides excellent protection for older motorcycle engines, perfectly matching evolving engine technology trends from leading OEMs. Its heat-activated anti-wear molecules™ protect the engine instantly—from start-up to high-temperature, long-distance rides.",
+    "While optimized for the latest engine technology, Jaguar 10W-40 10W30 also provides excellent protection for older motorcycle engines, perfectly matching evolving engine technology trends from lead-ing OEMs. Its heat-activated anti-wear moleculesTM protect the engine instantly-from start-up to high-temperature, long-distance rides.",
   availablePackaging: "1 Liter",
   image: product2,
-  Availability: "In Stock"
+
+   Formulatedby: "UAE",
 },
 
 
@@ -72,7 +73,7 @@ const products = [
   saeGrade: "20W-50",
   apiSpecification: "SL",
 
-    subtitle: "Jaguar, CNG Oil 2L, 20W-50Engine Oil API-SL/CF-2L, Semi Synthetic",
+    subtitle: "Jaguar, CNG Oil 2L, 20W-50 Engine Oil API-SL/CF-2L, Semi Synthetic",
     description1:
       "Jaguar Perfect CNG 20W-50 is a premium synthetic-technology engine oil designed for CNG, LPG, petrol, and diesel engines. Formulated with advanced Friction-Shield TechnologyTM, it pro-vides superior engine wear protection, reduces friction, and en-sures long-lasting engine life.",
     description2: "This high-performance oil delivers excellent cleanliness, oxida-tion stability, and high-temperature protection, making it ideal for vehicles that operate in hot or severe driving conditions. Wheth-er you drive a CNG car, van, or light truck, Jaguar Perfect CNG 20W-50 keeps your engine running smoother and cleaner every day.",
@@ -105,7 +106,7 @@ const products = [
   title: "Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W-50",
   brand: "Jaguar",
   category: "Premium Multi-Grade Engine Oil",
-  capacity: "5 Liters",
+  capacity: "5 Liter",
   saeGrade: "20W-50",
   apiSpecification: "CH-4",
   Formulatedby: "UAE",
@@ -223,7 +224,7 @@ image: product9,
   brand: "Jaguar",
   category: "High-Performance Gearbox Lubricant for Passenger Cars Trucks & Heavy Vehicles",
   saeGrade: "90",
-   saeGrade: "AW ISO 100",
+  
   apiSpecification: "GL-4",
     
   Formulatedby: "UAE",
@@ -648,10 +649,7 @@ const JaguarDetails = ({}) => {
       )}
 
       {/* Availability (always shown) */}
-      <p className="text-base md:text-lg">
-        <span className="font-semibold">Availability:</span>{" "}
-        <span className="text-green-600 font-medium">In Stock</span>
-      </p>
+   
     </div>
 
     {/* Description */}
@@ -958,7 +956,7 @@ const JaguarDetails = ({}) => {
       <section className="mb-6">
         <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
         <p className="mb-2">
-          Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W50 is recommended for:
+          Jaguar Premium Multi-Grade Engine Oil CH-4 20W50 is recommended for:
         </p>
         <ul className="space-y-1 ml-4">
           <li>
