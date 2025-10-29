@@ -9,7 +9,6 @@ import mutolLogo from "../../assets/Motul-Logo.png";
 import Phuter from "../../assets/Phuter.png";
 
 import product1 from "../../assets/Motul-4T-3000-20W-40-HC-Tech.png";
-
 import product2 from "../../assets/MOTUL-7100-4T-20W-50FULL-SYNTHETIC-1L-FRANCE.png";
 import product3 from "../../assets/Motul-5100-10W40.png";
 import product4 from "../../assets/MOTUL-7100-4T-10W-30-FULL-SYNTHETIC-1L-Vietnam.png";
@@ -632,11 +631,7 @@ const MotulDetails = ({}) => {
         )}
       </div>
 
-      {/* Availability */}
-      <p className="text-sm sm:text-base pt-1">
-        <span className="font-semibold text-black">Availability:</span>{" "}
-        <span className="text-green-600 font-medium">In Stock</span>
-      </p>
+     
 
       {/* Description */}
       <div className="pt-4 space-y-2">
