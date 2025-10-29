@@ -17,23 +17,27 @@ const OurBusiness = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const businesses = [
-    {
-      logo: fixitLogo,
-      // link: "https://www.drfixit.co.in/",
-    },
-    {
-      logo: jaguarLogo,
-      // link: "https://www.jaguar.com/",
-    },
-    {
-      logo: motulLogo,
-      // link: "https://www.motul.com/",
-    },
-    {
-      logo: shadowLogo,
-      // link: "https://shadow-printing.com/",
-    },
-  ];
+  {
+    
+    logo: fixitLogo,
+    link: "/drfixit",
+  },
+  {
+    
+    logo: jaguarLogo,
+    link: "/jaguar",
+  },
+  {
+    
+    logo: motulLogo,
+    link: "/motul",
+  },
+  {
+    
+    logo: shadowLogo,
+    link: "/robinson",
+  },
+];
 
   return (
     <section className="relative">
