@@ -27,11 +27,11 @@ const products = [
   id: 1,
   title: "JAGUAR 20W-40 4T / 20W-50 4T",
   brand: "Jaguar",
-  category: "Motor Cycle Engine Oil (Motor Engine Oil)",
+  category: "Motor Cycle Engine Oil",
   capacity: "1 Liter",
   saeGrade: "20W-40, 20W50 (Semi Synthetic)",
   apiSpecification: "SM JASO MA2",
-  madeIn: "UAE",
+  Formulatedby: "UAE",
   subtitle: "Jaguar 20W-40-20W50 - Premium Four-Stroke Motorcycle Engine Oil",
   description1:
     "Jaguar 20W-40 is a high-performance motorcycle engine oil specially formulated for modern four-stroke engines. Developed with advanced additive technology and highly refined mineral base oils, it ensures superior engine protection, smooth clutch performance, and extended engine life.",
@@ -87,7 +87,7 @@ const products = [
   category: "Premium Multi-Grade Engine Oil Specially Designed For Gassoline and Diesel Engine",
   saeGrade: "20W-50",
   apiSpecification: " SM",
-  madeIn: "UAE",
+  Formulatedby: "UAE",
   
   description1:
     "Jaguar Premium Multi-Grade Engine Oil SAE 20W-50 is a fully synthetic, high-performance engine oil engineered to deliver superior wear protection, cleaner performance, and longer engine life. Designed for modern petrol and diesel engines, this advanced formula ensures excellent lubrication even under extreme heat and heavy-load driving conditions.",
@@ -108,7 +108,7 @@ const products = [
   capacity: "5 Liters",
   saeGrade: "20W-50",
   apiSpecification: "CH-4",
-  madeIn: "UAE",
+  Formulatedby: "UAE",
  
  description1:
   "Jaguar Premium Multi-Grade Engine Oil CH-4 20W50 is an ul-tra-high-performance engine oil formulated with ad-vanced synthetic technology and premium base stocks. It pro-vides excellent lubrication, enhanced engine protection, and longer engine life for both modern and older generation diesel en-gines operating in the most demanding conditions.",
@@ -124,7 +124,7 @@ const products = [
   category: "Premium High-Performance Diesel Engine Oil",
   saeGrade: "15W-40",
   apiSpecification: "CI-4",
-  madeIn: "UAE",
+  Formulatedby: "UAE",
   description1:
     "Jaguar Heavy Duty 15W-40 API CI-4/SM is a high-performance, heavy-duty diesel engine oil developed using advanced technology base oils and a balanced additive system. It is specially engineered to deliver maximum protection and performance for turbo-charged and intercooled diesel engines operating under severe on-road and off-road conditions.",
   description2:
@@ -144,7 +144,7 @@ const products = [
 
   saeGrade: "HD-50",
   apiSpecification: "SF/CD",
-  madeIn: "UAE",
+  Formulatedby: "UAE",
   description1:
     "Jaguar HD-50 API SF/CD is a high-quality multigrade motor oil spe-cially formulated for passenger vehicles, light trucks, and heavy-duty engines that operate under demanding conditions. De-signed with premium Group I base oils and advanced additive technology, Jaguar HD-50 ensures superior engine cleanliness, re-duced wear, and long-lasting protection against oxidation and cor-rosion.",
   description2:
@@ -159,7 +159,7 @@ const products = [
   category: "High-Performance Motor Oil for Diesel Engines",
   saeGrade: "20W50",
   apiSpecification: "CH4",
-  madeIn: "UAE",
+  Formulatedby: "UAE",
   capacity: "10, 11, 15, 16, 18 & 20 Liters",
   description1:
     "Jaguar Extra Mileage 20W-50 API-CH4 is a premium multigrade diesel engine oil specially engineered to provide outstanding protection and performance for modern and older diesel engines. Developed using advanced additive technology and high-quality base oils, it helps to reduce engine wear, prevent sludge formation, and maintain engine cleanliness for longer service life.",
@@ -179,7 +179,7 @@ const products = [
   saeGrade: "20W50",
   apiSpecification: "CF/SF",
     
-  madeIn: "UAE",
+  Formulatedby: "UAE",
     description1:
       "Jaguar Extreme Power 20W50 (API-CF/SF) is a super premium heavy-duty diesel engine oil developed using advanced additive technology and 100% virgin base oils.",
 description2: "WFormulated for maximum engine protection, excellent cleanliness, and long-lasting performance, this oil ensures smooth operation even under the most demanding conditions.",
@@ -195,7 +195,7 @@ image: product9,
       saeGrade: "HV ISO 68",
   apiSpecification: "HV",
   
-  madeIn: "UAE",
+  Formulatedby: "UAE",
     description1:
       "Jaguar Hydraulic Oil HV ISO 68 is a high-performance, anti-wear hy-draulic fluid specially formulated to deliver maximum protection, extended equipment life, and superior performance in both indus-trial and mobile hydraulic systems. Built with advanced Friction GuardTM technology, it ensures smooth operation and energy-effi-cient performance even under extreme conditions.",
     image: product10,
@@ -209,7 +209,7 @@ image: product9,
     category: "Premium Anti-Wear Hydraulic Oil - Engineered for Industrial and Heavy-Duty Performance",
        saeGrade: "AW ISO 100",
   apiSpecification: "AW",
-    madeIn: "UAE",
+    Formulatedby: "UAE",
     description1:
       "Jaguar Hydraulic Oil AW ISO 100 is a high-performance, anti-wear hydraulic fluid specially formulated to deliver maximum protec-tion, extended equipment life, and superior performance in both industrial and mobile hydraulic systems. Built with advanced Fric-tion GuardTM technology, it ensures smooth operation and ener-gy-efficient performance even under extreme conditions.",
     
@@ -226,7 +226,7 @@ image: product9,
    saeGrade: "AW ISO 100",
   apiSpecification: "GL-4",
     
-  madeIn: "UAE",
+  Formulatedby: "UAE",
     description1:
       "Jaguar Gear Oil GL-4 SAE-90 is a premium multi-vehicle gear lubri-cant designed for manual transmissions and transaxles in passen-ger cars, trucks, and other commercial vehicles. Specially formulat-ed with advanced anti-wear and oxidation-resistant additives, it ensures long-lasting protection, smooth gear shifting, and maxi-mum gearbox performance in all driving conditions.",
    
@@ -636,9 +636,9 @@ const JaguarDetails = ({}) => {
           {p.apiSpecification}
         </p>
       )}
-      {p.madeIn && (
+      {p.Formulatedby && (
         <p className="text-base md:text-lg">
-          <span className="font-bold text-black">Made In:</span> {p.madeIn}
+          <span className="font-bold text-black">Formulated by:</span> {p.Formulatedby}
         </p>
       )}
       {p.quantity && (
