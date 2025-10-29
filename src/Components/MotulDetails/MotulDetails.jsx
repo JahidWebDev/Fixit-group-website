@@ -544,7 +544,7 @@ const MotulDetails = ({}) => {
               <span className="hidden md:block w-[2px] h-9 bg-black"></span>
               <p className="text-gray-800 text-base md:text-lg leading-tight">
                 100% Genuine Motul Lubricants-sourced directly
-                <br className="hidden md:block" /> from the official importer
+                <br className="hidden md:block" /> from the official reseller
               </p>
             </div>
     
@@ -712,7 +712,7 @@ const MotulDetails = ({}) => {
     <section className="mb-6">
       <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
       <p className="mb-2 font-semibold  text-[17px]  text-black">
-        Buy genuine Motul 20W-40 Motorcycle Oil in Bangladesh from the only official Motul importer.
+        Buy genuine Motul 20W-40 Motorcycle Oil in Bangladesh from the only official Motulreseller.
       </p>
       <ul className="space-y-1 ml-4">
         <li>
@@ -966,7 +966,7 @@ const MotulDetails = ({}) => {
       <li><span className="text-red-600 mr-2">▪</span>Trusted worldwide by riders, racers, and manufacturers</li>
     </ul>
     <p className="mt-2 font-semibold text-black">
-      Buy Genuine Motul 7100 in Bangladesh from the only official Motul importer. Experience true Motul performance — Power. Protection. Performance.
+      Buy Genuine Motul 7100 in Bangladesh from the only official Motulreseller. Experience true Motul performance — Power. Protection. Performance.
     </p>
   </section>
 

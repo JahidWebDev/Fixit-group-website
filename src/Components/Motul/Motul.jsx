@@ -463,7 +463,7 @@ const images = [bannerImage1, bannerImage2];
               <span className="hidden md:block w-[2px] h-9 bg-black"></span>
               <p className="text-gray-800 text-base md:text-lg leading-tight">
                 100% Genuine Motul Lubricants-sourced directly
-                <br className="hidden md:block" /> from the official importer
+                <br className="hidden md:block" /> from the official reseller
               </p>
             </div>
     
@@ -549,7 +549,7 @@ const images = [bannerImage1, bannerImage2];
         <p className="text-gray-700 text-lg md:text-xl lg:text-2xl leading-relaxed mb-10">
           World-renowned Motul Lubricants and Motul Engine Oils are now more
           accessible than ever in Bangladesh - brought to you directly by the
-          only official importer of Motul Bangladesh.
+          only official reseller of Motul Bangladesh.
         </p>
 
         <p className="text-gray-700 text-lg md:text-xl lg:text-2xl leading-relaxed mb-10">
@@ -566,7 +566,7 @@ const images = [bannerImage1, bannerImage2];
 
         <ul className="space-y-4 ml-4 md:ml-10 lg:ml-16 text-gray-800">
           {[
-            "100% Genuine Motul Lubricants-sourced directly from the official importer",
+            "100% Genuine Motul Lubricants-sourced directly from the official reseller",
             "Maximum Engine Performance and Protection",
             "Premium Oils for Both Motorcycles and Cars",
             "Trusted Worldwide by Professional Racers and Engineers",

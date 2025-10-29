@@ -203,7 +203,7 @@ const Jaguar = () => {
     },
     {
       id: 12,
-      name: "AGUAR Gear Oil GL-4",
+      name: "JAGUAR Gear Oil GL-4",
       desc: "20 Litre SAE-90",
       descone: "API-GL-4",
       desctwo: "Formulated by U.A.E ",
