@@ -1,8 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
-import Container from "../../Container";
 import logo from "../../assets/Fixit-Group-Logo.png";
 import img1 from "../../assets/FixitGroup-Career-Banner.png";
 const roles = [
@@ -285,12 +283,31 @@ const Careers = () => {
 
                     {/* Let’s Talk Button */}
                     <li>
-                      <Link
-                        to="https://wa.me/yourwhatsapp"
-                        className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
-                      >
-                        <span>Let’s Talk</span>
-                      </Link>
+                     <Link
+  to="#"
+  onClick={(e) => {
+    e.preventDefault();
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+      window.location.href = "tel:+8801898795771";
+      setTimeout(() => {
+        window.open("https://wa.me/8801898795771", "_blank");
+      }, 1500);
+    } else {
+      // 💻 ডেস্কটপে হলে: শুধু WhatsApp খুলবে
+      window.open("https://wa.me/8801898795771", "_blank");
+    }
+  }}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
+>
+  Let’s Talk on WhatsApp
+</Link>
+
                     </li>
 
                     {/* Find Link Dealer */}

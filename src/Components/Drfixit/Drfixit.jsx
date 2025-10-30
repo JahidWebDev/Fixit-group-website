@@ -23,6 +23,12 @@ import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre
 import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
 
+
+
+
+
+
+
 const Drfixit = () => {
 
    const images = [bannerImage1, bannerImage2];
@@ -189,6 +195,11 @@ const Drfixit = () => {
       img: product9,
     },
   ];
+
+
+
+  
+
 
   // ✅ Filter logic
   const filteredProducts =
@@ -461,12 +472,32 @@ const Drfixit = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            to="https://wa.me/yourwhatsapp"
-                            className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
-                          >
-                            Let’s Talk
-                          </Link>
+<Link
+  to="#"
+  onClick={(e) => {
+    e.preventDefault();
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+      window.location.href = "tel:+8801898795771";
+      setTimeout(() => {
+        window.open("https://wa.me/8801898795771", "_blank");
+      }, 1500);
+    } else {
+      // 💻 ডেস্কটপে হলে: শুধু WhatsApp খুলবে
+      window.open("https://wa.me/8801898795771", "_blank");
+    }
+  }}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
+>
+  Let’s Talk on WhatsApp
+</Link>
+
+
                         </li>
                         <li>
                           <Link
@@ -543,19 +574,36 @@ const Drfixit = () => {
         onTouchMove={isMobile ? handleTouchMove : undefined}
         onTouchEnd={isMobile ? handleTouchEnd : undefined}
       >
-        <a
-          href="https://wa.me/8801712345678"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
-        >
-          <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
-          <img
-            src={callIcon}
-            alt="Call Icon"
-            className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
-          />
-        </a>
+   <a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+      window.location.href = "tel:+8801898795771";
+      setTimeout(() => {
+        window.open("https://wa.me/8801898795771", "_blank");
+      }, 1500);
+    } else {
+      // 💻 ডেস্কটপ হলে: শুধু WhatsApp
+      window.open("https://wa.me/8801898795771", "_blank");
+    }
+  }}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+>
+  <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
+  <img
+    src={callIcon}
+    alt="Call Icon"
+    className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
+  />
+</a>
+
       </div>
   
   
@@ -791,18 +839,42 @@ const Drfixit = () => {
               {/* Middle - Call Icon with WhatsApp Link + Red Pulse */}
               <div className="relative flex items-center justify-center">
                 <div className="absolute w-[70px] h-[70px] bg-white rounded-full animate-redPulse"></div>
-                <a
-                  href="https://wa.me/8801788360303"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[60px] h-[60px] shadow-lg hover:scale-110 transition-transform duration-300"
-                >
-                  <img
-                    src={callIcon}
-                    alt="WhatsApp Call Icon"
-                    className="w-[35px] h-[35px]"
-                  />
-                </a>
+              <div className="flex gap-4">
+  {/* WhatsApp Button */}
+ <a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 📱 মোবাইলে: আগে কল, তারপর WhatsApp
+      window.location.href = "tel:+8801898795771";
+      setTimeout(() => {
+        window.open("https://wa.me/8801898795771", "_blank");
+      }, 1500);
+    } else {
+      // 💻 ডেস্কটপে: শুধু WhatsApp
+      window.open("https://wa.me/8801898795771", "_blank");
+    }
+  }}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[60px] h-[60px] shadow-lg hover:scale-110 transition-transform duration-300"
+>
+  <img
+    src={callIcon}
+    alt="WhatsApp Call Icon"
+    className="w-[35px] h-[35px]"
+  />
+</a>
+
+
+
+
+</div>
+
               </div>
 
               {/* Right Side - Email Info */}

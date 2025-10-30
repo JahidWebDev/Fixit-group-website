@@ -256,12 +256,31 @@ const OurBusiness = () => {
           </Link>
         </li>
         <li>
-          <Link
-            to="https://wa.me/yourwhatsapp"
-            className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
-          >
-            Let’s Talk
-          </Link>
+        <Link
+  to="#"
+  onClick={(e) => {
+    e.preventDefault();
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+      window.location.href = "tel:+8801898795771";
+      setTimeout(() => {
+        window.open("https://wa.me/8801898795771", "_blank");
+      }, 1500);
+    } else {
+      // 💻 ডেস্কটপে হলে: শুধু WhatsApp খুলবে
+      window.open("https://wa.me/8801898795771", "_blank");
+    }
+  }}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
+>
+  Let’s Talk on WhatsApp
+</Link>
+
         </li>
         <li>
           <Link

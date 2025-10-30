@@ -498,12 +498,31 @@ const Jaguar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="https://wa.me/yourwhatsapp"
-                    className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
-                  >
-                    Let’s Talk
-                  </Link>
+                <Link
+  to="#"
+  onClick={(e) => {
+    e.preventDefault();
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+      window.location.href = "tel:+8801898795771";
+      setTimeout(() => {
+        window.open("https://wa.me/8801898795771", "_blank");
+      }, 1500);
+    } else {
+      // 💻 ডেস্কটপে হলে: শুধু WhatsApp খুলবে
+      window.open("https://wa.me/8801898795771", "_blank");
+    }
+  }}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
+>
+  Let’s Talk on WhatsApp
+</Link>
+
                 </li>
                 <li>
                   <Link
@@ -560,35 +579,52 @@ const Jaguar = () => {
         <div className="relative z-10 flex items-center justify-center h-full"></div>
 
         {/* ✅ Fixed Green Rounded Shape with WhatsApp Icon */}
-    <div
-          className={`fixed z-50 flex items-center justify-center w-[120px] h-[60px] md:w-[145px] md:h-[70px]
-                 rounded-l-[150px] shadow-[0_4px_20px_rgba(0,0,0,0.2)]
-                 bg-gradient-to-r to-[#25D366]/100 from-[#25D366]/80
-                 backdrop-blur-lg
-                 transition-all duration-300 ease-out `}
-          style={{
-            top: isMobile ? `${yPos}px` : "50%",
-            right: rightOffset,
-            transform: isMobile ? "none" : "translateY(-50%)",
-          }}
-          onTouchStart={isMobile ? handleTouchStart : undefined}
-          onTouchMove={isMobile ? handleTouchMove : undefined}
-          onTouchEnd={isMobile ? handleTouchEnd : undefined}
-        >
-          <a
-            href="https://wa.me/8801712345678"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+     <div
+            className={`fixed z-50 flex items-center justify-center w-[120px] h-[60px] md:w-[145px] md:h-[70px]
+                   rounded-l-[150px] shadow-[0_4px_20px_rgba(0,0,0,0.2)]
+                   bg-gradient-to-r to-[#25D366]/100 from-[#25D366]/80
+                   backdrop-blur-lg
+                   transition-all duration-300 ease-out `}
+            style={{
+              top: isMobile ? `${yPos}px` : "50%",
+              right: rightOffset,
+              transform: isMobile ? "none" : "translateY(-50%)",
+            }}
+            onTouchStart={isMobile ? handleTouchStart : undefined}
+            onTouchMove={isMobile ? handleTouchMove : undefined}
+            onTouchEnd={isMobile ? handleTouchEnd : undefined}
           >
-            <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
-            <img
-              src={callIcon}
-              alt="Call Icon"
-              className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
-            />
-          </a>
-        </div>
+       <a
+      href="#"
+      onClick={(e) => {
+        e.preventDefault();
+    
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    
+        if (isMobile) {
+          // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+          window.location.href = "tel:+8801898795771";
+          setTimeout(() => {
+            window.open("https://wa.me/8801898795771", "_blank");
+          }, 1500);
+        } else {
+          // 💻 ডেস্কটপ হলে: শুধু WhatsApp
+          window.open("https://wa.me/8801898795771", "_blank");
+        }
+      }}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+    >
+      <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
+      <img
+        src={callIcon}
+        alt="Call Icon"
+        className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
+      />
+    </a>
+    
+          </div>
       </section>
 
       <section className="bg-[#F0F2F1] py-16 sm:py-20 md:py-24 px-4 sm:px-8 md:px-16 lg:px-24">
@@ -846,18 +882,34 @@ const Jaguar = () => {
               {/* Call Icon */}
               <div className="relative flex items-center justify-center">
                 <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
-                <a
-                  href="https://wa.me/8801788360303"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[45px] h-[45px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
-                >
-                  <img
-                    src={callIcon}
-                    alt="WhatsApp Call Icon"
-                    className="w-[32px] h-[32px]"
-                  />
-                </a>
+             <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+            
+                const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            
+                if (isMobile) {
+                  // 📱 মোবাইলে: আগে কল, তারপর WhatsApp
+                  window.location.href = "tel:+8801898795771";
+                  setTimeout(() => {
+                    window.open("https://wa.me/8801898795771", "_blank");
+                  }, 1500);
+                } else {
+                  // 💻 ডেস্কটপে: শুধু WhatsApp
+                  window.open("https://wa.me/8801898795771", "_blank");
+                }
+              }}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative z-10 flex items-center justify-center bg-white rounded-full  w-[50px] h-[50px] shadow-lg hover:scale-110 transition-transform duration-300"
+            >
+              <img
+                src={callIcon}
+                alt="WhatsApp Call Icon"
+                className="w-[35px] h-[35px]"
+              />
+            </a>
               </div>
 
               {/* Email */}

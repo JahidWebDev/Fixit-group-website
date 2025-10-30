@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
 
@@ -228,6 +228,60 @@ const products = [
 ];
 
 const MotulDetails = ({}) => {
+
+
+
+   const [yPos, setYPos] = useState(window.innerHeight - 80);
+  const [dragging, setDragging] = useState(false);
+  const [offsetY, setOffsetY] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const rightOffset = 0;
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // ✅ যখন dragging হবে, তখন body touch off থাকবে
+  useEffect(() => {
+    if (dragging) {
+      document.body.style.overflow = "hidden";     // scroll বন্ধ
+      document.body.style.touchAction = "none";    // touch বন্ধ
+      document.body.style.pointerEvents = "none";  // click বন্ধ
+    } else {
+      document.body.style.overflow = "auto";       // scroll আবার চালু
+      document.body.style.touchAction = "auto";    // touch চালু
+      document.body.style.pointerEvents = "auto";  // click চালু
+    }
+  }, [dragging]);
+
+  // === Handle Touch Start ===
+  const handleTouchStart = (e) => {
+    if (!isMobile) return;
+    const touch = e.touches[0];
+    setOffsetY(touch.clientY - yPos);
+    setDragging(true); // 👈 Drag শুরু
+  };
+
+  // === Handle Touch Move ===
+  const handleTouchMove = (e) => {
+    if (!dragging) return;
+    const touch = e.touches[0];
+    let newY = touch.clientY - offsetY;
+
+    if (newY < 0) newY = 0;
+    if (newY > window.innerHeight - 60) newY = window.innerHeight - 60;
+
+    setYPos(newY);
+  };
+
+  // === Handle Touch End ===
+  const handleTouchEnd = () => {
+    setDragging(false); // 👈 Drag শেষ
+  };
+
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -515,11 +569,30 @@ const MotulDetails = ({}) => {
                         </li>
                         <li>
                           <Link
-                            to="https://wa.me/yourwhatsapp"
-                            className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
-                          >
-                            Let’s Talk
-                          </Link>
+  to="#"
+  onClick={(e) => {
+    e.preventDefault();
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+      window.location.href = "tel:+8801898795771";
+      setTimeout(() => {
+        window.open("https://wa.me/8801898795771", "_blank");
+      }, 1500);
+    } else {
+      // 💻 ডেস্কটপে হলে: শুধু WhatsApp খুলবে
+      window.open("https://wa.me/8801898795771", "_blank");
+    }
+  }}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
+>
+  Let’s Talk on WhatsApp
+</Link>
+
                         </li>
                         <li>
                           <Link
@@ -676,7 +749,52 @@ const MotulDetails = ({}) => {
   </div>
 
 
-
+<div
+         className={`fixed z-50 flex items-center justify-center w-[120px] h-[60px] md:w-[145px] md:h-[70px]
+                rounded-l-[150px] shadow-[0_4px_20px_rgba(0,0,0,0.2)]
+                bg-gradient-to-r to-[#25D366]/100 from-[#25D366]/80
+                backdrop-blur-lg
+                transition-all duration-300 ease-out `}
+         style={{
+           top: isMobile ? `${yPos}px` : "50%",
+           right: rightOffset,
+           transform: isMobile ? "none" : "translateY(-50%)",
+         }}
+         onTouchStart={isMobile ? handleTouchStart : undefined}
+         onTouchMove={isMobile ? handleTouchMove : undefined}
+         onTouchEnd={isMobile ? handleTouchEnd : undefined}
+       >
+    <a
+   href="#"
+   onClick={(e) => {
+     e.preventDefault();
+ 
+     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+ 
+     if (isMobile) {
+       // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+       window.location.href = "tel:+8801898795771";
+       setTimeout(() => {
+         window.open("https://wa.me/8801898795771", "_blank");
+       }, 1500);
+     } else {
+       // 💻 ডেস্কটপ হলে: শুধু WhatsApp
+       window.open("https://wa.me/8801898795771", "_blank");
+     }
+   }} 
+   target="_blank"
+   rel="noopener noreferrer"
+   className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+ >
+   <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
+   <img
+     src={callIcon}
+     alt="Call Icon"
+     className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
+   />
+ </a>
+ 
+       </div>
 
 
 
@@ -2089,21 +2207,37 @@ const MotulDetails = ({}) => {
                   </div>
     
             
-                  <div className="relative flex items-center justify-center">
-                    <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
-                    <a
-                      href="https://wa.me/8801788360303"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="relative z-10 flex items-center justify-center bg-white rounded-full w-[45px] h-[45px] shadow-yellow-400/40 shadow-md hover:scale-110 transition-transform duration-300"
-                    >
-                      <img
-                        src={callIcon}
-                        alt="WhatsApp Call Icon"
-                        className="w-[32px] h-[32px]"
-                      />
-                    </a>
-                  </div>
+                 <div className="relative flex items-center justify-center">
+                               <div className="absolute w-[50px] h-[50px] bg-yellow-500 rounded-full animate-ping opacity-30"></div>
+                            <a
+                             href="#"
+                             onClick={(e) => {
+                               e.preventDefault();
+                           
+                               const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                           
+                               if (isMobile) {
+                                 // 📱 মোবাইলে: আগে কল, তারপর WhatsApp
+                                 window.location.href = "tel:+8801898795771";
+                                 setTimeout(() => {
+                                   window.open("https://wa.me/8801898795771", "_blank");
+                                 }, 1500);
+                               } else {
+                                 // 💻 ডেস্কটপে: শুধু WhatsApp
+                                 window.open("https://wa.me/8801898795771", "_blank");
+                               }
+                             }}
+                             target="_blank"
+                             rel="noopener noreferrer"
+                             className="relative z-10 flex items-center justify-center bg-white rounded-full  w-[50px] h-[50px] shadow-lg hover:scale-110 transition-transform duration-300"
+                           >
+                             <img
+                               src={callIcon}
+                               alt="WhatsApp Call Icon"
+                               className="w-[35px] h-[35px]"
+                             />
+                           </a>
+                             </div>
     
                   
                   <div className="text-center md:text-right space-y-1">
