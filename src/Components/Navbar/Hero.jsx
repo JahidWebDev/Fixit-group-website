@@ -52,7 +52,7 @@ const Hero = () => {
                   <img
                     src={logo}
                     alt="Fixit Logo"
-                    className="h-[60px] w-[60px] sm:h-[80px] sm:w-[80px] lg:h-[105px] lg:w-[105px] cursor-pointer"
+                    className="h-[70px] w-[70px] sm:h-[90px] sm:w-[90px] lg:h-[105px] lg:w-[105px] cursor-pointer"
                   />
                 </Link>
               </div>
