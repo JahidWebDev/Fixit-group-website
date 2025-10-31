@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+
+import React, { useRef, useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
 import drfixitLogo from "../../assets/Dr-Fixit-Logo.png";
@@ -6,6 +7,7 @@ import emailjs from "emailjs-com";
 import callIcon from "../../assets/Call-Icon-Green.png"; // WhatsApp icon
 import LocationIcon from "../../assets/Location-Man-Icon.png";
 
+import { FaChevronDown } from "react-icons/fa"
 import bgImage from "../../assets/bg-images.png";
 
 import product1 from "../../assets/Dr-Fixit-Brand-LW+-101-1-Litre.png";
@@ -17,6 +19,18 @@ import product9 from "../../assets/Fevilock-500-ml.png";
 import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre.png";
 import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
+const districts = [
+  "Bandarban","Barguna","Barisal","Bogra","Brahmanbaria","Chandpur","Chittagong","Comilla",
+  "Cox's Bazar","Chuadanga","Dhaka","Dinajpur","Faridpur","Feni","Gaibandha","Gazipur",
+  "Gopalganj","Habiganj","Jamalpur","Jessore","Jhenaidah","Joypurhat","Khagrachari",
+  "Khulna","Kishoreganj","Kurigram","Kushtia","Lalmonirhat","Lakshmipur","Magura",
+  "Manikganj","Maulvibazar","Meherpur","Mymensingh","Naogaon","Narail","Narayanganj",
+  "Narsingdi","Natore","Nawabganj","Netrokona","Nilphamari","Noakhali","Pabna","Panchagarh",
+  "Patuakhali","Pirojpur","Rajbari","Rajshahi","Rangamati","Rangpur","Satkhira","Sherpur",
+  "Sirajganj","Sylhet","Tangail"
+];
+
+
 
 const products = [
   {
@@ -211,6 +225,87 @@ const products = [
 ];
 
 const ProductDetails = ({}) => {
+
+   const [open, setOpen] = useState(false);
+     const dropdownRef = useRef(null);
+     const listRef = useRef(null);
+   
+     const handleSelect = (district) => {
+       setFormData({ ...formData, district });
+       setOpen(false);
+   
+       // Smooth scroll to top when reopening dropdown
+       if (listRef.current) {
+         listRef.current.scrollTop = 0;
+       }
+     };
+   
+     // Close dropdown on outside click
+     useEffect(() => {
+       const handleClickOutside = (e) => {
+         if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+           setOpen(false);
+         }
+       };
+       document.addEventListener("mousedown", handleClickOutside);
+       return () => document.removeEventListener("mousedown", handleClickOutside);
+     }, []);
+   
+
+ const [showPopup, setShowPopup] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    dealer: "",
+    district: "",
+    consent: false,
+  });
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSent(false);
+
+    emailjs
+      .send(
+        "service_2h4r499",
+        "template_jftpe7b",
+        formData,
+        "VV_o1hjWQVsWaOnT7"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          setSent(true);
+          setFormData({
+            name: "",
+            company: "",
+            dealer: "",
+            district: "",
+            consent: false,
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.error("EmailJS Error:", error);
+          alert("❌ Failed to send email. Please try again.");
+        }
+      );
+  };
+
+
+
+
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -231,57 +326,6 @@ const ProductDetails = ({}) => {
   const prev = () =>
     setIndex((prev) => (prev - 1 + products.length) % products.length);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    dealer: "",
-    district: "",
-    consent: false,
-  });
-
-  const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    emailjs
-      .send(
-        "service_2h4r499", // 🔹 Your EmailJS Service ID
-        "template_jftpe7b", // 🔹 Replace with your EmailJS Template ID
-        formData,
-        "VV_o1hjWQVsWaOnT7" // 🔹 Replace with your EmailJS Public Key
-      )
-      .then(
-        () => {
-          setLoading(false);
-          setSent(true);
-          setFormData({
-            name: "",
-            company: "",
-            dealer: "",
-            district: "",
-            consent: false,
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error("EmailJS Error:", error);
-          alert("❌ Failed to send email.");
-        }
-      );
-
-      
-  };
 
 
   const [yPos, setYPos] = useState(window.innerHeight - 80);
@@ -577,12 +621,13 @@ const ProductDetails = ({}) => {
 
                           </li>
                           <li>
-                            <Link
-                              to="/dealer"
-                              className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
-                            >
-                              Find Link Dealer
-                            </Link>
+                                            <button
+  type="button"
+  onClick={() => setShowPopup(true)}
+  className="flex justify-center items-center gap-2 w-[330px] h-10 bg-yellow-400 text-black rounded-lg mb-2 py-2 font-semibold hover:bg-yellow-500 transition-colors mx-auto"
+>
+  Find Link Dealer
+</button>
                           </li>
                         </ul>
                       </div>
@@ -674,7 +719,7 @@ const ProductDetails = ({}) => {
          <img
            src={callIcon}
            alt="Call Icon"
-           className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
+           className="relative w-6 h-6 lg:w-10 lg:h-10 z-10"
          />
        </a>
        
@@ -699,12 +744,12 @@ const ProductDetails = ({}) => {
     </div>
 
     <div className="mt-6 md:mt-8 w-full flex justify-center">
-      <Link
-        to="/find-dealer"
-        className="bg-[#f6b400] hover:bg-[#e0a200] text-black font-semibold px-6 md:px-8 py-3 rounded-md shadow-md transition"
-      >
-        Find a Dealer
-      </Link>
+       <button
+                onClick={() => setShowPopup(true)}
+                className="bg-[#fbbf24] text-black font-semibold text-[13px] sm:text-[14px] md:text-[15px] px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg shadow hover:bg-[#f59e0b] transition-all duration-300"
+              >
+                FIND A DEALER
+              </button>
     </div>
   </div>
 
@@ -769,6 +814,130 @@ const ProductDetails = ({}) => {
       </div>
     </div>
   </div>
+
+{showPopup && (
+          <>
+            <div
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 animate-fadeIn"
+              onClick={() => setShowPopup(false)}
+            ></div>
+
+            <div className="fixed inset-0 flex items-center justify-center z-50 px-4 animate-slideUp">
+              <div className="relative w-full max-w-md bg-[#0B63FF] rounded-xl p-8 text-white shadow-2xl">
+                {/* Close Button */}
+                <button
+                  onClick={() => setShowPopup(false)}
+                  className="absolute top-3 right-3 text-white hover:text-yellow-300 text-2xl"
+                >
+                  &times;
+                </button>
+
+                <h3 className="text-2xl font-semibold mb-6 text-center">
+                  Request a Quote
+                </h3>
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                    required
+                  />
+
+                  <input
+                    type="text"
+                    name="company"
+                    placeholder="Your Phone Number"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                    required
+                  />
+
+                  <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0">
+                    <div className="relative w-full sm:w-1/2">
+  <select
+    name="dealer"
+    value={formData.dealer}
+    onChange={handleChange}
+    className="w-full p-3 rounded-md bg-gray-100 text-black border appearance-none cursor-pointer focus:outline-none"
+    required
+  >
+    <option value="" disabled>
+      Dealer/Depo
+    </option>
+    <option value="Dealer">Dealer</option>
+    <option value="Depo">Depo</option>
+  </select>
+
+  {/* Arrow icon on the right */}
+  <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
+</div>
+
+<div className="relative w-full sm:w-1/2" ref={dropdownRef}>
+  {/* Dropdown button */}
+  <div
+    className="p-3 bg-gray-100 rounded-md cursor-pointer text-black border flex justify-between items-center"
+    onClick={() => setOpen(!open)}
+  >
+    <span>{formData.district || "District"}</span>
+    <FaChevronDown className={`ml-2 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+  </div>
+
+  {/* Scrollable list */}
+  {open && (
+    <ul className="absolute z-50 mt-1 w-full max-h-64 overflow-auto bg-white border rounded-md shadow-lg text-black">
+      {districts.map((district) => (
+        <li
+          key={district}
+          className="p-3 hover:bg-gray-200 cursor-pointer"
+          onClick={() => handleSelect(district)}
+        >
+          {district}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
+
+
+                  </div>
+
+                  <div className="flex items-start space-x-2 text-sm mt-2">
+                    <input
+                      type="checkbox"
+                      name="consent"
+                      checked={formData.consent}
+                      onChange={handleChange}
+                      className="mt-1"
+                    />
+                    <p>
+                      I consent to receiving calls based on the information
+                      provided above.
+                    </p>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full bg-white text-[#0B63FF] font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-gray-100 transition disabled:opacity-60"
+                  >
+                    {loading ? "Sending..." : "Submit"}
+                  </button>
+                </form>
+
+                {sent && (
+                  <p className="text-green-300 text-center mt-4">
+                    ✅ Mail sent successfully!
+                  </p>
+                )}
+              </div>
+            </div>
+          </>
+        )}
 
 </div>
 
@@ -2473,7 +2642,7 @@ const ProductDetails = ({}) => {
                 <img
                   src={callIcon}
                   alt="WhatsApp Call Icon"
-                  className="w-[35px] h-[35px]"
+                  className="w-[55px] h-[55px]"
                 />
               </a>
               </div>
@@ -2513,35 +2682,50 @@ const ProductDetails = ({}) => {
 
               <div className="flex space-x-3">
                 {/* Dealer/Depo Dropdown */}
-                <select
-                  name="dealer"
-                  value={formData.dealer}
-                  onChange={handleChange}
-                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                  required
-                >
-                  <option value="" disabled selected>
-                    Dealer/Depo
-                  </option>
-                  <option value="Dealer">Dealer</option>
-                  <option value="Depo">Depo</option>
-                </select>
+                                  <div className="relative w-full sm:w-1/2">
+  <select
+    name="dealer"
+    value={formData.dealer}
+    onChange={handleChange}
+    className="w-full p-3 rounded-md bg-gray-100 text-black border appearance-none cursor-pointer focus:outline-none"
+    required
+  >
+    <option value="" disabled>
+      Dealer/Depo
+    </option>
+    <option value="Dealer">Dealer</option>
+    <option value="Depo">Depo</option>
+  </select>
 
-                {/* District Dropdown */}
-                <select
-                  name="district"
-                  value={formData.district}
-                  onChange={handleChange}
-                  className="w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                  required
-                >
-                  <option value="" disabled selected>
-                    District
-                  </option>
-                  <option value="Dhaka">Dhaka</option>
-                  <option value="Chittagong">Chittagong</option>
-                  <option value="Khulna">Khulna</option>
-                </select>
+  {/* Arrow icon on the right */}
+  <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
+                               </div>
+
+<div className="relative w-full sm:w-1/2" ref={dropdownRef}>
+  {/* Dropdown button */}
+  <div
+    className="p-3 bg-gray-100 rounded-md cursor-pointer text-black border flex justify-between items-center"
+    onClick={() => setOpen(!open)}
+  >
+    <span>{formData.district || "District"}</span>
+    <FaChevronDown className={`ml-2 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+  </div>
+
+  {/* Scrollable list */}
+  {open && (
+    <ul className="absolute z-50 mt-1 w-full max-h-64 overflow-auto bg-white border rounded-md shadow-lg text-black">
+      {districts.map((district) => (
+        <li
+          key={district}
+          className="p-3 hover:bg-gray-200 cursor-pointer"
+          onClick={() => handleSelect(district)}
+        >
+          {district}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
               </div>
 
               <div className="flex items-start space-x-2 text-sm mt-2">

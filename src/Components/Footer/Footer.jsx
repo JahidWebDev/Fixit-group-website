@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
+  
   FaYoutube,
   FaTwitter,
 } from "react-icons/fa";
@@ -83,14 +83,7 @@ const Footer = () => {
         >
           <FaInstagram size={20} />
         </a>
-        <a
-          href=""
-          target=""
-          rel="noopener noreferrer"
-          className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full text-white hover:text-[#0A66C2] hover:bg-white transition-all duration-300"
-        >
-          <FaLinkedinIn size={20} />
-        </a>
+      
         <a
           href="https://www.youtube.com/@fixit-group"
           target="_blank"

@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
+import { FaChevronDown } from "react-icons/fa"
 
 // import Container from "../../Container";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
@@ -24,10 +25,32 @@ import product6 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
 import product7 from "../../assets/MOTUL-7100-4T-10W-40-ESTER.png";
 import product8 from "../../assets/Motul-4T-Plus-3000-10W-30-HC-Tech.png";
 import product9 from "../../assets/Motul4T-Plus-3000-10W-40-HC-Tech.png";
+const districts = [
+  "Bandarban","Barguna","Barisal","Bogra","Brahmanbaria","Chandpur","Chittagong","Comilla",
+  "Cox's Bazar","Chuadanga","Dhaka","Dinajpur","Faridpur","Feni","Gaibandha","Gazipur",
+  "Gopalganj","Habiganj","Jamalpur","Jessore","Jhenaidah","Joypurhat","Khagrachari",
+  "Khulna","Kishoreganj","Kurigram","Kushtia","Lalmonirhat","Lakshmipur","Magura",
+  "Manikganj","Maulvibazar","Meherpur","Mymensingh","Naogaon","Narail","Narayanganj",
+  "Narsingdi","Natore","Nawabganj","Netrokona","Nilphamari","Noakhali","Pabna","Panchagarh",
+  "Patuakhali","Pirojpur","Rajbari","Rajshahi","Rangamati","Rangpur","Satkhira","Sherpur",
+  "Sirajganj","Sylhet","Tangail"
+];
 
 
 const Motul = () => {
+   const [open, setOpen] = useState(false);
+    const dropdownRef = useRef(null);
+    const listRef = useRef(null);
   
+    const handleSelect = (district) => {
+      setFormData({ ...formData, district });
+      setOpen(false);
+  
+      // Smooth scroll to top when reopening dropdown
+      if (listRef.current) {
+        listRef.current.scrollTop = 0;
+      }
+    };
   
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -103,6 +126,7 @@ const images = [bannerImage1, bannerImage2];
       descone: "20W40",
       desctwo: " Mineral",
       img: product1,
+      category: "Bike",
     },
   
     {
@@ -111,6 +135,7 @@ const images = [bannerImage1, bannerImage2];
       desc: "2 Litre API-SL 20W-50",
       descone: " Full Synthetic",
       img: product2,
+      category: "Bike",
     },
     {
       id: 3,
@@ -118,27 +143,31 @@ const images = [bannerImage1, bannerImage2];
       desc: "1 Litre SAE 10W40, API: SP JASO MA2",
       descone: "Fully Synthetic",
       img: product3,
+      category: "Bike",
     },
     {
       id: 4,
       name: "MOTUL 7100 4T 10W-30 FULL SYNTHETIC 1L (Vietnam)",
       desc: "1 Litre API-SP 10W-30",
-      
+      category: "Bike",
       descthree: "",
       category: "Febilock Glue",
       img: product4,
+      category: "Bike",
     },
     {
       id: 5,
       name: "MOTUL 300V 4T 10W-40",
       desc: "01 Litre",
       img: product5,
+      category: "Bike",
     },
     {
       id: 6,
       name: "MOTUL 300V 4T 10W-30",
       desc: "01 Litre",
        img: product6,
+       category: "Bike",
     },
     {
       id: 7,
@@ -146,6 +175,7 @@ const images = [bannerImage1, bannerImage2];
       desc: "1 Litre API-SP 10W-40",
       descone: "Full Synthetic",
       img: product7,
+      category: "Bike",
     },
     {
       id: 8,
@@ -153,6 +183,7 @@ const images = [bannerImage1, bannerImage2];
       desc: "1 Litre API SN JASO MA2 10W30",
       descone: "Mineral",
       img: product8,
+      category: "Bike",
     },
     {
       id: 9,
@@ -160,6 +191,7 @@ const images = [bannerImage1, bannerImage2];
       desc: "1 Litre API SN JASO MA2 10W40",
       descone: "Mineral",
       img: product9,
+      category: "Bike",
     },
   
    
@@ -172,7 +204,7 @@ const images = [bannerImage1, bannerImage2];
 
   // const ProductsGrid = () => {
   //   const [selectedCategory, setSelectedCategory] = useState("All");
-
+const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -180,28 +212,27 @@ const images = [bannerImage1, bannerImage2];
     district: "",
     consent: false,
   });
-
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
 
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
+    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    setSent(false);
 
     emailjs
       .send(
-        "service_2h4r499", // 🔹 Your EmailJS Service ID
-        "template_jftpe7b", // 🔹 Replace with your EmailJS Template ID
+        "service_2h4r499",
+        "template_jftpe7b",
         formData,
-        "VV_o1hjWQVsWaOnT7" // 🔹 Replace with your EmailJS Public Key
+        "VV_o1hjWQVsWaOnT7"
       )
       .then(
         () => {
@@ -218,10 +249,12 @@ const images = [bannerImage1, bannerImage2];
         (error) => {
           setLoading(false);
           console.error("EmailJS Error:", error);
-          alert("❌ Failed to send email.");
+          alert("❌ Failed to send email. Please try again.");
         }
       );
   };
+
+
   return (
      <section className="w-full  z-50">
           <header className="top-0 bg-[#B71C1C] left-0 w-full z-50">
@@ -461,12 +494,13 @@ const images = [bannerImage1, bannerImage2];
 
                           </li>
                           <li>
-                            <Link
-                              to="/dealer"
-                              className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
-                            >
-                              Find Link Dealer
-                            </Link>
+                                            <button
+  type="button"
+  onClick={() => setShowPopup(true)}
+  className="flex justify-center items-center gap-2 w-[330px] h-10 bg-yellow-400 text-black rounded-lg mb-2 py-2 font-semibold hover:bg-yellow-500 transition-colors mx-auto"
+>
+  Find Link Dealer
+</button>
                           </li>
                         </ul>
                       </div>
@@ -562,7 +596,7 @@ const images = [bannerImage1, bannerImage2];
    <img
      src={callIcon}
      alt="Call Icon"
-     className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
+     className="relative w-6 h-6 lg:w-10 lg:h-10 z-10"
    />
  </a>
  
@@ -686,9 +720,12 @@ const images = [bannerImage1, bannerImage2];
     </button>
   ))}
 
-  <button className="bg-[#fbbf24] text-black font-semibold text-[15px] sm:text-[16px] px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg shadow hover:bg-[#f59e0b] transition">
-    FIND A DEALER
-  </button>
+   <button
+                onClick={() => setShowPopup(true)}
+                className="bg-[#fbbf24] text-black font-semibold text-[13px] sm:text-[14px] md:text-[15px] px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg shadow hover:bg-[#f59e0b] transition-all duration-300"
+              >
+                FIND A DEALER
+              </button>
 </div>
 
             </div>
@@ -736,12 +773,12 @@ const images = [bannerImage1, bannerImage2];
             Product Details
           </Link>
 
-          <Link
-            to="/find-dealer"
-            className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300 text-center"
-          >
-            Find a Dealer
-          </Link>
+             <button
+                    onClick={() => setShowPopup(true)}
+                    className="bg-[#fbbf24] text-black text-[15px] font-medium py-2 rounded-md shadow-sm hover:bg-[#f59e0b] transition-all duration-300 text-center"
+                  >
+                    Find a Dealer
+                  </button>
         </div>
       </div>
 
@@ -781,6 +818,129 @@ const images = [bannerImage1, bannerImage2];
                 )}
               </div>
             </div>
+             {showPopup && (
+                      <>
+                        <div
+                          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 animate-fadeIn"
+                          onClick={() => setShowPopup(false)}
+                        ></div>
+            
+                        <div className="fixed inset-0 flex items-center justify-center z-50 px-4 animate-slideUp">
+                          <div className="relative w-full max-w-md bg-[#0B63FF] rounded-xl p-8 text-white shadow-2xl">
+                            {/* Close Button */}
+                            <button
+                              onClick={() => setShowPopup(false)}
+                              className="absolute top-3 right-3 text-white hover:text-yellow-300 text-2xl"
+                            >
+                              &times;
+                            </button>
+            
+                            <h3 className="text-2xl font-semibold mb-6 text-center">
+                              Request a Quote
+                            </h3>
+            
+                            <form onSubmit={handleSubmit} className="space-y-4">
+                              <input
+                                type="text"
+                                name="name"
+                                placeholder="Your Name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                                required
+                              />
+            
+                              <input
+                                type="text"
+                                name="company"
+                                placeholder="Your Phone Number"
+                                value={formData.company}
+                                onChange={handleChange}
+                                className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                                required
+                              />
+            
+                              <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0">
+                                <div className="relative w-full sm:w-1/2">
+              <select
+                name="dealer"
+                value={formData.dealer}
+                onChange={handleChange}
+                className="w-full p-3 rounded-md bg-gray-100 text-black border appearance-none cursor-pointer focus:outline-none"
+                required
+              >
+                <option value="" disabled>
+                  Dealer/Depo
+                </option>
+                <option value="Dealer">Dealer</option>
+                <option value="Depo">Depo</option>
+              </select>
+            
+              {/* Arrow icon on the right */}
+              <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
+            </div>
+            
+            <div className="relative w-full sm:w-1/2" ref={dropdownRef}>
+              {/* Dropdown button */}
+              <div
+                className="p-3 bg-gray-100 rounded-md cursor-pointer text-black border flex justify-between items-center"
+                onClick={() => setOpen(!open)}
+              >
+                <span>{formData.district || "District"}</span>
+                <FaChevronDown className={`ml-2 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+              </div>
+            
+              {/* Scrollable list */}
+              {open && (
+                <ul className="absolute z-50 mt-1 w-full max-h-64 overflow-auto bg-white border rounded-md shadow-lg text-black">
+                  {districts.map((district) => (
+                    <li
+                      key={district}
+                      className="p-3 hover:bg-gray-200 cursor-pointer"
+                      onClick={() => handleSelect(district)}
+                    >
+                      {district}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+            
+            
+                              </div>
+            
+                              <div className="flex items-start space-x-2 text-sm mt-2">
+                                <input
+                                  type="checkbox"
+                                  name="consent"
+                                  checked={formData.consent}
+                                  onChange={handleChange}
+                                  className="mt-1"
+                                />
+                                <p>
+                                  I consent to receiving calls based on the information
+                                  provided above.
+                                </p>
+                              </div>
+            
+                              <button
+                                type="submit"
+                                disabled={loading}
+                                className="w-full bg-white text-[#0B63FF] font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-gray-100 transition disabled:opacity-60"
+                              >
+                                {loading ? "Sending..." : "Submit"}
+                              </button>
+                            </form>
+            
+                            {sent && (
+                              <p className="text-green-300 text-center mt-4">
+                                ✅ Mail sent successfully!
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </>
+                    )}
           </section>
     
           {/* ================= from================= */}
@@ -834,7 +994,7 @@ const images = [bannerImage1, bannerImage2];
                         <h3 className="text-base font-semibold text-yellow-400">
                           Emergency
                         </h3>
-                        <p className="text-sm font-medium text-gray-300">
+                        <p className="text-2xl font-bold text-gray-300">
                           +8801788360303
                         </p>
                       </div>
@@ -862,12 +1022,12 @@ const images = [bannerImage1, bannerImage2];
                                    }}
                                    target="_blank"
                                    rel="noopener noreferrer"
-                                   className="relative z-10 flex items-center justify-center bg-white rounded-full  w-[50px] h-[50px] shadow-lg hover:scale-110 transition-transform duration-300"
+                                   className="relative z-10 flex items-center justify-center bg-white rounded-full  w-[55px] h-[55px] shadow-lg hover:scale-110 transition-transform duration-300"
                                  >
                                    <img
                                      src={callIcon}
                                      alt="WhatsApp Call Icon"
-                                     className="w-[35px] h-[35px]"
+                                     className="w-[55px] h-[55px]"
                                    />
                                  </a>
                                    </div>
@@ -912,34 +1072,50 @@ const images = [bannerImage1, bannerImage2];
                       />
         
                       <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0">
-                        <select
-                          name="dealer"
-                          value={formData.dealer}
-                          onChange={handleChange}
-                          className="w-full sm:w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                          required
-                        >
-                          <option value="" disabled>
-                            Dealer/Depo
-                          </option>
-                          <option value="Dealer">Dealer</option>
-                          <option value="Depo">Depo</option>
-                        </select>
-        
-                        <select
-                          name="district"
-                          value={formData.district}
-                          onChange={handleChange}
-                          className="w-full sm:w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                          required
-                        >
-                          <option value="" disabled>
-                            District
-                          </option>
-                          <option value="Dhaka">Dhaka</option>
-                          <option value="Chittagong">Chittagong</option>
-                          <option value="Khulna">Khulna</option>
-                        </select>
+                                                        <div className="relative w-full sm:w-1/2">
+                          <select
+                            name="dealer"
+                            value={formData.dealer}
+                            onChange={handleChange}
+                            className="w-full p-3 rounded-md bg-gray-100 text-black border appearance-none cursor-pointer focus:outline-none"
+                            required
+                          >
+                            <option value="" disabled>
+                              Dealer/Depo
+                            </option>
+                            <option value="Dealer">Dealer</option>
+                            <option value="Depo">Depo</option>
+                          </select>
+                        
+                          {/* Arrow icon on the right */}
+                          <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
+                                                       </div>
+                        
+                        <div className="relative w-full sm:w-1/2" ref={dropdownRef}>
+                          {/* Dropdown button */}
+                          <div
+                            className="p-3 bg-gray-100 rounded-md cursor-pointer text-black border flex justify-between items-center"
+                            onClick={() => setOpen(!open)}
+                          >
+                            <span>{formData.district || "District"}</span>
+                            <FaChevronDown className={`ml-2 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+                          </div>
+                        
+                          {/* Scrollable list */}
+                          {open && (
+                            <ul className="absolute z-50 mt-1 w-full max-h-64 overflow-auto bg-white border rounded-md shadow-lg text-black">
+                              {districts.map((district) => (
+                                <li
+                                  key={district}
+                                  className="p-3 hover:bg-gray-200 cursor-pointer"
+                                  onClick={() => handleSelect(district)}
+                                >
+                                  {district}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
                       </div>
         
                       <div className="flex items-start space-x-2 text-sm mt-2">

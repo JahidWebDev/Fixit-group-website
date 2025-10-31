@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import React, { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
+import { FaChevronDown } from "react-icons/fa"
+import { useParams } from "react-router-dom";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
 
 import emailjs from "emailjs-com";
@@ -17,6 +20,17 @@ import product6 from "../../assets/MOTUL-300V-4T-10W-30-FULL-SYNTHETIC-1L.png";
 import product7 from "../../assets/MOTUL-7100-4T-10W-40-ESTER.png";
 import product8 from "../../assets/Motul-4T-Plus-3000-10W-30-HC-Tech.png";
 import product9 from "../../assets/Motul4T-Plus-3000-10W-40-HC-Tech.png";
+
+const districts = [
+  "Bandarban","Barguna","Barisal","Bogra","Brahmanbaria","Chandpur","Chittagong","Comilla",
+  "Cox's Bazar","Chuadanga","Dhaka","Dinajpur","Faridpur","Feni","Gaibandha","Gazipur",
+  "Gopalganj","Habiganj","Jamalpur","Jessore","Jhenaidah","Joypurhat","Khagrachari",
+  "Khulna","Kishoreganj","Kurigram","Kushtia","Lalmonirhat","Lakshmipur","Magura",
+  "Manikganj","Maulvibazar","Meherpur","Mymensingh","Naogaon","Narail","Narayanganj",
+  "Narsingdi","Natore","Nawabganj","Netrokona","Nilphamari","Noakhali","Pabna","Panchagarh",
+  "Patuakhali","Pirojpur","Rajbari","Rajshahi","Rangamati","Rangpur","Satkhira","Sherpur",
+  "Sirajganj","Sylhet","Tangail"
+];
 
 const products = [
 {
@@ -229,6 +243,32 @@ const products = [
 
 const MotulDetails = ({}) => {
 
+  
+  
+ const [open, setOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const listRef = useRef(null);
+
+  const handleSelect = (district) => {
+    setFormData({ ...formData, district });
+    setOpen(false);
+
+    // Smooth scroll to top when reopening dropdown
+    if (listRef.current) {
+      listRef.current.scrollTop = 0;
+    }
+  };
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
 
    const [yPos, setYPos] = useState(window.innerHeight - 80);
@@ -301,7 +341,7 @@ const MotulDetails = ({}) => {
   const next = () => setIndex((prev) => (prev + 1) % products.length);
   const prev = () =>
     setIndex((prev) => (prev - 1 + products.length) % products.length);
-
+const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -309,28 +349,27 @@ const MotulDetails = ({}) => {
     district: "",
     consent: false,
   });
-
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
 
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
+    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    setSent(false);
 
     emailjs
       .send(
-        "service_2h4r499", // 🔹 Your EmailJS Service ID
-        "template_jftpe7b", // 🔹 Replace with your EmailJS Template ID
+        "service_2h4r499",
+        "template_jftpe7b",
         formData,
-        "VV_o1hjWQVsWaOnT7" // 🔹 Replace with your EmailJS Public Key
+        "VV_o1hjWQVsWaOnT7"
       )
       .then(
         () => {
@@ -347,14 +386,15 @@ const MotulDetails = ({}) => {
         (error) => {
           setLoading(false);
           console.error("EmailJS Error:", error);
-          alert("❌ Failed to send email.");
+          alert("❌ Failed to send email. Please try again.");
         }
       );
+  };
 
 
 
       
-  };
+
 
   return (
     <section className="w-full  z-50">
@@ -595,12 +635,13 @@ const MotulDetails = ({}) => {
 
                         </li>
                         <li>
-                          <Link
-                            to="/dealer"
-                            className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
-                          >
-                            Find Link Dealer
-                          </Link>
+                                        <button
+  type="button"
+  onClick={() => setShowPopup(true)}
+  className="flex justify-center items-center gap-2 w-[330px] h-10 bg-yellow-400 text-black rounded-lg mb-2 py-2 font-semibold hover:bg-yellow-500 transition-colors mx-auto"
+>
+  Find Link Dealer
+</button>
                         </li>
                       </ul>
                     </div>
@@ -650,13 +691,136 @@ const MotulDetails = ({}) => {
     </div>
 
   <div className="mt-8">
-    <Link
-      to="/find-dealer"
-      className="bg-[#f6b400] hover:bg-[#e0a200] text-black font-semibold px-8 py-3 rounded-md shadow-md transition"
-    >
-      Find a Dealer
-    </Link>
+    <button
+                onClick={() => setShowPopup(true)}
+                className="bg-[#fbbf24] text-black font-semibold text-[13px] sm:text-[14px] md:text-[15px] px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg shadow hover:bg-[#f59e0b] transition-all duration-300"
+              >
+                FIND A DEALER
+              </button>
   </div>
+  {showPopup && (
+            <>
+              <div
+                className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 animate-fadeIn"
+                onClick={() => setShowPopup(false)}
+              ></div>
+  
+              <div className="fixed inset-0 flex items-center justify-center z-50 px-4 animate-slideUp">
+                <div className="relative w-full max-w-md bg-[#0B63FF] rounded-xl p-8 text-white shadow-2xl">
+                  {/* Close Button */}
+                  <button
+                    onClick={() => setShowPopup(false)}
+                    className="absolute top-3 right-3 text-white hover:text-yellow-300 text-2xl"
+                  >
+                    &times;
+                  </button>
+  
+                  <h3 className="text-2xl font-semibold mb-6 text-center">
+                    Request a Quote
+                  </h3>
+  
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                      required
+                    />
+  
+                    <input
+                      type="text"
+                      name="company"
+                      placeholder="Your Phone Number"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                      required
+                    />
+  
+                    <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0">
+                      <div className="relative w-full sm:w-1/2">
+    <select
+      name="dealer"
+      value={formData.dealer}
+      onChange={handleChange}
+      className="w-full p-3 rounded-md bg-gray-100 text-black border appearance-none cursor-pointer focus:outline-none"
+      required
+    >
+      <option value="" disabled>
+        Dealer/Depo
+      </option>
+      <option value="Dealer">Dealer</option>
+      <option value="Depo">Depo</option>
+    </select>
+  
+    {/* Arrow icon on the right */}
+    <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
+  </div>
+  
+  <div className="relative w-full sm:w-1/2" ref={dropdownRef}>
+    {/* Dropdown button */}
+    <div
+      className="p-3 bg-gray-100 rounded-md cursor-pointer text-black border flex justify-between items-center"
+      onClick={() => setOpen(!open)}
+    >
+      <span>{formData.district || "District"}</span>
+      <FaChevronDown className={`ml-2 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+    </div>
+  
+    {/* Scrollable list */}
+    {open && (
+      <ul className="absolute z-50 mt-1 w-full max-h-64 overflow-auto bg-white border rounded-md shadow-lg text-black">
+        {districts.map((district) => (
+          <li
+            key={district}
+            className="p-3 hover:bg-gray-200 cursor-pointer"
+            onClick={() => handleSelect(district)}
+          >
+            {district}
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+  
+  
+                    </div>
+  
+                    <div className="flex items-start space-x-2 text-sm mt-2">
+                      <input
+                        type="checkbox"
+                        name="consent"
+                        checked={formData.consent}
+                        onChange={handleChange}
+                        className="mt-1"
+                      />
+                      <p>
+                        I consent to receiving calls based on the information
+                        provided above.
+                      </p>
+                    </div>
+  
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="w-full bg-white text-[#0B63FF] font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-gray-100 transition disabled:opacity-60"
+                    >
+                      {loading ? "Sending..." : "Submit"}
+                    </button>
+                  </form>
+  
+                  {sent && (
+                    <p className="text-green-300 text-center mt-4">
+                      ✅ Mail sent successfully!
+                    </p>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
 </div>
 
 
@@ -790,7 +954,7 @@ const MotulDetails = ({}) => {
    <img
      src={callIcon}
      alt="Call Icon"
-     className="relative w-6 h-6 lg:w-7 lg:h-7 z-10"
+     className="relative w-6 h-6 lg:w-10 lg:h-10 z-10"
    />
  </a>
  
@@ -814,1342 +978,13 @@ const MotulDetails = ({}) => {
     >
       <img
         src={prod.image}
-        alt={prod.title}
+        
         className="max-w-[70px] max-h-[70px] object-contain"
       />
     </button>
   ))}
 </div>
-
-
-          {/* 🔹 Dynamic Text Content */}
-          {/* <div className="mt-20 ">
-            {p.id === 1 && (
-     <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
- 
-    <section className="mb-6">
-      <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
-      <p className="mb-2 font-semibold  text-[17px]  text-black">
-        Buy genuine Motul 20W-40 Motorcycle Oil in Bangladesh from the only official Motulreseller.
-      </p>
-      <ul className="space-y-1 ml-4">
-        <li>
-          <span className="text-red-600 mr-2">▪</span>
-          High-performance sport bikes and superbikes
-        </li>
-        <li>
-          <span className="text-red-600 mr-2">▪</span>
-          Track, racing, and endurance motorcycles
-        </li>
-        <li>
-          <span className="text-red-600 mr-2">▪</span>
-          Street and adventure motorcycles with 4-stroke engines
-        </li>
-        <li>
-          <span className="text-red-600 mr-2">▪</span>
-          Suitable for bikes with catalytic converters and modern emission systems
-        </li>
-      </ul>
-    </section>
-
-
-    <section className="mb-6">
-      <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
-      <ul className="space-y-1 ml-4">
-        <li><span className="text-red-600 mr-2">▪</span>Oil Type: 100% Synthetic (Ester Core®)</li>
-        <li><span className="text-red-600 mr-2">▪</span>Viscosity Grade: SAE 10W40</li>
-        <li><span className="text-red-600 mr-2">▪</span>Product Type: 4T Motorcycle Oil</li>
-        <li><span className="text-red-600 mr-2">▪</span>Standards: Exceeds API SP & JASO MA2 requirements</li>
-        <li><span className="text-red-600 mr-2">▪</span>Technology: Double Ester Core® Racing Technology</li>
-      </ul>
-    </section>
-
-
-    <section className="mb-6">
-      <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
-      <ul className="space-y-1 ml-4">
-        <li><span className="text-red-600 mr-2">▪</span>Suitable for all 4-stroke bikes up to 150cc</li>
-        <li><span className="text-red-600 mr-2">▪</span>Performs exceptionally well under high-temperature conditions</li>
-        <li><span className="text-red-600 mr-2">▪</span>High detergent and dispersant properties keep the engine, gear, and clutch clean</li>
-        <li><span className="text-red-600 mr-2">▪</span>Reinforced anti-wear technology extends engine life and maintains performance</li>
-        <li><span className="text-red-600 mr-2">▪</span>Meets international standards for engine protection and reliability</li>
-      </ul>
-    </section>
-
-  
-    <section className="mb-6">
-      <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-      <table className="w-full text-left border-collapse text-[15px]">
-        <thead>
-          <tr className="border-b border-gray-300">
-            <th className="py-1">Property</th>
-            <th className="py-1">Test Method</th>
-            <th className="py-1">Typical Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ["SAE Grade", "—", "20W50"],
-            ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
-            ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
-            ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
-            ["Viscosity Index", "ASTM D2270", "140"],
-            ["Pour Point (°C)", "ASTM D97", "-33"],
-            ["Flash Point (°C)", "ASTM D92", "228"],
-            ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
-            ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
-          ].map(([prop, method, value], i) => (
-            <tr key={i} className="border-b border-gray-200">
-              <td className="py-1">{prop}</td>
-              <td className="py-1">{method}</td>
-              <td className="py-1">{value}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </section>
-
-  
-    <section>
-      <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
-      <p>1L | 3.5L | 5L | 7.5L | 10L | 20L | 50L | 210L Barrel</p>
-    </section>
-  </div>
-            )}
-
-            {p.id === 2 && (
-             <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-b border-gray-300 py-8 text-[15px] leading-relaxed">
-
-      <section className="mb-6">
-        <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
-        <ul className="space-y-1 ml-4">
-          <li>
-            <span className="text-red-600 mr-2">▪</span>Recommended for modern
-            four-stroke motorcycle engines requiring JASO MA or JASO MA2
-            specifications.
-          </li>
-          <li>
-            <span className="text-red-600 mr-2">▪</span>Provides strong
-            protection for older motorcycle engines built before the introduction
-            of JASO MA/MA2.
-          </li>
-        </ul>
-      </section>
-
-
-      <section className="mb-6">
-        <h2 className="font-semibold text-[17px] mb-2">
-          Specifications and Approvals:
-        </h2>
-        <p className="mb-1">
-          This product meets or exceeds the requirements of the following
-          industry standards:
-        </p>
-        <ul className="space-y-1 ml-4">
-          <li>
-            <span className="text-red-600 mr-2">▪</span>JASO MA / JASO MA2
-          </li>
-          <li>
-            <span className="text-red-600 mr-2">▪</span>API SL
-          </li>
-        </ul>
-      </section>
-
-
-      <section className="mb-6">
-        <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
-
-        <p className="font-semibold">Advanced Engine Protection:</p>
-        <p className="mb-3">
-          Instant protection from{" "}
-          <span className="italic">heat-activated anti-wear molecules</span>™
-          ensures smooth performance and reduced metal wear even at high
-          temperatures.
-        </p>
-
-        <p className="font-semibold">Enhanced Wear Resistance:</p>
-        <p className="mb-3">
-          Provides up to 57% more wear protection than the industry standard
-          (based on API SL Sequence IVA test).
-        </p>
-
-        <p className="font-semibold">Smooth Clutch Operation:</p>
-        <p className="mb-3">
-          High-traction formulation helps prevent clutch slippage and allows
-          smoother gear shifting.
-        </p>
-
-        <p className="font-semibold">Engine & Gearbox Protection:</p>
-        <p className="mb-3">
-          Designed to protect both <strong>engine</strong> and{" "}
-          <strong>gearbox</strong> in one circulation system, minimizing friction
-          and corrosion.
-        </p>
-
-        <p className="font-semibold">Cleaner Engine Performance:</p>
-        <p>
-          Prevents deposit formation and helps keep the{" "}
-          <strong>engine clean</strong>, ensuring longer life and consistent
-          efficiency.
-        </p>
-      </section>
-
-     
-      <section className="mb-6">
-        <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-        <table className="w-full text-left border-collapse text-[15px]">
-          <thead>
-            <tr className="border-b border-gray-300">
-              <th className="py-1">Property</th>
-              <th className="py-1">Test Method</th>
-              <th className="py-1">Typical Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ["Grade", "SAE 20W–40", "—"],
-              ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "122"],
-              ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "15"],
-              ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.88"],
-              ["Pour Point (°C)", "ASTM D97", "-30"],
-              ["Flash Point (°C)", "ASTM D92", "230"],
-              ["Sulfated Ash (mass %)", "ASTM D874", "0.8"],
-              ["Total Base Number (mg KOH/g)", "ASTM D2896", "5.9"],
-              ["Mini-Rotary Viscometer @ -20°C (mPa.s)", "ASTM D4684", "12,500"],
-              ["Hi-Temp Hi-Shear Viscosity @ 150°C (mPa.s)", "ASTM D4683", "4.1"],
-            ].map(([prop, method, value], i) => (
-              <tr key={i} className="border-b border-gray-200">
-                <td className="py-1">{prop}</td>
-                <td className="py-1">{method}</td>
-                <td className="py-1">{value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
-
-      }
-      <section>
-        <h2 className="font-semibold text-[17px] mb-2">Health and Safety</h2>
-        <p className="mb-3">
-          For safe handling and use, please refer to the Material Safety Data
-          Sheet (MSDS) available at:
-        </p>
-        <p className="text-blue-700 underline">
-          www.jaguarlubricants.com
-        </p>
-        <p className="mt-3">
-          Jaguar Super Moto 20W-40 - Premium protection, smooth performance, and
-          longer engine life for your motorcycle.
-        </p>
-      </section>
-    </div>
-            )}
-
-            {p.id === 3 && (
-<div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
- 
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
-    <p className="mb-2 font-semibold text-[17px] text-black">
-      Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W50 is recommended for:
-    </p>
-    <ul className="space-y-1 ml-4">
-      <li>
-        <span className="text-red-600 mr-2">▪</span>
-        Naturally aspirated and turbocharged diesel engines from leading Japanese, European, and American manufacturers
-      </li>
-      <li>
-        <span className="text-red-600 mr-2">▪</span>
-        Heavy-duty trucks, buses, and light commercial vehicles operating in both highway and off-highway conditions
-      </li>
-      <li>
-        <span className="text-red-600 mr-2">▪</span>
-        Off-road machinery in construction, mining, quarrying, and agriculture industries
-      </li>
-      <li>
-        <span className="text-red-600 mr-2">▪</span>
-        Mixed fleet applications, including diesel and gasoline engines where CH-4 performance level is specified
-      </li>
-    </ul>
-  </section>
-
-
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Why Choose Motul 7100?</h2>
-    <ul className="space-y-1 ml-4">
-      <li><span className="text-red-600 mr-2">▪</span>Delivers sharp engine response and ultimate clutch performance</li>
-      <li><span className="text-red-600 mr-2">▪</span>Provides maximum protection in extreme temperatures and heavy loads</li>
-      <li><span className="text-red-600 mr-2">▪</span>Ensures longer engine life and stable oil performance</li>
-      <li><span className="text-red-600 mr-2">▪</span>Trusted worldwide by riders, racers, and manufacturers</li>
-    </ul>
-    <p className="mt-2 font-semibold text-black">
-      Buy Genuine Motul 7100 in Bangladesh from the only official Motulreseller. Experience true Motul performance — Power. Protection. Performance.
-    </p>
-  </section>
-
-
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
-    <ul className="space-y-1 ml-4">
-      <li><span className="text-red-600 mr-2">▪</span>Ester-based synthetic oil reduces internal friction and enhances engine efficiency</li>
-      <li><span className="text-red-600 mr-2">▪</span>High-temperature and high-speed resistance ensures durable protection</li>
-      <li><span className="text-red-600 mr-2">▪</span>Superior anti-wear additives extend engine and gearbox life</li>
-      <li><span className="text-red-600 mr-2">▪</span>Keeps clutch, gearbox, and engine clean throughout the oil drain interval</li>
-      <li><span className="text-red-600 mr-2">▪</span>Optimized phosphorus and sulfur content for better catalytic converter performance</li>
-      <li><span className="text-red-600 mr-2">▪</span>Enhanced clutch grip and smoother shifting for sport and adventure riders</li>
-      <li><span className="text-red-600 mr-2">▪</span>Compatible with modern emission systems and exhaust after-treatment technologies</li>
-    </ul>
-  </section>
-
-
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["SAE Grade", "—", "20W50"],
-          ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
-          ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
-          ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
-          ["Viscosity Index", "ASTM D2270", "140"],
-          ["Pour Point (°C)", "ASTM D97", "-33"],
-          ["Flash Point (°C)", "ASTM D92", "228"],
-          ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
-          ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
-    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
-  </section>
-</div>
-
-            )}
-            {p.id === 4 && (
-   <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
-
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
-    <p className="mb-2 font-semibold text-[17px] text-black">
-      Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W50 is recommended for:
-    </p>
-    <ul className="space-y-1 ml-4">
-      <li>
-        <span className="text-red-600 mr-2">▪</span>
-        Naturally aspirated and turbocharged diesel engines from leading Japanese, European, and American manufacturers
-      </li>
-      <li>
-        <span className="text-red-600 mr-2">▪</span>
-        Heavy-duty trucks, buses, and light commercial vehicles operating in highway and off-highway conditions
-      </li>
-      <li>
-        <span className="text-red-600 mr-2">▪</span>
-        Off-road machinery in construction, mining, quarrying, and agriculture industries
-      </li>
-      <li>
-        <span className="text-red-600 mr-2">▪</span>
-        Mixed fleet applications including diesel and gasoline engines where CH-4 performance is specified
-      </li>
-    </ul>
-  </section>
-
-  
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
-    <ul className="space-y-1 ml-4">
-      <li><span className="text-red-600 mr-2">▪</span>Street and commuter trucks/buses</li>
-      <li><span className="text-red-600 mr-2">▪</span>Dual-sport and mixed fleet vehicles</li>
-      <li><span className="text-red-600 mr-2">▪</span>Light off-road and industrial machinery</li>
-      <li><span className="text-red-600 mr-2">▪</span>Provides long-lasting protection and superior performance for engines expecting CH-4 standards</li>
-      <li><span className="text-red-600 mr-2">▪</span>Reliable performance in both on-road and off-road conditions</li>
-    </ul>
-  </section>
-
-  
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
-    <ul className="space-y-1 ml-4">
-      <li><span className="text-red-600 mr-2">▪</span>Technosynthese® formula reinforced with Motul Esters for maximum reliability</li>
-      <li><span className="text-red-600 mr-2">▪</span>Smooth engine response and gear shifting for a refined driving experience</li>
-      <li><span className="text-red-600 mr-2">▪</span>Optimized fuel economy and reduced internal friction</li>
-      <li><span className="text-red-600 mr-2">▪</span>Extended engine life — protection up to 16,000 km depending on OEM</li>
-      <li><span className="text-red-600 mr-2">▪</span>Excellent high-temperature stability for both on-road and off-road use</li>
-      <li><span className="text-red-600 mr-2">▪</span>Keeps engine and clutch clean for consistent performance</li>
-      <li><span className="text-red-600 mr-2">▪</span>Compatible with catalytic converters and modern emission systems</li>
-    </ul>
-  </section>
-
-  
-  
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["SAE Grade", "—", "20W50"],
-          ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
-          ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
-          ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
-          ["Viscosity Index", "ASTM D2270", "140"],
-          ["Pour Point (°C)", "ASTM D97", "-33"],
-          ["Flash Point (°C)", "ASTM D92", "228"],
-          ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
-          ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
-
-  
-  <section>
-    <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
-    <p>1L | 3.5L | 5L | 7.5L | 10L | 20L | 50L | 210L Barrel</p>
-  </section>
-</div>
-
-            )}
-
-            {p.id === 5 && (
-                <div className="max-w-[1700px] mx-auto font-sans text-black border-t  border-gray-300 py-8 text-[15px] leading-relaxed">
-     
-      <section className="mb-6">
-        <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
-        <p className="mb-2">
-          Jaguar Advanced Fully Synthetic Engine Oil CH-4 20W50 is recommended for:
-        </p>
-        <ul className="space-y-1 ml-4">
-          <li>
-            <span className="text-red-600 mr-2">▪</span>
-            Naturally aspirated and turbocharged diesel engines from leading Japanese, European, and American manufacturers.
-          </li>
-          <li>
-            <span className="text-red-600 mr-2">▪</span>
-            Heavy-duty trucks, buses, and light commercial vehicles operating in both highway and off-highway conditions.
-          </li>
-          <li>
-            <span className="text-red-600 mr-2">▪</span>
-            Off-road machinery in industries such as construction, mining, quarrying, and agriculture.
-          </li>
-          <li>
-            <span className="text-red-600 mr-2">▪</span>
-            Mixed fleet applications, including diesel and gasoline engines where CH-4 performance level is specified.
-          </li>
-        </ul>
-      </section>
-
-      <section className="mb-6">
-        <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
-        <ul className="space-y-1 ml-4">
-          <li><span className="text-red-600 mr-2">▪</span>API: CH-4</li>
-          <li><span className="text-red-600 mr-2">▪</span>MB Approval: 228.3</li>
-          <li><span className="text-red-600 mr-2">▪</span>Mack: EO-M Plus / EO-N</li>
-          <li><span className="text-red-600 mr-2">▪</span>MTU: Oil Category 2</li>
-          <li><span className="text-red-600 mr-2">▪</span>Renault Trucks: RLD-2</li>
-          <li><span className="text-red-600 mr-2">▪</span>Volvo: VDS-3</li>
-        </ul>
-      </section>
-
-      
-      <section className="mb-6">
-        <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
-
-        <p className="font-semibold">High thermal and oxidation stability:</p>
-        <p className="mb-3">Minimizes sludge formation, deposits, and viscosity thickening under high temperatures.</p>
-
-        <p className="font-semibold">Excellent TBN reserves:</p>
-        <p className="mb-3">Provides effective acid neutralization and improved deposit control for longer oil life.</p>
-
-        <p className="font-semibold">Shear stability (Stay-in-grade performance):</p>
-        <p className="mb-3">Maintains consistent viscosity and wear protection even under extreme operating conditions.</p>
-
-        <p className="font-semibold">Advanced detergency and dispersancy:</p>
-        <p className="mb-3">Keeps the engine cleaner, extending component life and ensuring smoother performance.</p>
-
-        <p className="font-semibold">Superior soot and deposit control:</p>
-        <p className="mb-3">Prevents oil thickening and ensures efficient oil circulation.</p>
-
-        <p className="font-semibold">Excellent low-temperature properties:</p>
-        <p className="mb-3">Protects the engine from cold-start wear and ensures smooth startup in winter.</p>
-
-        <p className="font-semibold">Seal and gasket compatibility:</p>
-        <p className="mb-3">Extends the life of gaskets and seals, minimizing oil leakage.</p>
-
-        <p className="font-semibold">Meets OEM specifications:</p>
-        <p>Suitable for mixed fleet operations — one oil for multiple applications.</p>
-      </section>
-
-    
-      <section className="mb-6">
-        <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-        <table className="w-full text-left border-collapse text-[15px]">
-          <thead>
-            <tr className="border-b border-gray-300">
-              <th className="py-1">Property</th>
-              <th className="py-1">Test Method</th>
-              <th className="py-1">Typical Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ["SAE Grade", "—", "20W50"],
-              ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
-              ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
-              ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
-              ["Viscosity Index", "ASTM D2270", "140"],
-              ["Pour Point (°C)", "ASTM D97", "-33"],
-              ["Flash Point (°C)", "ASTM D92", "228"],
-              ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
-              ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
-            ].map(([prop, method, value], i) => (
-              <tr key={i} className="border-b border-gray-200">
-                <td className="py-1">{prop}</td>
-                <td className="py-1">{method}</td>
-                <td className="py-1">{value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
-
-      <section>
-        <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
-        <p>1L | 3.5L | 5L | 7.5L | 10L | 20L | 50L | 210L Barrel</p>
-      </section>
-    </div>
-            )}
-
-            {p.id === 6 && (
- <div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
-
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
-    <p className="mb-2 font-semibold text-[17px] text-black">
-      Recommended for:
-    </p>
-    <ul className="space-y-1 ml-4">
-      <li><span className="text-red-600 mr-2">▪</span>High-performance sport bikes and superbikes</li>
-      <li><span className="text-red-600 mr-2">▪</span>Track, racing, and endurance motorcycles</li>
-      <li><span className="text-red-600 mr-2">▪</span>Street and adventure motorcycles with 4-stroke engines</li>
-      <li><span className="text-red-600 mr-2">▪</span>Suitable for bikes with catalytic converters and modern emission systems</li>
-    </ul>
-  </section>
-
-
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
-    <ul className="space-y-1 ml-4">
-      <li><span className="text-red-600 mr-2">▪</span>Oil Type: 100% Synthetic (Ester Core®)</li>
-      <li><span className="text-red-600 mr-2">▪</span>Viscosity Grade: SAE 10W40</li>
-      <li><span className="text-red-600 mr-2">▪</span>Product Type: 4T Motorcycle Oil</li>
-      <li><span className="text-red-600 mr-2">▪</span>Standards: Exceeds API SP & JASO MA2 requirements</li>
-      <li><span className="text-red-600 mr-2">▪</span>Technology: Double Ester Core® Racing Technology</li>
-    </ul>
-  </section>
-
-
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
-    <ul className="space-y-1 ml-4">
-      <li><span className="text-red-600 mr-2">▪</span>Ester Core® Technology ensures exceptional lubrication and film strength</li>
-      <li><span className="text-red-600 mr-2">▪</span>High-temperature and high-RPM stability for ultimate performance</li>
-      <li><span className="text-red-600 mr-2">▪</span>Outstanding anti-wear protection prolongs engine and gearbox life</li>
-      <li><span className="text-red-600 mr-2">▪</span>Maximized engine output and reduced friction losses</li>
-      <li><span className="text-red-600 mr-2">▪</span>Enhanced clutch performance for racing and sporty riding</li>
-      <li><span className="text-red-600 mr-2">▪</span>Stable oil pressure even under severe heat and load</li>
-      <li><span className="text-red-600 mr-2">▪</span>Keeps internal engine components clean for consistent performance</li>
-    </ul>
-  </section>
-
-  
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["SAE Grade", "—", "10W-40"],
-          ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
-          ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
-          ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
-          ["Viscosity Index", "ASTM D2270", "140"],
-          ["Pour Point (°C)", "ASTM D97", "-33"],
-          ["Flash Point (°C)", "ASTM D92", "228"],
-          ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
-          ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
-
- 
-  <section>
-    <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
-    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
-  </section>
-</div>
-
-            )}
-
-            {p.id === 7 && (
-<div className="max-w-[1700px] mx-auto font-sans text-black border-t border-gray-300 py-8 text-[15px] leading-relaxed">
-
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Application:</h2>
-    <p className="mb-2 font-semibold text-[17px] text-black">
-      Recommended for:
-    </p>
-    <ul className="space-y-1 ml-4">
-      <li><span className="text-red-600 mr-2">▪</span>High-performance sport bikes and superbikes</li>
-      <li><span className="text-red-600 mr-2">▪</span>Track, racing, and endurance motorcycles</li>
-      <li><span className="text-red-600 mr-2">▪</span>Street and adventure motorcycles with 4-stroke engines</li>
-      <li><span className="text-red-600 mr-2">▪</span>Suitable for bikes with catalytic converters and modern emission systems</li>
-    </ul>
-  </section>
-
- 
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Performance Standards</h2>
-    <ul className="space-y-1 ml-4">
-      <li><span className="text-red-600 mr-2">▪</span>Oil Type: 100% Synthetic (Ester Core®)</li>
-      <li><span className="text-red-600 mr-2">▪</span>Viscosity Grade: SAE 10W40</li>
-      <li><span className="text-red-600 mr-2">▪</span>Product Type: 4T Motorcycle Oil</li>
-      <li><span className="text-red-600 mr-2">▪</span>Standards: Exceeds API SP & JASO MA2 requirements</li>
-      <li><span className="text-red-600 mr-2">▪</span>Technology: Double Ester Core® Racing Technology</li>
-    </ul>
-  </section>
-
- 
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Key Features & Benefits</h2>
-    <ul className="space-y-1 ml-4">
-      <li><span className="text-red-600 mr-2">▪</span>Ester Core® Technology ensures exceptional lubrication and film strength</li>
-      <li><span className="text-red-600 mr-2">▪</span>High-temperature and high-RPM stability for ultimate performance</li>
-      <li><span className="text-red-600 mr-2">▪</span>Outstanding anti-wear protection prolongs engine and gearbox life</li>
-      <li><span className="text-red-600 mr-2">▪</span>Maximized engine output and reduced friction losses</li>
-      <li><span className="text-red-600 mr-2">▪</span>Enhanced clutch performance for racing and sporty riding</li>
-      <li><span className="text-red-600 mr-2">▪</span>Stable oil pressure even under severe heat and load</li>
-      <li><span className="text-red-600 mr-2">▪</span>Keeps internal engine components clean for consistent performance</li>
-    </ul>
-  </section>
-
-
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["SAE Grade", "—", "10W-40"],
-          ["Density @ 15.6°C (g/ml)", "ASTM D4052", "0.885"],
-          ["Kinematic Viscosity @ 40°C (mm²/s)", "ASTM D445", "106"],
-          ["Kinematic Viscosity @ 100°C (mm²/s)", "ASTM D445", "14.4"],
-          ["Viscosity Index", "ASTM D2270", "140"],
-          ["Pour Point (°C)", "ASTM D97", "-33"],
-          ["Flash Point (°C)", "ASTM D92", "228"],
-          ["Sulfated Ash (% wt)", "ASTM D874", "1.3"],
-          ["Total Base Number (mgKOH/g)", "ASTM D2896", "12"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
-
-  
-  <section>
-    <h2 className="font-semibold text-[17px] mb-2">Available Packs</h2>
-    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
-  </section>
-</div>
-
-
-            )}
-            {p.id === 8 && (
-    <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
-
-  <div className="border-t border-gray-300 py-6">
-    <h2 className="font-semibold text-lg mb-4">Application:</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Suitable for turbocharged and naturally aspirated diesel engines.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Ideal for light and heavy-duty commercial vehicles, buses, and trucks.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Perfect for off-highway applications such as mining, construction, and agriculture.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Meets the requirements of vehicles and equipment recommending API CH-4 specification oils.
-      </li>
-    </ul>
-  </div>
-
-
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Specification</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>API-CH-4
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>SAE Grade-20W-50
-      </li>
-    </ul>
-  </div>
-
-  
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
-
-    <div className="space-y-4">
-      <div>
-        <p className="font-semibold">Prolonged Engine Life:</p>
-        <p>Provides superior wear protection for piston rings, cylinder liners, and valve trains.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Clean Engine Performance:</p>
-        <p>Helps prevent harmful deposit build-up and keeps the engine running efficiently.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Improved Oxidation Stability:</p>
-        <p>Reduces oil degradation and thickening under extreme temperatures.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Enhanced Lubrication Film:</p>
-        <p>Maintains consistent oil pressure for smooth operation and fuel efficiency.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Reliable Performance:</p>
-        <p>Designed to perform in both on-road and off-road diesel engines, even under heavy load.</p>
-      </div>
-    </div>
-  </div>
-
-  
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Why Choose Jaguar Extra Mileage?</h2>
-    <p>
-      With its advanced formula and long-drain performance, Jaguar Extra Mileage 15W-40 delivers excellent
-      engine cleanliness, minimal wear, and maximum durability—helping you get the most mileage and
-      reliability from every drop.
-    </p>
-  </div>
-
-
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
-  </div>
-</section>
-
-
-            )}
-            {p.id === 9 && (
-                    <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
-
-  <div className="border-t border-gray-300 py-6">
-    <h2 className="font-semibold text-lg mb-4">Application:</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Suitable for diesel and gasoline engines (turbocharged or naturally aspirated).
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Recommended for trucks, buses, construction equipment, mining machinery, and agricultural vehicles.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Can also be used in gearboxes, torque converters, and hydraulic systems where the manufacturer specifies engine oil of this grade.
-      </li>
-    </ul>
-  </div>
-
- 
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Specification</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>API CF / SF / CD
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>ACEA E2
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>MB 228.0
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>MTU TYPE-1
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>Caterpillar TO-2
-      </li>
-    </ul>
-  </div>
-
- 
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
-
-    <div className="space-y-4">
-      <div>
-        <p className="font-semibold">Outstanding Engine Protection:</p>
-        <p>Prevents wear, deposits, and sludge for longer engine life.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">High Temperature Stability:</p>
-        <p>Resists oxidation and maintains viscosity under extreme heat.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Enhanced Fuel Economy:</p>
-        <p>Friction-reducing additives help improve fuel efficiency.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Cold Start Performance:</p>
-        <p>Rapid oil circulation minimizes engine wear during cold starts.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Excellent Detergency:</p>
-        <p>Keeps engine parts clean and free from harmful deposits.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">All-Weather Reliability:</p>
-        <p>Designed to perform in both hot and cold climates.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Extended Drain Interval:</p>
-        <p>Formulated for durability, reducing oil change frequency.</p>
-      </div>
-    </div>
-  </div>
-
-  
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["Appearance", "Visual", "Clear & Bright"],
-          ["Water", "Hot Plate", "Nil"],
-          ["Color", "ASTM D-1500", "L3.5"],
-          ["Density @29.5°C (g/cm³)", "ASTM D-4052", "0.882"],
-          ["Viscosity @100°C (cSt)", "ASTM D-445", "18.9"],
-          ["Viscosity @40°C (cSt)", "ASTM D-445", "165.2"],
-          ["Viscosity Index", "ASTM D-2270", "125"],
-          ["Pour Point (°C)", "ASTM D-97", "-15"],
-          ["Flash Point (°C)", "ASTM D-92", "250"],
-          ["TBN (mgKOH/g)", "ASTM D-2896", "8"],
-          ["Foam Characteristics", "ASTM D-892", "0/0"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
-
-  
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>1 L | 3.5 L | 5 L | 7.5 L | 10 L | 20 L | 50 L | 210 L Barrel</p>
-  </div>
-</section>
-
-            )}
-            {p.id === 10 && (
-        <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
-
-
-  <div className="border-t border-gray-300 py-6">
-    <h2 className="font-semibold text-lg mb-4">Application:</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Jaguar Hydraulic Oil HV ISO 68 is recommended for hydraulic systems operating under high-pressure or heavy-load conditions.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Ideal for industrial machinery, construction equipment, plastic molding machines, and mobile hydraulics.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Suitable for systems requiring a premium anti-wear hydraulic fluid meeting international OEM specifications.
-      </li>
-    </ul>
-  </div>
-
-  
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Specifications & Approvals</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>ASTM D6158, Eaton E-FDGN-TB002-E, Bosch Rexroth, DIN 51524 Parts 1, 2, 3
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>Parker Denison HF-0 / HF-1 / HF-2, Cincinnati/MAG IAS P-69, US Steel 127, 136
-      </li>
-    </ul>
-  </div>
-
-
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
-
-    <div className="space-y-4">
-      <div>
-        <p className="font-semibold">Exceptional Anti-Wear Protection:</p>
-        <p>Advanced additive system reduces metal-to-metal contact, minimizing wear in pumps, valves, and hydraulic motors.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Superior Oxidation Stability:</p>
-        <p>Provides up to 5,000 hours of oxidation resistance, ensuring longer oil life and reduced maintenance costs.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Enhanced System Cleanliness:</p>
-        <p>Effectively controls sludge, varnish, and deposits for improved hydraulic efficiency.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Wide Temperature Range Performance:</p>
-        <p>Maintains excellent viscosity and flow in both hot and cold operating conditions.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Corrosion & Rust Protection:</p>
-        <p>Guards against rust formation and component corrosion, extending system life.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Fast Air & Water Separation:</p>
-        <p>Improves filtration and prevents foaming in high-pressure environments.</p>
-      </div>
-    </div>
-  </div>
-
-  
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["Viscosity @ 40°C", "ASTM D445", "69.25 cSt"],
-          ["Viscosity @ 100°C", "ASTM D445", "8.95 cSt"],
-          ["Viscosity Index", "ASTM D2270", "103"],
-          ["Flash Point", "ASTM D92", "228°C"],
-          ["Pour Point", "ASTM D5950", "-30°C"],
-          ["Oxidation Stability", "ASTM D943", "5000 hours"],
-          ["Zinc, wt.%", "ASTM D5185", "0.041"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
-
-
-  <div className="py-6 ">
-    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>5L | 20L | 60L | 208L Drums</p>
-  </div>
-</section>
-
-            )}
-            {p.id === 11 && (
-              <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
-
-
-  <div className="border-t border-gray-300 py-6">
-    <h2 className="font-semibold text-lg mb-4">Application:</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Jaguar Hydraulic Oil AW ISO 100 is recommended for hydraulic systems operating under high-pressure or heavy-load conditions.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Ideal for industrial machinery, construction equipment, plastic molding machines, and mobile hydraulics.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Suitable for systems requiring a premium anti-wear hydraulic fluid meeting international OEM specifications.
-      </li>
-    </ul>
-  </div>
-
-
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Specifications & Approvals</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>ASTM D6158, Eaton E-FDGN-TB002-E, Bosch Rexroth, DIN 51524 Parts 1, 2, 3
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>Parker Denison HF-0 / HF-1 / HF-2, Cincinnati/MAG IAS P-69, US Steel 127, 136
-      </li>
-    </ul>
-  </div>
-
-
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
-
-    <div className="space-y-4">
-      <div>
-        <p className="font-semibold">Exceptional Anti-Wear Protection:</p>
-        <p>Advanced additive system reduces metal-to-metal contact, minimizing wear in pumps, valves, and hydraulic motors.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Superior Oxidation Stability:</p>
-        <p>Provides up to 5,000 hours of oxidation resistance, ensuring longer oil life and reduced maintenance costs.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Enhanced System Cleanliness:</p>
-        <p>Effectively controls sludge, varnish, and deposits for improved hydraulic efficiency.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Wide Temperature Range Performance:</p>
-        <p>Maintains excellent viscosity and flow in both hot and cold operating conditions.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Corrosion & Rust Protection:</p>
-        <p>Guards against rust formation and component corrosion, extending system life.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Fast Air & Water Separation:</p>
-        <p>Improves filtration and prevents foaming in high-pressure environments.</p>
-      </div>
-    </div>
-  </div>
-
- 
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["Viscosity @ 40°C", "ASTM D445", "100 cSt"],
-          ["Viscosity @ 100°C", "ASTM D445", "11.5 cSt"],
-          ["Viscosity Index", "ASTM D2270", "98"],
-          ["Flash Point", "ASTM D92", "230°C"],
-          ["Pour Point", "ASTM D5950", "-27°C"],
-          ["Oxidation Stability", "ASTM D943", "5000 hours"],
-          ["Zinc, wt.%", "ASTM D5185", "0.042"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
-
- 
-  <div className="py-6 ">
-    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>5L | 20L | 60L | 208L Drums</p>
-  </div>
-</section>
-
-            )}
-            {p.id === 12 && (
-           <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
-
- 
-  <div className="border-t border-gray-300 py-6">
-    <h2 className="font-semibold text-lg mb-4">Application:</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Jaguar Gear Oil GL-4 SAE-90 is suitable for manual transmissions and transaxles in passenger cars, buses, trucks, and vans.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Ideal for industrial and agricultural gear systems requiring GL-4 performance.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Suitable for vehicles where the manufacturer recommends API GL-4 gear oil.
-      </li>
-    </ul>
-  </div>
-
- 
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Performance Standards</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>API GL-4
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>MIL-L-2105
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>ZF TE-ML 02A / 17A / 19A
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>MAN 341 Type Z2
-      </li>
-    </ul>
-  </div>
-
-
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
-
-    <div className="space-y-4">
-      <div>
-        <p className="font-semibold">Outstanding Gear Protection:</p>
-        <p>High-quality base oils and modern additives protect gears against wear, scuffing, and pitting, even under heavy load.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Smooth Shifting Performance:</p>
-        <p>Maintains consistent lubrication for smooth and quiet gear engagement in all temperatures.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Excellent Thermal Stability:</p>
-        <p>Resists oxidation and oil thickening at high temperatures for longer oil life.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Corrosion & Foam Resistance:</p>
-        <p>Protects against rust, oxidation, foaming, and deposit build-up that can reduce gearbox efficiency.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Extended Gear Life:</p>
-        <p>Reduces metal-to-metal contact, extending the service life of gear components.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">All-Season Performance:</p>
-        <p>Performs reliably across a wide range of operating temperatures, ensuring protection in both hot and cold climates.</p>
-      </div>
-    </div>
-  </div>
-
-  
-  <div className="py-6 ">
-    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>5L | 20L | 60L | 208L Drums</p>
-  </div>
-</section>
-
-            )}
-            {p.id === 13 && (
-                          <section className="max-w-[1700px] mx-auto bg-white text-black p-6 md:p-10 leading-relaxed">
-
-
-  <div className="border-t border-gray-300 py-6">
-    <h2 className="font-semibold text-lg mb-4">Application:</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Jaguar Hydraulic Oil AW ISO 100 is recommended for hydraulic systems operating under high-pressure or heavy-load conditions.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Ideal for industrial machinery, construction equipment, plastic molding machines, and mobile hydraulics.
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>
-        Suitable for systems requiring a premium anti-wear hydraulic fluid meeting international OEM specifications.
-      </li>
-    </ul>
-  </div>
-
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Specifications & Approvals</h2>
-    <ul className="space-y-2 pl-6">
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>ASTM D6158, Eaton E-FDGN-TB002-E, Bosch Rexroth, DIN 51524 Parts 1, 2, 3
-      </li>
-      <li className="flex items-start">
-        <span className="text-red-600 mr-2">▪</span>Parker Denison HF-0 / HF-1 / HF-2, Cincinnati/MAG IAS P-69, US Steel 127, 136
-      </li>
-    </ul>
-  </div>
-
-  
-  <div className="py-6">
-    <h2 className="font-semibold text-lg mb-4">Key Features & Benefits</h2>
-
-    <div className="space-y-4">
-      <div>
-        <p className="font-semibold">Exceptional Anti-Wear Protection:</p>
-        <p>Advanced additive system reduces metal-to-metal contact, minimizing wear in pumps, valves, and hydraulic motors.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Superior Oxidation Stability:</p>
-        <p>Provides up to 5,000 hours of oxidation resistance, ensuring longer oil life and reduced maintenance costs.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Enhanced System Cleanliness:</p>
-        <p>Effectively controls sludge, varnish, and deposits for improved hydraulic efficiency.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Wide Temperature Range Performance:</p>
-        <p>Maintains excellent viscosity and flow in both hot and cold operating conditions.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Corrosion & Rust Protection:</p>
-        <p>Guards against rust formation and component corrosion, extending system life.</p>
-      </div>
-
-      <div>
-        <p className="font-semibold">Fast Air & Water Separation:</p>
-        <p>Improves filtration and prevents foaming in high-pressure environments.</p>
-      </div>
-    </div>
-  </div>
-
-  
-  <section className="mb-6">
-    <h2 className="font-semibold text-[17px] mb-2">Technical Properties</h2>
-    <table className="w-full text-left border-collapse text-[15px]">
-      <thead>
-        <tr className="border-b border-gray-300">
-          <th className="py-1">Property</th>
-          <th className="py-1">Test Method</th>
-          <th className="py-1">Typical Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["Viscosity @ 40°C", "ASTM D445", "100 cSt"],
-          ["Viscosity @ 100°C", "ASTM D445", "11.5 cSt"],
-          ["Viscosity Index", "ASTM D2270", "98"],
-          ["Flash Point", "ASTM D92", "230°C"],
-          ["Pour Point", "ASTM D5950", "-27°C"],
-          ["Oxidation Stability", "ASTM D943", "5000 hours"],
-          ["Zinc, wt.%", "ASTM D5185", "0.042"],
-        ].map(([prop, method, value], i) => (
-          <tr key={i} className="border-b border-gray-200">
-            <td className="py-1">{prop}</td>
-            <td className="py-1">{method}</td>
-            <td className="py-1">{value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </section>
-
-  <div className="py-6  border-gray-300">
-    <h2 className="font-semibold text-lg mb-4">Available Packs</h2>
-    <p>5L | 20L | 60L | 208L Drums</p>
-  </div>
-</section>
-            )}
-          </div> */}
+{/* ======================================= */}
         </div>
       </section>
      <section
@@ -2201,7 +1036,7 @@ const MotulDetails = ({}) => {
                     <h3 className="text-base font-semibold text-yellow-400">
                       Emergency
                     </h3>
-                    <p className="text-sm font-medium text-gray-300">
+                    <p className="text-2xl font-bold text-gray-300">
                       +8801788360303
                     </p>
                   </div>
@@ -2229,12 +1064,12 @@ const MotulDetails = ({}) => {
                              }}
                              target="_blank"
                              rel="noopener noreferrer"
-                             className="relative z-10 flex items-center justify-center bg-white rounded-full  w-[50px] h-[50px] shadow-lg hover:scale-110 transition-transform duration-300"
+                             className="relative z-10 flex items-center justify-center bg-white rounded-full  w-[55px] h-[55px] shadow-lg hover:scale-110 transition-transform duration-300"
                            >
                              <img
                                src={callIcon}
                                alt="WhatsApp Call Icon"
-                               className="w-[35px] h-[35px]"
+                               className="w-[55px] h-[55px]"
                              />
                            </a>
                              </div>
@@ -2279,34 +1114,50 @@ const MotulDetails = ({}) => {
                   />
     
                   <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0">
-                    <select
-                      name="dealer"
-                      value={formData.dealer}
-                      onChange={handleChange}
-                      className="w-full sm:w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                      required
-                    >
-                      <option value="" disabled>
-                        Dealer/Depo
-                      </option>
-                      <option value="Dealer">Dealer</option>
-                      <option value="Depo">Depo</option>
-                    </select>
-    
-                    <select
-                      name="district"
-                      value={formData.district}
-                      onChange={handleChange}
-                      className="w-full sm:w-1/2 p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                      required
-                    >
-                      <option value="" disabled>
-                        District
-                      </option>
-                      <option value="Dhaka">Dhaka</option>
-                      <option value="Chittagong">Chittagong</option>
-                      <option value="Khulna">Khulna</option>
-                    </select>
+                                <div className="relative w-full sm:w-1/2">
+  <select
+    name="dealer"
+    value={formData.dealer}
+    onChange={handleChange}
+    className="w-full p-3 rounded-md bg-gray-100 text-black border appearance-none cursor-pointer focus:outline-none"
+    required
+  >
+    <option value="" disabled>
+      Dealer/Depo
+    </option>
+    <option value="Dealer">Dealer</option>
+    <option value="Depo">Depo</option>
+  </select>
+
+  {/* Arrow icon on the right */}
+  <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
+                               </div>
+
+<div className="relative w-full sm:w-1/2" ref={dropdownRef}>
+  {/* Dropdown button */}
+  <div
+    className="p-3 bg-gray-100 rounded-md cursor-pointer text-black border flex justify-between items-center"
+    onClick={() => setOpen(!open)}
+  >
+    <span>{formData.district || "District"}</span>
+    <FaChevronDown className={`ml-2 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+  </div>
+
+  {/* Scrollable list */}
+  {open && (
+    <ul className="absolute z-50 mt-1 w-full max-h-64 overflow-auto bg-white border rounded-md shadow-lg text-black">
+      {districts.map((district) => (
+        <li
+          key={district}
+          className="p-3 hover:bg-gray-200 cursor-pointer"
+          onClick={() => handleSelect(district)}
+        >
+          {district}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
                   </div>
     
                   <div className="flex items-start space-x-2 text-sm mt-2">
