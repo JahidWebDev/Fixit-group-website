@@ -218,7 +218,7 @@ const Drfixit = () => {
       id: 13,
       name: "Dr Fixit Brand Fevilock",
       desc: "500ml Liter Bonding Expert",
-      category: "Febilock Glue",
+      category: "Glue",
       img: product9,
     },
   ];
@@ -233,11 +233,11 @@ const Drfixit = () => {
   //   const [selectedCategory, setSelectedCategory] = useState("All");
   const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    dealer: "",
-    district: "",
-    consent: false,
+            name: "",
+            company: "",
+            dealer: "",
+            district: "",
+            
   });
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
@@ -256,10 +256,10 @@ const Drfixit = () => {
 
     emailjs
       .send(
-        "service_2h4r499",
-        "template_jftpe7b",
+        "service_a4t7uq6",
+        "template_3wjfacu",
         formData,
-        "VV_o1hjWQVsWaOnT7"
+        "jpez9azGNJatkyjQE"
       )
       .then(
         () => {
@@ -524,7 +524,7 @@ const Drfixit = () => {
                  <button
   type="button"
   onClick={() => setShowPopup(true)}
-  className="flex justify-center items-center gap-2 w-[330px] h-10 bg-yellow-400 text-black rounded-lg mb-2 py-2 font-semibold hover:bg-yellow-500 transition-colors mx-auto"
+  className="flex justify-center items-center gap-2 w-[280px] h-10 bg-yellow-400 text-black rounded-lg mb-2 py-2 font-semibold hover:bg-yellow-500 transition-colors mx-auto"
 >
   Find Link Dealer
 </button>
@@ -624,7 +624,7 @@ const Drfixit = () => {
             <img
               src={callIcon}
               alt="Call Icon"
-              className="relative w-7 h-6 lg:w-10 lg:h-10 z-10"
+              className="relative w-6 h-6 lg:w-10 lg:h-10 z-10"
             />
           </a>
         </div>
@@ -1055,7 +1055,7 @@ const Drfixit = () => {
 
   {/* Arrow icon on the right */}
   <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
-</div>
+                               </div>
 
 <div className="relative w-full sm:w-1/2" ref={dropdownRef}>
   {/* Dropdown button */}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-
+import emailjs from "emailjs-com";
 import logo from "../../assets/Fixit-Group-Logo.png";
 import img1 from "../../assets/plant-bg.jpg";
 import img2 from "../../assets/plant-bg2.jpg";
@@ -31,6 +31,51 @@ const Hero = () => {
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
+
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // Handle form submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_a4t7uq6", // 🔹 Replace with your EmailJS service ID
+        "template_3wjfacu", // 🔹 Replace with your EmailJS template ID
+        formData,
+        "jpez9azGNJatkyjQE"   // 🔹 Replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSent(true);
+          setLoading(false);
+          setFormData({ name: "", email: "", message: "" });
+          setTimeout(() => setShowPopup(false), 2000);
+        },
+        (error) => {
+          console.log(error.text);
+          setLoading(false);
+        }
+      );
+  };
+
+
+
 
   return (
     <section id="hero" className="relative">
@@ -277,12 +322,12 @@ const Hero = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/dealer"
-                        className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
-                      >
-                        Find Link Dealer
-                      </Link>
+                          <Link
+                                            to="/contact"
+                                            className="flex  justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
+                                          >
+                                            <span>Contact Us</span>
+                                          </Link>
                     </li>
                   </ul>
                 </div>
@@ -355,67 +400,82 @@ const Hero = () => {
         </button>
 
         {/* ✅ Bottom Button */}
-        <button
-          onClick={() => setShowPopup(true)}
-          className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 
-            bg-[#C0302D] text-white font-normal 
-            px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base 
-            md:px-6 md:py-3.5 md:text-lg tracking-wide 
-            shadow-lg hover:bg-[#a82825] hover:scale-105 
-            transition-all duration-300 z-20 rounded-lg"
-        >
-          GET IN TOUCH
-        </button>
+    <>
+      <button
+        onClick={() => setShowPopup(true)}
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 
+          bg-[#C0302D] text-white font-normal 
+          px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base 
+          md:px-6 md:py-3.5 md:text-lg tracking-wide 
+          shadow-lg hover:bg-[#a82825] hover:scale-105 
+          transition-all duration-300 z-20 rounded-lg"
+      >
+        GET IN TOUCH
+      </button>
 
-        {/* ✅ Glass Popup */}
-        {showPopup && (
-          <>
-            <div
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 animate-fadeIn"
-              onClick={() => setShowPopup(false)}
-            ></div>
+      {/* ✅ Glass Popup */}
+      {showPopup && (
+        <>
+          <div
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 animate-fadeIn"
+            onClick={() => setShowPopup(false)}
+          ></div>
 
-            <div className="fixed inset-0 flex items-center justify-center z-50">
-              <div className="relative w-[90%] max-w-lg bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-8 text-white animate-slideUp">
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="relative w-[90%] max-w-lg bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-8 text-white animate-slideUp">
+              <button
+                onClick={() => setShowPopup(false)}
+                className="absolute top-3 right-3 text-white hover:text-yellow-400 text-2xl"
+              >
+                &times;
+              </button>
+
+              <h2 className="text-3xl font-semibold mb-6 text-center">
+                Get in Touch
+              </h2>
+
+              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="bg-white/20 border border-white/30 rounded-lg px-4 py-2 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="bg-white/20 border border-white/30 rounded-lg px-4 py-2 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  rows="4"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="bg-white/20 border border-white/30 rounded-lg px-4 py-2 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                ></textarea>
+
                 <button
-                  onClick={() => setShowPopup(false)}
-                  className="absolute top-3 right-3 text-white hover:text-yellow-400 text-2xl"
+                  type="submit"
+                  disabled={loading}
+                  className="bg-yellow-500 text-black font-semibold rounded-lg py-2 mt-2 hover:bg-yellow-600 transition-all"
                 >
-                  &times;
+                  {loading ? "Sending..." : sent ? "Message Sent!" : "Send Message"}
                 </button>
-
-                <h2 className="text-3xl font-semibold mb-6 text-center">
-                  Get in Touch
-                </h2>
-
-                <form className="flex flex-col gap-4">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="bg-white/20 border border-white/30 rounded-lg px-4 py-2 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="bg-white/20 border border-white/30 rounded-lg px-4 py-2 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  />
-                  <textarea
-                    placeholder="Your Message"
-                    rows="4"
-                    className="bg-white/20 border border-white/30 rounded-lg px-4 py-2 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  ></textarea>
-
-                  <button
-                    type="submit"
-                    className="bg-yellow-500 text-black font-semibold rounded-lg py-2 mt-2 hover:bg-yellow-600 transition-all"
-                  >
-                    Send Message
-                  </button>
-                </form>
-              </div>
+              </form>
             </div>
-          </>
-        )}
+          </div>
+        </>
+      )}
+    </>
       </div>
     </section>
   );

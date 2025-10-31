@@ -13,6 +13,10 @@ import shadowLogo from "../../assets/Robinson-Can-Industrise.png";
 import { Link } from "react-router-dom";
 
 const OurBusiness = () => {
+
+
+
+  
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -283,12 +287,12 @@ const OurBusiness = () => {
 
         </li>
         <li>
-          <Link
-            to="/dealer"
-            className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
-          >
-            Find Link Dealer
-          </Link>
+               <Link
+                                 to="/contact"
+                                 className="flex  justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
+                               >
+                                 <span>Contact Us</span>
+                               </Link>
         </li>
       </ul>
     </div>

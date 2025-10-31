@@ -277,10 +277,10 @@ const ProductDetails = ({}) => {
 
     emailjs
       .send(
-        "service_2h4r499",
-        "template_jftpe7b",
+        "service_a4t7uq6",
+        "template_3wjfacu",
         formData,
-        "VV_o1hjWQVsWaOnT7"
+        "jpez9azGNJatkyjQE"
       )
       .then(
         () => {
@@ -291,8 +291,7 @@ const ProductDetails = ({}) => {
             company: "",
             dealer: "",
             district: "",
-            consent: false,
-          });
+           });
         },
         (error) => {
           setLoading(false);
@@ -624,7 +623,7 @@ const ProductDetails = ({}) => {
                                             <button
   type="button"
   onClick={() => setShowPopup(true)}
-  className="flex justify-center items-center gap-2 w-[330px] h-10 bg-yellow-400 text-black rounded-lg mb-2 py-2 font-semibold hover:bg-yellow-500 transition-colors mx-auto"
+  className="flex justify-center items-center gap-2 w-[280px] h-10 bg-yellow-400 text-black rounded-lg mb-2 py-2 font-semibold hover:bg-yellow-500 transition-colors mx-auto"
 >
   Find Link Dealer
 </button>
@@ -667,7 +666,8 @@ const ProductDetails = ({}) => {
     w-full 
     bg-cover 
     bg-center 
-    bg-no-repeat 
+    bg-no-repeat
+
   "
         style={{ backgroundImage: `url(${bgImage})` }}
       >
@@ -728,7 +728,7 @@ const ProductDetails = ({}) => {
 
       {/* ============================= */}
       <section id="banner"  className="bg-white">
-        <div className="max-w-full mx-auto py-30 px-6 md:px-70">
+        <div className="max-w-full mx-auto py-25  px-6 md:px-70">
           {/* Product Details */}
          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start px-4 md:px-0">
   {/* Left: Image */}

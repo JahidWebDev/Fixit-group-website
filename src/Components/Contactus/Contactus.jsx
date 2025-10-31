@@ -22,13 +22,12 @@ const Contactus = () => {
     e.preventDefault();
     setIsSending(true);
 
-    // Replace with your actual EmailJS credentials
     emailjs
       .sendForm(
-        "service_m7ecbsq",
-        "template_53nh9bd",
+        "service_a4t7uq6",
+        "template_3wjfacu",
         form.current,
-        "VV_o1hjWQVsWaOnT7"
+        "jpez9azGNJatkyjQE"
       )
       .then(
         () => {
@@ -46,28 +45,29 @@ const Contactus = () => {
 
   return (
     <section className="relative">
-    <div
-  className="relative bg-cover bg-center h-[800px] transition-all duration-700 ease-in-out"
-  style={{ backgroundImage: `url(${images[currentIndex]})` }}
->
-  ...
-  <div className="absolute bottom-10 left-40 text-left z-50">
-    <p className="text-white font-semibold text-3xl md:text-4xl drop-shadow-lg">
-      Contact <span className=" font-bold">Us</span>
-    </p>
-  </div>
+      {/* Banner */}
+      <div
+        className="relative bg-cover bg-center h-[400px] sm:h-[500px] md:h-[650px] lg:h-[800px] transition-all duration-700 ease-in-out"
+        style={{ backgroundImage: `url(${images[currentIndex]})` }}
+      >
+        {/* Banner Text */}
+        <div className="absolute bottom-8 left-5 sm:bottom-10 sm:left-10 md:left-20 lg:left-40 text-left ">
+          <p className="text-white font-semibold text-2xl sm:text-3xl md:text-4xl drop-shadow-lg">
+            Contact <span className="font-bold">Us</span>
+          </p>
+        </div>
 
+        {/* Navbar */}
         <div className="absolute top-0 left-0 w-full z-20">
-          <header className="absolute top-0 left-0 w-full z-50">
-            {/* Main Container */}
+          <header className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/70 to-transparent">
             <div className="max-w-[1600px] mx-auto flex justify-between items-center px-5 py-3 md:px-10">
               {/* Logo */}
-              <div className="flex items-center py-5">
+              <div className="flex items-center py-3">
                 <Link to="/">
                   <img
                     src={logo}
                     alt="Fixit Logo"
-                    className="h-[70px] w-[70px] md:h-[90px] md:w-[90px] lg:h-[105px] lg:w-[105px] cursor-pointer"
+                    className="h-[60px] w-[60px] sm:h-[80px] sm:w-[80px] md:h-[90px] md:w-[90px] lg:h-[105px] lg:w-[105px] cursor-pointer"
                   />
                 </Link>
               </div>
@@ -118,7 +118,7 @@ const Contactus = () => {
                   </button>
 
                   {dropdownOpen && (
-                    <ul className="absolute top-10 left-0 w-64 rounded-xl shadow-xl py-3 bg-yellow-400/60 backdrop-blur-lg border border-yellow-300/50 text-black animate-fadeIn z-50">
+                    <ul className="absolute top-10 left-0 w-64 rounded-xl shadow-xl py-3 bg-yellow-400/70 backdrop-blur-lg border border-yellow-300/50 text-black animate-fadeIn z-50">
                       {[
                         { name: "Dr. Fixit Ltd.", to: "/drfixit" },
                         { name: "Jaguar Lubricants", to: "/jaguar" },
@@ -153,12 +153,12 @@ const Contactus = () => {
                     to="/contact"
                     className="px-6 py-2 bg-yellow-500 text-black font-semibold rounded-md hover:bg-yellow-600 transition"
                   >
-                    CONTACT
+                    CONTACT 
                   </Link>
                 </li>
               </ul>
 
-              {/* Hamburger Icon */}
+              {/* Mobile Menu Icon */}
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="md:hidden text-white focus:outline-none"
@@ -175,10 +175,10 @@ const Contactus = () => {
             {menuOpen && (
               <>
                 <div
-                  className="fixed inset-0 bg-black/40 z-40"
+                  className="fixed inset-0 bg-black/40 z-"
                   onClick={() => setMenuOpen(false)}
                 />
-                <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+                <div className="absolute top-[70px] sm:top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
                   <ul className="flex flex-col text-base font-medium py-4">
                     <li>
                       <Link
@@ -265,19 +265,37 @@ const Contactus = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="https://wa.me/yourwhatsapp"
-                        className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
-                      >
-                        <span>Let’s Talk</span>
-                      </Link>
+                            <Link
+                      to="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                    
+                        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                    
+                        if (isMobile) {
+                          // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+                          window.location.href = "tel:+8801898795771";
+                          setTimeout(() => {
+                            window.open("https://wa.me/8801898795771", "_blank");
+                          }, 1500);
+                        } else {
+                          // 💻 ডেস্কটপে হলে: শুধু WhatsApp খুলবে
+                          window.open("https://wa.me/8801898795771", "_blank");
+                        }
+                      }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
+                    >
+                      Let’s Talk on WhatsApp
+                    </Link>
                     </li>
-                    <li>
+                    <li className="z-40">
                       <Link
-                        to="/dealer"
-                        className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
+                        to="/contact"
+                        className="flex  justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
                       >
-                        <span>Find Link Dealer</span>
+                        <span>Contact Us</span>
                       </Link>
                     </li>
                   </ul>
@@ -286,137 +304,143 @@ const Contactus = () => {
             )}
           </header>
         </div>
-
-        <div className="absolute bottom-10 left-0 w-full text-center z-30">
-
-</div>
       </div>
 
       {/* CONTACT FORM SECTION */}
-      <section className="bg-[#FAF9F6] py-40 px-6 md:px-40">
-        <div className="mb-10">
+      <section className="bg-[#FAF9F6] py-20 sm:py-28 md:py-40 px-4 sm:px-10 md:px-20 lg:px-40">
+        <div className="mb-10 text-center md:text-left">
           <p className="text-sm font-semibold text-black mb-2">
             <span className="text-red-600">//</span> GET IN TOUCH
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
-            Let’s work together to create <br />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800 leading-snug">
+            Let’s work together to create <br className="hidden sm:block" />
             <span className="font-bold bg-gradient-to-r from-[#C62828] to-[#F57C00] bg-clip-text text-transparent">
               the life and business
             </span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12">
           {/* Left Form */}
-        <div className="bg-black/100 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-8 max-w-2xl mx-auto text-white">
-  <h3 className="text-lg font-semibold mb-2">
-    Send A Message
-  </h3>
-  <p className="text-sm text-gray-300 mb-6">
-    Unlock your potential with expert guidance! Schedule a free consultation toward personal and business success.
-  </p>
+          <div className="bg-black text-white backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 w-full max-w-2xl mx-auto">
+            <h3 className="text-lg font-semibold mb-2">Send A Message</h3>
+            <p className="text-sm text-gray-300 mb-6">
+              Unlock your potential with expert guidance! Schedule a free
+              consultation toward personal and business success.
+            </p>
 
-  <form ref={form} onSubmit={sendEmail} className="space-y-4">
-    <div className="grid grid-cols-2 gap-4">
-      <input
-        type="text"
-        name="first_name"
-        placeholder="First Name"
-        required
-        className="bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400"
-      />
-      <input
-        type="text"
-        name="last_name"
-        placeholder="Last Name"
-        required
-        className="bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400"
-      />
-    </div>
+            <form ref={form} onSubmit={sendEmail} className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="first_name"
+                  placeholder="First Name"
+                  required
+                  className="bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-1"
+                />
+                <input
+                  type="text"
+                  name="last_name"
+                  placeholder="Last Name"
+                  required
+                  className="bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-1"
+                />
+              </div>
 
-    <div className="grid grid-cols-2 gap-4">
-      <input
-        type="email"
-        name="email"
-        placeholder="Email Address"
-        required
-        className="bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400"
-      />
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Phone Number"
-        className="bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400"
-      />
-    </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                  className="bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-1"
+                />
+                <input
+                  type="tel"
+                  name="company"
+                  placeholder="Phone Number"
+                  className="bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-1"
+                />
+              </div>
 
-    <textarea
-      name="message"
-      placeholder="Message"
-      rows="5"
-      required
-      className="w-full bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400"
-    ></textarea>
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows="5"
+                required
+                className="w-full bg-white/10 border border-white/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-1"
+              ></textarea>
 
-    <button
-      type="submit"
-      disabled={isSending}
-      className={`flex items-center justify-center gap-2 bg-gradient-to-r from-[#C62828] to-[#F57C00] text-white font-semibold px-6 py-2 rounded-full transition ${
-        isSending ? "opacity-70 cursor-not-allowed" : "hover:opacity-90"
-      }`}
-    >
-      {isSending ? "Sending..." : "Submit Message"} <ArrowRight size={18} />
-    </button>
+              <button
+                type="submit"
+                disabled={isSending}
+                className={`flex items-center justify-center gap-2 bg-gradient-to-r from-[#C62828] to-[#F57C00] text-white font-semibold px-6 py-2 rounded-full transition-transform duration-200 ${
+                  isSending
+                    ? "opacity-70 cursor-not-allowed"
+                    : "hover:scale-105 hover:opacity-90"
+                }`}
+              >
+                {isSending ? "Sending..." : "Submit Message"}{" "}
+                <ArrowRight size={18} />
+              </button>
 
-    {sent && (
-      <p className="text-green-500 text-sm mt-2">
-        ✅ Message sent successfully!
-      </p>
-    )}
-  </form>
-</div>
-
+              {sent && (
+                <p className="text-green-500 text-sm mt-2">
+                  ✅ Message sent successfully!
+                </p>
+              )}
+            </form>
+          </div>
 
           {/* Right Info */}
-       <div className="flex flex-col justify-center space-y-10">
-  <div>
-    <h4 className="font-semibold text-gray-800 text-xl mb-2">Call Us</h4>
-    <p className="text-base text-gray-600 mb-3">
-      Call us today for personalized coaching and transformative growth!
-    </p>
-    <div className="flex items-center gap-3 font-medium text-gray-900 text-lg">
-      <Phone className="text-[#F57C00]" size={24} />
-      <span>+880 1898-795771</span>
-    </div>
-  </div>
+          <div className="flex flex-col justify-center space-y-10 text-center md:text-left">
+            <div>
+              <h4 className="font-semibold text-gray-800 text-xl mb-2">
+                Call Us
+              </h4>
+              <p className="text-base text-gray-600 mb-3">
+                Call us today for personalized coaching and transformative
+                growth!
+              </p>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 font-medium text-gray-900 text-lg justify-center md:justify-start">
+                <Phone className="text-[#F57C00] mx-auto sm:mx-0" size={24} />
+                <span>+880 1898-795771</span>
+              </div>
+            </div>
 
-  <hr className="border-t border-gray-300 w-4/5" />
+            <hr className="border-t border-gray-300 w-4/5 mx-auto md:mx-0" />
 
-  <div>
-    <h4 className="font-semibold text-gray-800 text-xl mb-2">Email Us</h4>
-    <p className="text-base text-gray-600 mb-3">
-      Email us now for expert coaching and tailored growth solutions!
-    </p>
-    <div className="flex items-center gap-3 font-medium text-gray-900 text-lg">
-      <Mail className="text-[#F57C00]" size={24} />
-      <span>support@fixitgroupbd.com</span>
-    </div>
-  </div>
+            <div>
+              <h4 className="font-semibold text-gray-800 text-xl mb-2">
+                Email Us
+              </h4>
+              <p className="text-base text-gray-600 mb-3">
+                Email us now for expert coaching and tailored growth solutions!
+              </p>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 font-medium text-gray-900 text-lg justify-center md:justify-start">
+                <Mail className="text-[#F57C00] mx-auto sm:mx-0" size={24} />
+                <span>support@fixitgroupbd.com</span>
+              </div>
+            </div>
 
-  <hr className="border-t border-gray-300 w-4/5" />
+            <hr className="border-t border-gray-300 w-4/5 mx-auto md:mx-0" />
 
-  <div>
-    <h4 className="font-semibold text-gray-800 text-xl mb-2">Visit Us</h4>
-    <p className="text-base text-gray-600 mb-3">
-      Visit us for personalized coaching and guidance toward lasting success!
-    </p>
-    <div className="flex items-center gap-3 font-medium text-gray-900 text-lg">
-      <MapPin className="text-[#F57C00]" size={24} />
-      <span>House No. 09, Road No. 02, Block-C, Rampura, Banasree.</span>
-    </div>
-  </div>
-</div>
-
+            <div>
+              <h4 className="font-semibold text-gray-800 text-xl mb-2">
+                Visit Us
+              </h4>
+              <p className="text-base text-gray-600 mb-3">
+                Visit us for personalized coaching and guidance toward lasting
+                success!
+              </p>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 font-medium text-gray-900 text-lg justify-center md:justify-start">
+                <MapPin className="text-[#F57C00] mx-auto sm:mx-0" size={24} />
+                <span>
+                  House No. 09, Road No. 02, Block-C, Rampura, Banasree.
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </section>

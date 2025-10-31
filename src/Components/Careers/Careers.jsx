@@ -186,7 +186,7 @@ const Careers = () => {
                 />
 
                 {/* Floating Dropdown Menu */}
-                <div className="absolute top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+                <div className="absolute top-[110px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
                   <ul className="flex flex-col text-base font-medium py-4">
                     {/* Home */}
                     <li>
@@ -312,12 +312,12 @@ const Careers = () => {
 
                     {/* Find Link Dealer */}
                     <li>
-                      <Link
-                        to="/dealer"
-                        className="flex justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
-                      >
-                        <span>Find Link Dealer</span>
-                      </Link>
+                            <Link
+                                              to="/contact"
+                                              className="flex  justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
+                                            >
+                                              <span>Contact Us</span>
+                                            </Link>
                     </li>
 
                     {/* App for Contractor */}

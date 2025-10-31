@@ -229,10 +229,10 @@ const [showPopup, setShowPopup] = useState(false);
 
     emailjs
       .send(
-        "service_2h4r499",
-        "template_jftpe7b",
+        "service_a4t7uq6",
+        "template_3wjfacu",
         formData,
-        "VV_o1hjWQVsWaOnT7"
+        "jpez9azGNJatkyjQE"
       )
       .then(
         () => {
@@ -497,7 +497,7 @@ const [showPopup, setShowPopup] = useState(false);
                                             <button
   type="button"
   onClick={() => setShowPopup(true)}
-  className="flex justify-center items-center gap-2 w-[330px] h-10 bg-yellow-400 text-black rounded-lg mb-2 py-2 font-semibold hover:bg-yellow-500 transition-colors mx-auto"
+  className="flex justify-center items-center gap-2 w-[280px]  h-10 bg-yellow-400 text-black rounded-lg mb-2 py-2 font-semibold hover:bg-yellow-500 transition-colors mx-auto"
 >
   Find Link Dealer
 </button>
