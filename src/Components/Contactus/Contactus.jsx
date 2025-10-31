@@ -178,7 +178,7 @@ const Contactus = () => {
                   className="fixed inset-0 bg-black/40 z-"
                   onClick={() => setMenuOpen(false)}
                 />
-                <div className="absolute top-[70px] sm:top-[80px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+                <div className="absolute top-[70px] sm:top-[110px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
                   <ul className="flex flex-col text-base font-medium py-4">
                     <li>
                       <Link
