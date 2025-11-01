@@ -1,4 +1,3 @@
-
 import React, { useRef, useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import logo2 from "../../assets/Fixit-Group-Logo-Red-and-White.png";
@@ -7,7 +6,7 @@ import emailjs from "emailjs-com";
 import callIcon from "../../assets/Call-Icon-Green.png"; // WhatsApp icon
 import LocationIcon from "../../assets/Location-Man-Icon.png";
 
-import { FaChevronDown } from "react-icons/fa"
+import { FaChevronDown } from "react-icons/fa";
 import bgImage from "../../assets/bg-images.png";
 
 import product1 from "../../assets/Dr-Fixit-Brand-LW+-101-1-Litre.png";
@@ -20,17 +19,63 @@ import product10 from "../../assets/Dr-Fixit-Brand-5100-Exterior-Sealer-18-Litre
 import product11 from "../../assets/Rust-Remover-01-Litre.png";
 import product12 from "../../assets/Dr-Fixit-Brand-302-Super-Latex-1-Litre.png";
 const districts = [
-  "Bandarban","Barguna","Barisal","Bogra","Brahmanbaria","Chandpur","Chittagong","Comilla",
-  "Cox's Bazar","Chuadanga","Dhaka","Dinajpur","Faridpur","Feni","Gaibandha","Gazipur",
-  "Gopalganj","Habiganj","Jamalpur","Jessore","Jhenaidah","Joypurhat","Khagrachari",
-  "Khulna","Kishoreganj","Kurigram","Kushtia","Lalmonirhat","Lakshmipur","Magura",
-  "Manikganj","Maulvibazar","Meherpur","Mymensingh","Naogaon","Narail","Narayanganj",
-  "Narsingdi","Natore","Nawabganj","Netrokona","Nilphamari","Noakhali","Pabna","Panchagarh",
-  "Patuakhali","Pirojpur","Rajbari","Rajshahi","Rangamati","Rangpur","Satkhira","Sherpur",
-  "Sirajganj","Sylhet","Tangail"
+  "Bandarban",
+  "Barguna",
+  "Barisal",
+  "Bogra",
+  "Brahmanbaria",
+  "Chandpur",
+  "Chittagong",
+  "Comilla",
+  "Cox's Bazar",
+  "Chuadanga",
+  "Dhaka",
+  "Dinajpur",
+  "Faridpur",
+  "Feni",
+  "Gaibandha",
+  "Gazipur",
+  "Gopalganj",
+  "Habiganj",
+  "Jamalpur",
+  "Jessore",
+  "Jhenaidah",
+  "Joypurhat",
+  "Khagrachari",
+  "Khulna",
+  "Kishoreganj",
+  "Kurigram",
+  "Kushtia",
+  "Lalmonirhat",
+  "Lakshmipur",
+  "Magura",
+  "Manikganj",
+  "Maulvibazar",
+  "Meherpur",
+  "Mymensingh",
+  "Naogaon",
+  "Narail",
+  "Narayanganj",
+  "Narsingdi",
+  "Natore",
+  "Nawabganj",
+  "Netrokona",
+  "Nilphamari",
+  "Noakhali",
+  "Pabna",
+  "Panchagarh",
+  "Patuakhali",
+  "Pirojpur",
+  "Rajbari",
+  "Rajshahi",
+  "Rangamati",
+  "Rangpur",
+  "Satkhira",
+  "Sherpur",
+  "Sirajganj",
+  "Sylhet",
+  "Tangail",
 ];
-
-
 
 const products = [
   {
@@ -175,25 +220,29 @@ const products = [
   },
   {
     id: 10,
-    title: "18kg Dr. Fixit 302 Super Latex-Premium SBR Waterproofing & Bonding Agent for Concrete Repair",
+    title:
+      "18kg Dr. Fixit 302 Super Latex-Premium SBR Waterproofing & Bonding Agent for Concrete Repair",
     brand: "Dr. Fixit Limited",
     category: "Admixture",
     quantity: "1 Litre",
     subtitle: "Dr. Fixit 302 Super Latex",
-    description: "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applica-tions. This URP-based formulation is known for enhancing the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
+    description:
+      "Dr. Fixit 302 Super Latex is a Styrene-Butadiene co-polymer latex designed for waterproofing, bonding, and concrete repair applica-tions. This URP-based formulation is known for enhancing the strength, flexibility, and water resistance of cementitious mixes, making it an ideal solution for long-lasting repairs and surface protection.",
     subtitletwo: "SBR Latex for repairs & waterproofing",
     image: product2,
     availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
   },
   {
     id: 11,
-    title: "18kg Dr. Fixit 5100 Exterior Wall Sealer High-Performance Water-Based Wall Primer for Interior Walls",
+    title:
+      "18kg Dr. Fixit 5100 Exterior Wall Sealer High-Performance Water-Based Wall Primer for Interior Walls",
     brand: "Dr. Fixit Limited",
     category: "Paints",
     quantity: "18 Litre",
     subtitle: "Dr. Fixit 5100 Exterior Wall Sealer.",
     subtitletwo: "Excelient Finish Leveling",
-    description: "Dr. Fixit 5100 Wall Sealer is a high-performance, water-based sealer specially formulated for exterior walls, whether new or repainted. It enhances the durability and performance of the finishing coat while providing effective protection against moisture and alkalinity. Ideal when used with Weatherbond, it ensures long-lasting exterior wall protection and a superior finish.",
+    description:
+      "Dr. Fixit 5100 Wall Sealer is a high-performance, water-based sealer specially formulated for exterior walls, whether new or repainted. It enhances the durability and performance of the finishing coat while providing effective protection against moisture and alkalinity. Ideal when used with Weatherbond, it ensures long-lasting exterior wall protection and a superior finish.",
     availablePackaging: "1 litre, 5 litre, 10 litre, and 20 litre",
     image: product10,
   },
@@ -225,34 +274,32 @@ const products = [
 ];
 
 const ProductDetails = ({}) => {
+  const [open, setOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const listRef = useRef(null);
 
-   const [open, setOpen] = useState(false);
-     const dropdownRef = useRef(null);
-     const listRef = useRef(null);
-   
-     const handleSelect = (district) => {
-       setFormData({ ...formData, district });
-       setOpen(false);
-   
-       // Smooth scroll to top when reopening dropdown
-       if (listRef.current) {
-         listRef.current.scrollTop = 0;
-       }
-     };
-   
-     // Close dropdown on outside click
-     useEffect(() => {
-       const handleClickOutside = (e) => {
-         if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-           setOpen(false);
-         }
-       };
-       document.addEventListener("mousedown", handleClickOutside);
-       return () => document.removeEventListener("mousedown", handleClickOutside);
-     }, []);
-   
+  const handleSelect = (district) => {
+    setFormData({ ...formData, district });
+    setOpen(false);
 
- const [showPopup, setShowPopup] = useState(false);
+    // Smooth scroll to top when reopening dropdown
+    if (listRef.current) {
+      listRef.current.scrollTop = 0;
+    }
+  };
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -291,7 +338,7 @@ const ProductDetails = ({}) => {
             company: "",
             dealer: "",
             district: "",
-           });
+          });
         },
         (error) => {
           setLoading(false);
@@ -300,10 +347,6 @@ const ProductDetails = ({}) => {
         }
       );
   };
-
-
-
-
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -325,8 +368,6 @@ const ProductDetails = ({}) => {
   const prev = () =>
     setIndex((prev) => (prev - 1 + products.length) % products.length);
 
-
-
   const [yPos, setYPos] = useState(window.innerHeight - 80);
   const [dragging, setDragging] = useState(false);
   const [offsetY, setOffsetY] = useState(0);
@@ -342,13 +383,13 @@ const ProductDetails = ({}) => {
   // ✅ যখন dragging হবে, তখন body touch off থাকবে
   useEffect(() => {
     if (dragging) {
-      document.body.style.overflow = "hidden";     // scroll বন্ধ
-      document.body.style.touchAction = "none";    // touch বন্ধ
-      document.body.style.pointerEvents = "none";  // click বন্ধ
+      document.body.style.overflow = "hidden"; // scroll বন্ধ
+      document.body.style.touchAction = "none"; // touch বন্ধ
+      document.body.style.pointerEvents = "none"; // click বন্ধ
     } else {
-      document.body.style.overflow = "auto";       // scroll আবার চালু
-      document.body.style.touchAction = "auto";    // touch চালু
-      document.body.style.pointerEvents = "auto";  // click চালু
+      document.body.style.overflow = "auto"; // scroll আবার চালু
+      document.body.style.touchAction = "auto"; // touch চালু
+      document.body.style.pointerEvents = "auto"; // click চালু
     }
   }, [dragging]);
 
@@ -376,10 +417,6 @@ const ProductDetails = ({}) => {
   const handleTouchEnd = () => {
     setDragging(false); // 👈 Drag শেষ
   };
-
-
-
-
 
   return (
     <section className="w-full  z-50">
@@ -520,118 +557,118 @@ const ProductDetails = ({}) => {
         </div>
 
         {/* Mobile Menu */}
-              {menuOpen && (
-                    <>
-                      <div
-                        className="fixed inset-0 bg-black/40 z-40"
-                        onClick={() => setMenuOpen(false)}
+        {menuOpen && (
+          <>
+            <div
+              className="fixed inset-0 bg-black/40 z-40"
+              onClick={() => setMenuOpen(false)}
+            />
+            <div className="absolute top-[110px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+              <ul className="flex flex-col text-base font-medium py-4">
+                <li>
+                  <Link to="/" className="block px-5 py-3 hover:bg-gray-100">
+                    HOME
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/ourbusiness"
+                    className="block px-5 py-3 hover:bg-gray-100"
+                  >
+                    ABOUT US
+                  </Link>
+                </li>
+                <li>
+                  <button
+                    onClick={() => setSubmenuOpen(!submenuOpen)}
+                    className="w-full flex justify-between items-center px-5 py-3 hover:bg-gray-100"
+                  >
+                    OUR BUSINESS
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`w-4 h-4 transition-transform ${
+                        submenuOpen ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
                       />
-                      <div className="absolute top-[110px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
-                        <ul className="flex flex-col text-base font-medium py-4">
-                          <li>
-                            <Link to="/" className="block px-5 py-3 hover:bg-gray-100">
-                              HOME
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="/ourbusiness"
-                              className="block px-5 py-3 hover:bg-gray-100"
-                            >
-                              ABOUT US
-                            </Link>
-                          </li>
-                          <li>
-                            <button
-                              onClick={() => setSubmenuOpen(!submenuOpen)}
-                              className="w-full flex justify-between items-center px-5 py-3 hover:bg-gray-100"
-                            >
-                              OUR BUSINESS
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className={`w-4 h-4 transition-transform ${
-                                  submenuOpen ? "rotate-180" : ""
-                                }`}
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  d="M19 9l-7 7-7-7"
-                                />
-                              </svg>
-                            </button>
-                            {submenuOpen && (
-                            <ul className="pl-6 bg-gray-50">
-            {[
-              { name: "Dr. Fixit Ltd.", link: "/drfixit" },
-              { name: "Jaguar Lubricants", link: "/jaguar" },
-              { name: "Motul", link: "/motul" },
-              { name: "Robinson Can Industries", link: "/robinson" },
-            ].map((item, i) => (
-              <li key={i}>
-                <Link
-                  to={item.link}
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-                            )}
-                          </li>
-                          <li>
-                            <Link
-                              to="/careers"
-                              className="block px-5 py-3 hover:bg-gray-100"
-                            >
-                              CAREERS
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-  to="#"
-  onClick={(e) => {
-    e.preventDefault();
-
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
-      window.location.href = "tel:+8801898795771";
-      setTimeout(() => {
-        window.open("https://wa.me/8801898795771", "_blank");
-      }, 1500);
-    } else {
-      // 💻 ডেস্কটপে হলে: শুধু WhatsApp খুলবে
-      window.open("https://wa.me/8801898795771", "_blank");
-    }
-  }}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
->
-  Let’s Talk on WhatsApp
-</Link>
-
-                          </li>
-                          <li>
-                                            <button
-  type="button"
-  onClick={() => setShowPopup(true)}
-  className="flex justify-center items-center gap-2 w-[280px] h-10 bg-yellow-400 text-black rounded-lg mb-2 py-2 font-semibold hover:bg-yellow-500 transition-colors mx-auto"
->
-  Find Link Dealer
-</button>
-                          </li>
-                        </ul>
-                      </div>
-                    </>
+                    </svg>
+                  </button>
+                  {submenuOpen && (
+                    <ul className="pl-6 bg-gray-50">
+                      {[
+                        { name: "Dr. Fixit Ltd.", link: "/drfixit" },
+                        { name: "Jaguar Lubricants", link: "/jaguar" },
+                        { name: "Motul", link: "/motul" },
+                        { name: "Robinson Can Industries", link: "/robinson" },
+                      ].map((item, i) => (
+                        <li key={i}>
+                          <Link
+                            to={item.link}
+                            className="block px-4 py-2 hover:bg-gray-100"
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   )}
+                </li>
+                <li>
+                  <Link
+                    to="/careers"
+                    className="block px-5 py-3 hover:bg-gray-100"
+                  >
+                    CAREERS
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      const isMobile = /Android|iPhone|iPad|iPod/i.test(
+                        navigator.userAgent
+                      );
+
+                      if (isMobile) {
+                        // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+                        window.location.href = "tel:+8801898795771";
+                        setTimeout(() => {
+                          window.open("https://wa.me/8801898795771", "_blank");
+                        }, 1500);
+                      } else {
+                        // 💻 ডেস্কটপে হলে: শুধু WhatsApp খুলবে
+                        window.open("https://wa.me/8801898795771", "_blank");
+                      }
+                    }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
+                  >
+                    Let’s Talk on WhatsApp
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contact"
+                    className="flex  justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
+                  >
+                    <span>Contact Us</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </>
+        )}
       </header>
       {/* =========================== */}
       <section className="relative z-[-9999]  border-[#b71c1c] bg-white py-10 px-10 md:px-44 flex flex-col md:flex-row items-center justify-between">
@@ -678,269 +715,283 @@ const ProductDetails = ({}) => {
         <div className="relative z-10 flex items-center justify-center h-full"></div>
 
         {/* ✅ Fixed Green Rounded Shape with WhatsApp Icon */}
-       <div
-               className={`fixed z-50 flex items-center justify-center w-[120px] h-[60px] md:w-[145px] md:h-[70px]
+        <div
+          className={`fixed z-50 flex items-center justify-center w-[120px] h-[60px] md:w-[145px] md:h-[70px]
                       rounded-l-[150px] shadow-[0_4px_20px_rgba(0,0,0,0.2)]
                       bg-gradient-to-r to-[#25D366]/100 from-[#25D366]/80
                       backdrop-blur-lg
                       transition-all duration-300 ease-out `}
-               style={{
-                 top: isMobile ? `${yPos}px` : "50%",
-                 right: rightOffset,
-                 transform: isMobile ? "none" : "translateY(-50%)",
-               }}
-               onTouchStart={isMobile ? handleTouchStart : undefined}
-               onTouchMove={isMobile ? handleTouchMove : undefined}
-               onTouchEnd={isMobile ? handleTouchEnd : undefined}
-             >
+          style={{
+            top: isMobile ? `${yPos}px` : "50%",
+            right: rightOffset,
+            transform: isMobile ? "none" : "translateY(-50%)",
+          }}
+          onTouchStart={isMobile ? handleTouchStart : undefined}
+          onTouchMove={isMobile ? handleTouchMove : undefined}
+          onTouchEnd={isMobile ? handleTouchEnd : undefined}
+        >
           <a
-         href="#"
-         onClick={(e) => {
-           e.preventDefault();
-       
-           const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-       
-           if (isMobile) {
-             // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
-             window.location.href = "tel:+8801898795771";
-             setTimeout(() => {
-               window.open("https://wa.me/8801898795771", "_blank");
-             }, 1500);
-           } else {
-             // 💻 ডেস্কটপ হলে: শুধু WhatsApp
-             window.open("https://wa.me/8801898795771", "_blank");
-           }
-         }}
-         target="_blank"
-         rel="noopener noreferrer"
-         className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
-       >
-         <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
-         <img
-           src={callIcon}
-           alt="Call Icon"
-           className="relative w-6 h-6 lg:w-10 lg:h-10 z-10"
-         />
-       </a>
-       
-             </div>
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+
+              const isMobile = /Android|iPhone|iPad|iPod/i.test(
+                navigator.userAgent
+              );
+
+              if (isMobile) {
+                // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+                window.location.href = "tel:+8801898795771";
+                setTimeout(() => {
+                  window.open("https://wa.me/8801898795771", "_blank");
+                }, 1500);
+              } else {
+                // 💻 ডেস্কটপ হলে: শুধু WhatsApp
+                window.open("https://wa.me/8801898795771", "_blank");
+              }
+            }}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative flex items-center justify-center mr-[60px] lg:mr-[50%] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+          >
+            <span className="absolute inset-0 rounded-full bg-white opacity-70 animate-redPulse"></span>
+            <img
+              src={callIcon}
+              alt="Call Icon"
+              className="relative w-6 h-6 lg:w-10 lg:h-10 z-10"
+            />
+          </a>
+        </div>
       </section>
 
       {/* ============================= */}
-      <section id="banner"  className="bg-white">
+      <section id="banner" className="bg-white">
         <div className="max-w-full mx-auto py-25  px-6 md:px-70">
           {/* Product Details */}
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start px-4 md:px-0">
-  {/* Left: Image */}
-  <div className="flex flex-col items-center">
-    <div className="border h-[420px] w-full max-w-[450px] md:h-[560px] md:w-[450px] border-gray-200 rounded-2xl shadow-sm p-4 flex items-center justify-center overflow-hidden">
-      <img
-        src={p.image}
-        alt={p.title}
-        className="w-full h-full object-contain transform transition-transform duration-500 ease-in-out hover:scale-110 touch:scale-110"
-        onTouchStart={(e) => e.currentTarget.classList.add('scale-110')}
-        onTouchEnd={(e) => e.currentTarget.classList.remove('scale-110')}
-      />
-    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start px-4 md:px-0">
+            {/* Left: Image */}
+            <div className="flex flex-col items-center">
+              <div className="border h-[420px] w-full max-w-[450px] md:h-[560px] md:w-[450px] border-gray-200 rounded-2xl shadow-sm p-4 flex items-center justify-center overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="w-full h-full object-contain transform transition-transform duration-500 ease-in-out hover:scale-110 touch:scale-110"
+                  onTouchStart={(e) =>
+                    e.currentTarget.classList.add("scale-110")
+                  }
+                  onTouchEnd={(e) =>
+                    e.currentTarget.classList.remove("scale-110")
+                  }
+                />
+              </div>
 
-    <div className="mt-6 md:mt-8 w-full flex justify-center">
-       <button
-                onClick={() => setShowPopup(true)}
-                className="bg-[#fbbf24] text-black font-semibold text-[13px] sm:text-[14px] md:text-[15px] px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg shadow hover:bg-[#f59e0b] transition-all duration-300"
-              >
-                FIND A DEALER
-              </button>
-    </div>
-  </div>
-
-  {/* Right: Info */}
-  <div className="mt-6 md:mt-0 lg:pt-[10px]">
-    <div className="space-y-2 text-black md:pl-6 lg:pl-0">
-      {/* Title */}
-      {p.title && (
-        <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-black">
-          {p.title}
-        </h2>
-      )}
-
-      {/* Product Info */}
-      <div className="space-y-1 pt-2">
-        {p.brand && (
-          <p className="text-sm sm:text-base">
-            <span className="font-semibold">Brand:</span> {p.brand}
-          </p>
-        )}
-        {p.category && (
-          <p className="text-sm sm:text-base">
-            <span className="font-semibold">Category:</span> {p.category}
-          </p>
-        )}
-        {p.quantity && (
-          <p className="text-sm sm:text-base">
-            <span className="font-semibold">Quantity:</span> {p.quantity}
-          </p>
-        )}
-      </div>
-
-      {/* Availability */}
-      <p className="text-sm sm:text-base pt-1">
-        <span className="font-semibold text-black">Availability:</span>{" "}
-        <span className="text-green-600 font-medium">In Stock</span>
-      </p>
-
-      {/* Description */}
-      <div className="pt-4 space-y-2">
-        {p.subtitle && (
-          <h3 className="text-lg sm:text-xl font-semibold">
-            {p.subtitle}
-          </h3>
-        )}
-        {p.subtitletwo && (
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-            {p.subtitletwo}
-          </p>
-        )}
-        {p.description && (
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-            {p.description}
-          </p>
-        )}
-        {p.availablePackaging && (
-          <p className="text-sm sm:text-base text-black leading-relaxed">
-            <span className="font-semibold">Available Packaging:</span>{" "}
-            {p.availablePackaging}
-          </p>
-        )}
-      </div>
-    </div>
-  </div>
-
-{showPopup && (
-          <>
-            <div
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 animate-fadeIn"
-              onClick={() => setShowPopup(false)}
-            ></div>
-
-            <div className="fixed inset-0 flex items-center justify-center z-50 px-4 animate-slideUp">
-              <div className="relative w-full max-w-md bg-[#0B63FF] rounded-xl p-8 text-white shadow-2xl">
-                {/* Close Button */}
+              <div className="mt-6 md:mt-8 w-full flex justify-center">
                 <button
-                  onClick={() => setShowPopup(false)}
-                  className="absolute top-3 right-3 text-white hover:text-yellow-300 text-2xl"
+                  onClick={() => setShowPopup(true)}
+                  className="bg-[#fbbf24] text-black font-semibold text-[13px] sm:text-[14px] md:text-[15px] px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg shadow hover:bg-[#f59e0b] transition-all duration-300"
                 >
-                  &times;
+                  FIND A DEALER
                 </button>
-
-                <h3 className="text-2xl font-semibold mb-6 text-center">
-                  Request a Quote
-                </h3>
-
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                    required
-                  />
-
-                  <input
-                    type="text"
-                    name="company"
-                    placeholder="Your Phone Number"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
-                    required
-                  />
-
-                  <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0">
-                    <div className="relative w-full sm:w-1/2">
-  <select
-    name="dealer"
-    value={formData.dealer}
-    onChange={handleChange}
-    className="w-full p-3 rounded-md bg-gray-100 text-black border appearance-none cursor-pointer focus:outline-none"
-    required
-  >
-    <option value="" disabled>
-      Dealer/Depo
-    </option>
-    <option value="Dealer">Dealer</option>
-    <option value="Depo">Depo</option>
-  </select>
-
-  {/* Arrow icon on the right */}
-  <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
-</div>
-
-<div className="relative w-full sm:w-1/2" ref={dropdownRef}>
-  {/* Dropdown button */}
-  <div
-    className="p-3 bg-gray-100 rounded-md cursor-pointer text-black border flex justify-between items-center"
-    onClick={() => setOpen(!open)}
-  >
-    <span>{formData.district || "District"}</span>
-    <FaChevronDown className={`ml-2 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
-  </div>
-
-  {/* Scrollable list */}
-  {open && (
-    <ul className="absolute z-50 mt-1 w-full max-h-64 overflow-auto bg-white border rounded-md shadow-lg text-black">
-      {districts.map((district) => (
-        <li
-          key={district}
-          className="p-3 hover:bg-gray-200 cursor-pointer"
-          onClick={() => handleSelect(district)}
-        >
-          {district}
-        </li>
-      ))}
-    </ul>
-  )}
-</div>
-
-
-                  </div>
-
-                  <div className="flex items-start space-x-2 text-sm mt-2">
-                    <input
-                      type="checkbox"
-                      name="consent"
-                      checked={formData.consent}
-                      onChange={handleChange}
-                      className="mt-1"
-                    />
-                    <p>
-                      I consent to receiving calls based on the information
-                      provided above.
-                    </p>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full bg-white text-[#0B63FF] font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-gray-100 transition disabled:opacity-60"
-                  >
-                    {loading ? "Sending..." : "Submit"}
-                  </button>
-                </form>
-
-                {sent && (
-                  <p className="text-green-300 text-center mt-4">
-                    ✅ Mail sent successfully!
-                  </p>
-                )}
               </div>
             </div>
-          </>
-        )}
 
-</div>
+            {/* Right: Info */}
+            <div className="mt-6 md:mt-0 lg:pt-[10px]">
+              <div className="space-y-2 text-black md:pl-6 lg:pl-0">
+                {/* Title */}
+                {p.title && (
+                  <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-black">
+                    {p.title}
+                  </h2>
+                )}
 
+                {/* Product Info */}
+                <div className="space-y-1 pt-2">
+                  {p.brand && (
+                    <p className="text-sm sm:text-base">
+                      <span className="font-semibold">Brand:</span> {p.brand}
+                    </p>
+                  )}
+                  {p.category && (
+                    <p className="text-sm sm:text-base">
+                      <span className="font-semibold">Category:</span>{" "}
+                      {p.category}
+                    </p>
+                  )}
+                  {p.quantity && (
+                    <p className="text-sm sm:text-base">
+                      <span className="font-semibold">Quantity:</span>{" "}
+                      {p.quantity}
+                    </p>
+                  )}
+                </div>
+
+                {/* Availability */}
+                <p className="text-sm sm:text-base pt-1">
+                  <span className="font-semibold text-black">
+                    Availability:
+                  </span>{" "}
+                  <span className="text-green-600 font-medium">In Stock</span>
+                </p>
+
+                {/* Description */}
+                <div className="pt-4 space-y-2">
+                  {p.subtitle && (
+                    <h3 className="text-lg sm:text-xl font-semibold">
+                      {p.subtitle}
+                    </h3>
+                  )}
+                  {p.subtitletwo && (
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                      {p.subtitletwo}
+                    </p>
+                  )}
+                  {p.description && (
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                      {p.description}
+                    </p>
+                  )}
+                  {p.availablePackaging && (
+                    <p className="text-sm sm:text-base text-black leading-relaxed">
+                      <span className="font-semibold">
+                        Available Packaging:
+                      </span>{" "}
+                      {p.availablePackaging}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {showPopup && (
+              <>
+                <div
+                  className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 animate-fadeIn"
+                  onClick={() => setShowPopup(false)}
+                ></div>
+
+                <div className="fixed inset-0 flex items-center justify-center z-50 px-4 animate-slideUp">
+                  <div className="relative w-full max-w-md bg-[#0B63FF] rounded-xl p-8 text-white shadow-2xl">
+                    {/* Close Button */}
+                    <button
+                      onClick={() => setShowPopup(false)}
+                      className="absolute top-3 right-3 text-white hover:text-yellow-300 text-2xl"
+                    >
+                      &times;
+                    </button>
+
+                    <h3 className="text-2xl font-semibold mb-6 text-center">
+                      Request a Quote
+                    </h3>
+
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                        required
+                      />
+
+                      <input
+                        type="text"
+                        name="company"
+                        placeholder="Your Phone Number"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className="w-full p-3 rounded-md bg-gray-100 text-gray-900 focus:outline-none"
+                        required
+                      />
+
+                      <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0">
+                        <div className="relative w-full sm:w-1/2">
+                          <select
+                            name="dealer"
+                            value={formData.dealer}
+                            onChange={handleChange}
+                            className="w-full p-3 rounded-md bg-gray-100 text-black border appearance-none cursor-pointer focus:outline-none"
+                            required
+                          >
+                            <option value="" disabled>
+                              Dealer/Depo
+                            </option>
+                            <option value="Dealer">Dealer</option>
+                            <option value="Depo">Depo</option>
+                          </select>
+
+                          {/* Arrow icon on the right */}
+                          <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
+                        </div>
+
+                        <div
+                          className="relative w-full sm:w-1/2"
+                          ref={dropdownRef}
+                        >
+                          {/* Dropdown button */}
+                          <div
+                            className="p-3 bg-gray-100 rounded-md cursor-pointer text-black border flex justify-between items-center"
+                            onClick={() => setOpen(!open)}
+                          >
+                            <span>{formData.district || "District"}</span>
+                            <FaChevronDown
+                              className={`ml-2 transition-transform duration-200 ${
+                                open ? "rotate-180" : ""
+                              }`}
+                            />
+                          </div>
+
+                          {/* Scrollable list */}
+                          {open && (
+                            <ul className="absolute z-50 mt-1 w-full max-h-64 overflow-auto bg-white border rounded-md shadow-lg text-black">
+                              {districts.map((district) => (
+                                <li
+                                  key={district}
+                                  className="p-3 hover:bg-gray-200 cursor-pointer"
+                                  onClick={() => handleSelect(district)}
+                                >
+                                  {district}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="flex items-start space-x-2 text-sm mt-2">
+                        <input
+                          type="checkbox"
+                          name="consent"
+                          checked={formData.consent}
+                          onChange={handleChange}
+                          className="mt-1"
+                        />
+                        <p>
+                          I consent to receiving calls based on the information
+                          provided above.
+                        </p>
+                      </div>
+
+                      <button
+                        type="submit"
+                        disabled={loading}
+                        className="w-full bg-white text-[#0B63FF] font-semibold py-3 mt-3 rounded-md cursor-pointer hover:bg-gray-100 transition disabled:opacity-60"
+                      >
+                        {loading ? "Sending..." : "Submit"}
+                      </button>
+                    </form>
+
+                    {sent && (
+                      <p className="text-green-300 text-center mt-4">
+                        ✅ Mail sent successfully!
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
 
           {/* 🔹 Thumbnails */}
           <div className="flex justify-center gap-4 mt-12 flex-wrap">
@@ -965,107 +1016,122 @@ const ProductDetails = ({}) => {
 
           {/* 🔹 Dynamic Text Content */}
           <div className="mt-20 ">
-           {p.id === 1 && (
-  <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
-    {/* Header */}
-    <div className="mb-12">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4">
-        Dr. Fixit LW+ 101 (1 Litre)
-      </h1>
-      <p className="text-lg md:text-xl">
-        Integral liquid waterproofing compound designed to enhance concrete
-        strength, reduce permeability, and ensure long-term durability in all
-        types of structures.
-      </p>
-    </div>
+            {p.id === 1 && (
+              <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
+                {/* Header */}
+                <div className="mb-12">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                    Dr. Fixit LW+ 101 (1 Litre)
+                  </h1>
+                  <p className="text-lg md:text-xl">
+                    Integral liquid waterproofing compound designed to enhance
+                    concrete strength, reduce permeability, and ensure long-term
+                    durability in all types of structures.
+                  </p>
+                </div>
 
-    {/* Content Sections */}
-    <div className="space-y-10">
-      {/* Key Benefits */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Key Benefits
-        </h2>
-        <ul className="list-disc list-inside text-lg md:text-xl space-y-3">
-          <li>
-            <span className="font-semibold">Improved Concrete Strength:</span>{" "}
-            Water reduction improves compressive strength and long-term
-            durability.
-          </li>
-          <li>
-            <span className="font-semibold">Enhanced Waterproofing:</span>{" "}
-            Reduces concrete porosity to prevent leaks and dampness.
-          </li>
-          <li>
-            <span className="font-semibold">Increased Workability:</span>{" "}
-            Improves ease of placement without compromising strength.
-          </li>
-          <li>
-            <span className="font-semibold">Reduced Shrinkage:</span> Minimizes
-            cracking and surface shrinkage for better finish.
-          </li>
-          <li>
-            <span className="font-semibold">Better Durability:</span> Resists
-            damage from environmental exposure and chemical attacks.
-          </li>
-          <li>
-            <span className="font-semibold">Cost Efficiency:</span> Reduces
-            maintenance cost with improved life of concrete.
-          </li>
-        </ul>
-      </div>
+                {/* Content Sections */}
+                <div className="space-y-10">
+                  {/* Key Benefits */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Key Benefits
+                    </h2>
+                    <ul className="list-disc list-inside text-lg md:text-xl space-y-3">
+                      <li>
+                        <span className="font-semibold">
+                          Improved Concrete Strength:
+                        </span>{" "}
+                        Water reduction improves compressive strength and
+                        long-term durability.
+                      </li>
+                      <li>
+                        <span className="font-semibold">
+                          Enhanced Waterproofing:
+                        </span>{" "}
+                        Reduces concrete porosity to prevent leaks and dampness.
+                      </li>
+                      <li>
+                        <span className="font-semibold">
+                          Increased Workability:
+                        </span>{" "}
+                        Improves ease of placement without compromising
+                        strength.
+                      </li>
+                      <li>
+                        <span className="font-semibold">
+                          Reduced Shrinkage:
+                        </span>{" "}
+                        Minimizes cracking and surface shrinkage for better
+                        finish.
+                      </li>
+                      <li>
+                        <span className="font-semibold">
+                          Better Durability:
+                        </span>{" "}
+                        Resists damage from environmental exposure and chemical
+                        attacks.
+                      </li>
+                      <li>
+                        <span className="font-semibold">Cost Efficiency:</span>{" "}
+                        Reduces maintenance cost with improved life of concrete.
+                      </li>
+                    </ul>
+                  </div>
 
-      {/* Dosage */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Dosage
-        </h2>
-        <p className="text-lg md:text-xl">
-          Use <span className="font-semibold">200 ml</span> of Dr. Fixit LW+ 101
-          for every <span className="font-semibold">50 kg</span> bag of cement.
-          Mix properly for best waterproofing and strength results.
-        </p>
-      </div>
+                  {/* Dosage */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Dosage
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Use <span className="font-semibold">200 ml</span> of Dr.
+                      Fixit LW+ 101 for every{" "}
+                      <span className="font-semibold">50 kg</span> bag of
+                      cement. Mix properly for best waterproofing and strength
+                      results.
+                    </p>
+                  </div>
 
-      {/* Shelf Life */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Shelf Life
-        </h2>
-        <p className="text-lg md:text-xl">
-          Best before <span className="font-semibold">2 years</span> from date of
-          manufacture when stored in sealed packaging.
-        </p>
-      </div>
+                  {/* Shelf Life */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Shelf Life
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Best before <span className="font-semibold">2 years</span>{" "}
+                      from date of manufacture when stored in sealed packaging.
+                    </p>
+                  </div>
 
-      {/* Storage */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Storage
-        </h2>
-        <p className="text-lg md:text-xl">
-          Store in a cool, dry place away from direct sunlight and heat.
-        </p>
-      </div>
+                  {/* Storage */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Storage
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Store in a cool, dry place away from direct sunlight and
+                      heat.
+                    </p>
+                  </div>
 
-      {/* Applications */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Applications
-        </h2>
-        <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
-          <li>Foundations and basements</li>
-          <li>RCC roofs, slabs, and terraces</li>
-          <li>Columns and beams</li>
-          <li>Tunnels and bridges</li>
-          <li>Water-retaining structures</li>
-          <li>Plastering for internal & external walls</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-)}
-
+                  {/* Applications */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Applications
+                    </h2>
+                    <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
+                      <li>Foundations and basements</li>
+                      <li>RCC roofs, slabs, and terraces</li>
+                      <li>Columns and beams</li>
+                      <li>Tunnels and bridges</li>
+                      <li>Water-retaining structures</li>
+                      <li>Plastering for internal & external walls</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            )}
 
             {p.id === 2 && (
               <section className=" py-20 px-6">
@@ -1455,389 +1521,466 @@ const ProductDetails = ({}) => {
                 </div>
               </section>
             )}
-{p.id === 4 && (
-  <section className="py-20 px-6">
-    <div className="max-w-[1700px] mx-auto text-gray-800 leading-relaxed">
-      {/* Header */}
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-start">
-        Dr Fixit 302 Super Latex (30kg)
-      </h2>
+            {p.id === 4 && (
+              <section className="py-20 px-6">
+                <div className="max-w-[1700px] mx-auto text-gray-800 leading-relaxed">
+                  {/* Header */}
+                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-start">
+                    Dr Fixit 302 Super Latex (30kg)
+                  </h2>
 
-      {/* Introduction */}
-      <div className="space-y-8 pl-4 border-l-4 border-yellow-400">
-        <p className="text-lg md:text-xl">
-          <span className="font-semibold">Dr. Fixit 302 Super Latex</span> is a
-          Styrene Butadiene Rubber (SBR) based waterproofing and bonding agent
-          designed for use with cement for concrete and mortar repair. It
-          enhances adhesion, flexibility, and water resistance, ensuring
-          long-lasting durability in construction and repair applications.
-        </p>
+                  {/* Introduction */}
+                  <div className="space-y-8 pl-4 border-l-4 border-yellow-400">
+                    <p className="text-lg md:text-xl">
+                      <span className="font-semibold">
+                        Dr. Fixit 302 Super Latex
+                      </span>{" "}
+                      is a Styrene Butadiene Rubber (SBR) based waterproofing
+                      and bonding agent designed for use with cement for
+                      concrete and mortar repair. It enhances adhesion,
+                      flexibility, and water resistance, ensuring long-lasting
+                      durability in construction and repair applications.
+                    </p>
 
-        <p className="text-lg md:text-xl">
-          This polymer latex is ideal for applications such as waterproof
-          coatings, bonding old and new concrete, patch repairs, and protective
-          coatings for slabs, terraces, and bathrooms.
-        </p>
-      </div>
+                    <p className="text-lg md:text-xl">
+                      This polymer latex is ideal for applications such as
+                      waterproof coatings, bonding old and new concrete, patch
+                      repairs, and protective coatings for slabs, terraces, and
+                      bathrooms.
+                    </p>
+                  </div>
 
-      {/* Recommended Areas of Application */}
-      <div className="mt-16 space-y-6">
-        <h3 className="text-3xl font-semibold text-gray-900">
-          Recommended Areas of Application
-        </h3>
-        <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
-          <li>Waterproofing of bathrooms, terraces, and roofs</li>
-          <li>Bonding coat for old and new concrete or plaster</li>
-          <li>Repair mortar and concrete modification</li>
-          <li>Chhajjas, balconies, and slabs</li>
-          <li>Protective coating for RCC structures</li>
-        </ul>
-      </div>
+                  {/* Recommended Areas of Application */}
+                  <div className="mt-16 space-y-6">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      Recommended Areas of Application
+                    </h3>
+                    <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
+                      <li>Waterproofing of bathrooms, terraces, and roofs</li>
+                      <li>Bonding coat for old and new concrete or plaster</li>
+                      <li>Repair mortar and concrete modification</li>
+                      <li>Chhajjas, balconies, and slabs</li>
+                      <li>Protective coating for RCC structures</li>
+                    </ul>
+                  </div>
 
-      {/* Application Method */}
-      <div className="mt-16 space-y-8">
-        <h3 className="text-3xl font-semibold text-gray-900">
-          Application Method
-        </h3>
-        <ol className="list-decimal pl-8 text-lg md:text-xl space-y-3">
-          <li>
-            Clean the surface to remove dust, oil, grease, or loose particles.
-          </li>
-          <li>
-            Mix <span className="font-semibold">Dr. Fixit 302 Super Latex</span> with
-            cement in the ratio of{" "}
-            <span className="font-semibold">1:2 (Latex : Cement)</span> to form a
-            smooth, brushable slurry.
-          </li>
-          <li>
-            Apply two coats of the slurry with a brush, keeping an interval of{" "}
-            <span className="font-semibold">4-6 hours</span> between coats.
-          </li>
-          <li>
-            For bonding coats, mix in{" "}
-            <span className="font-semibold">1:1 (Latex : Cement)</span> ratio and
-            apply before new concrete placement.
-          </li>
-          <li>
-            For repair mortars, add{" "}
-            <span className="font-semibold">10–15% Latex</span> by weight of
-            cement for enhanced adhesion and strength.
-          </li>
-        </ol>
-      </div>
+                  {/* Application Method */}
+                  <div className="mt-16 space-y-8">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      Application Method
+                    </h3>
+                    <ol className="list-decimal pl-8 text-lg md:text-xl space-y-3">
+                      <li>
+                        Clean the surface to remove dust, oil, grease, or loose
+                        particles.
+                      </li>
+                      <li>
+                        Mix{" "}
+                        <span className="font-semibold">
+                          Dr. Fixit 302 Super Latex
+                        </span>{" "}
+                        with cement in the ratio of{" "}
+                        <span className="font-semibold">
+                          1:2 (Latex : Cement)
+                        </span>{" "}
+                        to form a smooth, brushable slurry.
+                      </li>
+                      <li>
+                        Apply two coats of the slurry with a brush, keeping an
+                        interval of{" "}
+                        <span className="font-semibold">4-6 hours</span> between
+                        coats.
+                      </li>
+                      <li>
+                        For bonding coats, mix in{" "}
+                        <span className="font-semibold">
+                          1:1 (Latex : Cement)
+                        </span>{" "}
+                        ratio and apply before new concrete placement.
+                      </li>
+                      <li>
+                        For repair mortars, add{" "}
+                        <span className="font-semibold">10–15% Latex</span> by
+                        weight of cement for enhanced adhesion and strength.
+                      </li>
+                    </ol>
+                  </div>
 
-      {/* Coverage */}
-      <div className="mt-16 space-y-4">
-        <h3 className="text-3xl font-semibold text-gray-900">Coverage</h3>
-        <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
-          <li>
-            <span className="font-semibold">Waterproof coating:</span> 2-2.2 m²/kg
-            for 2 coats (1:2 ratio)
-          </li>
-          <li>
-            <span className="font-semibold">Bonding coat:</span> 4-4.5 m²/kg per coat
-            (1:1 ratio)
-          </li>
-          <li>
-            <span className="font-semibold">Repair mortar modifier:</span> 6-7.5 kg per
-            50 kg of cement
-          </li>
-        </ul>
-        <p className="text-gray-700 text-base italic">
-          *Coverage may vary depending on surface texture and site conditions.*
-        </p>
-      </div>
+                  {/* Coverage */}
+                  <div className="mt-16 space-y-4">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      Coverage
+                    </h3>
+                    <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
+                      <li>
+                        <span className="font-semibold">
+                          Waterproof coating:
+                        </span>{" "}
+                        2-2.2 m²/kg for 2 coats (1:2 ratio)
+                      </li>
+                      <li>
+                        <span className="font-semibold">Bonding coat:</span>{" "}
+                        4-4.5 m²/kg per coat (1:1 ratio)
+                      </li>
+                      <li>
+                        <span className="font-semibold">
+                          Repair mortar modifier:
+                        </span>{" "}
+                        6-7.5 kg per 50 kg of cement
+                      </li>
+                    </ul>
+                    <p className="text-gray-700 text-base italic">
+                      *Coverage may vary depending on surface texture and site
+                      conditions.*
+                    </p>
+                  </div>
 
-      {/* Key Benefits */}
-      <div className="mt-16 space-y-4">
-        <h3 className="text-3xl font-semibold text-gray-900">
-          Key Benefits
-        </h3>
-        <ol className="list-decimal pl-8 text-lg md:text-xl space-y-3">
-          <li>
-            Provides excellent bonding between old and new concrete or plaster.
-          </li>
-          <li>
-            Prevents water seepage and dampness through treated surfaces.
-          </li>
-          <li>
-            Enhances flexibility and tensile strength of cement mortar.
-          </li>
-          <li>Reduces shrinkage cracks and increases durability.</li>
-          <li>
-            Improves resistance to chemicals and corrosion in RCC structures.
-          </li>
-        </ol>
-      </div>
+                  {/* Key Benefits */}
+                  <div className="mt-16 space-y-4">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      Key Benefits
+                    </h3>
+                    <ol className="list-decimal pl-8 text-lg md:text-xl space-y-3">
+                      <li>
+                        Provides excellent bonding between old and new concrete
+                        or plaster.
+                      </li>
+                      <li>
+                        Prevents water seepage and dampness through treated
+                        surfaces.
+                      </li>
+                      <li>
+                        Enhances flexibility and tensile strength of cement
+                        mortar.
+                      </li>
+                      <li>
+                        Reduces shrinkage cracks and increases durability.
+                      </li>
+                      <li>
+                        Improves resistance to chemicals and corrosion in RCC
+                        structures.
+                      </li>
+                    </ol>
+                  </div>
 
-      {/* Dosage */}
-      <div className="mt-16 space-y-4">
-        <h3 className="text-3xl font-semibold text-gray-900">Dosage</h3>
-        <p className="text-lg md:text-xl">
-          Use <span className="font-semibold">6–7.5 kg</span> of Dr. Fixit 302 Super
-          Latex per <span className="font-semibold">50 kg</span> of cement when used
-          as a modifier. Adjust ratios according to use type as recommended above.
-        </p>
-      </div>
+                  {/* Dosage */}
+                  <div className="mt-16 space-y-4">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      Dosage
+                    </h3>
+                    <p className="text-lg md:text-xl">
+                      Use <span className="font-semibold">6–7.5 kg</span> of Dr.
+                      Fixit 302 Super Latex per{" "}
+                      <span className="font-semibold">50 kg</span> of cement
+                      when used as a modifier. Adjust ratios according to use
+                      type as recommended above.
+                    </p>
+                  </div>
 
-      {/* SBR Waterproofing Section */}
-      <div className="mt-16 space-y-4">
-        <h3 className="text-3xl font-semibold text-gray-900">
-          SBR Waterproofing Advantages
-        </h3>
-        <p className="text-lg md:text-xl">
-          Being an SBR-based polymer, Dr. Fixit 302 Super Latex forms a flexible,
-          seamless, and durable waterproof barrier. It protects concrete from
-          cracks, seepage, and deterioration caused by water ingress.
-        </p>
-        <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
-          <li>Provides long-lasting waterproof protection</li>
-          <li>Enhances structural bonding and strength</li>
-          <li>Ideal for repairing damaged concrete surfaces</li>
-          <li>Minimizes future maintenance and leakage issues</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-)}
+                  {/* SBR Waterproofing Section */}
+                  <div className="mt-16 space-y-4">
+                    <h3 className="text-3xl font-semibold text-gray-900">
+                      SBR Waterproofing Advantages
+                    </h3>
+                    <p className="text-lg md:text-xl">
+                      Being an SBR-based polymer, Dr. Fixit 302 Super Latex
+                      forms a flexible, seamless, and durable waterproof
+                      barrier. It protects concrete from cracks, seepage, and
+                      deterioration caused by water ingress.
+                    </p>
+                    <ul className="list-disc pl-8 text-lg md:text-xl space-y-2">
+                      <li>Provides long-lasting waterproof protection</li>
+                      <li>Enhances structural bonding and strength</li>
+                      <li>Ideal for repairing damaged concrete surfaces</li>
+                      <li>Minimizes future maintenance and leakage issues</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            )}
 
+            {p.id === 5 && (
+              <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
+                {/* Header */}
+                <div className="mb-12">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                    Dr. Fixit LW+ 101 (18 Litre)
+                  </h1>
+                  <p className="text-lg md:text-xl">
+                    High-performance integral liquid waterproofing compound for
+                    concrete and plaster that enhances strength, durability, and
+                    long-term protection against water seepage.
+                  </p>
+                </div>
 
-         {p.id === 5 && (
-  <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
-    {/* Header */}
-    <div className="mb-12">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4">
-        Dr. Fixit LW+ 101 (18 Litre)
-      </h1>
-      <p className="text-lg md:text-xl">
-        High-performance integral liquid waterproofing compound for concrete and plaster that enhances strength, durability, and long-term protection against water seepage.
-      </p>
-    </div>
+                {/* Content Sections */}
+                <div className="space-y-10">
+                  {/* Application Steps */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Application Method
+                    </h2>
+                    <p className="text-lg md:text-xl mb-4">
+                      Dr. Fixit LW+ 101 should be mixed properly with cement,
+                      sand, and aggregates for best performance. Follow these
+                      steps during concrete or plaster preparation:
+                    </p>
+                    <ol className="list-decimal list-inside space-y-3 text-lg md:text-xl">
+                      <li>
+                        Mix cement, sand, and aggregates in proper proportion
+                        with <span className="font-semibold">2/3rd</span> of the
+                        total mixing water.
+                      </li>
+                      <li>
+                        Mix Dr. Fixit LW+ with the remaining{" "}
+                        <span className="font-semibold">1/3rd portion</span> of
+                        water and add this to the premixed concrete or mortar.
+                      </li>
+                      <li>
+                        Mix thoroughly until a uniform and cohesive consistency
+                        is achieved.
+                      </li>
+                      <li>
+                        Maintain the{" "}
+                        <span className="font-semibold">
+                          water–cement ratio
+                        </span>{" "}
+                        below <span className="font-semibold">0.5</span> to
+                        achieve better durability and strength.
+                      </li>
+                    </ol>
+                  </div>
 
-    {/* Content Sections */}
-    <div className="space-y-10">
-      {/* Application Steps */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Application Method
-        </h2>
-        <p className="text-lg md:text-xl mb-4">
-          Dr. Fixit LW+ 101 should be mixed properly with cement, sand, and aggregates for best performance. Follow these steps during concrete or plaster preparation:
-        </p>
-        <ol className="list-decimal list-inside space-y-3 text-lg md:text-xl">
-          <li>
-            Mix cement, sand, and aggregates in proper proportion with{" "}
-            <span className="font-semibold">2/3rd</span> of the total mixing water.
-          </li>
-          <li>
-            Mix Dr. Fixit LW+ with the remaining{" "}
-            <span className="font-semibold">1/3rd portion</span> of water and add this to the premixed concrete or mortar.
-          </li>
-          <li>Mix thoroughly until a uniform and cohesive consistency is achieved.</li>
-          <li>
-            Maintain the{" "}
-            <span className="font-semibold">water–cement ratio</span> below{" "}
-            <span className="font-semibold">0.5</span> to achieve better durability and strength.
-          </li>
-        </ol>
-      </div>
+                  {/* Recommended Areas */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Recommended Areas of Application
+                    </h2>
+                    <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
+                      <li>Roof slabs and terraces</li>
+                      <li>Columns, beams, and footings</li>
+                      <li>Foundations and basements</li>
+                      <li>RCC water-retaining structures</li>
+                      <li>Internal and external wall plastering</li>
+                    </ul>
+                  </div>
 
-      {/* Recommended Areas */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Recommended Areas of Application
-        </h2>
-        <ul className="list-disc list-inside text-lg md:text-xl space-y-2">
-          <li>Roof slabs and terraces</li>
-          <li>Columns, beams, and footings</li>
-          <li>Foundations and basements</li>
-          <li>RCC water-retaining structures</li>
-          <li>Internal and external wall plastering</li>
-        </ul>
-      </div>
+                  {/* Workability */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Increased Workability
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Enhances the flow and ease of concrete placement without
+                      affecting strength, ensuring smooth, cohesive, and
+                      consistent mixes.
+                    </p>
+                  </div>
 
-      {/* Workability */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Increased Workability
-        </h2>
-        <p className="text-lg md:text-xl">
-          Enhances the flow and ease of concrete placement without affecting strength, ensuring smooth, cohesive, and consistent mixes.
-        </p>
-      </div>
+                  {/* Shrinkage Control */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Reduced Shrinkage and Cracking
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Optimized water content minimizes shrinkage and surface
+                      cracks, reducing maintenance and improving structure
+                      lifespan.
+                    </p>
+                  </div>
 
-      {/* Shrinkage Control */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Reduced Shrinkage and Cracking
-        </h2>
-        <p className="text-lg md:text-xl">
-          Optimized water content minimizes shrinkage and surface cracks, reducing maintenance and improving structure lifespan.
-        </p>
-      </div>
+                  {/* Dosage */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Dosage
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Use <span className="font-semibold">200 ml</span> of Dr.
+                      Fixit LW+ 101 for every{" "}
+                      <span className="font-semibold">50 kg</span> bag of cement
+                      for best waterproofing and strength performance.
+                    </p>
+                  </div>
 
-      {/* Dosage */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Dosage
-        </h2>
-        <p className="text-lg md:text-xl">
-          Use <span className="font-semibold">200 ml</span> of Dr. Fixit LW+ 101 for every{" "}
-          <span className="font-semibold">50 kg</span> bag of cement for best waterproofing and strength performance.
-        </p>
-      </div>
+                  {/* Key Benefits */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Key Benefits
+                    </h2>
+                    <ul className="list-disc list-inside text-lg md:text-xl space-y-3">
+                      <li>Improves cohesion and workability of concrete.</li>
+                      <li>
+                        Provides superior protection to steel reinforcement
+                        against corrosion.
+                      </li>
+                      <li>Effectively prevents dampness and water seepage.</li>
+                      <li>Minimizes plaster shrinkage and cracking.</li>
+                      <li>
+                        Improves overall strength and durability of mortar and
+                        concrete.
+                      </li>
+                    </ul>
+                  </div>
 
-      {/* Key Benefits */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Key Benefits
-        </h2>
-        <ul className="list-disc list-inside text-lg md:text-xl space-y-3">
-          <li>Improves cohesion and workability of concrete.</li>
-          <li>Provides superior protection to steel reinforcement against corrosion.</li>
-          <li>Effectively prevents dampness and water seepage.</li>
-          <li>Minimizes plaster shrinkage and cracking.</li>
-          <li>Improves overall strength and durability of mortar and concrete.</li>
-        </ul>
-      </div>
+                  {/* Mixing Ratio */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Mixing Ratio
+                    </h2>
+                    <p className="text-lg md:text-xl">
+                      Mix <span className="font-semibold">200 ml</span> of Dr.
+                      Fixit LW+ 101 per{" "}
+                      <span className="font-semibold">50 kg</span> bag of
+                      cement. This ensures improved waterproofing, minimizes
+                      cracks, and enhances durability for long-lasting concrete
+                      applications.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            )}
 
-      {/* Mixing Ratio */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Mixing Ratio
-        </h2>
-        <p className="text-lg md:text-xl">
-          Mix <span className="font-semibold">200 ml</span> of Dr. Fixit LW+ 101 per{" "}
-          <span className="font-semibold">50 kg</span> bag of cement. This ensures improved waterproofing, minimizes cracks, and enhances durability for long-lasting concrete applications.
-        </p>
-      </div>
-    </div>
-  </section>
-)}
+            {p.id === 6 && (
+              <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
+                {/* Heading */}
+                <div className="mb-12">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                    Dr. Fixit 302 Super Latex
+                  </h1>
+                  <p className="text-lg md:text-xl">
+                    Premium SBR (Styrene Butadiene Rubber) Latex for
+                    waterproofing, bonding, and enhancing durability of
+                    cement-based mixes.
+                  </p>
+                </div>
 
-{p.id === 6 && (
-  <section className="py-20 px-8 md:px-13 mx-auto text-gray-800">
-    {/* Heading */}
-    <div className="mb-12">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4">
-        Dr. Fixit 302 Super Latex
-      </h1>
-      <p className="text-lg md:text-xl">
-        Premium SBR (Styrene Butadiene Rubber) Latex for waterproofing, bonding,
-        and enhancing durability of cement-based mixes.
-      </p>
-    </div>
+                {/* Content Sections */}
+                <div className="space-y-10">
+                  {/* Application Section */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Application
+                    </h2>
+                    <p className="mb-4">
+                      Dr. Fixit 302 Super Latex is ideal for waterproof
+                      coatings, bonding coats, and repair mortars.
+                    </p>
+                    <ul className="list-disc list-inside space-y-3">
+                      <li>
+                        <strong>Waterproof Coating:</strong> Mix with cement in
+                        a 1:2 ratio to form a brushable slurry for slabs,
+                        terraces, and roofs.
+                      </li>
+                      <li>
+                        <strong>Bond Coat:</strong> Mix in a 1:1 ratio for
+                        excellent adhesion between old and new concrete/plaster
+                        surfaces.
+                      </li>
+                      <li>
+                        <strong>Repair Mortars:</strong> Add to cement-sand
+                        mortar to improve bond strength, flexibility, and water
+                        resistance.
+                      </li>
+                    </ul>
+                  </div>
 
-    {/* Content Sections */}
-    <div className="space-y-10">
-      {/* Application Section */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Application
-        </h2>
-        <p className="mb-4">
-          Dr. Fixit 302 Super Latex is ideal for waterproof coatings, bonding
-          coats, and repair mortars.
-        </p>
-        <ul className="list-disc list-inside space-y-3">
-          <li>
-            <strong>Waterproof Coating:</strong> Mix with cement in a 1:2 ratio
-            to form a brushable slurry for slabs, terraces, and roofs.
-          </li>
-          <li>
-            <strong>Bond Coat:</strong> Mix in a 1:1 ratio for excellent adhesion
-            between old and new concrete/plaster surfaces.
-          </li>
-          <li>
-            <strong>Repair Mortars:</strong> Add to cement-sand mortar to improve
-            bond strength, flexibility, and water resistance.
-          </li>
-        </ul>
-      </div>
+                  {/* Benefits Section */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Benefits
+                    </h2>
+                    <ul className="list-disc list-inside space-y-3">
+                      <li>
+                        Forms strong bonds between old and new concrete or
+                        plaster surfaces.
+                      </li>
+                      <li>Prevents dampness and water penetration.</li>
+                      <li>Multipurpose waterproofing and bonding solution.</li>
+                      <li>
+                        Enhances durability and water resistance of repair
+                        mortars.
+                      </li>
+                      <li>
+                        Reduces shrinkage cracks for long-lasting repairs.
+                      </li>
+                    </ul>
+                  </div>
 
-      {/* Benefits Section */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Benefits
-        </h2>
-        <ul className="list-disc list-inside space-y-3">
-          <li>Forms strong bonds between old and new concrete or plaster surfaces.</li>
-          <li>Prevents dampness and water penetration.</li>
-          <li>Multipurpose waterproofing and bonding solution.</li>
-          <li>Enhances durability and water resistance of repair mortars.</li>
-          <li>Reduces shrinkage cracks for long-lasting repairs.</li>
-        </ul>
-      </div>
+                  {/* Coverage Section */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Coverage
+                    </h2>
+                    <ul className="list-disc list-inside space-y-3">
+                      <li>
+                        <strong>Waterproof Coating:</strong> 2-2.2 m²/kg for 2
+                        coats (cement:latex = 2:1).
+                      </li>
+                      <li>
+                        <strong>Mortar Modifier:</strong> 6-7.5 kg per 50 kg bag
+                        of cement.
+                      </li>
+                      <li>
+                        <strong>Bonding Agent:</strong> 4.2-4.5 m²/kg per coat
+                        depending on surface texture.
+                      </li>
+                    </ul>
+                  </div>
 
-      {/* Coverage Section */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Coverage
-        </h2>
-        <ul className="list-disc list-inside space-y-3">
-          <li>
-            <strong>Waterproof Coating:</strong> 2-2.2 m²/kg for 2 coats
-            (cement:latex = 2:1).
-          </li>
-          <li>
-            <strong>Mortar Modifier:</strong> 6-7.5 kg per 50 kg bag of cement.
-          </li>
-          <li>
-            <strong>Bonding Agent:</strong> 4.2-4.5 m²/kg per coat depending on
-            surface texture.
-          </li>
-        </ul>
-      </div>
+                  {/* Uses Section */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      Uses
+                    </h2>
+                    <ul className="list-disc list-inside space-y-3">
+                      <li>
+                        Waterproof coatings for roofs, terraces, and concrete
+                        surfaces.
+                      </li>
+                      <li>
+                        Bonding old and new concrete/plaster to prevent
+                        delamination.
+                      </li>
+                      <li>
+                        Repair mix modifier for durability, strength, and crack
+                        resistance.
+                      </li>
+                      <li>
+                        Floors, slabs, columns, beams, balconies, toilets, and
+                        bathrooms.
+                      </li>
+                    </ul>
+                  </div>
 
-      {/* Uses Section */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          Uses
-        </h2>
-        <ul className="list-disc list-inside space-y-3">
-          <li>
-            Waterproof coatings for roofs, terraces, and concrete surfaces.
-          </li>
-          <li>
-            Bonding old and new concrete/plaster to prevent delamination.
-          </li>
-          <li>
-            Repair mix modifier for durability, strength, and crack resistance.
-          </li>
-          <li>
-            Floors, slabs, columns, beams, balconies, toilets, and bathrooms.
-          </li>
-        </ul>
-      </div>
-
-      {/* SBR Waterproofing Section */}
-      <div>
-        <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
-          SBR Waterproofing
-        </h2>
-        <p className="mb-3">
-          Dr. Fixit 302 Super Latex is a Styrene Butadiene Rubber (SBR) latex
-          that provides long-lasting waterproofing, bonding, and durability.
-        </p>
-        <ul className="list-disc list-inside space-y-3">
-          <li>
-            <strong>Waterproof Coating:</strong> Forms seamless waterproof
-            barriers on roofs, slabs, and terraces.
-          </li>
-          <li>
-            <strong>Bonding Agent:</strong> Ensures strong adhesion between old
-            and new concrete/plaster.
-          </li>
-          <li>
-            <strong>Repair & Strengthening:</strong> Improves strength,
-            flexibility, and crack resistance of mortars and concrete.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-)}
-
+                  {/* SBR Waterproofing Section */}
+                  <div>
+                    <h2 className="text-3xl font-semibold border-l-4 border-yellow-400 pl-4 mb-4">
+                      SBR Waterproofing
+                    </h2>
+                    <p className="mb-3">
+                      Dr. Fixit 302 Super Latex is a Styrene Butadiene Rubber
+                      (SBR) latex that provides long-lasting waterproofing,
+                      bonding, and durability.
+                    </p>
+                    <ul className="list-disc list-inside space-y-3">
+                      <li>
+                        <strong>Waterproof Coating:</strong> Forms seamless
+                        waterproof barriers on roofs, slabs, and terraces.
+                      </li>
+                      <li>
+                        <strong>Bonding Agent:</strong> Ensures strong adhesion
+                        between old and new concrete/plaster.
+                      </li>
+                      <li>
+                        <strong>Repair & Strengthening:</strong> Improves
+                        strength, flexibility, and crack resistance of mortars
+                        and concrete.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            )}
 
             {p.id === 7 && (
               <section className=" py-20 px-8 md:px-13 mx-auto text-gray-800">
@@ -2617,34 +2760,36 @@ const ProductDetails = ({}) => {
               {/* Middle - Call Icon with WhatsApp Link + Red Pulse */}
               <div className="relative flex items-center justify-center">
                 <div className="absolute w-[70px] h-[70px] bg-white rounded-full animate-redPulse"></div>
-               <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-              
-                  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-              
-                  if (isMobile) {
-                    // 📱 মোবাইলে: আগে কল, তারপর WhatsApp
-                    window.location.href = "tel:+8801898795771";
-                    setTimeout(() => {
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+
+                    const isMobile = /Android|iPhone|iPad|iPod/i.test(
+                      navigator.userAgent
+                    );
+
+                    if (isMobile) {
+                      // 📱 মোবাইলে: আগে কল, তারপর WhatsApp
+                      window.location.href = "tel:+8801898795771";
+                      setTimeout(() => {
+                        window.open("https://wa.me/8801898795771", "_blank");
+                      }, 1500);
+                    } else {
+                      // 💻 ডেস্কটপে: শুধু WhatsApp
                       window.open("https://wa.me/8801898795771", "_blank");
-                    }, 1500);
-                  } else {
-                    // 💻 ডেস্কটপে: শুধু WhatsApp
-                    window.open("https://wa.me/8801898795771", "_blank");
-                  }
-                }}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative z-10 flex items-center justify-center bg-white rounded-full w-[60px] h-[60px] shadow-lg hover:scale-110 transition-transform duration-300"
-              >
-                <img
-                  src={callIcon}
-                  alt="WhatsApp Call Icon"
-                  className="w-[55px] h-[55px]"
-                />
-              </a>
+                    }
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-10 flex items-center justify-center bg-white rounded-full w-[60px] h-[60px] shadow-lg hover:scale-110 transition-transform duration-300"
+                >
+                  <img
+                    src={callIcon}
+                    alt="WhatsApp Call Icon"
+                    className="w-[55px] h-[55px]"
+                  />
+                </a>
               </div>
 
               {/* Right Side - Email Info */}
@@ -2682,50 +2827,54 @@ const ProductDetails = ({}) => {
 
               <div className="flex space-x-3">
                 {/* Dealer/Depo Dropdown */}
-                                  <div className="relative w-full sm:w-1/2">
-  <select
-    name="dealer"
-    value={formData.dealer}
-    onChange={handleChange}
-    className="w-full p-3 rounded-md bg-gray-100 text-black border appearance-none cursor-pointer focus:outline-none"
-    required
-  >
-    <option value="" disabled>
-      Dealer/Depo
-    </option>
-    <option value="Dealer">Dealer</option>
-    <option value="Depo">Depo</option>
-  </select>
+                <div className="relative w-full sm:w-1/2">
+                  <select
+                    name="dealer"
+                    value={formData.dealer}
+                    onChange={handleChange}
+                    className="w-full p-3 rounded-md bg-gray-100 text-black border appearance-none cursor-pointer focus:outline-none"
+                    required
+                  >
+                    <option value="" disabled>
+                      Dealer/Depo
+                    </option>
+                    <option value="Dealer">Dealer</option>
+                    <option value="Depo">Depo</option>
+                  </select>
 
-  {/* Arrow icon on the right */}
-  <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
-                               </div>
+                  {/* Arrow icon on the right */}
+                  <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
+                </div>
 
-<div className="relative w-full sm:w-1/2" ref={dropdownRef}>
-  {/* Dropdown button */}
-  <div
-    className="p-3 bg-gray-100 rounded-md cursor-pointer text-black border flex justify-between items-center"
-    onClick={() => setOpen(!open)}
-  >
-    <span>{formData.district || "District"}</span>
-    <FaChevronDown className={`ml-2 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
-  </div>
+                <div className="relative w-full sm:w-1/2" ref={dropdownRef}>
+                  {/* Dropdown button */}
+                  <div
+                    className="p-3 bg-gray-100 rounded-md cursor-pointer text-black border flex justify-between items-center"
+                    onClick={() => setOpen(!open)}
+                  >
+                    <span>{formData.district || "District"}</span>
+                    <FaChevronDown
+                      className={`ml-2 transition-transform duration-200 ${
+                        open ? "rotate-180" : ""
+                      }`}
+                    />
+                  </div>
 
-  {/* Scrollable list */}
-  {open && (
-    <ul className="absolute z-50 mt-1 w-full max-h-64 overflow-auto bg-white border rounded-md shadow-lg text-black">
-      {districts.map((district) => (
-        <li
-          key={district}
-          className="p-3 hover:bg-gray-200 cursor-pointer"
-          onClick={() => handleSelect(district)}
-        >
-          {district}
-        </li>
-      ))}
-    </ul>
-  )}
-</div>
+                  {/* Scrollable list */}
+                  {open && (
+                    <ul className="absolute z-50 mt-1 w-full max-h-64 overflow-auto bg-white border rounded-md shadow-lg text-black">
+                      {districts.map((district) => (
+                        <li
+                          key={district}
+                          className="p-3 hover:bg-gray-200 cursor-pointer"
+                          onClick={() => handleSelect(district)}
+                        >
+                          {district}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
 
               <div className="flex items-start space-x-2 text-sm mt-2">

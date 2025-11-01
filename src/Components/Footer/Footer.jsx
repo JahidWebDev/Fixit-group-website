@@ -105,9 +105,18 @@ const Footer = () => {
       {/* === Bottom Copyright === */}
       <div className="relative z-10 bg-[#8b1313]/60 backdrop-blur-md border-t border-white/10 py-4 px-4 sm:px-6 flex flex-col md:flex-row items-center justify-around text-[13px] sm:text-sm text-center gap-2 mt-6">
         <p className="lg:mr-60">© 2025 Fixit Group. All Rights Reserved.</p>
-        <p className="opacity-90">
-          Designed by <span className="font-semibold">Jahid Hossain</span>
-        </p>
+      <p className="opacity-90">
+  Designed by{" "}
+  <a
+    href="https://wa.me/8801777169849"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-semibold text-green-300 hover:underline"
+  >
+    Fixit Group
+  </a>
+</p>
+
       </div>
     </footer>
   );

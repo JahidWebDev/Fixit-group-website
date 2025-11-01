@@ -13,35 +13,27 @@ import shadowLogo from "../../assets/Robinson-Can-Industrise.png";
 import { Link } from "react-router-dom";
 
 const OurBusiness = () => {
-
-
-
-  
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const businesses = [
-  {
-    
-    logo: fixitLogo,
-    link: "/drfixit",
-  },
-  {
-    
-    logo: jaguarLogo,
-    link: "/jaguar",
-  },
-  {
-    
-    logo: motulLogo,
-    link: "/motul",
-  },
-  {
-    
-    logo: shadowLogo,
-    link: "/robinson",
-  },
-];
+    {
+      logo: fixitLogo,
+      link: "/drfixit",
+    },
+    {
+      logo: jaguarLogo,
+      link: "/jaguar",
+    },
+    {
+      logo: motulLogo,
+      link: "/motul",
+    },
+    {
+      logo: shadowLogo,
+      link: "/robinson",
+    },
+  ];
 
   return (
     <section className="relative">
@@ -93,51 +85,54 @@ const OurBusiness = () => {
                   </li>
 
                   {/* Dropdown - Our Business */}
-<li className="relative">
-  <button
-    onClick={() => setDropdownOpen(!dropdownOpen)}
-    className="transition-all duration-300 hover:text-yellow-400 flex items-center"
-  >
-    Our Business
-    <svg
-      className={`ml-1 w-4 h-4 transform transition-transform duration-300 ${
-        dropdownOpen ? "rotate-180" : "rotate-0"
-      }`}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-    </svg>
-  </button>
+                  <li className="relative">
+                    <button
+                      onClick={() => setDropdownOpen(!dropdownOpen)}
+                      className="transition-all duration-300 hover:text-yellow-400 flex items-center"
+                    >
+                      Our Business
+                      <svg
+                        className={`ml-1 w-4 h-4 transform transition-transform duration-300 ${
+                          dropdownOpen ? "rotate-180" : "rotate-0"
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
 
-  {dropdownOpen && (
-    <ul
-      className="absolute top-10 left-0 w-64 rounded-xl shadow-xl py-3
+                    {dropdownOpen && (
+                      <ul
+                        className="absolute top-10 left-0 w-64 rounded-xl shadow-xl py-3
                  bg-yellow-400/60 backdrop-blur-lg border border-yellow-300/50
                  text-black animate-fadeIn z-50"
-    >
-      {[
-        { name: "Dr. Fixit Ltd.", to: "/drfixit" },
-        { name: "Jaguar Lubricants", to: "/jaguar" },
-        { name: "Motul", to: "/motul" },
-        { name: "Robinson Can Industries", to: "/robinson" },
-      ].map((item) => (
-        <li key={item.to}>
-          <Link
-            to={item.to}
-            className="block px-5 py-2 font-semibold  transition-all duration-300
+                      >
+                        {[
+                          { name: "Dr. Fixit Ltd.", to: "/drfixit" },
+                          { name: "Jaguar Lubricants", to: "/jaguar" },
+                          { name: "Motul", to: "/motul" },
+                          { name: "Robinson Can Industries", to: "/robinson" },
+                        ].map((item) => (
+                          <li key={item.to}>
+                            <Link
+                              to={item.to}
+                              className="block px-5 py-2 font-semibold  transition-all duration-300
                        hover:bg-red-700/60  hover:text-white"
-          >
-            {item.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  )}
-</li>
-
+                            >
+                              {item.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
 
                   {/* Careers */}
                   <li className="relative group">
@@ -187,118 +182,130 @@ const OurBusiness = () => {
                 </button>
               </div>
 
-                 {menuOpen && (
-  <>
-    <div
-      className="fixed inset-0 bg-black/40 z-40"
-      onClick={() => setMenuOpen(false)}
-    />
-    <div className="absolute top-[110px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
-      <ul className="flex flex-col text-base font-medium py-4">
-        <li>
-          <Link to="/" className="block px-5 py-3 hover:bg-gray-100">
-            HOME
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/ourbusiness"
-            className="block px-5 py-3 hover:bg-gray-100"
-          >
-            ABOUT US
-          </Link>
-        </li>
-        <li>
-          <button
-            onClick={() => setSubmenuOpen(!submenuOpen)}
-            className="w-full flex justify-between items-center px-5 py-3 hover:bg-gray-100"
-          >
-            OUR BUSINESS
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className={`w-4 h-4 transition-transform ${
-                submenuOpen ? "rotate-180" : ""
-              }`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-          {submenuOpen && (
-            <ul className="pl-6 bg-gray-50">
-              {[
-                { name: "Dr. Fixit Ltd.", link: "/drfixit" },
-                { name: "Jaguar Lubricants", link: "/jaguar" },
-                { name: "Motul", link: "/motul" },
-                { name: "Robinson Can Industries", link: "/robinson" },
-              ].map((item, i) => (
-                <li key={i}>
-                  <Link
-                    to={item.link}
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-        <li>
-          <Link
-            to="/careers"
-            className="block px-5 py-3 hover:bg-gray-100"
-          >
-            CAREERS
-          </Link>
-        </li>
-        <li>
-        <Link
-  to="#"
-  onClick={(e) => {
-    e.preventDefault();
+              {menuOpen && (
+                <>
+                  <div
+                    className="fixed inset-0 bg-black/40 z-40"
+                    onClick={() => setMenuOpen(false)}
+                  />
+                  <div className="absolute top-[110px] right-4 left-4 z-50 bg-white text-black rounded-2xl shadow-xl overflow-hidden animate-fadeIn">
+                    <ul className="flex flex-col text-base font-medium py-4">
+                      <li>
+                        <Link
+                          to="/"
+                          className="block px-5 py-3 hover:bg-gray-100"
+                        >
+                          HOME
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/ourbusiness"
+                          className="block px-5 py-3 hover:bg-gray-100"
+                        >
+                          ABOUT US
+                        </Link>
+                      </li>
+                      <li>
+                        <button
+                          onClick={() => setSubmenuOpen(!submenuOpen)}
+                          className="w-full flex justify-between items-center px-5 py-3 hover:bg-gray-100"
+                        >
+                          OUR BUSINESS
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className={`w-4 h-4 transition-transform ${
+                              submenuOpen ? "rotate-180" : ""
+                            }`}
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </button>
+                        {submenuOpen && (
+                          <ul className="pl-6 bg-gray-50">
+                            {[
+                              { name: "Dr. Fixit Ltd.", link: "/drfixit" },
+                              { name: "Jaguar Lubricants", link: "/jaguar" },
+                              { name: "Motul", link: "/motul" },
+                              {
+                                name: "Robinson Can Industries",
+                                link: "/robinson",
+                              },
+                            ].map((item, i) => (
+                              <li key={i}>
+                                <Link
+                                  to={item.link}
+                                  className="block px-4 py-2 hover:bg-gray-100"
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                      <li>
+                        <Link
+                          to="/careers"
+                          className="block px-5 py-3 hover:bg-gray-100"
+                        >
+                          CAREERS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="#"
+                          onClick={(e) => {
+                            e.preventDefault();
 
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                            const isMobile = /Android|iPhone|iPad|iPod/i.test(
+                              navigator.userAgent
+                            );
 
-    if (isMobile) {
-      // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
-      window.location.href = "tel:+8801898795771";
-      setTimeout(() => {
-        window.open("https://wa.me/8801898795771", "_blank");
-      }, 1500);
-    } else {
-      // 💻 ডেস্কটপে হলে: শুধু WhatsApp খুলবে
-      window.open("https://wa.me/8801898795771", "_blank");
-    }
-  }}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
->
-  Let’s Talk on WhatsApp
-</Link>
-
-        </li>
-        <li>
-               <Link
-                                 to="/contact"
-                                 className="flex  justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
-                               >
-                                 <span>Contact Us</span>
-                               </Link>
-        </li>
-      </ul>
-    </div>
-  </>
-)}
-
+                            if (isMobile) {
+                              // 📱 মোবাইলে হলে: আগে কল, তারপর WhatsApp
+                              window.location.href = "tel:+8801898795771";
+                              setTimeout(() => {
+                                window.open(
+                                  "https://wa.me/8801898795771",
+                                  "_blank"
+                                );
+                              }, 1500);
+                            } else {
+                              // 💻 ডেস্কটপে হলে: শুধু WhatsApp খুলবে
+                              window.open(
+                                "https://wa.me/8801898795771",
+                                "_blank"
+                              );
+                            }
+                          }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex justify-center items-center gap-2 bg-green-500 text-white rounded-lg mx-4 my-2 py-2 font-semibold"
+                        >
+                          Let’s Talk on WhatsApp
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/contact"
+                          className="flex  justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
+                        >
+                          <span>Contact Us</span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </>
+              )}
             </header>
           </Container>
         </div>
@@ -310,7 +317,8 @@ const OurBusiness = () => {
               Welcome to Fixit Group
             </h1>
             <p className="text-base md:text-xl max-w-2xl mx-auto">
-              Building a stronger, smart Bangladesh through innovation, quality, and trust.
+              Building a stronger, smart Bangladesh through innovation, quality,
+              and trust.
             </p>
           </div>
         </div>
@@ -363,8 +371,8 @@ const OurBusiness = () => {
                 </strong>
                 . Within Link short period, these products gained the trust and
                 confidence of customers nationwide, establishing{" "}
-                <span className="font-bold text-white">Fixit Group</span> as Link
-                trusted and reliable name in the{" "}
+                <span className="font-bold text-white">Fixit Group</span> as
+                Link trusted and reliable name in the{" "}
                 <strong>Construction Chemical Industry of Bangladesh.</strong>
               </p>
 
@@ -383,8 +391,8 @@ const OurBusiness = () => {
                 registered with the Bangladesh Government under the name{" "}
                 <span className="font-bold text-white">Dr. Fixit Limited</span>,
                 obtaining RJSC certification along with all required legal and
-                business documents. This milestone marked Link significant chapter
-                in Fixit Group’s history—a period of strong growth and
+                business documents. This milestone marked Link significant
+                chapter in Fixit Group’s history—a period of strong growth and
                 overwhelming positive feedback from our valued customers.
                 Alhamdulillah!
               </p>
@@ -425,32 +433,32 @@ const OurBusiness = () => {
       </section>
 
       {/* ================== Logo Grid Section ================== */}
-   <section className="pt-16 sm:pt-20 md:pt-[200px]">
-      <Container>
-        <div className="text-center">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-10 justify-items-center pb-16 sm:pb-20 md:pb-[200px]">
-            {businesses.map((item, index) => (
-              <Link
-                key={index}
-                to={item.link}
-                className="group flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
-              >
-                <div className="flex items-center justify-center w-[120px] sm:w-[160px] md:w-[220px] h-[60px] sm:h-[90px] md:h-[110px] transition-all duration-300">
-                  <img
-                    src={item.logo}
-                    alt={item.name}
-                    className="max-h-[80%] max-w-[90%] object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <p className="mt-3 text-xs sm:text-sm md:text-base font-semibold text-gray-800">
-                  {item.name}
-                </p>
-              </Link>
-            ))}
+      <section className="pt-16 sm:pt-20 md:pt-[200px]">
+        <Container>
+          <div className="text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-10 justify-items-center pb-16 sm:pb-20 md:pb-[200px]">
+              {businesses.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.link}
+                  className="group flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+                >
+                  <div className="flex items-center justify-center w-[120px] sm:w-[160px] md:w-[220px] h-[60px] sm:h-[90px] md:h-[110px] transition-all duration-300">
+                    <img
+                      src={item.logo}
+                      alt={item.name}
+                      className="max-h-[80%] max-w-[90%] object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <p className="mt-3 text-xs sm:text-sm md:text-base font-semibold text-gray-800">
+                    {item.name}
+                  </p>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </Container>
-    </section>
+        </Container>
+      </section>
 
       {/* ================== Vision / Mission / Goals ================== */}
       <div className="max-w-8xl mx-auto bg-[#e6e7e870] my-10 text-gray-900 ">
@@ -534,7 +542,8 @@ const OurBusiness = () => {
                 future.
               </li>
               <li>
-                Develop Link skilled and dedicated team to drive continuous growth.
+                Develop Link skilled and dedicated team to drive continuous
+                growth.
               </li>
             </ul>
           </div>
@@ -548,8 +557,8 @@ const OurBusiness = () => {
             FIXIT GROUP
           </span>{" "}
           <span className="text-black">
-            is dedicated to quality, sustainability, and innovation – building Link
-            stronger, smarter Bangladesh.
+            is dedicated to quality, sustainability, and innovation – building
+            Link stronger, smarter Bangladesh.
           </span>
         </p>
       </div>

@@ -23,6 +23,7 @@ import ScrollToTop from "./Components/ScrollToTop";
 
 // ✅ Correct import path
 import video from "./assets/LoadingpageAnimation2.mp4";
+import Robinson from "./Components/Robinson/Robinson";
 
 // ================= Preloader ==================
 function Preloader() {
@@ -110,6 +111,7 @@ function App() {
               <Route path="/contact" element={<Contactus />} />
               <Route path="/motul" element={<Motul />} />
               <Route path="/motuldetails/:id" element={<MotulDetails />} />
+              <Route path="/robinson" element={<Robinson/>} />
             </Routes>
             <Footer />
           </motion.div>

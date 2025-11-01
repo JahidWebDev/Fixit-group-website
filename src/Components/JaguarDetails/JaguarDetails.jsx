@@ -647,13 +647,12 @@ const [showPopup, setShowPopup] = useState(false);
 
                         </li>
                         <li>
-                                      <button
-  type="button"
-  onClick={() => setShowPopup(true)}
-  className="flex justify-center items-center gap-2 w-[280px]  h-10 bg-yellow-400 text-black rounded-lg mb-2 py-2 font-semibold hover:bg-yellow-500 transition-colors mx-auto"
->
-  Find Link Dealer
-</button>
+   <Link
+                                              to="/contact"
+                                              className="flex  justify-center items-center gap-2 bg-yellow-400 text-black rounded-lg mx-4 mb-2 py-2 font-semibold"
+                                            >
+                                              <span>Contact Us</span>
+                                            </Link>
                         </li>
                       </ul>
                     </div>
